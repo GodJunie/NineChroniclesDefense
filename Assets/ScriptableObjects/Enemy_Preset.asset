@@ -1,0 +1,2548 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2c2c1bb975c5f428509fade2639208, type: 3}
+  m_Name: Enemy_Preset
+  m_EditorClassIdentifier: 
+  filePath: /Users/lavit/Desktop/New Taable/Enemy_Preset.xlsx
+  sheetName: Enemy_Preset
+  idCol: Id
+  enemyIdCol: EnemyId
+  dropItemIdCol: HoldItem
+  dropItemAmountCol: HoldItemAmount
+  hpCol: Hp
+  atkCol: Atk
+  defCol: Def
+  criProbCol: CriProb
+  criDamageCol: CriDamage
+  moveSpeedCol: MoveSpeed
+  attackSpeedCol: AtkSpeed
+  EnemyPresets:
+  - id: 20000001
+    enemyId: 2001000
+    status:
+      hp: 8
+      atk: 3
+      def: 1
+      criProb: 0.1
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006024
+      amount: 1
+  - id: 20000002
+    enemyId: 2001000
+    status:
+      hp: 13
+      atk: 5
+      def: 2
+      criProb: 0.1
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006025
+      amount: 1
+  - id: 20000003
+    enemyId: 2001000
+    status:
+      hp: 18
+      atk: 8
+      def: 3
+      criProb: 0.1
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006026
+      amount: 1
+  - id: 20000004
+    enemyId: 2001000
+    status:
+      hp: 24
+      atk: 11
+      def: 3
+      criProb: 0.1
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006027
+      amount: 1
+  - id: 20000005
+    enemyId: 2001000
+    status:
+      hp: 29
+      atk: 14
+      def: 4
+      criProb: 0.15
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006028
+      amount: 1
+  - id: 20000006
+    enemyId: 2001000
+    status:
+      hp: 35
+      atk: 19
+      def: 4
+      criProb: 0.18
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006029
+      amount: 1
+  - id: 20000007
+    enemyId: 2001000
+    status:
+      hp: 46
+      atk: 24
+      def: 5
+      criProb: 0.2
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006030
+      amount: 1
+  - id: 20000008
+    enemyId: 2001000
+    status:
+      hp: 50
+      atk: 29
+      def: 5
+      criProb: 0.22
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006031
+      amount: 1
+  - id: 20000009
+    enemyId: 2001000
+    status:
+      hp: 54
+      atk: 34
+      def: 7
+      criProb: 0.22
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006032
+      amount: 1
+  - id: 20000010
+    enemyId: 2001000
+    status:
+      hp: 59
+      atk: 40
+      def: 9
+      criProb: 0.22
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 1
+    dropItems:
+    - id: 3001016
+      amount: 1
+    - id: 3002012
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3006033
+      amount: 1
+  - id: 20000011
+    enemyId: 2001001
+    status:
+      hp: 40
+      atk: 15
+      def: 5
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003009
+      amount: 1
+  - id: 20000012
+    enemyId: 2001001
+    status:
+      hp: 44
+      atk: 18
+      def: 8
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003010
+      amount: 1
+  - id: 20000013
+    enemyId: 2001001
+    status:
+      hp: 51
+      atk: 22
+      def: 12
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003011
+      amount: 1
+  - id: 20000014
+    enemyId: 2001001
+    status:
+      hp: 56
+      atk: 26
+      def: 15
+      criProb: 0.21
+      criDamage: 0.28
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003012
+      amount: 1
+  - id: 20000015
+    enemyId: 2001001
+    status:
+      hp: 62
+      atk: 31
+      def: 21
+      criProb: 0.22
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 1.8
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003013
+      amount: 1
+  - id: 20000016
+    enemyId: 2001001
+    status:
+      hp: 66
+      atk: 37
+      def: 24
+      criProb: 0.22
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003014
+      amount: 1
+  - id: 20000017
+    enemyId: 2001001
+    status:
+      hp: 73
+      atk: 43
+      def: 28
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003015
+      amount: 1
+  - id: 20000018
+    enemyId: 2001001
+    status:
+      hp: 78
+      atk: 52
+      def: 35
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003016
+      amount: 1
+  - id: 20000019
+    enemyId: 2001001
+    status:
+      hp: 84
+      atk: 64
+      def: 42
+      criProb: 0.25
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003017
+      amount: 1
+  - id: 20000020
+    enemyId: 2001001
+    status:
+      hp: 92
+      atk: 75
+      def: 50
+      criProb: 0.25
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001014
+      amount: 1
+    - id: 3002009
+      amount: 1
+    - id: 3002013
+      amount: 1
+    - id: 3003003
+      amount: 1
+    - id: 3003018
+      amount: 1
+  - id: 20000021
+    enemyId: 2001002
+    status:
+      hp: 46
+      atk: 20
+      def: 2
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006015
+      amount: 1
+  - id: 20000022
+    enemyId: 2001002
+    status:
+      hp: 51
+      atk: 24
+      def: 4
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006016
+      amount: 1
+  - id: 20000023
+    enemyId: 2001002
+    status:
+      hp: 60
+      atk: 29
+      def: 8
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006017
+      amount: 1
+  - id: 20000024
+    enemyId: 2001002
+    status:
+      hp: 66
+      atk: 35
+      def: 11
+      criProb: 0.21
+      criDamage: 0.28
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000025
+    enemyId: 2001002
+    status:
+      hp: 73
+      atk: 41
+      def: 12
+      criProb: 0.22
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000026
+    enemyId: 2001002
+    status:
+      hp: 82
+      atk: 48
+      def: 15
+      criProb: 0.22
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006020
+      amount: 1
+  - id: 20000027
+    enemyId: 2001002
+    status:
+      hp: 90
+      atk: 54
+      def: 19
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006021
+      amount: 1
+  - id: 20000028
+    enemyId: 2001002
+    status:
+      hp: 98
+      atk: 62
+      def: 23
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006022
+      amount: 1
+  - id: 20000029
+    enemyId: 2001002
+    status:
+      hp: 105
+      atk: 71
+      def: 26
+      criProb: 0.25
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006023
+      amount: 1
+  - id: 20000030
+    enemyId: 2001002
+    status:
+      hp: 124
+      atk: 80
+      def: 30
+      criProb: 0.25
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001002
+      amount: 1
+    - id: 3001013
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3006014
+      amount: 1
+    - id: 3006024
+      amount: 1
+  - id: 20000031
+    enemyId: 2001003
+    status:
+      hp: 42
+      atk: 10
+      def: 10
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000032
+    enemyId: 2001003
+    status:
+      hp: 47
+      atk: 14
+      def: 14
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000033
+    enemyId: 2001003
+    status:
+      hp: 53
+      atk: 18
+      def: 20
+      criProb: 0.2
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006020
+      amount: 1
+  - id: 20000034
+    enemyId: 2001003
+    status:
+      hp: 59
+      atk: 25
+      def: 27
+      criProb: 0.21
+      criDamage: 0.28
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006021
+      amount: 1
+  - id: 20000035
+    enemyId: 2001003
+    status:
+      hp: 64
+      atk: 30
+      def: 32
+      criProb: 0.22
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006022
+      amount: 1
+  - id: 20000036
+    enemyId: 2001003
+    status:
+      hp: 72
+      atk: 36
+      def: 39
+      criProb: 0.22
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006023
+      amount: 1
+  - id: 20000037
+    enemyId: 2001003
+    status:
+      hp: 81
+      atk: 44
+      def: 44
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006024
+      amount: 1
+  - id: 20000038
+    enemyId: 2001003
+    status:
+      hp: 90
+      atk: 51
+      def: 51
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006025
+      amount: 1
+  - id: 20000039
+    enemyId: 2001003
+    status:
+      hp: 104
+      atk: 58
+      def: 63
+      criProb: 0.25
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006026
+      amount: 1
+  - id: 20000040
+    enemyId: 2001003
+    status:
+      hp: 112
+      atk: 64
+      def: 75
+      criProb: 0.25
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3002013
+      amount: 1
+    - id: 3003004
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006027
+      amount: 1
+  - id: 20000041
+    enemyId: 2001004
+    status:
+      hp: 50
+      atk: 15
+      def: 25
+      criProb: 0.2
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006017
+      amount: 1
+  - id: 20000042
+    enemyId: 2001004
+    status:
+      hp: 56
+      atk: 18
+      def: 30
+      criProb: 0.2
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000043
+    enemyId: 2001004
+    status:
+      hp: 63
+      atk: 21
+      def: 38
+      criProb: 0.2
+      criDamage: 0.2
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000044
+    enemyId: 2001004
+    status:
+      hp: 70
+      atk: 25
+      def: 46
+      criProb: 0.21
+      criDamage: 0.23
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006020
+      amount: 1
+  - id: 20000045
+    enemyId: 2001004
+    status:
+      hp: 78
+      atk: 30
+      def: 55
+      criProb: 0.22
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006021
+      amount: 1
+  - id: 20000046
+    enemyId: 2001004
+    status:
+      hp: 87
+      atk: 35
+      def: 65
+      criProb: 0.22
+      criDamage: 0.25
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006022
+      amount: 1
+  - id: 20000047
+    enemyId: 2001004
+    status:
+      hp: 95
+      atk: 42
+      def: 77
+      criProb: 0.25
+      criDamage: 0.28
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006023
+      amount: 1
+  - id: 20000048
+    enemyId: 2001004
+    status:
+      hp: 106
+      atk: 48
+      def: 82
+      criProb: 0.25
+      criDamage: 0.28
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006024
+      amount: 1
+  - id: 20000049
+    enemyId: 2001004
+    status:
+      hp: 117
+      atk: 52
+      def: 93
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006025
+      amount: 1
+  - id: 20000050
+    enemyId: 2001004
+    status:
+      hp: 134
+      atk: 60
+      def: 105
+      criProb: 0.25
+      criDamage: 0.3
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3003004
+      amount: 1
+    - id: 3003009
+      amount: 1
+    - id: 3003013
+      amount: 1
+    - id: 3003018
+      amount: 1
+    - id: 3006026
+      amount: 1
+  - id: 20000051
+    enemyId: 2001005
+    status:
+      hp: 45
+      atk: 14
+      def: 15
+      criProb: 0.3
+      criDamage: 0.45
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006016
+      amount: 1
+  - id: 20000052
+    enemyId: 2001005
+    status:
+      hp: 50
+      atk: 18
+      def: 18
+      criProb: 0.3
+      criDamage: 0.45
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006017
+      amount: 1
+  - id: 20000053
+    enemyId: 2001005
+    status:
+      hp: 59
+      atk: 21
+      def: 22
+      criProb: 0.3
+      criDamage: 0.45
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000054
+    enemyId: 2001005
+    status:
+      hp: 65
+      atk: 25
+      def: 27
+      criProb: 0.32
+      criDamage: 0.48
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000055
+    enemyId: 2001005
+    status:
+      hp: 72
+      atk: 30
+      def: 33
+      criProb: 0.35
+      criDamage: 0.52
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006020
+      amount: 1
+  - id: 20000056
+    enemyId: 2001005
+    status:
+      hp: 81
+      atk: 35
+      def: 39
+      criProb: 0.4
+      criDamage: 0.55
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006021
+      amount: 1
+  - id: 20000057
+    enemyId: 2001005
+    status:
+      hp: 90
+      atk: 42
+      def: 45
+      criProb: 0.47
+      criDamage: 0.55
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006022
+      amount: 1
+  - id: 20000058
+    enemyId: 2001005
+    status:
+      hp: 99
+      atk: 48
+      def: 52
+      criProb: 0.5
+      criDamage: 0.6
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006023
+      amount: 1
+  - id: 20000059
+    enemyId: 2001005
+    status:
+      hp: 107
+      atk: 52
+      def: 60
+      criProb: 0.5
+      criDamage: 0.6
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006024
+      amount: 1
+  - id: 20000060
+    enemyId: 2001005
+    status:
+      hp: 125
+      atk: 60
+      def: 71
+      criProb: 0.5
+      criDamage: 0.7
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001012
+      amount: 1
+    - id: 3004014
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3004022
+      amount: 1
+    - id: 3006025
+      amount: 1
+  - id: 20000061
+    enemyId: 2002000
+    status:
+      hp: 130
+      atk: 40
+      def: 38
+      criProb: 0.3
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003010
+      amount: 1
+  - id: 20000062
+    enemyId: 2002000
+    status:
+      hp: 138
+      atk: 45
+      def: 42
+      criProb: 0.3
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003011
+      amount: 1
+  - id: 20000063
+    enemyId: 2002000
+    status:
+      hp: 146
+      atk: 51
+      def: 49
+      criProb: 0.3
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003012
+      amount: 1
+  - id: 20000064
+    enemyId: 2002000
+    status:
+      hp: 154
+      atk: 58
+      def: 56
+      criProb: 0.33
+      criDamage: 0.43
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003013
+      amount: 1
+  - id: 20000065
+    enemyId: 2002000
+    status:
+      hp: 163
+      atk: 63
+      def: 62
+      criProb: 0.35
+      criDamage: 0.43
+      moveSpeed: 2
+      attackSpeed: 1.8
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003014
+      amount: 1
+  - id: 20000066
+    enemyId: 2002000
+    status:
+      hp: 174
+      atk: 72
+      def: 73
+      criProb: 0.35
+      criDamage: 0.47
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003015
+      amount: 1
+  - id: 20000067
+    enemyId: 2002000
+    status:
+      hp: 186
+      atk: 83
+      def: 86
+      criProb: 0.39
+      criDamage: 0.47
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003016
+      amount: 1
+  - id: 20000068
+    enemyId: 2002000
+    status:
+      hp: 199
+      atk: 95
+      def: 93
+      criProb: 0.42
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003017
+      amount: 1
+  - id: 20000069
+    enemyId: 2002000
+    status:
+      hp: 210
+      atk: 102
+      def: 102
+      criProb: 0.47
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003018
+      amount: 1
+  - id: 20000070
+    enemyId: 2002000
+    status:
+      hp: 223
+      atk: 115
+      def: 115
+      criProb: 0.5
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3001008
+      amount: 1
+    - id: 3002006
+      amount: 1
+    - id: 3003001
+      amount: 1
+    - id: 3003005
+      amount: 1
+    - id: 3003019
+      amount: 1
+  - id: 20000071
+    enemyId: 2002001
+    status:
+      hp: 130
+      atk: 50
+      def: 38
+      criProb: 0.25
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006010
+      amount: 1
+  - id: 20000072
+    enemyId: 2002001
+    status:
+      hp: 138
+      atk: 54
+      def: 42
+      criProb: 0.25
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006011
+      amount: 1
+  - id: 20000073
+    enemyId: 2002001
+    status:
+      hp: 146
+      atk: 60
+      def: 49
+      criProb: 0.25
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006012
+      amount: 1
+  - id: 20000074
+    enemyId: 2002001
+    status:
+      hp: 154
+      atk: 67
+      def: 56
+      criProb: 0.25
+      criDamage: 0.43
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006013
+      amount: 1
+  - id: 20000075
+    enemyId: 2002001
+    status:
+      hp: 163
+      atk: 75
+      def: 62
+      criProb: 0.35
+      criDamage: 0.43
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006014
+      amount: 1
+  - id: 20000076
+    enemyId: 2002001
+    status:
+      hp: 174
+      atk: 83
+      def: 73
+      criProb: 0.35
+      criDamage: 0.47
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006015
+      amount: 1
+  - id: 20000077
+    enemyId: 2002001
+    status:
+      hp: 186
+      atk: 91
+      def: 86
+      criProb: 0.39
+      criDamage: 0.47
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006016
+      amount: 1
+  - id: 20000078
+    enemyId: 2002001
+    status:
+      hp: 199
+      atk: 103
+      def: 93
+      criProb: 0.4
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006017
+      amount: 1
+  - id: 20000079
+    enemyId: 2002001
+    status:
+      hp: 210
+      atk: 115
+      def: 102
+      criProb: 0.4
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000080
+    enemyId: 2002001
+    status:
+      hp: 223
+      atk: 132
+      def: 115
+      criProb: 0.4
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 2
+    dropItems:
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003019
+      amount: 1
+    - id: 3006009
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000081
+    enemyId: 2002002
+    status:
+      hp: 145
+      atk: 38
+      def: 45
+      criProb: 0.35
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006013
+      amount: 1
+  - id: 20000082
+    enemyId: 2002002
+    status:
+      hp: 152
+      atk: 43
+      def: 49
+      criProb: 0.35
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006014
+      amount: 1
+  - id: 20000083
+    enemyId: 2002002
+    status:
+      hp: 158
+      atk: 48
+      def: 54
+      criProb: 0.35
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006015
+      amount: 1
+  - id: 20000084
+    enemyId: 2002002
+    status:
+      hp: 165
+      atk: 56
+      def: 61
+      criProb: 0.38
+      criDamage: 0.35
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006016
+      amount: 1
+  - id: 20000085
+    enemyId: 2002002
+    status:
+      hp: 172
+      atk: 61
+      def: 70
+      criProb: 0.38
+      criDamage: 0.38
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006017
+      amount: 1
+  - id: 20000086
+    enemyId: 2002002
+    status:
+      hp: 186
+      atk: 69
+      def: 82
+      criProb: 0.38
+      criDamage: 0.38
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000087
+    enemyId: 2002002
+    status:
+      hp: 197
+      atk: 80
+      def: 95
+      criProb: 0.4
+      criDamage: 0.38
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000088
+    enemyId: 2002002
+    status:
+      hp: 208
+      atk: 88
+      def: 108
+      criProb: 0.4
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006020
+      amount: 1
+  - id: 20000089
+    enemyId: 2002002
+    status:
+      hp: 221
+      atk: 95
+      def: 122
+      criProb: 0.4
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006021
+      amount: 1
+  - id: 20000090
+    enemyId: 2002002
+    status:
+      hp: 239
+      atk: 115
+      def: 140
+      criProb: 0.45
+      criDamage: 0.45
+      moveSpeed: 2
+      attackSpeed: 1.5
+    dropItems:
+    - id: 3001006
+      amount: 1
+    - id: 3001007
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003020
+      amount: 1
+    - id: 3006022
+      amount: 1
+  - id: 20000091
+    enemyId: 2002003
+    status:
+      hp: 145
+      atk: 42
+      def: 40
+      criProb: 0.4
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006012
+      amount: 1
+  - id: 20000092
+    enemyId: 2002003
+    status:
+      hp: 152
+      atk: 48
+      def: 45
+      criProb: 0.4
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006013
+      amount: 1
+  - id: 20000093
+    enemyId: 2002003
+    status:
+      hp: 158
+      atk: 53
+      def: 49
+      criProb: 0.4
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006014
+      amount: 1
+  - id: 20000094
+    enemyId: 2002003
+    status:
+      hp: 165
+      atk: 61
+      def: 53
+      criProb: 0.45
+      criDamage: 0.4
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006015
+      amount: 1
+  - id: 20000095
+    enemyId: 2002003
+    status:
+      hp: 172
+      atk: 67
+      def: 61
+      criProb: 0.48
+      criDamage: 0.45
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006016
+      amount: 1
+  - id: 20000096
+    enemyId: 2002003
+    status:
+      hp: 186
+      atk: 73
+      def: 72
+      criProb: 0.5
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006017
+      amount: 1
+  - id: 20000097
+    enemyId: 2002003
+    status:
+      hp: 197
+      atk: 88
+      def: 83
+      criProb: 0.5
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000098
+    enemyId: 2002003
+    status:
+      hp: 208
+      atk: 99
+      def: 94
+      criProb: 0.55
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000099
+    enemyId: 2002003
+    status:
+      hp: 221
+      atk: 112
+      def: 102
+      criProb: 0.6
+      criDamage: 0.55
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006020
+      amount: 1
+  - id: 20000100
+    enemyId: 2002003
+    status:
+      hp: 239
+      atk: 128
+      def: 110
+      criProb: 0.6
+      criDamage: 0.55
+      moveSpeed: 2
+      attackSpeed: 1.3
+    dropItems:
+    - id: 3002004
+      amount: 1
+    - id: 3003000
+      amount: 1
+    - id: 3003014
+      amount: 1
+    - id: 3003015
+      amount: 1
+    - id: 3006021
+      amount: 1
+  - id: 20000101
+    enemyId: 2002004
+    status:
+      hp: 134
+      atk: 48
+      def: 39
+      criProb: 0.45
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006011
+      amount: 1
+  - id: 20000102
+    enemyId: 2002004
+    status:
+      hp: 142
+      atk: 52
+      def: 41
+      criProb: 0.45
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006012
+      amount: 1
+  - id: 20000103
+    enemyId: 2002004
+    status:
+      hp: 150
+      atk: 58
+      def: 47
+      criProb: 0.48
+      criDamage: 0.5
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006013
+      amount: 1
+  - id: 20000104
+    enemyId: 2002004
+    status:
+      hp: 158
+      atk: 65
+      def: 55
+      criProb: 0.48
+      criDamage: 0.55
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006014
+      amount: 1
+  - id: 20000105
+    enemyId: 2002004
+    status:
+      hp: 169
+      atk: 73
+      def: 61
+      criProb: 0.53
+      criDamage: 0.55
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006015
+      amount: 1
+  - id: 20000106
+    enemyId: 2002004
+    status:
+      hp: 181
+      atk: 80
+      def: 71
+      criProb: 0.53
+      criDamage: 0.6
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006016
+      amount: 1
+  - id: 20000107
+    enemyId: 2002004
+    status:
+      hp: 192
+      atk: 89
+      def: 85
+      criProb: 0.55
+      criDamage: 0.65
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006017
+      amount: 1
+  - id: 20000108
+    enemyId: 2002004
+    status:
+      hp: 206
+      atk: 100
+      def: 91
+      criProb: 0.55
+      criDamage: 0.7
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006018
+      amount: 1
+  - id: 20000109
+    enemyId: 2002004
+    status:
+      hp: 217
+      atk: 111
+      def: 101
+      criProb: 0.6
+      criDamage: 0.8
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006019
+      amount: 1
+  - id: 20000110
+    enemyId: 2002004
+    status:
+      hp: 230
+      atk: 128
+      def: 113
+      criProb: 0.65
+      criDamage: 0.85
+      moveSpeed: 2
+      attackSpeed: 3
+    dropItems:
+    - id: 3001009
+      amount: 1
+    - id: 3002007
+      amount: 1
+    - id: 3002010
+      amount: 1
+    - id: 3004019
+      amount: 1
+    - id: 3006020
+      amount: 1
+  - id: 20000111
+    enemyId: 2002005
+    status:
+      hp: 140
+      atk: 62
+      def: 40
+      criProb: 0.5
+      criDamage: 0.45
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003021
+      amount: 1
+  - id: 20000112
+    enemyId: 2002005
+    status:
+      hp: 152
+      atk: 78
+      def: 45
+      criProb: 0.5
+      criDamage: 0.45
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003022
+      amount: 1
+  - id: 20000113
+    enemyId: 2002005
+    status:
+      hp: 173
+      atk: 89
+      def: 49
+      criProb: 0.5
+      criDamage: 0.45
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003023
+      amount: 1
+  - id: 20000114
+    enemyId: 2002005
+    status:
+      hp: 193
+      atk: 102
+      def: 53
+      criProb: 0.55
+      criDamage: 0.5
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003024
+      amount: 1
+  - id: 20000115
+    enemyId: 2002005
+    status:
+      hp: 217
+      atk: 115
+      def: 61
+      criProb: 0.58
+      criDamage: 0.5
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003025
+      amount: 1
+  - id: 20000116
+    enemyId: 2002005
+    status:
+      hp: 246
+      atk: 128
+      def: 72
+      criProb: 0.6
+      criDamage: 0.5
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003026
+      amount: 1
+  - id: 20000117
+    enemyId: 2002005
+    status:
+      hp: 286
+      atk: 140
+      def: 83
+      criProb: 0.66
+      criDamage: 0.6
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003027
+      amount: 1
+  - id: 20000118
+    enemyId: 2002005
+    status:
+      hp: 320
+      atk: 156
+      def: 94
+      criProb: 0.7
+      criDamage: 0.7
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003028
+      amount: 1
+  - id: 20000119
+    enemyId: 2002005
+    status:
+      hp: 358
+      atk: 173
+      def: 102
+      criProb: 0.7
+      criDamage: 0.8
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003029
+      amount: 1
+  - id: 20000120
+    enemyId: 2002005
+    status:
+      hp: 402
+      atk: 198
+      def: 110
+      criProb: 0.7
+      criDamage: 0.1
+      moveSpeed: 3
+      attackSpeed: 4
+    dropItems:
+    - id: 3003001
+      amount: 1
+    - id: 3003006
+      amount: 1
+    - id: 3003011
+      amount: 1
+    - id: 3003016
+      amount: 1
+    - id: 3003030
+      amount: 1

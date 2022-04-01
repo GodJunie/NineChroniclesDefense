@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 923c066227b59564b8ede0ef611ef1bc, type: 3}
+  m_Name: MonsterStatusInfoLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/ScriptableObjects/MonsterStatus
+  filePath: /Users/lavit/Desktop/New Taable/Monster_Status.xlsx
+  sheetName: Status_1006007
+  hpCol: HP
+  atkCol: Atk
+  defCol: Def
+  criProbCol: CriProb
+  criDamageCol: CriDamage
+  moveSpeedCol: MoveSpeed
+  attackSpeedCol: AtkSpeed

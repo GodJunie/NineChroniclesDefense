@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30df0142489198546b09d037de660241, type: 3}
+  m_Name: Status_1004001
+  m_EditorClassIdentifier: 
+  statuses:
+  - hp: 215
+    atk: 38
+    def: 23
+    criProb: 0.3
+    criDamage: 0.32
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 215
+    atk: 38
+    def: 23
+    criProb: 0.3
+    criDamage: 0.32
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 228
+    atk: 42
+    def: 27
+    criProb: 0.3
+    criDamage: 38
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 241
+    atk: 48
+    def: 32
+    criProb: 0.3
+    criDamage: 0.43
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 259
+    atk: 56
+    def: 39
+    criProb: 0.3
+    criDamage: 0.49
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 274
+    atk: 61
+    def: 45
+    criProb: 0.3
+    criDamage: 55
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 292
+    atk: 68
+    def: 53
+    criProb: 0.3
+    criDamage: 0.62
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 312
+    atk: 76
+    def: 61
+    criProb: 0.4
+    criDamage: 0.73
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 330
+    atk: 82
+    def: 73
+    criProb: 0.4
+    criDamage: 81
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 354
+    atk: 93
+    def: 85
+    criProb: 0.5
+    criDamage: 0.93
+    moveSpeed: 2
+    attackSpeed: 2
+  - hp: 377
+    atk: 102
+    def: 98
+    criProb: 0.6
+    criDamage: 1.02
+    moveSpeed: 2
+    attackSpeed: 2

@@ -1,0 +1,937 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c916d770500cb84eae16e4eca74aa5c, type: 3}
+  m_Name: Stage1
+  m_EditorClassIdentifier: 
+  dayTimes:
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters:
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+  - timePart: 1
+    time: 120
+    wave:
+      leftEnemies:
+      - id: 20000001
+        time: 10
+      - id: 20000001
+        time: 1
+      - id: 20000001
+        time: 1.2
+      - id: 20000001
+        time: 0.7
+      - id: 20000001
+        time: 1
+      - id: 20000001
+        time: 1.2
+      - id: 20000001
+        time: 1.1
+      - id: 20000001
+        time: 1.2
+      - id: 20000001
+        time: 1
+      - id: 20000001
+        time: 5
+      - id: 20000011
+        time: 0.5
+      - id: 20000011
+        time: 0.8
+      rightEnemies: []
+    monsters: []
+  - timePart: 2
+    time: 60
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters: []
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters:
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+  - timePart: 1
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies:
+      - id: 20000002
+        time: 10
+      - id: 20000002
+        time: 1
+      - id: 20000002
+        time: 1.2
+      - id: 20000002
+        time: 0.7
+      - id: 20000002
+        time: 1
+      - id: 20000002
+        time: 1.2
+      - id: 20000002
+        time: 1
+      - id: 20000002
+        time: 1
+      - id: 20000002
+        time: 0.7
+      - id: 20000002
+        time: 1.2
+      - id: 20000002
+        time: 1
+      - id: 20000002
+        time: 1.2
+      - id: 20000002
+        time: 0.7
+      - id: 20000002
+        time: 1
+      - id: 20000002
+        time: 0.7
+      - id: 20000012
+        time: 5
+      - id: 20000012
+        time: 0.5
+      - id: 20000012
+        time: 1.2
+      - id: 20000012
+        time: 0.5
+      - id: 20000012
+        time: 1
+    monsters: []
+  - timePart: 2
+    time: 60
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters: []
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters:
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+  - timePart: 1
+    time: 120
+    wave:
+      leftEnemies:
+      - id: 20000003
+        time: 10
+      - id: 20000003
+        time: 1
+      - id: 20000003
+        time: 0.5
+      - id: 20000003
+        time: 0.8
+      - id: 20000003
+        time: 1
+      - id: 20000023
+        time: 2
+      - id: 20000023
+        time: 0.5
+      - id: 20000023
+        time: 1.2
+      - id: 20000023
+        time: 0.8
+      - id: 20000023
+        time: 1
+      rightEnemies:
+      - id: 20000013
+        time: 30
+      - id: 20000013
+        time: 2
+      - id: 20000013
+        time: 0.5
+      - id: 20000013
+        time: 1
+      - id: 20000033
+        time: 5
+      - id: 20000033
+        time: 1.2
+      - id: 20000033
+        time: 0.8
+      - id: 20000033
+        time: 1
+      - id: 20000033
+        time: 1.2
+    monsters: []
+  - timePart: 2
+    time: 60
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters: []
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters:
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+  - timePart: 1
+    time: 120
+    wave:
+      leftEnemies:
+      - id: 20000004
+        time: 40
+      - id: 20000004
+        time: 1
+      - id: 20000004
+        time: 0.8
+      - id: 20000004
+        time: 1.2
+      - id: 20000004
+        time: 0.5
+      - id: 20000004
+        time: 1
+      - id: 20000004
+        time: 1.2
+      - id: 20000004
+        time: 0.8
+      - id: 20000014
+        time: 1.2
+      - id: 20000014
+        time: 1
+      - id: 20000014
+        time: 0.8
+      - id: 20000014
+        time: 1.2
+      - id: 20000014
+        time: 1
+      - id: 20000014
+        time: 0.5
+      - id: 20000014
+        time: 2
+      - id: 20000014
+        time: 0.5
+      - id: 20000014
+        time: 0.8
+      - id: 20000014
+        time: 1
+      rightEnemies:
+      - id: 20000044
+        time: 10
+      - id: 20000044
+        time: 0.5
+      - id: 20000044
+        time: 0.8
+      - id: 20000044
+        time: 1
+      - id: 20000044
+        time: 0.8
+      - id: 20000054
+        time: 1.2
+      - id: 20000054
+        time: 0.5
+      - id: 20000054
+        time: 0.8
+      - id: 20000054
+        time: 0.8
+      - id: 20000054
+        time: 1
+    monsters: []
+  - timePart: 2
+    time: 60
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters: []
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters:
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+  - timePart: 1
+    time: 180
+    wave:
+      leftEnemies:
+      - id: 20000025
+        time: 30
+      - id: 20000025
+        time: 2
+      - id: 20000025
+        time: 1.2
+      - id: 20000035
+        time: 0.8
+      - id: 20000025
+        time: 1
+      - id: 20000035
+        time: 0.5
+      - id: 20000025
+        time: 1
+      - id: 20000025
+        time: 2
+      - id: 20000035
+        time: 0.8
+      - id: 20000035
+        time: 0.8
+      - id: 20000035
+        time: 1.2
+      - id: 20000035
+        time: 1
+      rightEnemies:
+      - id: 20000045
+        time: 50
+      - id: 20000055
+        time: 1
+      - id: 20000045
+        time: 0.8
+      - id: 20000045
+        time: 2
+      - id: 20000055
+        time: 1.2
+      - id: 20000055
+        time: 1
+      - id: 20000045
+        time: 0.5
+      - id: 20000045
+        time: 1
+      - id: 20000055
+        time: 0.8
+      - id: 20000055
+        time: 1
+    monsters: []
+  - timePart: 2
+    time: 300
+    wave:
+      leftEnemies:
+      - id: 20000006
+        time: 200
+      - id: 20000006
+        time: 2
+      - id: 20000006
+        time: 1
+      - id: 20000006
+        time: 1.2
+      - id: 20000006
+        time: 0.8
+      - id: 20000016
+        time: 1.2
+      - id: 20000016
+        time: 0.5
+      - id: 20000016
+        time: 2
+      - id: 20000016
+        time: 0.5
+      - id: 20000066
+        time: 1
+      rightEnemies:
+      - id: 20000026
+        time: 170
+      - id: 20000036
+        time: 0.5
+      - id: 20000026
+        time: 0.8
+      - id: 20000046
+        time: 1
+      - id: 20000056
+        time: 0.8
+      - id: 20000026
+        time: 1
+      - id: 20000026
+        time: 0.5
+      - id: 20000046
+        time: 0.7
+      - id: 20000046
+        time: 0.5
+      - id: 20000036
+        time: 1.2
+      - id: 20000046
+        time: 1
+      - id: 20000036
+        time: 0.8
+      - id: 20000056
+        time: 0.5
+      - id: 20000056
+        time: 1
+      - id: 20000056
+        time: 1.2
+      - id: 20000026
+        time: 2
+      - id: 20000036
+        time: 0.8
+      - id: 20000066
+        time: 1
+    monsters:
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters:
+    - id: 1001002
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+  - timePart: 1
+    time: 120
+    wave:
+      leftEnemies:
+      - id: 20000017
+        time: 20
+      - id: 20000017
+        time: 5
+      - id: 20000017
+        time: 6
+      - id: 20000017
+        time: 2
+      - id: 20000067
+        time: 4
+      - id: 20000067
+        time: 5
+      - id: 20000067
+        time: 4
+      - id: 20000077
+        time: 3
+      - id: 20000087
+        time: 1.2
+      - id: 20000077
+        time: 1
+      rightEnemies:
+      - id: 20000017
+        time: 0.5
+      - id: 20000017
+        time: 0.5
+      - id: 20000017
+        time: 0.5
+      - id: 20000017
+        time: 0.5
+      - id: 20000017
+        time: 2
+      - id: 20000067
+        time: 1.2
+      - id: 20000017
+        time: 0.8
+      - id: 20000077
+        time: 1
+      - id: 20000017
+        time: 0.8
+      - id: 20000017
+        time: 0.5
+      - id: 20000017
+        time: 1
+      - id: 20000017
+        time: 2
+      - id: 20000087
+        time: 1.2
+      - id: 20000017
+        time: 0.8
+      - id: 20000017
+        time: 0.8
+      - id: 20000077
+        time: 0.5
+      - id: 20000087
+        time: 2
+      - id: 20000067
+        time: 1
+      - id: 20000017
+        time: 2
+      - id: 20000017
+        time: 1
+    monsters: []
+  - timePart: 2
+    time: 60
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters: []
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters:
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+  - timePart: 1
+    time: 120
+    wave:
+      leftEnemies:
+      - id: 20000088
+        time: 30
+      - id: 20000098
+        time: 0.5
+      - id: 20000098
+        time: 0.5
+      - id: 20000108
+        time: 1
+      - id: 20000108
+        time: 0.8
+      - id: 20000088
+        time: 1
+      - id: 20000108
+        time: 2
+      rightEnemies:
+      - id: 20000108
+        time: 20
+      - id: 20000098
+        time: 1
+      - id: 20000098
+        time: 2
+      - id: 20000108
+        time: 0.5
+      - id: 20000108
+        time: 2
+      - id: 20000098
+        time: 1
+      - id: 20000108
+        time: 1.2
+      - id: 20000078
+        time: 1
+    monsters: []
+  - timePart: 2
+    time: 60
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters: []
+  - timePart: 0
+    time: 120
+    wave:
+      leftEnemies:
+      - id: 20000069
+        time: 50
+      - id: 20000069
+        time: 1
+      - id: 20000079
+        time: 2
+      - id: 20000079
+        time: 1.2
+      - id: 20000089
+        time: 0.8
+      - id: 20000089
+        time: 2
+      - id: 20000079
+        time: 1
+      - id: 20000079
+        time: 0.5
+      - id: 20000069
+        time: 0.8
+      - id: 20000089
+        time: 1
+      - id: 20000079
+        time: 0.3
+      - id: 20000079
+        time: 1
+      rightEnemies:
+      - id: 20000069
+        time: 20
+      - id: 20000109
+        time: 0.5
+      - id: 20000109
+        time: 0.5
+      - id: 20000099
+        time: 0.5
+      - id: 20000069
+        time: 2
+      - id: 20000069
+        time: 1
+      - id: 20000099
+        time: 1.2
+      - id: 20000109
+        time: 0.8
+      - id: 20000099
+        time: 0.5
+      - id: 20000069
+        time: 1
+      - id: 20000069
+        time: 0.5
+      - id: 20000109
+        time: 1
+    monsters:
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+  - timePart: 1
+    time: 180
+    wave:
+      leftEnemies: []
+      rightEnemies: []
+    monsters: []
+  - timePart: 2
+    time: 300
+    wave:
+      leftEnemies:
+      - id: 20000010
+        time: 150
+      - id: 20000020
+        time: 0.5
+      - id: 20000020
+        time: 0.5
+      - id: 20000010
+        time: 0.5
+      - id: 20000020
+        time: 0.5
+      - id: 20000010
+        time: 2
+      - id: 20000010
+        time: 1
+      - id: 20000070
+        time: 1.2
+      - id: 20000070
+        time: 0.8
+      - id: 20000010
+        time: 1
+      - id: 20000070
+        time: 0.5
+      - id: 20000070
+        time: 1.2
+      - id: 20000010
+        time: 0.8
+      - id: 20000070
+        time: 1.2
+      - id: 20000070
+        time: 1
+      - id: 20000020
+        time: 2
+      - id: 20000070
+        time: 0.8
+      - id: 20000070
+        time: 1
+      - id: 20000070
+        time: 2
+      - id: 20000120
+        time: 10
+      rightEnemies:
+      - id: 20000030
+        time: 150
+      - id: 20000030
+        time: 0.5
+      - id: 20000040
+        time: 0.5
+      - id: 20000040
+        time: 0.5
+      - id: 20000050
+        time: 0.5
+      - id: 20000050
+        time: 2
+      - id: 20000060
+        time: 1
+      - id: 20000060
+        time: 1.2
+      - id: 20000080
+        time: 0.8
+      - id: 20000080
+        time: 1
+      - id: 20000090
+        time: 0.5
+      - id: 20000090
+        time: 1.2
+      - id: 20000100
+        time: 0.8
+      - id: 20000100
+        time: 1.2
+      - id: 20000110
+        time: 1
+      - id: 20000110
+        time: 2
+      - id: 20000030
+        time: 0.8
+      - id: 20000040
+        time: 1
+      - id: 20000050
+        time: 2
+      - id: 20000060
+        time: 1
+      - id: 20000010
+        time: 1
+    monsters:
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001003
+      time: 0.5
+    - id: 1001002
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001001
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001000
+      time: 0.5
+    - id: 1001003
+      time: 0.5

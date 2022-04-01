@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Effects
+  - Range
+  - Monster
+  - Enemy
+  - House
+  - Wall
+  - Booty
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Character
+  - VFX
+  - InGameBackground
+  - InGameForeground
+  - InGameForegroundVFX
+  - InGameBackgroundVFX
+  - CharacterVFX
+  - UISystemLayer
+  - PostProcess
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: InGameBackground
+    uniqueID: 381710681
+    locked: 0
+  - name: InGameBackgroundVFX
+    uniqueID: 3771372065
+    locked: 0
+  - name: Character
+    uniqueID: 590739575
+    locked: 0
+  - name: CharacterVFX
+    uniqueID: 317033869
+    locked: 0
+  - name: InGameForeground
+    uniqueID: 700048019
+    locked: 0
+  - name: InGameForegroundVFX
+    uniqueID: 1824983751
+    locked: 0
+  - name: UI
+    uniqueID: 3675344747
+    locked: 0
+  - name: VFX
+    uniqueID: 2904934303
+    locked: 0
+  - name: SystemUI
+    uniqueID: 2949179215
+    locked: 0
