@@ -234,7 +234,7 @@ namespace G2T.NCD.Game {
         }
 
         public void AddItem(int id, int count) {
-            var info = TableLoader.Instance.ItemTable.Items.Find(e => e.Id == id);
+            var info = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == id);
             if(info == null) {
                 throw new Exception(string.Format("{0} 에 해당하는 아이템이 없음", id));
             }

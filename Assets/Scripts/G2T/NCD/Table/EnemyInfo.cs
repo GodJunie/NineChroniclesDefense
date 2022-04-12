@@ -11,7 +11,7 @@ namespace G2T.NCD.Table {
     using Game;
 
     [Serializable]
-    public class EnemyInfo {
+    public class EnemyInfo : ExcelData {
         [HorizontalGroup("group")]
         // 정보
         [BoxGroup("group/정보")]

@@ -29,13 +29,13 @@ namespace G2T.NCD.Table.Editor {
 
         protected override OdinMenuTree BuildMenuTree() {
             OdinMenuTree tree = new OdinMenuTree() {
-                { "아이템 정보 테이블", ItemTable.Instance },
-                { "몬스터 정보 테이블", MonsterTable.Instance },
+                //{ "아이템 정보 테이블", ItemTable.Instance },
+                { "몬스터 정보 테이블", new MonsterTableLoader() },
                 { "몬스터 스탯 테이블", MonsterStatusInfoLoader.Instance },
-                { "적군 정보 테이블", EnemyTable.Instance },
-                { "적군 프리셋 테이블", EnemyPresetTable.Instance },
+                //{ "적군 정보 테이블", EnemyTable.Instance },
+                //{ "적군 프리셋 테이블",  },
                 { "스테이지 정보 테이블", StageTable.Instance },
-                { "스테이지 타임라인 테이블", StageTimelineInfoLoader.Instance }
+                { "스테이지 타임라인 테이블", StageTimelineInfoLoader.Instance },
             };
 
             tree.Config.DrawSearchToolbar = true;

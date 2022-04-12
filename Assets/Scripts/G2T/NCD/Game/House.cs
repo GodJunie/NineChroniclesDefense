@@ -36,7 +36,7 @@ namespace G2T.NCD.Game {
             this.hpBar.SetHp(curHp);
             if(this.curHp <= 0f) {
                 GameController.Instance.OnGameOver();
-            }
+            }       
         }
     }
 }

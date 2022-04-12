@@ -9,7 +9,7 @@ using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Table {
     [System.Serializable]
-    public class ItemInfo {
+    public class ItemInfo : ExcelData {
         [HorizontalGroup("group", 80f)]
         [BoxGroup("group/아이콘")]
         [HideLabel]
