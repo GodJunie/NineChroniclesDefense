@@ -91,7 +91,7 @@ namespace G2T.NCD.UI {
                 }
                 for(int i = 0; i < this.items.Count; i++) {
                     var item = this.items[i];
-                    var info = TableLoader.Instance.ItemTable.Items.Find(e => e.Id == item.Id);
+                    var info = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == item.Id);
 
                     UICatchPanelSlot slot;
                     if(i < this.itemSlots.Count) {

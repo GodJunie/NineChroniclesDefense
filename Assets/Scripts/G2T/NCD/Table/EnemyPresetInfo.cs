@@ -11,7 +11,7 @@ namespace G2T.NCD.Table {
     using Game;
 
     [Serializable]
-    public class EnemyPresetInfo {
+    public class EnemyPresetInfo : ExcelData {
         #region Structs
         [Serializable]
         public struct DropItem {
