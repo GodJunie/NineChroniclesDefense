@@ -9,6 +9,8 @@ using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Table {
     using Game;
+    using Newtonsoft.Json.Linq;
+    using System.Linq;
 
     [Serializable]
     public class EnemyPresetInfo : ExcelData {
@@ -61,13 +63,37 @@ namespace G2T.NCD.Table {
         [SerializeField]
         private List<DropItem> dropItems;
 
-        public EnemyPresetInfo(int id, int enemyId, Status status, List<DropItem> dropItems) {
-            this.id = id;
-            this.enemyId = enemyId;
-            this.status = status;
-            this.dropItems = dropItems;
+
+        public override string[] GetProperties() {
+            var properties = new string[] {
+                "id",
+                "enemyId", 
+                "dropItemIds",
+                "dropItemAmounts",
+            };
+            return properties.Concat(Status.Properties).ToArray();
         }
 
+        public override void InitFromJObject(JObject jObject) {
+            this.id = jObject.Value<int>("id");
+            this.enemyId = jObject.Value<int>("enemyId");
+
+            var dropItemIds = jObject["dropItemIds"].Values<int>().ToList();
+            var dropItemAmounts = jObject["dropItemAmounts"].Values<int>().ToList();
+
+            this.dropItems = new List<DropItem>();
+            for(int i = 0; i < Mathf.Min(dropItemIds.Count, dropItemAmounts.Count); i++) {
+                dropItems.Add(new DropItem(dropItemIds[i], dropItemAmounts[i]));
+            }
+
+            this.status = Status.FromJObject(jObject);
+        }
+
+        #region Getter
         public int Id { get => id; }
+        public int EnemyId { get => enemyId; }
+        public Status Status { get => status; }
+        public List<DropItem> DropItems { get => dropItems; }
+        #endregion
     }
 }

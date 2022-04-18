@@ -109,7 +109,8 @@ namespace G2T.NCD.UI {
                     slot.CountText.text = string.Format("<color=#{0}>{1}</color>/{2}", (count < item.Count ? textDisabledColor : textEnabledColor).GetHexString(), count, item.Count);
 
                     slot.gameObject.SetActive(true);
-                    slot.IconImage.sprite = info.Icon;
+
+                    //slot.IconImage.sprite = info.Icon;
                 }
 
                 this.items = monster.LevelInfos[monster.Level].Needs;

@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a320fa6d94db5e3498cfe23e69755970, type: 3}
+  m_Name: MonsterTable
+  m_EditorClassIdentifier: 
+  Datas:
+  - id: 1001000
+    name: "\uD14C\uB77C\uD1A0\uC2DC\uB4DC"
+    description: "\uC774\uADF8\uB4DC\uB77C\uC2E4\uC758 \uBD80\uC0B0\uBB3C\uACFC \uD759\uC774
+      \uC11E\uC5EC \uB9CC\uB4E4\uC5B4\uC9C4 \uC0DD\uBA85\uCCB4\uB2E4. \uAC81\uC774
+      \uB9CE\uC544 \uB2E4\uC218\uAC00 \uBB49\uCCD0\uB2E4\uB2C8\uB294 \uAC83\uC744
+      \uB9CE\uC774 \uBCFC \uC218 \uC788\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001000
+    iconPath: 1001001
+  - id: 1001001
+    name: "\uD14C\uB77C\uD1A0\uB9C8\uD1A0"
+    description: "\uC2F9\uC744 \uD2F0\uC6CC \uC870\uAE08\uC740 \uC790\uC2E0\uAC10\uC774
+      \uC0DD\uACBC\uB2E4. \uD638\uAE30\uC2EC\uC774 \uB9CE\uC544 \uC774\uAC83\uC800\uAC83
+      \uAC74\uB4DC\uB9AC\uB2E4 \uC0AC\uACE0\uB97C \uCE58\uAE30\uB3C4 \uD55C\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001001
+    iconPath: 1001001
+  - id: 1001002
+    name: "\uD14C\uB77C\uD1A0\uB9AC\uBE0C"
+    description: "\uC78E\uC774 \uC790\uB77C\uB0A8\uACFC \uB3D9\uC2DC\uC5D0 \uB2E4\uB978
+      \uD14C\uB77C\uD1A0\uB9C8 \uBCF4\uB2E4 \uC131\uC9C8\uC774 \uC0AC\uB098\uC6CC\uC84C\uB2E4.
+      \uBB34\uB9AC\uB97C \uC9C0\uC5B4 \uB2E4\uB2C8\uBA70, \uB18D\uC791\uBB3C\uC744
+      \uB9DD\uAC00\uB728\uB9B0\uB2E4\uACE0 \uD55C\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001002
+    iconPath: 1001001
+  - id: 1001003
+    name: "\uD1A0\uB77C\uD1A0\uB8E8\uCE20"
+    description: "\uBA38\uB9AC\uC5D0 \uB9C8\uB825\uC73C\uB85C \uAC00\uB4DD\uCC2C
+      \uACFC\uC2E4\uC774 \uC790\uB77C\uB098 \uC788\uB2E4. \uACFC\uC2E4\uC740 \uB9C8\uBC95
+      \uC57D\uBB3C\uC744 \uB9CC\uB4DC\uB294 \uC7AC\uB8CC\uB85C \uC778\uAE30\uAC00
+      \uB9CE\uB2E4\uACE0 \uD55C\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001003
+    iconPath: 1001001
+  - id: 1001004
+    name: "\uD14C\uB77C\uD1A0\uB77C\uC6CC"
+    description: "\uBA38\uB9AC\uC758 \uACFC\uC2E4\uC774 \uC790\uB77C \uC544\uB984\uB2E4\uC6B4
+      \uAF43\uC744 \uD53C\uC6E0\uB2E4. \uC774\uADF8\uB4DC\uB77C\uC2E4 \uC804\uC5ED\uC5D0\uC11C
+      \uAC00\uC7A5 \uC88B\uC740 \uCD5C\uC0C1\uC758 \uAFC0\uC744 \uC5BB\uC744 \uC218
+      \uC788\uB2E4\uACE0 \uD55C\uB2E4. \uBE44\uAD50\uC801 \uC628\uC21C\uD55C \uD3B8\uC774\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001004
+    iconPath: 1001001
+  - id: 1001005
+    name: "\uD14C\uB77C\uD1A0\uBA38\uC298"
+    description: "\uB2E4 \uC790\uB780 \uD14C\uB77C\uD1A0\uB9C8\uB85C \uC628\uC21C\uD55C
+      \uC131\uACA9\uC744 \uAC16\uACE0 \uC788\uB2E4. \uD558\uC9C0\uB9CC \uBAB8\uC5D0\uC11C
+      \uC790\uB77C\uB09C \uBC84\uC12F\uC740 \uC0C1\uB2F9\uD788 \uAC15\uD55C \uB3C5\uC744
+      \uD488\uACE0 \uC788\uC5B4 \uC8FC\uBCC0\uC5D0 \uC788\uAE30\uB9CC\uD574\uB3C4
+      \uBC1C\uC791\uC744 \uC77C\uC73C\uD0AC \uC218 \uC788\uC73C\uB2C8 \uC8FC\uC758
+      \uD574\uC57C\uD55C\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001005
+    iconPath: 1001001
+  - id: 1001006
+    name: "\uD14C\uB77C\uD1A0\uC704\uC988"
+    description: "\uD14C\uB77C\uD1A0\uB9C8 \uC911 \uAC00\uC7A5 \uB09C\uD3ED\uD558\uB2E4\uACE0
+      \uC804\uD574\uC9C0\uACE0, \uD14C\uB77C\uD1A0\uB9AC\uBE0C \uB4E4\uACFC \uBB34\uB9AC\uC9C0\uC5B4
+      \uB2E4\uB2CC\uB2E4\uACE0 \uD55C\uB2E4. \uBAB8\uC5D0 \uC790\uB77C\uB09C \uD480\uC740
+      \uADC0\uD55C \uC57D\uC7AC\uB85C\uB3C4 \uC0AC\uC6A9\uB418\uAE30 \uB54C\uBB38\uC5D0
+      \uC790\uC8FC \uBC00\uB835\uC5D0 \uB300\uC0C1\uC774 \uB41C\uB2E4\uACE0 \uD55C\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001006
+    iconPath: 1001001
+  - id: 1001007
+    name: "\uD14C\uB77C\uD1A0\uBC14\uC778"
+    description: "\uC9C0\uC18D\uB41C \uBC00\uB835\uC5D0 \uC2DC\uB2EC\uB9AC\uB358
+      \uD14C\uB77C\uD1A0\uC704\uC988\uAC00 \uC790\uC2E0\uC744 \uBCF4\uD638\uD558\uAE30
+      \uC704\uD574 \uB369\uAD74\uC744 \uC628\uBAB8\uC5D0 \uAC10\uC2F8\uACE0\uC788\uB2E4.
+      \uB369\uAD74\uC5D0 \uC788\uB294 \uAC00\uC2DC\uC5D0\uB294 \uCE58\uBA85\uC801\uC778
+      \uB3C5\uC774 \uBC1C\uB77C\uC838 \uC788\uC5B4 \uAC00\uAE4C\uC774 \uB2E4\uAC00\uAC00\uAE30\uB780
+      \uC27D\uC9C0 \uC54A\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001007
+    iconPath: 1001001
+  - id: 1001008
+    name: "\uD14C\uB77C\uD1A0\uAC00\uB4E0"
+    description: "\uC804\uC124\uB85C\uB9CC \uC804\uD574\uC9C0\uB294 \uD14C\uB77C\uD1A0\uB9C8\uB85C
+      \uC5EC\uB7EC\uAC1C\uC758 \uACFC\uC2E4\uC5D0\uC11C \uAF43\uC744 \uD53C\uC6B4
+      \uD615\uD0DC\uC774\uB2E4. \uC774\uB97C \uBCF8 \uC790\uB4E4\uC5D0\uAC8C\uB294
+      \uD589\uC6B4\uC774 \uB530\uB978\uB2E4\uB294 \uC804\uC124\uC774 \uC788\uC9C0\uB9CC
+      \uC2E4\uC81C\uB85C \uBCF8 \uC774\uB294 \uC544\uBB34\uB3C4 \uC5C6\uB2E4\uACE0
+      \uD55C\uB2E4."
+    evolutionMaterials:
+    - id: 1002000
+      amount: 1
+    - id: 2001000
+      amount: 1
+    evolutionResult: 1001001
+    catchMaterials:
+    - id: 1002000
+      amount: 1
+    prefabPath: 1001001
+    statusPath: Status_1001008
+    iconPath: 1001001

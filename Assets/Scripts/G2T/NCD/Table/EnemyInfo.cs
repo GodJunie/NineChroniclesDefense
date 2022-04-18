@@ -9,6 +9,7 @@ using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Table {
     using Game;
+    using Newtonsoft.Json.Linq;
 
     [Serializable]
     public class EnemyInfo : ExcelData {
@@ -35,22 +36,36 @@ namespace G2T.NCD.Table {
         [LabelWidth(80f)]
         [LabelText("프리팹")]
         [SerializeField]
-        private Enemy prefab;
+        private string prefabPath;
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("아이콘")]
         [SerializeField]
-        private Sprite icon;
+        private string iconPath;
 
-        public EnemyInfo(int id, string name, string description) {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-        }
-
-        public Sprite Icon { get => icon; }
         public int Id { get => id; }
         public string Name { get => name; }
         public string Description { get => description; }
+        public string IconPath { get => iconPath; }
+        public string PrefabPath { get => prefabPath; }
+
+        public override string[] GetProperties() {
+            var properties = new string[] {
+                "id",
+                "name",
+                "description",
+                "prefabPath",
+                "iconPath",
+            };
+            return properties;
+        }
+
+        public override void InitFromJObject(JObject jObject) {
+            this.id = jObject.Value<int>("id");
+            this.name = jObject.Value<string>("name");
+            this.description = jObject.Value<string>("description");
+            this.iconPath = jObject.Value<string>("iconPath");
+            this.prefabPath = jObject.Value<string>("prefabPath");
+        }
     }
 }

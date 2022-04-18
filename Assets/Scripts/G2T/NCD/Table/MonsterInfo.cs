@@ -9,6 +9,8 @@ using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Table {
     using Game;
+    using Newtonsoft.Json.Linq;
+    using System.Linq;
 
     [Serializable]
     public class MonsterInfo : ExcelData {
@@ -19,13 +21,21 @@ namespace G2T.NCD.Table {
             [HorizontalGroup("group")]
             [BoxGroup("group/아이디")]
             [HideLabel]
-            public int id;
+            private int id;
 
             [SerializeField]
             [HorizontalGroup("group")]
             [BoxGroup("group/개수")]
             [HideLabel]
-            public int amount;
+            private int amount;
+
+            public EvolutionMaterial(int id, int amount) {
+                this.id = id;
+                this.amount = amount;
+            }
+
+            public int Id { get => id; }
+            public int Amount { get => amount; }
         }
 
         [Serializable]
@@ -41,6 +51,14 @@ namespace G2T.NCD.Table {
             [BoxGroup("group/개수")]
             [HideLabel]
             public int amount;
+
+            public CatchMaterial(int id, int amount) {
+                this.id = id;
+                this.amount = amount;
+            }
+
+            public int Id { get => id; }
+            public int Amount { get => amount; }
         }
         #endregion
 
@@ -50,51 +68,109 @@ namespace G2T.NCD.Table {
         [LabelText("아이디")]
         [LabelWidth(80f)]
         [SerializeField]
-        public int id;
+        private int id;
         [BoxGroup("group/정보")]
         [LabelText("이름")]
         [LabelWidth(80f)]
         [SerializeField]
-        public string name;
+        private string name;
         [BoxGroup("group/정보")]
         [LabelText("설명")]
         [LabelWidth(80f)]
         [SerializeField]
-        public string description;
+        private string description;
 
         // 진화
         [BoxGroup("group/진화")]
         [LabelWidth(80f)]
         [LabelText("진화 재료")]
         [SerializeField]
-        public List<EvolutionMaterial> evolutionMaterials;
+        private List<EvolutionMaterial> evolutionMaterials;
         [BoxGroup("group/진화")]
         [LabelWidth(80f)]
         [LabelText("진화 결과")]
         [SerializeField]
-        public int evolutionResult;
+        private int evolutionResult;
 
         // 포획
         [BoxGroup("group/포획")]
         [LabelText("포획 재료")]
         [SerializeField]
-        public List<CatchMaterial> catchMaterials;
+        private List<CatchMaterial> catchMaterials;
 
         // 오브젝트
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("프리팹")]
         [SerializeField]
-        public Monster prefab;
+        private string prefabPath;
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("스탯")]
         [SerializeField]
-        public MonsterStatusInfo status;
+        private string statusPath;
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("아이콘")]
         [SerializeField]
-        public Sprite icon;
+        private string iconPath;
+
+
+        public override string[] GetProperties() {
+            var properties = new string[] {
+                "id",
+                "name",
+                "description",
+                "evolutionMaterialIds",
+                "evolutionMaterialAmounts",
+                "evolutionResult",
+                "catchMaterialIds",
+                "catchMaterialAmounts",
+                "prefabPath",
+                "statusPath",
+                "iconPath"
+            };
+            return properties;
+        }
+
+        public override void InitFromJObject(JObject jObject) {
+            this.id = jObject.Value<int>("id");
+            this.name = jObject.Value<string>("name");
+            this.description = jObject.Value<string>("description");
+            this.evolutionResult = jObject.Value<int>("evolutionResult");
+            this.prefabPath = jObject.Value<string>("prefabPath");
+            this.statusPath = jObject.Value<string>("statusPath");
+            this.iconPath = jObject.Value<string>("iconPath");
+
+            var evolutionMaterialIds = jObject["evolutionMaterialIds"].Values<int>().ToList();
+            var evolutionMaterialAmounts = jObject["evolutionMaterialAmounts"].Values<int>().ToList();
+
+            this.evolutionMaterials = new List<EvolutionMaterial>();
+            for(int i = 0; i < Mathf.Min(evolutionMaterialIds.Count, evolutionMaterialAmounts.Count); i++) {
+                evolutionMaterials.Add(new EvolutionMaterial(evolutionMaterialIds[i], evolutionMaterialAmounts[i]));
+            }
+
+
+            var catchMaterialIds = jObject["catchMaterialIds"].Values<int>().ToList();
+            var catchMaterialAmounts = jObject["catchMaterialAmounts"].Values<int>().ToList();
+
+            this.catchMaterials = new List<CatchMaterial>();
+            for(int i = 0; i < Mathf.Min(catchMaterialIds.Count, catchMaterialAmounts.Count); i++) {
+                catchMaterials.Add(new CatchMaterial(catchMaterialIds[i], catchMaterialAmounts[i]));
+            }
+        }
+
+        #region Getter
+        public int Id { get => id; }
+        public string Name { get => name; }
+        public string Description { get => description; }
+        public List<EvolutionMaterial> EvolutionMaterials { get => evolutionMaterials; }
+        public int EvoutionResult { get => evolutionResult; }
+        public List<CatchMaterial> CatchMaterials { get => catchMaterials; }
+        public string PrefabPath { get => prefabPath; }
+        public string IconPath { get => iconPath; }
+        public string StatusPath { get => statusPath; }
+        #endregion
+
     }
 }

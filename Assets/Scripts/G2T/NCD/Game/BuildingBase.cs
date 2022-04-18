@@ -11,6 +11,13 @@ namespace G2T.NCD.Game {
 
     public class BuildingBase : MonoBehaviour {
         [SerializeField]
+        private HpBar hpBar;
+
+        [SerializeField]
+        private float hp;
+        private float curHp;
+
+        [SerializeField]
         private float range;
         [SerializeField]
         private int count;
@@ -23,7 +30,6 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private RectTransform uiRoot;
 
-
         private int level;
         private List<Monster> monsters;
 
@@ -32,17 +38,16 @@ namespace G2T.NCD.Game {
         private Action OnDestroy;
         private Action OnRepair;
 
-
         // Getter
         public int Level { get => level; }
         public float Range { get => range; }
         public int Count { get => count; }
         public int CurrentCount { get => monsters.Count; }
 
-
         // Start is called before the first frame update
         void Start() {
-
+            this.curHp = this.hp;
+            this.hpBar.Init(this.hp);
         }
 
         // Update is called once per frame
@@ -55,13 +60,12 @@ namespace G2T.NCD.Game {
             
         }
 
-        public void AddMonster(Monster monster) {
-            this.monsters.Add(monster);
-
-            monster.OnDead += (monster) => {
-                this.monsters.Remove(monster);
-            };
+        public void OnDamaged(float damage) {
+            this.curHp -= damage;
+            this.hpBar.SetHp(curHp);
+            if(this.curHp <= 0f) {
+                //GameController.Instance.OnGameOver();
+            }
         }
     }
-
 }

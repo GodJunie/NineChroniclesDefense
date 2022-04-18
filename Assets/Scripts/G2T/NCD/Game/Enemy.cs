@@ -132,7 +132,7 @@ namespace G2T.NCD.Game {
                     }
                 } 
                 catch(Exception e) {
-
+                    Debug.LogError(e.Message);
                 }
             }
         }

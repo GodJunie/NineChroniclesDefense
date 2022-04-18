@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using Newtonsoft.Json.Linq;
 
 namespace G2T.NCD.Game {
     [System.Serializable]
@@ -59,5 +60,27 @@ namespace G2T.NCD.Game {
         public float CriDamage { get => criDamage; }
         public float MoveSpeed { get => moveSpeed; }
         public float AttackSpeed { get => attackSpeed; }
+
+        public static string[] Properties = new string[] {
+           "hp",
+           "atk",
+           "def",
+           "criProb",
+           "criDamage",
+           "moveSpeed",
+           "attackSpeed",
+        };
+
+        public static Status FromJObject(JObject jObject) {
+            var status = new Status();
+            status.hp          = jObject.Value<float>("hp");
+            status.atk         = jObject.Value<float>("atk");
+            status.def         = jObject.Value<float>("def");
+            status.criProb     = jObject.Value<float>("criProb");
+            status.criDamage   = jObject.Value<float>("criDamage");
+            status.moveSpeed   = jObject.Value<float>("moveSpeed");
+            status.attackSpeed = jObject.Value<float>("attackSpeed");
+            return status;
+        }
     }
 }

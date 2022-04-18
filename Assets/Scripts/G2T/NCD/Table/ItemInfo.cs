@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Editor
 using Sirenix.OdinInspector;
+using Newtonsoft.Json.Linq;
 
 namespace G2T.NCD.Table {
     [System.Serializable]
@@ -13,9 +14,8 @@ namespace G2T.NCD.Table {
         [HorizontalGroup("group", 80f)]
         [BoxGroup("group/아이콘")]
         [HideLabel]
-        [PreviewField(Alignment = ObjectFieldAlignment.Center, Height = 80f)]
         [SerializeField]
-        private Sprite icon;
+        private string iconPath;
 
         [SerializeField]
         [HorizontalGroup("group")]
@@ -35,15 +35,26 @@ namespace G2T.NCD.Table {
         [HideLabel]
         private string description;
 
-        public ItemInfo(int id, string name, string description) {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-        }
-
-        public Sprite Icon { get => icon; }
+        public string IconPath { get => iconPath; }
         public int Id { get => id; }
         public string Name { get => name; }
         public string Description { get => description; }
+
+        public override string[] GetProperties() {
+            var properties = new string[] {
+                "id",
+                "name",
+                "description",
+                "iconPath",
+            };
+            return properties;
+        }
+
+        public override void InitFromJObject(JObject jObject) {
+            this.id = jObject.Value<int>("id");
+            this.name = jObject.Value<string>("name");
+            this.description = jObject.Value<string>("description");
+            this.iconPath = jObject.Value<string>("iconPath");
+        }
     }
 }

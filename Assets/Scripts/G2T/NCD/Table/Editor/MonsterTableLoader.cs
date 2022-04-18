@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace G2T.NCD.Table.Editor {
-    public class MonsterTableLoader :ExcelTableLoader<MonsterTable, MonsterInfo> {
+    public class MonsterTableLoader : ExcelTableLoader<MonsterTableLoader, MonsterTable, MonsterInfo> {
         
     }
 }

@@ -75,7 +75,7 @@ namespace G2T.NCD.UI {
                 slot.CountText.text = string.Format("<color=#{0}>{1}</color>/{2}", (count < need.Count ? textDisabledColor : textEnabledColor).GetHexString(), count, need.Count);
 
                 slot.gameObject.SetActive(true);
-                slot.IconImage.sprite = info.Icon;
+                //slot.IconImage.sprite = info.Icon;
             }
 
             this.catchButton.interactable = this.CanCatch();

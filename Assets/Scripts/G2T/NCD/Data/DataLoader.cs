@@ -19,7 +19,7 @@ namespace G2T.NCD.Data {
         public List<object> Stages { get; private set; }
         public Dictionary<string, ItemData> Items { get; private set; }
 
-        private bool isDirty;
+        //private bool isDirty;
 
         
         [Button]
@@ -68,7 +68,7 @@ namespace G2T.NCD.Data {
             if(this.Monsters == null) this.Monsters = new Dictionary<string, MonsterData>();
             var monster = new MonsterData() { Id = id };
             this.Monsters.Add(NewGuid(), monster);
-            this.isDirty = true;
+            //this.isDirty = true;
         }
         #endregion
 

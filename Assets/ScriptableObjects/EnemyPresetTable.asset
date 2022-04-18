@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2c2c1bb975c5f428509fade2639208, type: 3}
+  m_Name: EnemyPresetTable
+  m_EditorClassIdentifier: 
+  Datas:
+  - id: 20010000
+    enemyId: 2001000
+    status:
+      hp: 10
+      atk: 10
+      def: 10
+      criProb: 0.1
+      criDamage: 1.5
+      moveSpeed: 10
+      attackSpeed: 10
+    dropItems:
+    - id: 2001000
+      amount: 1
+  - id: 20010001
+    enemyId: 2001000
+    status:
+      hp: 10
+      atk: 10
+      def: 10
+      criProb: 0.1
+      criDamage: 1.5
+      moveSpeed: 11
+      attackSpeed: 10
+    dropItems:
+    - id: 2001000
+      amount: 2
