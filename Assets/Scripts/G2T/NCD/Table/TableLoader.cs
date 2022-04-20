@@ -5,15 +5,10 @@ using UnityEngine;
 namespace G2T.NCD.Table {
     public class TableLoader : SingletonBehaviour<TableLoader> {
         public ItemTable ItemTable;
-
-        // Start is called before the first frame update
-        void Start() {
-
-        }
-
-        // Update is called once per frame
-        void Update() {
-
-        }
+        public MonsterTable MonsterTable;
+        public EnemyTable EnemyTable;
+        public EnemyPresetTable EnemyPresetTable;
+        public StageTable StageTable;
+        public BuildingTable BuildingTable;
     }
 }

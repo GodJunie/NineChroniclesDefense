@@ -73,6 +73,11 @@ namespace G2T.NCD.Table {
         [LabelText("프리팹")]
         [SerializeField]
         private string prefabPath;
+        [BoxGroup("group/연결")]
+        [LabelWidth(80f)]
+        [LabelText("아이콘 이미지")]
+        [SerializeField]
+        private string iconPath;
 
         public override string[] GetProperties() {
             var properties = new string[] {
@@ -84,6 +89,7 @@ namespace G2T.NCD.Table {
                 "range",
                 "statusPath",
                 "prefabPath",
+                "iconPath",
             };
             return properties;
         }
@@ -105,6 +111,7 @@ namespace G2T.NCD.Table {
 
             this.statusPath = jObject.Value<string>("statusPath");
             this.prefabPath = jObject.Value<string>("prefabPath");
+            this.iconPath = jObject.Value<string>("iconPath");
         }
 
         #region Getter
@@ -115,6 +122,7 @@ namespace G2T.NCD.Table {
         public float Range { get => range; }
         public string StatusPath { get => statusPath; }
         public string PrefabPath { get => prefabPath; }
+        public string IconPath { get => IconPath; }
         #endregion
     }
 }

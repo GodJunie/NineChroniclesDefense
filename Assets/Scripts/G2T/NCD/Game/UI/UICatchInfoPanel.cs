@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
-namespace G2T.NCD.UI {
+namespace G2T.NCD.Game.UI {
     using Table;
     using Data;
     using Game;

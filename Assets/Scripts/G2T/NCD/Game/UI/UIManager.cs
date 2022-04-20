@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace G2T.NCD.UI {
+namespace G2T.NCD.Game.UI {
     public class UIManager : SingletonBehaviour<UIManager> {
         [SerializeField]
         private List<UIInfo> uis;

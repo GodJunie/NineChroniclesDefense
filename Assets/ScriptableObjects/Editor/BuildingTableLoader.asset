@@ -14,5 +14,317 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FolderPath: Assets/ScriptableObjects
   filePath: C:/Users/godju/Downloads/Building_Info.xlsx
-  sheetName: Description
-  Columns: []
+  sheetName: BuildingInfo
+  Columns:
+  - ColumnName: Id
+    PropertyName: id
+    Type: 0
+    IsArray: 0
+    index: 1
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath
+  - ColumnName: Name
+    PropertyName: name
+    Type: 2
+    IsArray: 0
+    index: 2
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath
+  - ColumnName: Description
+    PropertyName: description
+    Type: 2
+    IsArray: 0
+    index: 3
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath
+  - ColumnName: ItemIds
+    PropertyName: constructItemIds
+    Type: 0
+    IsArray: 1
+    index: 4
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath
+  - ColumnName: ItemAmounts
+    PropertyName: constructItemAmounts
+    Type: 0
+    IsArray: 1
+    index: 5
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath
+  - ColumnName: Range
+    PropertyName: range
+    Type: 1
+    IsArray: 0
+    index: 6
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath
+  - ColumnName: StatusPath
+    PropertyName: statusPath
+    Type: 2
+    IsArray: 0
+    index: 7
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath
+  - ColumnName: PrefabPath
+    PropertyName: prefabPath
+    Type: 2
+    IsArray: 0
+    index: 8
+    cols:
+    - Id
+    - Name
+    - Description
+    - ItemIds
+    - ItemAmounts
+    - Range
+    - StatusPath
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - constructItemIds
+    - constructItemAmounts
+    - range
+    - statusPath
+    - prefabPath

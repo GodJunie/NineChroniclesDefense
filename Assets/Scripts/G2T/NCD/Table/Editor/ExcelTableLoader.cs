@@ -23,7 +23,10 @@ using Newtonsoft.Json.Linq;
 
 namespace G2T.NCD.Table.Editor {
     [Serializable]
-    public class ExcelTableLoader<Loader, Table, Data> : ScriptableObject where Loader : ExcelTableLoader<Loader, Table, Data>, new() where Table : ExcelTable<Table, Data>, new() where Data : ExcelData, new() {
+    public class ExcelTableLoader<Loader, Table, Data> : ScriptableObject 
+        where Loader : ExcelTableLoader<Loader, Table, Data>, new() 
+        where Table : ExcelTable<Table, Data>, new() 
+        where Data : ExcelData, new() {
         public enum ValueType { Int, Float, String, Boolean };
 
         [Serializable]

@@ -10,6 +10,11 @@ namespace G2T.NCD.Game {
     using Table;
 
     public class BuildingBase : MonoBehaviour {
+        // 정보
+        [SerializeField]
+        private int id;
+
+
         [SerializeField]
         private HpBar hpBar;
 
@@ -38,11 +43,15 @@ namespace G2T.NCD.Game {
         private Action OnDestroy;
         private Action OnRepair;
 
-        // Getter
+
+        #region Getter
+        public int Id { get => id; }
         public int Level { get => level; }
         public float Range { get => range; }
         public int Count { get => count; }
         public int CurrentCount { get => monsters.Count; }
+        #endregion
+
 
         // Start is called before the first frame update
         void Start() {

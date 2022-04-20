@@ -22,7 +22,7 @@ namespace G2T.NCD.Game {
         private List<BackgroundGroup> backgrounds;
         [TabGroup("group", "오브젝트")]
         [SerializeField]
-        private House house;
+        private PlayerController player;
 
         #region UI
         // 패널
@@ -45,11 +45,6 @@ namespace G2T.NCD.Game {
         private Text textEnemiesCount;
         #endregion
 
-        [TabGroup("group", "런타임 데이터")]
-        [ListDrawerSettings]
-        [SerializeField]
-        private List<ItemData> items = new List<ItemData>();
-
         [TabGroup("group", "게임 설정")]
         [BoxGroup("group/게임 설정/맵 크기")]
         [HorizontalGroup("group/게임 설정/맵 크기/group", .5f)]
@@ -64,24 +59,15 @@ namespace G2T.NCD.Game {
         private float minRangeRight;
         #endregion
 
-        // Private Members
-        #region Private Members
-        private List<Monster> monsters = new List<Monster>();
-        private List<Enemy> enemies = new List<Enemy>();
+        public List<ItemData> Items { get; private set; }
+        public List<Enemy> Enemies { get; private set; }
+        public List<Monster> Monsters { get; private set; }
+        public List<BuildingBase> Buildings { get; private set; }
+        public float RangeLeft { get; private set; }
+        public float RangeRight { get; private set; }
 
-        private List<BuildingBase> buildings = new List<BuildingBase>();
-
-        private float rangeLeft;
-        private float rangeRight;
-
-        // Getter
-        public List<ItemData> Items { get => items; }
-        public House House { get => house; }
-        public List<Enemy> Enemies { get => enemies; }
-
-        public float RangeLeft { get => rangeLeft; }
-        public float RangeRight { get => rangeRight; }
-        #endregion
+        public PlayerController Player { get => player; }
+       
 
         protected override void Awake() {
         
@@ -100,15 +86,37 @@ namespace G2T.NCD.Game {
 
         }
 
+        #region Item
         public void AddItem(int id, int count) {
             var info = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == id);
             if(info == null) {
                 throw new Exception(string.Format("{0} 에 해당하는 아이템이 없음", id));
             }
         }
+        #endregion
+
+        #region Building
+        public void OnConstructBuilding(int id) {
+
+        }
 
         public void AddBuilding() {
 
         }
+        #endregion
+
+        #region Data
+        public void LoadGame() {
+
+        }
+
+        public void GameStart() {
+
+
+            RangeLeft = minRangeLeft;
+            RangeRight = minRangeRight;
+        }
+        #endregion
+
     }
 }

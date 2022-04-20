@@ -58,7 +58,7 @@ namespace G2T.NCD.Game {
         void Start() {
             this.curState = State.Move;
 
-            var house = GameController.Instance.House;
+            var house = GameController.Instance.Buildings.Find(e => e is House);
             var diff = house.transform.position - this.transform.position;
             if(diff.x < 0) {
                 // ¸ñÇ¥¹° ¿ÞÂÊ

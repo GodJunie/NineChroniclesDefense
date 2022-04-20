@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
 
-namespace G2T.NCD.UI {
+namespace G2T.NCD.Game.UI {
     public class UICatchPanelSlot : MonoBehaviour {
         public Image IconImage;
         public Text CountText;

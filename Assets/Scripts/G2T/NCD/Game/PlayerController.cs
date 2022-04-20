@@ -19,6 +19,9 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private Transform skeletonTransform;
 
+        [SerializeField]
+        private RectTransform uiRoot;
+
         private new Transform transform;
 
         private Direction curDirection;

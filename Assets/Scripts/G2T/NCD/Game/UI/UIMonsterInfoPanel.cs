@@ -9,8 +9,7 @@ using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
 
-namespace G2T.NCD.UI {
-    using Game;
+namespace G2T.NCD.Game.UI {
     using Table;
     using Data;
 
