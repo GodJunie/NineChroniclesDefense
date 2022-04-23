@@ -11,7 +11,7 @@ namespace G2T.NCD.Game {
         private Sprite spriteFriendlyFill;
 
         public void SetType (MonsterType type) {
-            if(type == MonsterType.Neutrality) {
+            if(type == MonsterType.Wild) {
                 this.hpFill.sprite = spriteNeutralityFill;
             } else {
                 this.hpFill.sprite = spriteFriendlyFill;

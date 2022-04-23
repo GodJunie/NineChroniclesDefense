@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8424750890d51e9428f08b1c3843c03f, type: 3}
   m_Name: BuildingTableLoader
   m_EditorClassIdentifier: 
-  FolderPath: Assets/ScriptableObjects
+  FolderPath: Assets/ScriptableObjects/Tables
   filePath: C:/Users/godju/Downloads/Building_Info.xlsx
   sheetName: BuildingInfo
   Columns:

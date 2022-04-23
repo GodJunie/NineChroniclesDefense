@@ -1,0 +1,284 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 59ac6147b6df8a74e90c647490c816e8, type: 3}
+  m_Name: StageTimelineTableLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/ScriptableObjects/StageTimeline
+  filePath: C:/Users/godju/Downloads/Timeline_Table (1).xlsx
+  sheetName: Stage1
+  Columns:
+  - ColumnName: Timepart
+    PropertyName: timePart
+    Type: 2
+    IsArray: 0
+    index: 1
+    cols:
+    - Timepart
+    - Period
+    - WaveLeftId
+    - WaveRightId
+    - MonsterId
+    - MonsterAmounts
+    - MonsterPercent
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - timePart
+    - time
+    - waveLeftIds
+    - waveRightIds
+    - monsterIds
+    - monsterProbs
+    - monsterAmount
+  - ColumnName: Period
+    PropertyName: time
+    Type: 1
+    IsArray: 0
+    index: 2
+    cols:
+    - Timepart
+    - Period
+    - WaveLeftId
+    - WaveRightId
+    - MonsterId
+    - MonsterAmounts
+    - MonsterPercent
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - timePart
+    - time
+    - waveLeftIds
+    - waveRightIds
+    - monsterIds
+    - monsterProbs
+    - monsterAmount
+  - ColumnName: WaveLeftId
+    PropertyName: waveLeftIds
+    Type: 0
+    IsArray: 1
+    index: 3
+    cols:
+    - Timepart
+    - Period
+    - WaveLeftId
+    - WaveRightId
+    - MonsterId
+    - MonsterAmounts
+    - MonsterPercent
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - timePart
+    - time
+    - waveLeftIds
+    - waveRightIds
+    - monsterIds
+    - monsterProbs
+    - monsterAmount
+  - ColumnName: WaveRightId
+    PropertyName: waveRightIds
+    Type: 0
+    IsArray: 1
+    index: 4
+    cols:
+    - Timepart
+    - Period
+    - WaveLeftId
+    - WaveRightId
+    - MonsterId
+    - MonsterAmounts
+    - MonsterPercent
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - timePart
+    - time
+    - waveLeftIds
+    - waveRightIds
+    - monsterIds
+    - monsterProbs
+    - monsterAmount
+  - ColumnName: MonsterId
+    PropertyName: monsterIds
+    Type: 0
+    IsArray: 1
+    index: 5
+    cols:
+    - Timepart
+    - Period
+    - WaveLeftId
+    - WaveRightId
+    - MonsterId
+    - MonsterAmounts
+    - MonsterPercent
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - timePart
+    - time
+    - waveLeftIds
+    - waveRightIds
+    - monsterIds
+    - monsterProbs
+    - monsterAmount
+  - ColumnName: MonsterPercent
+    PropertyName: monsterProbs
+    Type: 1
+    IsArray: 1
+    index: 7
+    cols:
+    - Timepart
+    - Period
+    - WaveLeftId
+    - WaveRightId
+    - MonsterId
+    - MonsterAmounts
+    - MonsterPercent
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - timePart
+    - time
+    - waveLeftIds
+    - waveRightIds
+    - monsterIds
+    - monsterProbs
+    - monsterAmount
+  - ColumnName: MonsterAmounts
+    PropertyName: monsterAmount
+    Type: 0
+    IsArray: 0
+    index: 6
+    cols:
+    - Timepart
+    - Period
+    - WaveLeftId
+    - WaveRightId
+    - MonsterId
+    - MonsterAmounts
+    - MonsterPercent
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - timePart
+    - time
+    - waveLeftIds
+    - waveRightIds
+    - monsterIds
+    - monsterProbs
+    - monsterAmount

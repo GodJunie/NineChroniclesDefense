@@ -11,12 +11,6 @@ using Newtonsoft.Json.Linq;
 namespace G2T.NCD.Table {
     [System.Serializable]
     public class ItemInfo : ExcelData {
-        [HorizontalGroup("group", 80f)]
-        [BoxGroup("group/아이콘")]
-        [HideLabel]
-        [SerializeField]
-        private string iconPath;
-
         [SerializeField]
         [HorizontalGroup("group")]
         [BoxGroup("group/정보")]
@@ -34,6 +28,14 @@ namespace G2T.NCD.Table {
         [BoxGroup("group/정보/group/설명")]
         [HideLabel]
         private string description;
+
+        [HorizontalGroup("group")]
+        [BoxGroup("group/연결")]
+        [BoxGroup("group/연결/아이콘 경로")]
+        [HideLabel]
+        [SerializeField]
+        [FilePath(AbsolutePath = false)]
+        private string iconPath;
 
         public string IconPath { get => iconPath; }
         public int Id { get => id; }

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace G2T.NCD.Game.UI {
+    using System.IO;
+    using System.Linq;
     using Table;
     using UnityEngine.EventSystems;
 
@@ -25,25 +27,27 @@ namespace G2T.NCD.Game.UI {
         private void Awake() {
             table = TableLoader.Instance.BuildingTable;
 
+            var datas = table.Datas.Where(e => e.Id != 5001000).ToList();
+
             for(int i = 0; i < buttons.Count; i++) {
                 var button = buttons[i];
                 var iconImage = iconImages[i];
 
-                if(i < table.Datas.Count) {
-                    var data = table.Datas[i];
+                if(i < datas.Count) {
+                    var data = datas[i];
 
                     button.onClick.AddListener(() => {
                         int id = data.Id;
                         Debug.Log(string.Format("Try to construct building id : {0}", id));
+                        GameController.Instance.OnConstructBuilding(id);
+                        this.gameObject.SetActive(false);
                     });
 
-                    //try {
-                    //    var icon = Resources.Load<Sprite>(data.IconPath);
-                    //    iconImage.sprite = icon;
-                    //}
-                    //catch {
+                    var path = data.IconPath;
+                    path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
 
-                    //}
+                    var icon = Resources.Load<Sprite>(path);
+                    iconImage.sprite = icon;
 
                     var trigger = button.GetComponent<EventTrigger>();
 

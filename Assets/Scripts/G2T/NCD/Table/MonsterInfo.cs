@@ -102,16 +102,19 @@ namespace G2T.NCD.Table {
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("프리팹")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string prefabPath;
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("스탯")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string statusPath;
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("아이콘")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string iconPath;
 
@@ -142,21 +145,26 @@ namespace G2T.NCD.Table {
             this.statusPath = jObject.Value<string>("statusPath");
             this.iconPath = jObject.Value<string>("iconPath");
 
-            var evolutionMaterialIds = jObject["evolutionMaterialIds"].Values<int>().ToList();
-            var evolutionMaterialAmounts = jObject["evolutionMaterialAmounts"].Values<int>().ToList();
 
-            this.evolutionMaterials = new List<EvolutionMaterial>();
-            for(int i = 0; i < Mathf.Min(evolutionMaterialIds.Count, evolutionMaterialAmounts.Count); i++) {
-                evolutionMaterials.Add(new EvolutionMaterial(evolutionMaterialIds[i], evolutionMaterialAmounts[i]));
+            if(jObject["evolutionMaterialIds"] != null && jObject["evolutionMaterialAmounts"] != null) {
+                var evolutionMaterialIds = jObject["evolutionMaterialIds"].Values<int>().ToList();
+                var evolutionMaterialAmounts = jObject["evolutionMaterialAmounts"].Values<int>().ToList();
+
+                this.evolutionMaterials = new List<EvolutionMaterial>();
+                for(int i = 0; i < Mathf.Min(evolutionMaterialIds.Count, evolutionMaterialAmounts.Count); i++) {
+                    evolutionMaterials.Add(new EvolutionMaterial(evolutionMaterialIds[i], evolutionMaterialAmounts[i]));
+                }
             }
 
 
-            var catchMaterialIds = jObject["catchMaterialIds"].Values<int>().ToList();
-            var catchMaterialAmounts = jObject["catchMaterialAmounts"].Values<int>().ToList();
+            if(jObject["catchMaterialIds"] != null && jObject["catchMaterialAmounts"] != null) {
+                var catchMaterialIds = jObject["catchMaterialIds"].Values<int>().ToList();
+                var catchMaterialAmounts = jObject["catchMaterialAmounts"].Values<int>().ToList();
 
-            this.catchMaterials = new List<CatchMaterial>();
-            for(int i = 0; i < Mathf.Min(catchMaterialIds.Count, catchMaterialAmounts.Count); i++) {
-                catchMaterials.Add(new CatchMaterial(catchMaterialIds[i], catchMaterialAmounts[i]));
+                this.catchMaterials = new List<CatchMaterial>();
+                for(int i = 0; i < Mathf.Min(catchMaterialIds.Count, catchMaterialAmounts.Count); i++) {
+                    catchMaterials.Add(new CatchMaterial(catchMaterialIds[i], catchMaterialAmounts[i]));
+                }
             }
         }
 
@@ -172,5 +180,13 @@ namespace G2T.NCD.Table {
         public string StatusPath { get => statusPath; }
         #endregion
 
+        public void Temp(string prefabFolderPath, string iconFolderPath, string statusFolderPath) {
+            if(!this.prefabPath.StartsWith(prefabFolderPath))
+                this.prefabPath = string.Format(prefabFolderPath + prefabPath + ".prefab");
+            if(!this.iconPath.StartsWith(iconFolderPath))
+                this.iconPath = string.Format(iconFolderPath + iconPath + ".png");
+            if(!this.statusPath.StartsWith(statusFolderPath))
+                this.statusPath = string.Format(statusFolderPath + statusPath + ".asset");
+        }
     }
 }

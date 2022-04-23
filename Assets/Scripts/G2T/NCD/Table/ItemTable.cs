@@ -22,6 +22,6 @@ using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Table {
     public class ItemTable : ExcelTable<ItemTable, ItemInfo> {
-
+        
     }
 }

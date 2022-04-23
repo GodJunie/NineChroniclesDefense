@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7c6b9f11d82704fad0be5412f1ab20, type: 3}
+  m_Name: RestaurantStatusTable
+  m_EditorClassIdentifier: 
+  Datas:
+  - status:
+      hp: 200
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3005011
+      amount: 3
+    - id: 3004012
+      amount: 3
+    synthesisIds: e1930400e2930400e3930400e4930400
+  - status:
+      hp: 220
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3005011
+      amount: 2
+    - id: 3004013
+      amount: 3
+    - id: 3004014
+      amount: 3
+    synthesisIds: e5930400e6930400e7930400
+  - status:
+      hp: 240
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3002008
+      amount: 5
+    - id: 3004020
+      amount: 3
+    synthesisIds: e8930400
+  - status:
+      hp: 260
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004022
+      amount: 4
+    - id: 3006024
+      amount: 1
+    - id: 3004010
+      amount: 1
+    synthesisIds: e9930400
+  - status:
+      hp: 280
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004015
+      amount: 3
+    - id: 3006003
+      amount: 2
+    - id: 3005003
+      amount: 3
+    synthesisIds: ea930400
+  - status:
+      hp: 300
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3006014
+      amount: 3
+    - id: 3002008
+      amount: 7
+    synthesisIds: eb930400
+  - status:
+      hp: 320
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3005012
+      amount: 5
+    - id: 3004006
+      amount: 2
+    - id: 3004007
+      amount: 2
+    synthesisIds: ef930400
+  - status:
+      hp: 340
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004022
+      amount: 6
+    - id: 3004008
+      amount: 3
+    - id: 3004010
+      amount: 3
+    synthesisIds: ec930400
+  - status:
+      hp: 360
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3006026
+      amount: 2
+    - id: 3006000
+      amount: 4
+    - id: 30006003
+      amount: 6
+    synthesisIds: ed930400
+  - status:
+      hp: 380
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 0
+      amount: 0
+    synthesisIds: ee930400

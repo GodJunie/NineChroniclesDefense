@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25895213ff148644bbac03f0d7e99e0c, type: 3}
   m_Name: StageTableLoader
   m_EditorClassIdentifier: 
-  FolderPath: 
+  FolderPath: Assets/ScriptableObjects/Tables
   filePath: 
   sheetName: 
   Columns: []

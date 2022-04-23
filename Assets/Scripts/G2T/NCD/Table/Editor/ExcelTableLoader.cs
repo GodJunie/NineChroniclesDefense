@@ -202,6 +202,7 @@ namespace G2T.NCD.Table.Editor {
                 if(header.StringCellValue == "END")
                     break;
 
+
                 var jObj = new JObject();
                 foreach(var col in Columns) {
                     var cell = GetCell(row, col.index);
@@ -215,11 +216,14 @@ namespace G2T.NCD.Table.Editor {
                         value = cell.StringCellValue;
                         break;
                     default:
-                        Debug.LogError(string.Format("Undefined Cell Type {0}", cell.CellType));
                         break;
                     }
 
                     if(col.IsArray) {
+                        if(value == null) {
+                            jObj.Add(col.PropertyName, new JArray());
+                            continue;
+                        }
                         var values = Convert.ToString(value).Split(new char[] { ',' });
                         switch(col.Type) {
                         case ValueType.Boolean:
@@ -252,6 +256,7 @@ namespace G2T.NCD.Table.Editor {
                         }
                     }
                 }
+
                 string json = jObj.ToString();
                 Debug.Log(json);
 
@@ -273,6 +278,7 @@ namespace G2T.NCD.Table.Editor {
 
             try {
                 UnityEditor.AssetDatabase.CreateAsset(table, path);
+                UnityEditor.AssetDatabase.ImportAsset(path);
             }
             catch(Exception e) {
                 Debug.LogError(e.Message);

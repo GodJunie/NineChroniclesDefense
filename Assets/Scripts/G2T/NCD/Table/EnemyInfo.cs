@@ -35,11 +35,13 @@ namespace G2T.NCD.Table {
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("프리팹")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string prefabPath;
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("아이콘")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string iconPath;
 
@@ -66,6 +68,15 @@ namespace G2T.NCD.Table {
             this.description = jObject.Value<string>("description");
             this.iconPath = jObject.Value<string>("iconPath");
             this.prefabPath = jObject.Value<string>("prefabPath");
+        }
+
+        public void Temp() {
+            var p = "Assets/Resources/Prefabs/Game/Enemies/";
+            if(!this.prefabPath.StartsWith(p))
+                this.prefabPath = string.Format(p + prefabPath + ".prefab");
+            var p2 = "Assets/Resources/UI/Icons/Character/";
+            if(!this.iconPath.StartsWith(p2))
+                this.iconPath = string.Format(p2 + iconPath + ".png");
         }
     }
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db2d8ad206d3364a97c5a829e3c20d8, type: 3}
   m_Name: MonsterTableLoader
   m_EditorClassIdentifier: 
-  FolderPath: Assets/ScriptableObjects
-  filePath: C:/Users/godju/Documents/Tables/MonsterInfo.xlsx
+  FolderPath: Assets/ScriptableObjects/Tables
+  filePath: C:/Users/godju/Downloads/Monster_Info.xlsx
   sheetName: MonsterInfo
   Columns:
   - ColumnName: Id
@@ -34,6 +34,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -50,7 +62,7 @@ MonoBehaviour:
     PropertyName: name
     Type: 2
     IsArray: 0
-    index: 2
+    index: 15
     cols:
     - Id
     - Name
@@ -64,6 +76,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -80,7 +104,7 @@ MonoBehaviour:
     PropertyName: description
     Type: 2
     IsArray: 0
-    index: 3
+    index: 16
     cols:
     - Id
     - Name
@@ -94,6 +118,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -124,6 +160,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -154,6 +202,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -184,6 +244,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -214,6 +286,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -244,6 +328,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -274,6 +370,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -304,6 +412,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name
@@ -334,6 +454,18 @@ MonoBehaviour:
     - PrefabPath
     - IconPath
     - TargetType
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     properties:
     - id
     - name

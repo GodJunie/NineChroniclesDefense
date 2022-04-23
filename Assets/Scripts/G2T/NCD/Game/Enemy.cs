@@ -10,8 +10,11 @@ using Spine.Unity;
 // Other
 using Sirenix.OdinInspector;
 using Cysharp.Threading.Tasks;
+using System.Linq;
 
 namespace G2T.NCD.Game {
+    using Table;
+
     [RequireComponent(typeof(Rigidbody2D))]
     public class Enemy : MonoBehaviour {
         // Serialized Members
@@ -20,9 +23,6 @@ namespace G2T.NCD.Game {
         private SkeletonAnimation anim;
         [SerializeField]
         private HpBar hpBar;
-        // Settings
-        [SerializeField]
-        private Status status;
 
         [SerializeField]
         private Transform skeletonTransform;
@@ -31,34 +31,35 @@ namespace G2T.NCD.Game {
         private Direction defaultDirection;
 
         [SerializeField]
-        private GameObject booty;
+        private GameObject bootyPrefab;
 
         // Private Members
         // Components
         private Rigidbody2D rigid;
         private new Transform transform;
         // game
+        private Status status;
+
         private Direction curDirection;
         private State curState;
         private float curHp;
 
         // objects
         private List<Monster> monsters = new List<Monster>();
-        private House targetHouse;
+        private List<BuildingBase> buildings = new List<BuildingBase>();
 
         // Events
         public Action<Enemy> OnDead;
 
-        private void Awake() {
-            this.rigid = GetComponent<Rigidbody2D>();
-            this.transform = GetComponent<Transform>();
-        }
+        private EnemyPresetInfo info;
 
-        // Start is called before the first frame update
-        void Start() {
+        public void Init(EnemyPresetInfo info) {
+            this.info = info;
+            this.status = info.Status;
+
             this.curState = State.Move;
 
-            var house = GameController.Instance.Buildings.Find(e => e is House);
+            var house = GameController.Instance.House;
             var diff = house.transform.position - this.transform.position;
             if(diff.x < 0) {
                 // ¸ñÇ¥¹° ¿ÞÂÊ
@@ -71,6 +72,16 @@ namespace G2T.NCD.Game {
             this.hpBar.Init(this.status.Hp);
 
             StartFSM();
+        }
+
+        private void Awake() {
+            this.rigid = GetComponent<Rigidbody2D>();
+            this.transform = GetComponent<Transform>();
+        }
+
+        // Start is called before the first frame update
+        void Start() {
+            
         }
 
         // Update is called once per frame
@@ -122,13 +133,11 @@ namespace G2T.NCD.Game {
             if(this.curState == State.Attack) {
                 try {
                     if(this.monsters.Count > 0) {
-                        foreach(var monster in this.monsters) {
-                            if(monster != null)
-                                monster.OnDamaged(this.status.Atk);
-                        }
-                    }
-                    if(targetHouse != null) {
-                        targetHouse.OnDamaged(this.status.Atk);
+                        var monster = this.monsters.OrderBy(e => Mathf.Abs(e.PosX - this.transform.position.x)).First();
+                        monster.OnDamaged(this.status.Atk);
+                    } else if(this.buildings.Count > 0) {
+                        var building = this.buildings.OrderBy(e => Mathf.Abs(e.PosX - this.transform.position.x)).First();
+                        building.OnDamaged(this.status.Atk);
                     }
                 } 
                 catch(Exception e) {
@@ -147,7 +156,20 @@ namespace G2T.NCD.Game {
         private IEnumerator Dead() {
             var entry = this.anim.AnimationState.SetAnimation(0, "Die", false);
             yield return new WaitForSpineAnimationComplete(entry);
-            Instantiate(booty, this.transform.position, Quaternion.identity);
+
+            var booty = Instantiate(bootyPrefab, this.transform.position, Quaternion.identity).GetComponent<Booty>();
+
+            var sum = info.DropItems.Sum(e => e.Prob);
+            var rand = UnityEngine.Random.Range(0f, sum);
+
+            foreach(var dropItem in info.DropItems) {
+                if(rand <= dropItem.Prob) {
+                    booty.Init(dropItem.Id, dropItem.Amount);
+                    break;
+                }
+                rand -= dropItem.Prob;
+            }
+
             Destroy(this.gameObject);
             yield break;
         }
@@ -171,15 +193,26 @@ namespace G2T.NCD.Game {
                 monster.OnDead += (monster) => {
                     if(this.monsters.Contains(monster)) {
                         this.monsters.Remove(monster);
-                        if(this.monsters.Count == 0 && this.targetHouse == null) {
+                        if(this.monsters.Count == 0 && this.buildings.Count == 0) {
                             this.curState = State.Move;
                         }
                     }
                 };
                 break;
-            case "House":
-                this.targetHouse = collision.GetComponent<House>();
+            case "Building":
+                var building = collision.GetComponent<MonsterHouse>();
+                if(this.buildings.Contains(building)) return;
+                this.buildings.Add(building);
                 this.curState = State.Attack;
+
+                building.OnDead += (e) => {
+                    if(this.buildings.Contains(e)) {
+                        this.buildings.Remove(e);
+                        if(this.monsters.Count == 0 && this.buildings.Count == 0) {
+                            this.curState = State.Move;
+                        }
+                    }
+                };
                 break;
             }
         }

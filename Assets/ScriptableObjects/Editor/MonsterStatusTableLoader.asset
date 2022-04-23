@@ -1,0 +1,270 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 84aaae40c1416f7488fcf6ef2c7f0054, type: 3}
+  m_Name: MonsterStatusTableLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/Resources/Prefabs/Game/MonsterStatusTables
+  filePath: C:/Users/godju/Downloads/Monster_Status.xlsx
+  sheetName: Status_1001003
+  Columns:
+  - ColumnName: ItemIds
+    PropertyName: levelUpItemIds
+    Type: 0
+    IsArray: 1
+    index: 11
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: ItemAmounts
+    PropertyName: levelUpItemAmounts
+    Type: 0
+    IsArray: 1
+    index: 12
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: HP
+    PropertyName: hp
+    Type: 1
+    IsArray: 0
+    index: 2
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: Atk
+    PropertyName: atk
+    Type: 1
+    IsArray: 0
+    index: 3
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: Def
+    PropertyName: def
+    Type: 1
+    IsArray: 0
+    index: 4
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: CriProb
+    PropertyName: criProb
+    Type: 1
+    IsArray: 0
+    index: 6
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: CriDamage
+    PropertyName: criDamage
+    Type: 1
+    IsArray: 0
+    index: 5
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: MoveSpeed
+    PropertyName: moveSpeed
+    Type: 1
+    IsArray: 0
+    index: 10
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+  - ColumnName: AtkSpeed
+    PropertyName: attackSpeed
+    Type: 1
+    IsArray: 0
+    index: 9
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed

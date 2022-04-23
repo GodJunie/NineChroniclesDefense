@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 22575bfe8ffa9cd4d8fe0e571e39f434, type: 3}
+  m_Name: EnemyTableLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/ScriptableObjects/Tables
+  filePath: C:/Users/godju/Downloads/Enemy_Info.xlsx
+  sheetName: EnemyInfo
+  Columns:
+  - ColumnName: Id
+    PropertyName: id
+    Type: 0
+    IsArray: 0
+    index: 1
+    cols:
+    - HAED
+    - Id
+    - Name
+    - Description
+    - IconPath
+    - PrefabPath
+    - TargetType
+    - 
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - prefabPath
+    - iconPath
+  - ColumnName: Name
+    PropertyName: name
+    Type: 2
+    IsArray: 0
+    index: 10
+    cols:
+    - HAED
+    - Id
+    - Name
+    - Description
+    - IconPath
+    - PrefabPath
+    - TargetType
+    - 
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - prefabPath
+    - iconPath
+  - ColumnName: Description
+    PropertyName: description
+    Type: 2
+    IsArray: 0
+    index: 11
+    cols:
+    - HAED
+    - Id
+    - Name
+    - Description
+    - IconPath
+    - PrefabPath
+    - TargetType
+    - 
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - prefabPath
+    - iconPath
+  - ColumnName: PrefabPath
+    PropertyName: prefabPath
+    Type: 2
+    IsArray: 0
+    index: 5
+    cols:
+    - HAED
+    - Id
+    - Name
+    - Description
+    - IconPath
+    - PrefabPath
+    - TargetType
+    - 
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - prefabPath
+    - iconPath
+  - ColumnName: IconPath
+    PropertyName: iconPath
+    Type: 2
+    IsArray: 0
+    index: 4
+    cols:
+    - HAED
+    - Id
+    - Name
+    - Description
+    - IconPath
+    - PrefabPath
+    - TargetType
+    - 
+    - 
+    - Name
+    - Description
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - prefabPath
+    - iconPath

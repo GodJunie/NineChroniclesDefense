@@ -18,15 +18,27 @@ namespace G2T.NCD.Game {
         private Direction defaultDirection;
         [SerializeField]
         private Transform skeletonTransform;
-
+        
         [SerializeField]
         private RectTransform uiRoot;
+        [SerializeField]
+        private Vector2 rootCanvasPosition;
+
+        [SerializeField]
+        private Transform buildingHolder;
+        [SerializeField]
+        private Vector2 buildingHolderPos;
 
         private new Transform transform;
 
         private Direction curDirection;
 
         private List<Monster> monsters = new List<Monster>();
+        private List<BuildingBase> buildings = new List<BuildingBase>();
+
+        public Transform BuildingHoder { get => buildingHolder; }
+
+        private IInteractable interactableTarget;
 
         private void Awake() {
             this.transform = GetComponent<Transform>();
@@ -34,15 +46,43 @@ namespace G2T.NCD.Game {
 
         // Start is called before the first frame update
         void Start() {
-
+            SetDirection(Direction.Right);
         }
 
         // Update is called once per frame
         void Update() {
             KeyboardInput();
+
+            if(this.interactableTarget != null && interactableTarget.Interacting) {
+
+            } else {
+                var interactables = monsters.Select(e => e as IInteractable).Concat(buildings.Select(e => e as IInteractable)).OrderBy(e => Mathf.Abs(this.transform.position.x - e.PosX)).ToList();
+
+                if(interactables.Count > 0) {
+                    interactableTarget = interactables[0];
+                    interactableTarget.ShowSpacebar();
+
+                    for(int i = 1; i < interactables.Count; i++) {
+                        var interatable = interactables[i];
+                        interatable.HideSpacebar();
+                    }
+
+                    if(Input.GetKeyDown(KeyCode.Space)) {
+                        interactableTarget.OnSpacebar();
+                    }
+                } else {
+                    interactableTarget = null;
+                }
+            }
+        }
+
+        public void ResetInteractableTarget() {
+            this.interactableTarget = null;
         }
 
         private void KeyboardInput() {
+            if(interactableTarget != null && interactableTarget.Interacting) return;
+
             float x = Input.GetAxisRaw("Horizontal");
 
             var pos = this.transform.position + new Vector3(x, 0f, 0f) * speed * Time.deltaTime;
@@ -53,20 +93,18 @@ namespace G2T.NCD.Game {
                 var direction = x > 0 ? Direction.Right : Direction.Left;
                 if(this.curDirection != direction) {
                     // current direction is changed
-                    this.curDirection = direction;
-                    this.skeletonTransform.rotation = Quaternion.Euler(0f, direction == this.defaultDirection ? 0f : 180f, 0f);
-                }
-            }
-
-            if(Input.GetKeyDown(KeyCode.Space)) {
-                if(this.monsters.Count > 0) {
-                    // find closest monster
-                    var first = this.monsters.OrderBy(e => Mathf.Abs(this.transform.position.x - e.transform.position.x)).First();
-                    first.OnInteraction();
+                    SetDirection(direction);
                 }
             }
         }
 
+        private void SetDirection(Direction direction) {
+            this.curDirection = direction;
+            this.skeletonTransform.rotation = Quaternion.Euler(0f, this.defaultDirection == direction ? 0f : 180f, 0f);
+
+            this.uiRoot.anchoredPosition = new Vector2(this.rootCanvasPosition.x * (direction == Direction.Right ? 1 : -1), this.rootCanvasPosition.y);
+            this.buildingHolder.localPosition = new Vector2(this.buildingHolderPos.x * (direction == Direction.Right ? 1 : -1), this.buildingHolderPos.y);
+        }
 
         private void OnTriggerEnter2D(Collider2D collision) {
             switch(collision.tag) {
@@ -81,6 +119,12 @@ namespace G2T.NCD.Game {
                 GameController.Instance.AddItem(booty.id, booty.count);
                 Destroy(booty.gameObject);
                 break;
+            case "Building":
+                var building = collision.GetComponent<BuildingBase>();
+                if(this.buildings.Contains(building))
+                    return;
+                this.buildings.Add(building);
+                break;
             }
         }
 
@@ -91,6 +135,14 @@ namespace G2T.NCD.Game {
                 if(this.monsters.Contains(monster)) {
                     this.monsters.Remove(monster);
                 }
+                monster.HideSpacebar();
+                break;
+            case "Building":
+                var building = collision.GetComponent<BuildingBase>();
+                if(this.buildings.Contains(building)) {
+                    this.buildings.Remove(building);
+                }
+                building.HideSpacebar();
                 break;
             }
         }

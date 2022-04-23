@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 85ca588ae97528147addc9387de99a36, type: 3}
+  m_Name: RestaurantStatusTableLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/ScriptableObjects/BuildingStatus
+  filePath: C:/Users/godju/Downloads/Building_Status.xlsx
+  sheetName: Status_5005000
+  Columns:
+  - ColumnName: ItemIds
+    PropertyName: levelUpItemIds
+    Type: 0
+    IsArray: 1
+    index: 3
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - SynthesisIds
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - synthesisIds
+  - ColumnName: ItemAmounts
+    PropertyName: levelUpItemAmounts
+    Type: 0
+    IsArray: 1
+    index: 4
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - SynthesisIds
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - synthesisIds
+  - ColumnName: Hp
+    PropertyName: hp
+    Type: 1
+    IsArray: 0
+    index: 2
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - SynthesisIds
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - synthesisIds
+  - ColumnName: SynthesisIds
+    PropertyName: synthesisIds
+    Type: 0
+    IsArray: 1
+    index: 5
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - SynthesisIds
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - synthesisIds

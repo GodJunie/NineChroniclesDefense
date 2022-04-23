@@ -71,8 +71,14 @@ namespace G2T.NCD.Table {
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("배경 이미지")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string backgroundPath;
+        [BoxGroup("group/연결")]
+        [LabelWidth(80f)]
+        [LabelText("인게임 배경 프리팹")]
+        [SerializeField]
+        private string backgroundPrefabPath;
 
         public override string[] GetProperties() {
             var properties = new string[] {
@@ -109,6 +115,7 @@ namespace G2T.NCD.Table {
         public string Description { get => description; }
         public string TimelinePath { get => timelinePath; }
         public string BackgroundPath { get => backgroundPath; }
+        public string BackgroundPrefabPath { get => backgroundPrefabPath; }
         public List<Reward> Rewards { get => rewards; }
         #endregion
     }

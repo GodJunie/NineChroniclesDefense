@@ -22,7 +22,7 @@ namespace G2T.NCD.Game {
 
 
         public void SetType(MonsterType type) {
-            if(type == MonsterType.Neutrality) {
+            if(type == MonsterType.Wild) {
                 this.imageSpacebarBtn.sprite = spriteNeutralityBtn;
                 this.textSpacebar.color = colorTextNeutrality;
             } else if(type == MonsterType.Friendly) {

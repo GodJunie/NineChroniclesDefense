@@ -71,11 +71,13 @@ namespace G2T.NCD.Table {
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("프리팹")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string prefabPath;
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("아이콘 이미지")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string iconPath;
 
@@ -122,7 +124,7 @@ namespace G2T.NCD.Table {
         public float Range { get => range; }
         public string StatusPath { get => statusPath; }
         public string PrefabPath { get => prefabPath; }
-        public string IconPath { get => IconPath; }
+        public string IconPath { get => iconPath; }
         #endregion
     }
 }

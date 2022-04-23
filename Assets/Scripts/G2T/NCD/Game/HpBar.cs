@@ -33,8 +33,8 @@ namespace G2T.NCD.Game {
 
         public void SetHp(float hp) {
             this.curHp = Mathf.Clamp(hp, 0f, maxHp);
-            this.hpFill.DOKill();
-            this.hpFill.DOFillAmount(curHp / maxHp, .3f);
+            //this.hpFill.DOKill();
+            this.hpFill.fillAmount = curHp / maxHp;
             this.hpText.text = string.Format("{0:0}/{1:0}", this.curHp, this.maxHp);
         }
 

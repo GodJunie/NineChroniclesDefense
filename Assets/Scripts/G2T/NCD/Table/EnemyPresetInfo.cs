@@ -29,13 +29,21 @@ namespace G2T.NCD.Table {
             [HideLabel]
             private int amount;
 
-            public DropItem(int id, int amount) {
+            [SerializeField]
+            [HorizontalGroup("group")]
+            [BoxGroup("group/확률")]
+            [HideLabel]
+            private float prob;
+
+            public DropItem(int id, int amount, float prob) {
                 this.id = id;
                 this.amount = amount;
+                this.prob = prob;
             }
 
             public int Id { get => id; }
             public int Amount { get => amount; }
+            public float Prob { get => prob; }
         }
         #endregion
 
@@ -70,6 +78,7 @@ namespace G2T.NCD.Table {
                 "enemyId", 
                 "dropItemIds",
                 "dropItemAmounts",
+                "dropItemProbs",
             };
             return properties.Concat(Status.Properties).ToArray();
         }
@@ -80,10 +89,11 @@ namespace G2T.NCD.Table {
 
             var dropItemIds = jObject["dropItemIds"].Values<int>().ToList();
             var dropItemAmounts = jObject["dropItemAmounts"].Values<int>().ToList();
+            var dropItemProbs = jObject["dropItemProbs"].Values<float>().ToList();
 
             this.dropItems = new List<DropItem>();
-            for(int i = 0; i < Mathf.Min(dropItemIds.Count, dropItemAmounts.Count); i++) {
-                dropItems.Add(new DropItem(dropItemIds[i], dropItemAmounts[i]));
+            for(int i = 0; i < Mathf.Min(dropItemIds.Count, dropItemAmounts.Count, dropItemProbs.Count); i++) {
+                dropItems.Add(new DropItem(dropItemIds[i], dropItemAmounts[i], dropItemProbs[i]));
             }
 
             this.status = Status.FromJObject(jObject);

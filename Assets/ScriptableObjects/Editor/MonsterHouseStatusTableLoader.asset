@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: da8db1a81b6e7a543984b0a17ee3b31a, type: 3}
+  m_Name: MonsterHouseStatusTableLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/ScriptableObjects/BuildingStatus
+  filePath: C:/Users/godju/Downloads/Building_Status.xlsx
+  sheetName: Status_5002000
+  Columns:
+  - ColumnName: ItemIds
+    PropertyName: levelUpItemIds
+    Type: 0
+    IsArray: 1
+    index: 3
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - MonsterAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - monsterAmount
+  - ColumnName: ItemAmounts
+    PropertyName: levelUpItemAmounts
+    Type: 0
+    IsArray: 1
+    index: 4
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - MonsterAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - monsterAmount
+  - ColumnName: Hp
+    PropertyName: hp
+    Type: 1
+    IsArray: 0
+    index: 2
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - MonsterAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - monsterAmount
+  - ColumnName: MonsterAmount
+    PropertyName: monsterAmount
+    Type: 0
+    IsArray: 0
+    index: 5
+    cols:
+    - Level
+    - Hp
+    - ItemIds
+    - ItemAmounts
+    - MonsterAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criProb
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - monsterAmount

@@ -1,0 +1,572 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90a73afec95a45cd92c1a6ec6a2edb5, type: 3}
+  m_Name: ItemTable
+  m_EditorClassIdentifier: 
+  Datas:
+  - id: 3001000
+    name: Stir-Fried Beef
+    description: It is a stir-fried food with sliced beef and vegetables. There are
+      more vegetables than meat.
+    iconPath: Assets/Resources/UI/Icons/Item/200000.png
+  - id: 3001001
+    name: can
+    description: fighting provisions for supply.
+    iconPath: Assets/Resources/UI/Icons/Item/201000.png
+  - id: 3001002
+    name: Fried egg
+    description: It is a dish that many people eat for a simple breakfast.
+    iconPath: Assets/Resources/UI/Icons/Item/201002.png
+  - id: 3001003
+    name: omelet
+    description: It is a dish that is eaten with egg omelet on top of fried rice.
+    iconPath: Assets/Resources/UI/Icons/Item/201005.png
+  - id: 3001004
+    name: Chop Steak & Rice
+    description: It is accompanied by steak and rice grilled with sliced beef.
+    iconPath: Assets/Resources/UI/Icons/Item/201008.png
+  - id: 3001005
+    name: Steak
+    description: It is a dish made of the finest beef. The degree of baking is called
+      medium walden.
+    iconPath: Assets/Resources/UI/Icons/Item/201011.png
+  - id: 3001006
+    name: Shrimp Pizza
+    description: Pizza with shrimp toppings.
+    iconPath: Assets/Resources/UI/Icons/Item/201014.png
+  - id: 3001007
+    name: Shrimp Salad
+    description: A salad mixed with cocktail shrimp and lettuce.
+    iconPath: Assets/Resources/UI/Icons/Item/201017.png
+  - id: 3001008
+    name: Canned Almonds
+    description: a can full of almonds It tastes great with honey.
+    iconPath: Assets/Resources/UI/Icons/Item/201020.png
+  - id: 3001009
+    name: Chicken Pizza
+    description: a pizza with chicken toppings.
+    iconPath: Assets/Resources/UI/Icons/Item/201022.png
+  - id: 3001010
+    name: Chicken
+    description: Fry chicken to make it. Somewhere in Midgard, it is quite popular.
+    iconPath: Assets/Resources/UI/Icons/Item/201025.png
+  - id: 3001011
+    name: Herb Tea
+    description: Tea brewed using Asgard San Herb. It is effective in recovering
+      from fatigue.
+    iconPath: Assets/Resources/UI/Icons/Item/202001.png
+  - id: 3001012
+    name: Red Jewel
+    description: It emits a red light as a gem that can be collected from mana ore.
+    iconPath: Assets/Resources/UI/Icons/Item/301000.png
+  - id: 3001013
+    name: Rice
+    description: It is a common sight of rice. It is used as a food ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302000.png
+  - id: 3001014
+    name: Fish
+    description: It is a flesh-rich red fish. It is used as a food ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302001.png
+  - id: 3001015
+    name: Empty Can
+    description: Empty cans. They are made of iron powder and recycled.
+    iconPath: Assets/Resources/UI/Icons/Item/302002.png
+  - id: 3001016
+    name: Egg
+    description: It is an egg with a white light. It is used as a food ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302003.png
+  - id: 3001017
+    name: Lump of Sugar
+    description: Crystals extracted from midgard sugar cane. It is used as a food
+      ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302004.png
+  - id: 3002000
+    name: Oil
+    description: It is made from oil extracted from midgard corn. It is used as a
+      food ingredient. The savory taste is excellent.
+    iconPath: Assets/Resources/UI/Icons/Item/302005.png
+  - id: 3002001
+    name: Herb
+    description: a herb native to Asgard It is used to make tea.
+    iconPath: Assets/Resources/UI/Icons/Item/302006.png
+  - id: 3002002
+    name: BBQ
+    description: It is a food made using the front legs of a pig.
+    iconPath: Assets/Resources/UI/Icons/Item/302007.png
+  - id: 3002003
+    name: BBQ with Pork
+    description: I cooked the whole pig. It is mainly used as festival food.
+    iconPath: Assets/Resources/UI/Icons/Item/302008.png
+  - id: 3002004
+    name: Thick Meat
+    description: It's the finest beef to make steak.
+    iconPath: Assets/Resources/UI/Icons/Item/302009.png
+  - id: 3002005
+    name: Shrimp
+    description: It is caught off the coast of Midgard. It is used as a food ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302012.png
+  - id: 3002006
+    name: Raw Chicken
+    description: It is made by catching old chickens. It is used as a food ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302013.png
+  - id: 3002007
+    name: Ketchup
+    description: It is a sauce made using midgard tomatoes. It is used as a food
+      ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302014.png
+  - id: 3002008
+    name: Branch
+    description: a common branch on the street
+    iconPath: Assets/Resources/UI/Icons/Item/302015.png
+  - id: 3002009
+    name: Almond
+    description: Supplies provided to cat drivers.
+    iconPath: Assets/Resources/UI/Icons/Item/302016.png
+  - id: 3002010
+    name: Honey of Teratoma
+    description: It is Asgard's best honey from teratolower. It is used as a food
+      ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302017.png
+  - id: 3002011
+    name: Steak Sauce
+    description: A sauce made from a mixture of spices. It is used as a food ingredient.
+    iconPath: Assets/Resources/UI/Icons/Item/302018.png
+  - id: 3002012
+    name: Sword Piece
+    description: a broken piece of the sword.
+    iconPath: Assets/Resources/UI/Icons/Item/303000.png
+  - id: 3002013
+    name: Broken Sword
+    description: a broken sword.
+    iconPath: Assets/Resources/UI/Icons/Item/303001.png
+  - id: 3003000
+    name: Rusty Sword
+    description: The sword is rusted. It looks like it's about to break any minute's
+      notice.
+    iconPath: Assets/Resources/UI/Icons/Item/303002.png
+  - id: 3003001
+    name: Sword
+    description: It is a sword made by mixing copper and steel. The durability is
+      not high.
+    iconPath: Assets/Resources/UI/Icons/Item/303003.png
+  - id: 3003002
+    name: Steel Sword
+    description: It is a sword made using only steel. It's very strong.
+    iconPath: Assets/Resources/UI/Icons/Item/303004.png
+  - id: 3003003
+    name: Worn Shirt
+    description: a worn-out shirt.
+    iconPath: Assets/Resources/UI/Icons/Item/303100.png
+  - id: 3003004
+    name: Cheap Shirt
+    description: Cheap shirts at the market.
+    iconPath: Assets/Resources/UI/Icons/Item/303101.png
+  - id: 3003005
+    name: Shirt
+    description: Shirts produced in bulk in Midgard.
+    iconPath: Assets/Resources/UI/Icons/Item/303102.png
+  - id: 3003006
+    name: High Quality Shirt
+    description: a shirt made of high-quality fabric.
+    iconPath: Assets/Resources/UI/Icons/Item/303103.png
+  - id: 3003007
+    name: Top Quality Shirt
+    description: It is a shirt made of high-quality silk that can be worn by nobles.
+    iconPath: Assets/Resources/UI/Icons/Item/303104.png
+  - id: 3003008
+    name: Worn Belt
+    description: An old belt. It looks like it's going to break soon.
+    iconPath: Assets/Resources/UI/Icons/Item/303200.png
+  - id: 3003009
+    name: Old Belt
+    description: Old belt used for a long time.
+    iconPath: Assets/Resources/UI/Icons/Item/303201.png
+  - id: 3003010
+    name: Belt
+    description: a belt produced in large quantities in Midgard.
+    iconPath: Assets/Resources/UI/Icons/Item/303202.png
+  - id: 3003011
+    name: High Quality Belt
+    description: A belt made using cowhide.
+    iconPath: Assets/Resources/UI/Icons/Item/303203.png
+  - id: 3003012
+    name: Top Quality Belt
+    description: A belt made of high-quality cowhide and mythril. It is said that
+      it can't be used for more than 10,000 years.
+    iconPath: Assets/Resources/UI/Icons/Item/303204.png
+  - id: 3003013
+    name: Faded Necklace
+    description: A rusted and faded necklace.
+    iconPath: Assets/Resources/UI/Icons/Item/303300.png
+  - id: 3003014
+    name: Silver Necklace
+    description: A necklace made of silver.
+    iconPath: Assets/Resources/UI/Icons/Item/303301.png
+  - id: 3003015
+    name: Plated Necklace
+    description: A plated necklace on a silver necklace.
+    iconPath: Assets/Resources/UI/Icons/Item/303302.png
+  - id: 3003016
+    name: Gold Necklace
+    description: A necklace made of 100% pure gold. There is a small gem in the middle.
+    iconPath: Assets/Resources/UI/Icons/Item/303303.png
+  - id: 3003017
+    name: Diamond Necklace
+    description: A necklace made of platinum and diamonds. It is said that diamonds
+      have some horsepower.
+    iconPath: Assets/Resources/UI/Icons/Item/303304.png
+  - id: 3003018
+    name: String Ring
+    description: A cheap ring made of copper.
+    iconPath: Assets/Resources/UI/Icons/Item/303400.png
+  - id: 3003019
+    name: Silver Ring
+    description: A ring made of silver.
+    iconPath: Assets/Resources/UI/Icons/Item/303401.png
+  - id: 3003020
+    name: Plated Ring
+    description: A plated ring on a silver ring.
+    iconPath: Assets/Resources/UI/Icons/Item/303402.png
+  - id: 3004000
+    name: Gold Ring
+    description: A ring made of 100% pure gold. There is a small gem in the middle.
+    iconPath: Assets/Resources/UI/Icons/Item/303403.png
+  - id: 3004001
+    name: Pearl Ring
+    description: Made of pure gold and pearls. It is made using pearls with magic
+      power.
+    iconPath: Assets/Resources/UI/Icons/Item/303404.png
+  - id: 3004002
+    name: Beads of Fire
+    description: "A bead with the power of the Spirit of Fire \u2018Salamender'."
+    iconPath: Assets/Resources/UI/Icons/Item/304000.png
+  - id: 3004003
+    name: Beads of Land
+    description: A bead with the power of the Spirit of Soil "Gnome."
+    iconPath: Assets/Resources/UI/Icons/Item/304001.png
+  - id: 3004004
+    name: Beads of Water
+    description: A bead with the power of the Spirit of Water 'Undine'.
+    iconPath: Assets/Resources/UI/Icons/Item/304002.png
+  - id: 3004005
+    name: Beads of Wind
+    description: A bead with the power of the Spirit of Wind 'Sylph'.
+    iconPath: Assets/Resources/UI/Icons/Item/304003.png
+  - id: 3004006
+    name: Blue Dye
+    description: Blue dye. Used to paint walls.
+    iconPath: Assets/Resources/UI/Icons/Item/305000.png
+  - id: 3004007
+    name: Red Dye
+    description: Red dye. Used to paint walls.
+    iconPath: Assets/Resources/UI/Icons/Item/305001.png
+  - id: 3004008
+    name: Green Dye
+    description: Green dye. Used to paint walls.
+    iconPath: Assets/Resources/UI/Icons/Item/305002.png
+  - id: 3004009
+    name: Yellow Dye
+    description: Yellow dye. Used to paint walls.
+    iconPath: Assets/Resources/UI/Icons/Item/305003.png
+  - id: 3004010
+    name: White Dye
+    description: White dye. Used to paint walls.
+    iconPath: Assets/Resources/UI/Icons/Item/305004.png
+  - id: 3004011
+    name: Rubber
+    description: It was made from a solution extracted from the old tree of Midgard.
+      have a good elasticity
+    iconPath: Assets/Resources/UI/Icons/Item/306000.png
+  - id: 3004012
+    name: Leaf
+    description: leaf.
+    iconPath: Assets/Resources/UI/Icons/Item/306001.png
+  - id: 3004013
+    name: Bundles of Leaves
+    description: Bundles of Leaves.
+    iconPath: Assets/Resources/UI/Icons/Item/306002.png
+  - id: 3004014
+    name: Sticky Material
+    description: It can be obtained from the old trees of Midgard. It's good to stick
+      something on.
+    iconPath: Assets/Resources/UI/Icons/Item/306003.png
+  - id: 3004015
+    name: Pampas Grass
+    description: Weeds growing around Yggdrassil. It is famous for its toughness.
+    iconPath: Assets/Resources/UI/Icons/Item/306004.png
+  - id: 3004016
+    name: Yggdrassil buds
+    description: The flowers of Teratolower are not yet in bloom. It is rumored that
+      the honey served at this time is quite sweet and delicious.
+    iconPath: Assets/Resources/UI/Icons/Item/306005.png
+  - id: 3004017
+    name: Yggdrassil Flower
+    description: It is the flower of the Teratolower. It is said to be popular among
+      lovers.
+    iconPath: Assets/Resources/UI/Icons/Item/306006.png
+  - id: 3004018
+    name: Yggdra Fruit
+    description: It is a fruit that grew from teratotuit It is popular for its refreshing
+      taste.
+    iconPath: Assets/Resources/UI/Icons/Item/306007.png
+  - id: 3004019
+    name: magic stone
+    description: Ore made by lumping together Yggdrassil's mana by-products.
+    iconPath: Assets/Resources/UI/Icons/Item/306008.png
+  - id: 3004020
+    name: Iron Ore
+    description: Iron Ore.
+    iconPath: Assets/Resources/UI/Icons/Item/306009.png
+  - id: 3004021
+    name: Axe Piece
+    description: Axe Piece.
+    iconPath: Assets/Resources/UI/Icons/Item/306010.png
+  - id: 3004022
+    name: Cotton Ball
+    description: It was made from the fur from the cotton of Midgard.
+    iconPath: Assets/Resources/UI/Icons/Item/306011.png
+  - id: 3005000
+    name: Copper
+    description: It is pure copper produced by refining copper ore.
+    iconPath: Assets/Resources/UI/Icons/Item/306012.png
+  - id: 3005001
+    name: Knife Handle
+    description: It's a handle you need to make a knife.
+    iconPath: Assets/Resources/UI/Icons/Item/306013.png
+  - id: 3005002
+    name: Yggdrasil Apple
+    description: It is said to grow only in the mountains at the top of Asgard.
+    iconPath: Assets/Resources/UI/Icons/Item/306014.png
+  - id: 3005003
+    name: stone of Land
+    description: It can be obtained from the barren land of Jotunheim, and contains
+      some mana.
+    iconPath: Assets/Resources/UI/Icons/Item/306015.png
+  - id: 3005004
+    name: Pearl
+    description: It is a precious gem from the sea of Igdrasil. It is said to contain
+      powerful mana.
+    iconPath: Assets/Resources/UI/Icons/Item/306016.png
+  - id: 3005005
+    name: The Eye of Odin
+    description: It is a surveillance decoration created by Odin to see the entire
+      Igdrasil.
+    iconPath: Assets/Resources/UI/Icons/Item/306017.png
+  - id: 3005006
+    name: Ball of Muspelheim
+    description: Beads made by refining the lava of Muspelheim.
+    iconPath: Assets/Resources/UI/Icons/Item/306018.png
+  - id: 3005007
+    name: Leather
+    description: Leather.
+    iconPath: Assets/Resources/UI/Icons/Item/306019.png
+  - id: 3005008
+    name: Wolf Claw
+    description: Wolf Claw.
+    iconPath: Assets/Resources/UI/Icons/Item/306020.png
+  - id: 3005009
+    name: Spear of Charm
+    description: the sorcery spear blades of the desert foxes.
+    iconPath: Assets/Resources/UI/Icons/Item/306021.png
+  - id: 3005010
+    name: Mask of Charm
+    description: The magic mask of the Desert Fox tribe.
+    iconPath: Assets/Resources/UI/Icons/Item/306022.png
+  - id: 3005011
+    name: bark
+    description: the bark from a rotten tree.
+    iconPath: Assets/Resources/UI/Icons/Item/306023.png
+  - id: 3005012
+    name: log
+    description: log.
+    iconPath: Assets/Resources/UI/Icons/Item/306024.png
+  - id: 3005013
+    name: Copper Curb
+    description: a plate made by smelting copper ore It's light and strong.
+    iconPath: Assets/Resources/UI/Icons/Item/306025.png
+  - id: 3006000
+    name: Black Cloth
+    description: a cloth made by mixing various dyes and coloring cloth.
+    iconPath: Assets/Resources/UI/Icons/Item/306026.png
+  - id: 3006001
+    name: sharp blade
+    description: a sharp blade_x007f_.
+    iconPath: Assets/Resources/UI/Icons/Item/306027.png
+  - id: 3006002
+    name: Iron Powder
+    description: an accessory to iron ore You can make it with cans.
+    iconPath: Assets/Resources/UI/Icons/Item/306028.png
+  - id: 3006003
+    name: Iron Plate
+    description: It was made by melting iron ore. It is mainly used to make armor.
+    iconPath: Assets/Resources/UI/Icons/Item/306029.png
+  - id: 3006004
+    name: Black Magic Jewel
+    description: It is a mana stone with the power of darkness. If you carry it,
+      you will have a strong body, but your personality will also become violent.
+    iconPath: Assets/Resources/UI/Icons/Item/306030.png
+  - id: 3006005
+    name: Chain
+    description: Because it is made by melting iron, it is quite hard and does not
+      break easily.
+    iconPath: Assets/Resources/UI/Icons/Item/306031.png
+  - id: 3006006
+    name: Axe of Darkness
+    description: It is an axe used by the Fire Pig tribe. This ax cuts the wound.
+    iconPath: Assets/Resources/UI/Icons/Item/306032.png
+  - id: 3006007
+    name: Mana Suppressor
+    description: It is a tool designed to suppress erosion by mana.
+    iconPath: Assets/Resources/UI/Icons/Item/306033.png
+  - id: 3006008
+    name: The Heart of Hella
+    description: It is a tool that contains the soul of Hella, the owner of Helheim.
+      When the weak mana touches it, it is dominated by Hella's soul.
+    iconPath: Assets/Resources/UI/Icons/Item/306034.png
+  - id: 3006009
+    name: Stone of Luxuriance
+    description: It is a mana stone created by extracting the energy of mana stone
+      sculpture. Used to create magic tools.
+    iconPath: Assets/Resources/UI/Icons/Item/306035.png
+  - id: 3006010
+    name: Stone of Fire
+    description: It is a mana stone created by extracting the energy of a red mana
+      stone piece. Used to create magic tools.
+    iconPath: Assets/Resources/UI/Icons/Item/306036.png
+  - id: 3006011
+    name: Stone of Wind
+    description: It is a mana stone created by extracting the energy of green mana
+      stone pieces. Used to create magic tools.
+    iconPath: Assets/Resources/UI/Icons/Item/306037.png
+  - id: 3006012
+    name: Stone of Earth
+    description: It is a mana stone created by extracting the energy of a yellow
+      mana stone piece. Used to create magic tools.
+    iconPath: Assets/Resources/UI/Icons/Item/306038.png
+  - id: 3006013
+    name: Stone of Water
+    description: It is a mana stone created by extracting the energy of a blue mana
+      stone piece. Used to create magic tools.
+    iconPath: Assets/Resources/UI/Icons/Item/306039.png
+  - id: 3006014
+    name: "Mana Stone Sculpture\b"
+    description: Fragments extracted from mana ore. There is a slight amount of mana.
+    iconPath: Assets/Resources/UI/Icons/Item/306040.png
+  - id: 3006015
+    name: Red Mana Stone Sculpture
+    description: Fragments extracted from mana ore. The power of fire is faintly
+      contained.
+    iconPath: Assets/Resources/UI/Icons/Item/306041.png
+  - id: 3006016
+    name: Green Mana Stone Sculpture
+    description: Fragments extracted from mana ore. The force of the wind is faintly
+      contained.
+    iconPath: Assets/Resources/UI/Icons/Item/306042.png
+  - id: 3006017
+    name: Yellow Mana Stone Sculpture
+    description: Fragments extracted from mana ore. The power of the earth is faintly
+      contained.
+    iconPath: Assets/Resources/UI/Icons/Item/306043.png
+  - id: 3006018
+    name: Blue Mana Stone Sculpture
+    description: Fragments extracted from mana ore. The power of the water is faintly
+      contained.
+    iconPath: Assets/Resources/UI/Icons/Item/306044.png
+  - id: 3006019
+    name: Luxuriance Cube
+    description: a harness made from the smelting of a stone of noxiousness It gives
+      magical power to the equipment it possesses.
+    iconPath: Assets/Resources/UI/Icons/Item/306045.png
+  - id: 3006020
+    name: Red Cube
+    description: a harness made by smelting fire stones It gives magical power to
+      the equipment it possesses.
+    iconPath: Assets/Resources/UI/Icons/Item/306046.png
+  - id: 3006021
+    name: Green Cube
+    description: a harness made by smelting the stones of the wind It gives magical
+      power to the equipment it possesses.
+    iconPath: Assets/Resources/UI/Icons/Item/306047.png
+  - id: 3006022
+    name: Yellow Cube
+    description: a harness made by smelting the stones of the earth It gives magical
+      power to the equipment it possesses.
+    iconPath: Assets/Resources/UI/Icons/Item/306048.png
+  - id: 3006023
+    name: Blue Cube
+    description: a harness made by smelting water stones It gives magical power to
+      the equipment it possesses.
+    iconPath: Assets/Resources/UI/Icons/Item/306049.png
+  - id: 3006024
+    name: White Cloth
+    description: It is a cloth that is common everywhere.
+    iconPath: Assets/Resources/UI/Icons/Item/306050.png
+  - id: 3006025
+    name: spellbound bead
+    description: It is a tool to arrest criminals with magical powers.
+    iconPath: Assets/Resources/UI/Icons/Item/306051.png
+  - id: 3006026
+    name: Mana Stone Plates
+    description: a stone slab studded with mana Use as a talisman.
+    iconPath: Assets/Resources/UI/Icons/Item/306052.png
+  - id: 3006027
+    name: Pennir's Claw
+    description: a claw from Fenrir's forefoot It is harder than steel and has powerful
+      mana, so it is also used as a material for making horse swords.
+    iconPath: Assets/Resources/UI/Icons/Item/306053.png
+  - id: 3006028
+    name: Mana Amplification Pendant
+    description: A pendant that amplifies the wearer's mana. It is very expensive
+      because it is decorated with platinum.
+    iconPath: Assets/Resources/UI/Icons/Item/306054.png
+  - id: 3006029
+    name: Wizard's Book
+    description: A book containing the wizardry research.
+    iconPath: Assets/Resources/UI/Icons/Item/306055.png
+  - id: 3006030
+    name: Bone Stick
+    description: a club made by connecting animal bones.
+    iconPath: Assets/Resources/UI/Icons/Item/306058.png
+  - id: 3006031
+    name: Gladiatorial Helmet
+    description: A helmet used by gladiators of the Fire Pig tribe. It is usually
+      used only during training.
+    iconPath: Assets/Resources/UI/Icons/Item/306059.png
+  - id: 3006032
+    name: Boar's Molar
+    description: a boar's molar.
+    iconPath: Assets/Resources/UI/Icons/Item/306060.png
+  - id: 3006033
+    name: Broken Axe Edge
+    description: Broken Axe Edge.
+    iconPath: Assets/Resources/UI/Icons/Item/306062.png
+  - id: 3006034
+    name: Fox Fur
+    description: Fox Fur.
+    iconPath: Assets/Resources/UI/Icons/Item/306063.png
+  - id: 3006035
+    name: Bronze Ornament
+    description: ornaments of refined bronze be popular among the nobility
+    iconPath: Assets/Resources/UI/Icons/Item/306064.png
+  - id: 3006036
+    name: Bronze Shoulder Extension
+    description: a shoulder girdle of bronze Durability is very weak because it is
+      made with the concept of a medal.
+    iconPath: Assets/Resources/UI/Icons/Item/306065.png
+  - id: 3006037
+    name: Golden Sand
+    description: It is sand that contains the power of light in Alfheim.
+    iconPath: Assets/Resources/UI/Icons/Item/400000.png
+  - id: 119
+    name: Gold
+    description: Gold.
+    iconPath: Assets/Resources/UI/Icons/Item/.png

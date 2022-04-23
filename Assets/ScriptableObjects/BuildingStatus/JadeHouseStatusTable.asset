@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab49f5473c865d4fad41a404fd0c283, type: 3}
+  m_Name: JadeHouseStatusTable
+  m_EditorClassIdentifier: 
+  Datas:
+  - status:
+      hp: 500
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004014
+      amount: 3
+    - id: 3005011
+      amount: 4
+    - id: 3005012
+      amount: 3
+    monsterAmount: 15
+  - status:
+      hp: 600
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004011
+      amount: 2
+    - id: 3004012
+      amount: 5
+    - id: 3006024
+      amount: 4
+    monsterAmount: 15
+  - status:
+      hp: 700
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3005013
+      amount: 4
+    - id: 3004015
+      amount: 4
+    - id: 3006003
+      amount: 2
+    monsterAmount: 15
+  - status:
+      hp: 800
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3006014
+      amount: 4
+    - id: 3005012
+      amount: 5
+    monsterAmount: 15
+  - status:
+      hp: 900
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3006024
+      amount: 5
+    - id: 3004006
+      amount: 2
+    monsterAmount: 15
+  - status:
+      hp: 1000
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004014
+      amount: 4
+    - id: 3004022
+      amount: 4
+    - id: 3006005
+      amount: 3
+    - id: 3004007
+      amount: 2
+    monsterAmount: 15
+  - status:
+      hp: 1100
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004011
+      amount: 5
+    - id: 3004012
+      amount: 5
+    - id: 3004013
+      amount: 5
+    - id: 3004008
+      amount: 2
+    - id: 3004009
+      amount: 2
+    monsterAmount: 15
+  - status:
+      hp: 1200
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3004019
+      amount: 3
+    - id: 3005012
+      amount: 4
+    - id: 3006024
+      amount: 5
+    - id: 3004010
+      amount: 3
+    monsterAmount: 15
+  - status:
+      hp: 1300
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3005004
+      amount: 1
+    - id: 3005012
+      amount: 5
+    - id: 3006002
+      amount: 5
+    - id: 3006003
+      amount: 5
+    monsterAmount: 15
+  - status:
+      hp: 1400
+      atk: 0
+      def: 0
+      criProb: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 0
+      amount: 0
+    monsterAmount: 15

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75034f3cdc3cac4c92ef2e16ee0eb23, type: 3}
   m_Name: ItemTableLoader
   m_EditorClassIdentifier: 
-  FolderPath: Assets/ScriptableObjects
+  FolderPath: Assets/ScriptableObjects/Tables
   filePath: C:/Users/godju/Downloads/Item_Info.xlsx
   sheetName: Item
   Columns:

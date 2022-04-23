@@ -9,929 +9,321 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c916d770500cb84eae16e4eca74aa5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b76e17966e2c2f4e9574c653c2c4567, type: 3}
   m_Name: Stage1
   m_EditorClassIdentifier: 
-  dayTimes:
+  Datas:
   - timePart: 0
-    time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    time: 60
+    leftEnemies: 
+    rightEnemies: 
     monsters:
     - id: 1001000
-      time: 0.5
+      prob: 97
+    - id: 1001001
+      prob: 1.3
     - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 1.3
+    - id: 1001003
+      prob: 0.4
+    monsterAmount: 5
   - timePart: 1
-    time: 120
-    wave:
-      leftEnemies:
-      - id: 20000001
-        time: 10
-      - id: 20000001
-        time: 1
-      - id: 20000001
-        time: 1.2
-      - id: 20000001
-        time: 0.7
-      - id: 20000001
-        time: 1
-      - id: 20000001
-        time: 1.2
-      - id: 20000001
-        time: 1.1
-      - id: 20000001
-        time: 1.2
-      - id: 20000001
-        time: 1
-      - id: 20000001
-        time: 5
-      - id: 20000011
-        time: 0.5
-      - id: 20000011
-        time: 0.8
-      rightEnemies: []
+    time: 10
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 60
+    leftEnemies: 214e0000214e0000214e0000214e0000214e0000
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
   - timePart: 2
     time: 60
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
   - timePart: 0
-    time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    time: 60
+    leftEnemies: 
+    rightEnemies: 
     monsters:
     - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 93
     - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 3
     - id: 1001002
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 3
     - id: 1001003
-      time: 0.5
+      prob: 1
+    monsterAmount: 15
   - timePart: 1
-    time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies:
-      - id: 20000002
-        time: 10
-      - id: 20000002
-        time: 1
-      - id: 20000002
-        time: 1.2
-      - id: 20000002
-        time: 0.7
-      - id: 20000002
-        time: 1
-      - id: 20000002
-        time: 1.2
-      - id: 20000002
-        time: 1
-      - id: 20000002
-        time: 1
-      - id: 20000002
-        time: 0.7
-      - id: 20000002
-        time: 1.2
-      - id: 20000002
-        time: 1
-      - id: 20000002
-        time: 1.2
-      - id: 20000002
-        time: 0.7
-      - id: 20000002
-        time: 1
-      - id: 20000002
-        time: 0.7
-      - id: 20000012
-        time: 5
-      - id: 20000012
-        time: 0.5
-      - id: 20000012
-        time: 1.2
-      - id: 20000012
-        time: 0.5
-      - id: 20000012
-        time: 1
+    time: 15
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 60
+    leftEnemies: 
+    rightEnemies: 224e0000224e0000224e0000224e0000224e0000224e0000224e0000224e0000224e00002c4e00002c4e00002c4e0000
+    monsters: []
+    monsterAmount: 0
   - timePart: 2
     time: 60
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
   - timePart: 0
     time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    leftEnemies: 
+    rightEnemies: 
     monsters:
     - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 85
     - id: 1001001
-      time: 0.5
+      prob: 7
     - id: 1001002
-      time: 0.5
+      prob: 7
     - id: 1001003
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 1
+    monsterAmount: 15
   - timePart: 1
-    time: 120
-    wave:
-      leftEnemies:
-      - id: 20000003
-        time: 10
-      - id: 20000003
-        time: 1
-      - id: 20000003
-        time: 0.5
-      - id: 20000003
-        time: 0.8
-      - id: 20000003
-        time: 1
-      - id: 20000023
-        time: 2
-      - id: 20000023
-        time: 0.5
-      - id: 20000023
-        time: 1.2
-      - id: 20000023
-        time: 0.8
-      - id: 20000023
-        time: 1
-      rightEnemies:
-      - id: 20000013
-        time: 30
-      - id: 20000013
-        time: 2
-      - id: 20000013
-        time: 0.5
-      - id: 20000013
-        time: 1
-      - id: 20000033
-        time: 5
-      - id: 20000033
-        time: 1.2
-      - id: 20000033
-        time: 0.8
-      - id: 20000033
-        time: 1
-      - id: 20000033
-        time: 1.2
+    time: 15
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 15
+    leftEnemies: 234e0000234e0000234e0000234e0000234e0000234e00002d4e00002d4e00002d4e0000374e0000
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 90
+    leftEnemies: 
+    rightEnemies: 234e0000234e0000234e0000414e0000414e0000
+    monsters: []
+    monsterAmount: 0
   - timePart: 2
     time: 60
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
   - timePart: 0
-    time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    time: 100
+    leftEnemies: 
+    rightEnemies: 
     monsters:
     - id: 1001000
-      time: 0.5
+      prob: 80
     - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 9
     - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
+      prob: 9
     - id: 1001003
-      time: 0.5
-    - id: 1001002
-      time: 0.5
+      prob: 2
+    monsterAmount: 20
   - timePart: 1
-    time: 120
-    wave:
-      leftEnemies:
-      - id: 20000004
-        time: 40
-      - id: 20000004
-        time: 1
-      - id: 20000004
-        time: 0.8
-      - id: 20000004
-        time: 1.2
-      - id: 20000004
-        time: 0.5
-      - id: 20000004
-        time: 1
-      - id: 20000004
-        time: 1.2
-      - id: 20000004
-        time: 0.8
-      - id: 20000014
-        time: 1.2
-      - id: 20000014
-        time: 1
-      - id: 20000014
-        time: 0.8
-      - id: 20000014
-        time: 1.2
-      - id: 20000014
-        time: 1
-      - id: 20000014
-        time: 0.5
-      - id: 20000014
-        time: 2
-      - id: 20000014
-        time: 0.5
-      - id: 20000014
-        time: 0.8
-      - id: 20000014
-        time: 1
-      rightEnemies:
-      - id: 20000044
-        time: 10
-      - id: 20000044
-        time: 0.5
-      - id: 20000044
-        time: 0.8
-      - id: 20000044
-        time: 1
-      - id: 20000044
-        time: 0.8
-      - id: 20000054
-        time: 1.2
-      - id: 20000054
-        time: 0.5
-      - id: 20000054
-        time: 0.8
-      - id: 20000054
-        time: 0.8
-      - id: 20000054
-        time: 1
+    time: 10
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 100
+    leftEnemies: 2e4e00002e4e00002e4e00002e4e00002e4e0000384e0000384e00004c4e00004c4e0000
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
   - timePart: 2
-    time: 60
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    time: 70
+    leftEnemies: 
+    rightEnemies: 564e0000424e0000424e0000564e0000424e000066750000564e0000424e0000
     monsters: []
+    monsterAmount: 0
   - timePart: 0
-    time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    time: 150
+    leftEnemies: 
+    rightEnemies: 
     monsters:
     - id: 1001000
-      time: 0.5
+      prob: 70
+    - id: 1001001
+      prob: 13.5
     - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001001
-      time: 0.5
+      prob: 13.5
     - id: 1001003
-      time: 0.5
+      prob: 3
+    monsterAmount: 20
   - timePart: 1
-    time: 180
-    wave:
-      leftEnemies:
-      - id: 20000025
-        time: 30
-      - id: 20000025
-        time: 2
-      - id: 20000025
-        time: 1.2
-      - id: 20000035
-        time: 0.8
-      - id: 20000025
-        time: 1
-      - id: 20000035
-        time: 0.5
-      - id: 20000025
-        time: 1
-      - id: 20000025
-        time: 2
-      - id: 20000035
-        time: 0.8
-      - id: 20000035
-        time: 0.8
-      - id: 20000035
-        time: 1.2
-      - id: 20000035
-        time: 1
-      rightEnemies:
-      - id: 20000045
-        time: 50
-      - id: 20000055
-        time: 1
-      - id: 20000045
-        time: 0.8
-      - id: 20000045
-        time: 2
-      - id: 20000055
-        time: 1.2
-      - id: 20000055
-        time: 1
-      - id: 20000045
-        time: 0.5
-      - id: 20000045
-        time: 1
-      - id: 20000055
-        time: 0.8
-      - id: 20000055
-        time: 1
+    time: 10
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 15
+    leftEnemies: 254e0000254e0000254e0000254e0000254e0000254e0000254e0000254e0000254e0000254e00002f4e0000394e0000434e00004d4e0000574e0000
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 125
+    leftEnemies: 
+    rightEnemies: 254e0000254e0000254e0000254e0000254e00002f4e0000394e0000434e00004d4e0000574e0000
+    monsters: []
+    monsterAmount: 0
+  - timePart: 2
+    time: 100
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1001000
+      prob: 67
+    - id: 1001001
+      prob: 15
+    - id: 1001002
+      prob: 15
+    - id: 1001003
+      prob: 3
+    monsterAmount: 20
   - timePart: 2
     time: 300
-    wave:
-      leftEnemies:
-      - id: 20000006
-        time: 200
-      - id: 20000006
-        time: 2
-      - id: 20000006
-        time: 1
-      - id: 20000006
-        time: 1.2
-      - id: 20000006
-        time: 0.8
-      - id: 20000016
-        time: 1.2
-      - id: 20000016
-        time: 0.5
-      - id: 20000016
-        time: 2
-      - id: 20000016
-        time: 0.5
-      - id: 20000066
-        time: 1
-      rightEnemies:
-      - id: 20000026
-        time: 170
-      - id: 20000036
-        time: 0.5
-      - id: 20000026
-        time: 0.8
-      - id: 20000046
-        time: 1
-      - id: 20000056
-        time: 0.8
-      - id: 20000026
-        time: 1
-      - id: 20000026
-        time: 0.5
-      - id: 20000046
-        time: 0.7
-      - id: 20000046
-        time: 0.5
-      - id: 20000036
-        time: 1.2
-      - id: 20000046
-        time: 1
-      - id: 20000036
-        time: 0.8
-      - id: 20000056
-        time: 0.5
-      - id: 20000056
-        time: 1
-      - id: 20000056
-        time: 1.2
-      - id: 20000026
-        time: 2
-      - id: 20000036
-        time: 0.8
-      - id: 20000066
-        time: 1
-    monsters:
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001003
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001003
-      time: 0.5
+    leftEnemies: 264e0000264e0000264e0000264e0000264e0000264e0000304e0000304e0000304e0000
+    rightEnemies: 304e0000304e00003a4e0000444e00004e4e0000584e00003a4e0000444e00004e4e000024500000624e0000
+    monsters: []
+    monsterAmount: 0
   - timePart: 0
     time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    leftEnemies: 
+    rightEnemies: 
     monsters:
-    - id: 1001002
-      time: 0.5
-    - id: 1001003
-      time: 0.5
-    - id: 1001003
-      time: 0.5
+    - id: 1001000
+      prob: 62
     - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 17
     - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001002
-      time: 0.5
+      prob: 17
+    - id: 1001003
+      prob: 4
+    monsterAmount: 20
   - timePart: 1
-    time: 120
-    wave:
-      leftEnemies:
-      - id: 20000017
-        time: 20
-      - id: 20000017
-        time: 5
-      - id: 20000017
-        time: 6
-      - id: 20000017
-        time: 2
-      - id: 20000067
-        time: 4
-      - id: 20000067
-        time: 5
-      - id: 20000067
-        time: 4
-      - id: 20000077
-        time: 3
-      - id: 20000087
-        time: 1.2
-      - id: 20000077
-        time: 1
-      rightEnemies:
-      - id: 20000017
-        time: 0.5
-      - id: 20000017
-        time: 0.5
-      - id: 20000017
-        time: 0.5
-      - id: 20000017
-        time: 0.5
-      - id: 20000017
-        time: 2
-      - id: 20000067
-        time: 1.2
-      - id: 20000017
-        time: 0.8
-      - id: 20000077
-        time: 1
-      - id: 20000017
-        time: 0.8
-      - id: 20000017
-        time: 0.5
-      - id: 20000017
-        time: 1
-      - id: 20000017
-        time: 2
-      - id: 20000087
-        time: 1.2
-      - id: 20000017
-        time: 0.8
-      - id: 20000017
-        time: 0.8
-      - id: 20000077
-        time: 0.5
-      - id: 20000087
-        time: 2
-      - id: 20000067
-        time: 1
-      - id: 20000017
-        time: 2
-      - id: 20000017
-        time: 1
+    time: 15
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 25
+    leftEnemies: 274e0000274e0000274e0000274e00003b4e0000454e00004f4e0000314e0000314e0000314e0000634e0000
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 85
+    leftEnemies: 
+    rightEnemies: 314e0000314e0000314e0000314e0000314e0000634e0000634e0000634e0000
+    monsters: []
+    monsterAmount: 0
   - timePart: 2
     time: 60
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
   - timePart: 0
-    time: 120
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    time: 100
+    leftEnemies: 
+    rightEnemies: 
     monsters:
-    - id: 1001002
-      time: 0.5
     - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 55
     - id: 1001001
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 20
     - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001002
-      time: 0.5
+      prob: 20
     - id: 1001003
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
+      prob: 5
+    monsterAmount: 25
   - timePart: 1
-    time: 120
-    wave:
-      leftEnemies:
-      - id: 20000088
-        time: 30
-      - id: 20000098
-        time: 0.5
-      - id: 20000098
-        time: 0.5
-      - id: 20000108
-        time: 1
-      - id: 20000108
-        time: 0.8
-      - id: 20000088
-        time: 1
-      - id: 20000108
-        time: 2
-      rightEnemies:
-      - id: 20000108
-        time: 20
-      - id: 20000098
-        time: 1
-      - id: 20000098
-        time: 2
-      - id: 20000108
-        time: 0.5
-      - id: 20000108
-        time: 2
-      - id: 20000098
-        time: 1
-      - id: 20000108
-        time: 1.2
-      - id: 20000078
-        time: 1
+    time: 20
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 130
+    leftEnemies: 644e0000644e00006e4e00006e4e0000824e0000784e0000784e0000824e00008c4e0000644e00008c4e0000
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
   - timePart: 2
-    time: 60
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+    time: 70
+    leftEnemies: 
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
   - timePart: 0
-    time: 120
-    wave:
-      leftEnemies:
-      - id: 20000069
-        time: 50
-      - id: 20000069
-        time: 1
-      - id: 20000079
-        time: 2
-      - id: 20000079
-        time: 1.2
-      - id: 20000089
-        time: 0.8
-      - id: 20000089
-        time: 2
-      - id: 20000079
-        time: 1
-      - id: 20000079
-        time: 0.5
-      - id: 20000069
-        time: 0.8
-      - id: 20000089
-        time: 1
-      - id: 20000079
-        time: 0.3
-      - id: 20000079
-        time: 1
-      rightEnemies:
-      - id: 20000069
-        time: 20
-      - id: 20000109
-        time: 0.5
-      - id: 20000109
-        time: 0.5
-      - id: 20000099
-        time: 0.5
-      - id: 20000069
-        time: 2
-      - id: 20000069
-        time: 1
-      - id: 20000099
-        time: 1.2
-      - id: 20000109
-        time: 0.8
-      - id: 20000099
-        time: 0.5
-      - id: 20000069
-        time: 1
-      - id: 20000069
-        time: 0.5
-      - id: 20000109
-        time: 1
+    time: 80
+    leftEnemies: 
+    rightEnemies: 
     monsters:
     - id: 1001000
-      time: 0.5
-    - id: 1001002
-      time: 0.5
+      prob: 50
     - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 20
     - id: 1001002
-      time: 0.5
+      prob: 20
     - id: 1001003
-      time: 0.5
-    - id: 1001003
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-  - timePart: 1
-    time: 180
-    wave:
-      leftEnemies: []
-      rightEnemies: []
+      prob: 10
+    monsterAmount: 25
+  - timePart: 0
+    time: 20
+    leftEnemies: 294e0000294e0000294e0000294e0000294e0000
+    rightEnemies: 
     monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 10
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
+  - timePart: 1
+    time: 190
+    leftEnemies: 
+    rightEnemies: 334e0000334e0000334e0000334e0000334e0000654e0000654e0000654e00006f4e0000794e0000834e00008d4e0000334e0000334e0000654e0000
+    monsters: []
+    monsterAmount: 0
   - timePart: 2
-    time: 300
-    wave:
-      leftEnemies:
-      - id: 20000010
-        time: 150
-      - id: 20000020
-        time: 0.5
-      - id: 20000020
-        time: 0.5
-      - id: 20000010
-        time: 0.5
-      - id: 20000020
-        time: 0.5
-      - id: 20000010
-        time: 2
-      - id: 20000010
-        time: 1
-      - id: 20000070
-        time: 1.2
-      - id: 20000070
-        time: 0.8
-      - id: 20000010
-        time: 1
-      - id: 20000070
-        time: 0.5
-      - id: 20000070
-        time: 1.2
-      - id: 20000010
-        time: 0.8
-      - id: 20000070
-        time: 1.2
-      - id: 20000070
-        time: 1
-      - id: 20000020
-        time: 2
-      - id: 20000070
-        time: 0.8
-      - id: 20000070
-        time: 1
-      - id: 20000070
-        time: 2
-      - id: 20000120
-        time: 10
-      rightEnemies:
-      - id: 20000030
-        time: 150
-      - id: 20000030
-        time: 0.5
-      - id: 20000040
-        time: 0.5
-      - id: 20000040
-        time: 0.5
-      - id: 20000050
-        time: 0.5
-      - id: 20000050
-        time: 2
-      - id: 20000060
-        time: 1
-      - id: 20000060
-        time: 1.2
-      - id: 20000080
-        time: 0.8
-      - id: 20000080
-        time: 1
-      - id: 20000090
-        time: 0.5
-      - id: 20000090
-        time: 1.2
-      - id: 20000100
-        time: 0.8
-      - id: 20000100
-        time: 1.2
-      - id: 20000110
-        time: 1
-      - id: 20000110
-        time: 2
-      - id: 20000030
-        time: 0.8
-      - id: 20000040
-        time: 1
-      - id: 20000050
-        time: 2
-      - id: 20000060
-        time: 1
-      - id: 20000010
-        time: 1
+    time: 80
+    leftEnemies: 
+    rightEnemies: 
     monsters:
-    - id: 1001001
-      time: 0.5
     - id: 1001000
-      time: 0.5
+      prob: 45
+    - id: 1001001
+      prob: 22
     - id: 1001002
-      time: 0.5
-    - id: 1001000
-      time: 0.5
+      prob: 22
     - id: 1001003
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001003
-      time: 0.5
-    - id: 1001002
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001001
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001000
-      time: 0.5
-    - id: 1001003
-      time: 0.5
+      prob: 11
+    monsterAmount: 25
+  - timePart: 2
+    time: 50
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
+  - timePart: 2
+    time: 170
+    leftEnemies: 2a4e00002a4e00002a4e00002a4e00002a4e0000344e0000344e0000344e0000344e0000664e0000664e0000664e0000
+    rightEnemies: 3e4e0000484e00005c4e0000524e00005c4e00003e4e0000484e0000524e0000704e0000844e00008e4e00007a4e0000954e0000
+    monsters: []
+    monsterAmount: 0

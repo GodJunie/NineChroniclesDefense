@@ -22,6 +22,9 @@ using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Table {
     public class MonsterTable : ExcelTable<MonsterTable, MonsterInfo> {
-
+        [Button]
+        private void Temp(string f1, string f2, string f3) {
+            foreach(var data in Datas) data.Temp(f1, f2, f3);
+        }
     }
 }

@@ -9,160 +9,114 @@ using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Table {
     using Game;
+    using Newtonsoft.Json.Linq;
+    using System.Linq;
 
     [Serializable]
-    public class StageTimelineInfo : ScriptableObject {
-        #region Struces
+    public class StageTimelineInfo : ExcelData {
+        #region Struct
         [Serializable]
-        public struct EnemySpawnInfo {
+        public struct MonsterSpawnInfo {
             [HorizontalGroup("group")]
             [BoxGroup("group/아이디")]
             [HideLabel]
             [SerializeField]
             private int id;
             [HorizontalGroup("group")]
-            [BoxGroup("group/시간")]
+            [BoxGroup("group/확률")]
             [HideLabel]
             [SerializeField]
-            private float time;
-          
-            public EnemySpawnInfo(int id, float time) {
-                this.id = id;
-                this.time = time;
-            }
-
-            public float Time { get => time; }
-        }
-
-        [Serializable]
-        public struct MonsterSpawnInfo {
-            [HorizontalGroup("group")]
-            [BoxGroup("group/프리팹")]
-            [HideLabel]
-            [SerializeField]
-            private int id;
-            [HorizontalGroup("group")]
-            [BoxGroup("group/시간")]
-            [HideLabel]
-            [SerializeField]
-            private float time;
-            //[HorizontalGroup("group")]
-            //[BoxGroup("group/위치")]
-            //[HideLabel]
-            //[SerializeField]
-            //private float x;
+            private float prob;
            
-            public MonsterSpawnInfo(int id, float time) {
+            public MonsterSpawnInfo(int id, float prob) {
                 this.id = id;
-                this.time = time;
+                this.prob = prob;
             }
 
-            public float Time { get => time; }
-            //public float X { get => x; }
-        }
-
-
-        [Serializable]
-        public struct WaveInfo {
-            [FoldoutGroup("웨이브")]
-            [HorizontalGroup("웨이브/group", .5f)]
-            [BoxGroup("웨이브/group/왼쪽")]
-            [ShowIf("@LeftEnemiesExists")]
-            [LabelText("왼쪽 적군 리스트")]
-            [SerializeField]
-            private List<EnemySpawnInfo> leftEnemies;
-            [BoxGroup("웨이브/group/오른쪽")]
-            [ShowIf("@RightEnemiesExists")]
-            [LabelText("오른쪽 적군 리스트")]
-            [SerializeField]
-            private List<EnemySpawnInfo> rightEnemies;
-
-            public WaveInfo(List<EnemySpawnInfo> leftEnemies, List<EnemySpawnInfo> rightEnemies) {
-                this.leftEnemies = leftEnemies;
-                this.rightEnemies = rightEnemies;
-            }
-
-#if UNITY_EDITOR
-            [BoxGroup("웨이브/group/왼쪽")]
-            [ShowIf("@!LeftEnemiesExists")]
-            [Button("생성하기")]
-            private void AddLeft() {
-                this.leftEnemies = new List<EnemySpawnInfo>();
-                this.leftEnemies.Add(new EnemySpawnInfo());
-            }
-            [BoxGroup("웨이브/group/왼쪽")]
-            [ShowIf("@LeftEnemiesExists")]
-            [Button("삭제하기")]
-            private void RemoveLeft() {
-                this.leftEnemies = new List<EnemySpawnInfo>();
-            }
-
-            [BoxGroup("웨이브/group/오른쪽")]
-            [ShowIf("@!RightEnemiesExists")]
-            [Button]
-            private void AddRight() {
-                this.rightEnemies = new List<EnemySpawnInfo>();
-                this.rightEnemies.Add(new EnemySpawnInfo());
-            }
-            [BoxGroup("웨이브/group/오른쪽")]
-            [ShowIf("@RightEnemiesExists")]
-            [Button("삭제하기")]
-            private void RemoveRight() {
-                this.rightEnemies = new List<EnemySpawnInfo>();
-            }
-#endif
-            public bool LeftEnemiesExists { get => this.leftEnemies != null && this.leftEnemies.Count > 0; }
-            public bool RightEnemiesExists { get => this.rightEnemies != null && this.rightEnemies.Count > 0; }
-
-            public List<EnemySpawnInfo> LeftEnemies { get => this.leftEnemies; }
-            public List<EnemySpawnInfo> RightEnemies { get => this.rightEnemies; }
-        }
-
-        [Serializable]
-        public struct DayTimeInfo {
-            [FoldoutGroup("@GroupName")]
-            [BoxGroup("@GroupName/시간 정보")]
-            [HorizontalGroup("@GroupName/시간 정보/group", .5f)]
-            [BoxGroup("@GroupName/시간 정보/group/시간대")]
-            [HideLabel]
-            [SerializeField]
-            private DayTimePart timePart;
-            [BoxGroup("@GroupName/시간 정보/group/시간 (초)")]
-            [HideLabel]
-            [SerializeField]
-            private float time;
-            [FoldoutGroup("@GroupName")]
-            [SerializeField]
-            [HideLabel]
-            private WaveInfo wave;
-            [FoldoutGroup("@GroupName")]
-            [SerializeField]
-            [LabelText("몬스터 스폰 정보")]
-            private List<MonsterSpawnInfo> monsters;
-
-            public DayTimeInfo(DayTimePart timePart, float time, WaveInfo wave, List<MonsterSpawnInfo> monsters) {
-                this.timePart = timePart;
-                this.time = time;
-                this.wave = wave;
-                this.monsters = monsters;
-            }
-
-            public float Time { get => time; }
-            public DayTimePart TimePart { get => timePart; }
-            public WaveInfo Wave { get => wave; }
-
-#if UNITY_EDITOR
-            private string GroupName { get => string.Format("{0}/{1}초{2}{3}{4}", this.timePart, this.time, this.wave.LeftEnemiesExists ? string.Format("/왼쪽 {0}명", this.wave.LeftEnemies.Count) : "", this.wave.RightEnemiesExists ? string.Format("/오른쪽 {0}명", this.wave.RightEnemies.Count) : "", this.monsters.Count > 0 ? string.Format("/몬스터 {0}마리", this.monsters.Count) : ""); }
-#endif
+            public int Id { get => id; }
+            public float Prob { get => prob; }
         }
         #endregion
 
+        [FoldoutGroup("@GroupName")]
+        [BoxGroup("@GroupName/시간 정보")]
+        [HorizontalGroup("@GroupName/시간 정보/group", .5f)]
+        [BoxGroup("@GroupName/시간 정보/group/시간대")]
+        [HideLabel]
         [SerializeField]
-        [LabelText("시간")]
-        private List<DayTimeInfo> dayTimes;
+        private DayTimePart timePart;
+        [BoxGroup("@GroupName/시간 정보/group/시간 (초)")]
+        [HideLabel]
+        [SerializeField]
+        private float time;
+        [FoldoutGroup("@GroupName")]
+        [SerializeField]
+        [LabelText("왼쪽 적군")]
+        private List<int> leftEnemies;
+        [FoldoutGroup("@GroupName")]
+        [LabelText("오른쪽 적군")]
+        [SerializeField]
+        private List<int> rightEnemies;
+        [FoldoutGroup("@GroupName")]
+        [SerializeField]
+        [LabelText("몬스터 정보")]
+        private List<MonsterSpawnInfo> monsters;
+        [FoldoutGroup("@GroupName")]
+        [SerializeField]
+        [LabelText("몬스터 마리수")]
+        private int monsterAmount;
 
-        public void Init(List<DayTimeInfo> dayTimes) {
-            this.dayTimes = dayTimes;
+        public DayTimePart TimePart { get => timePart; }
+        public float Time { get => time; }
+        public List<int> LeftEnemies { get => leftEnemies; }
+        public List<int> RightEnemies { get => rightEnemies; }
+        public List<MonsterSpawnInfo> Monsters { get => monsters; }
+        public int MonsterAmount { get => monsterAmount; }
+
+#if UNITY_EDITOR
+        private string GroupName { get => string.Format("{0}/{1}초/왼쪽 적 {2}명/오른쪽 적 {3}명/몬스터 {4}마리", this.timePart, this.time, this.leftEnemies.Count, this.rightEnemies.Count, this.monsterAmount); }
+#endif
+
+        public override string[] GetProperties() {
+            var properties = new string[] {
+                "timePart",
+                "time",
+                "waveLeftIds",
+                "waveRightIds",
+                "monsterIds",
+                "monsterProbs",
+                "monsterAmount"
+            };
+            return properties;
+        }
+
+        public override void InitFromJObject(JObject jObject) {
+            this.timePart = (DayTimePart)Enum.Parse(typeof(DayTimePart), jObject.Value<string>("timePart"));
+            this.time = jObject.Value<float>("time");
+
+            Debug.Log(jObject["waveLeftIds"]);
+
+            if(jObject["waveLeftIds"] != null)
+                this.leftEnemies = jObject["waveLeftIds"].Values<int>().ToList();
+            else
+                this.leftEnemies = new List<int>();
+            if(jObject["waveRightIds"] != null)
+                this.rightEnemies = jObject["waveRightIds"].Values<int>().ToList();
+            else
+                this.rightEnemies = new List<int>();
+
+            this.monsters = new List<MonsterSpawnInfo>();
+
+            if(jObject["monsterIds"] != null && jObject["monsterProbs"] != null) {
+                var monsterIds = jObject["monsterIds"].Values<int>().ToList();
+                var monsterProbs = jObject["monsterProbs"].Values<float>().ToList();
+
+                for(int i = 0; i < Mathf.Min(monsterIds.Count, monsterProbs.Count); i++) {
+                    monsters.Add(new MonsterSpawnInfo(monsterIds[i], monsterProbs[i]));
+                }
+            }
+
+            this.monsterAmount = jObject.Value<int>("monsterAmount");
         }
     }
 }
