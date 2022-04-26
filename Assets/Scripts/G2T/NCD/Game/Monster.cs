@@ -134,7 +134,7 @@ namespace G2T.NCD.Game {
                 textDef.text = status.Def.ToString();
                 textSpeed.text = status.MoveSpeed.ToString();
                 textAttackSpeed.text = status.AttackSpeed.ToString();
-                textCriRate.text = status.CriProb.ToString();
+                textCriRate.text = status.CriRate.ToString();
                 textCriDamage.text = status.CriDamage.ToString();
             }
         }

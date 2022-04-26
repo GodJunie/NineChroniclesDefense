@@ -14,28 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Datas:
   - id: 5001000
-    name: "\uC81C\uC774\uB4DC \uAC00\uAC8C"
-    description: "\uC81C\uC774\uB4DC\uAC00 \uC774\uADF8\uB4DC\uB77C\uC2E4 \uBFCC\uB9AC\uC5D0
-      \uCC28\uB9B0 \uC774\uB3D9\uC2DD \uAC00\uAC8C\uC774\uB2E4. \uD14C\uB77C\uD1A0\uB9C8\uC640
-      \uD568\uAED8 \uB9CC\uB4E4\uC5C8\uC73C\uBA70, \uAD70\uB370\uAD70\uB370 \uC5C9\uC131\uD55C
-      \uACF3\uB4E4\uC774 \uC874\uC7AC\uD55C\uB2E4."
-    constructItems:
-    - id: 1
-      amount: 1
+    name: Jade's store
+    description: It is a mobile shop that Jade set up on the roots of Igdrasil with
+      Teratoma. There are outdated places in places.
+    constructItems: []
     range: 4
     statusPath: Status_501000
     prefabPath: 
-    iconPath: Assets/Resources/UI/Icons/Building/MonsterHouse.png
+    iconPath: 
   - id: 5002000
-    name: "\uBAAC\uC2A4\uD130 \uD558\uC6B0\uC2A4"
-    description: "\uC81C\uC774\uB4DC\uAC00 \uD3EC\uD68D\uD55C \uBAAC\uC2A4\uD130\uB4E4\uC774
-      \uAC70\uC8FC\uD558\uB294 \uACF5\uAC04\uC774\uB2E4. \uC774\uC804\uC5D0 \uC790\uC2E0\uB4E4\uC774
-      \uC9C0\uB0B4\uB358 \uB0A1\uC740 \uC9D1\uBCF4\uB2E4 \uC2DC\uC124\uC774 \uC88B\uC544
-      \uC131\uAC00\uC2E0  \uACE0\uC591\uC774 \uC6A9\uC0AC\uB4E4\uC744 \uBE60\uB974\uAC8C
-      \uCC98\uCE58\uD558\uACE0 \uC9D1\uC5D0 \uAC00\uACE0 \uC2F6\uC5B4\uD558\uB294
-      \uBAAC\uC2A4\uD130\uAC00 \uC788\uC744 \uC815\uB3C4\uC774\uB2E4. \uAC74\uC124
-      \uC2DC \uD3EC\uD68D\uD560 \uC218 \uC788\uB294  \uBAAC\uC2A4\uD130 \uC218\uAC00
-      \uC99D\uAC00\uD55C\uB2E4."
+    name: Monster House
+    description: It is a space where monsters captured by Jade reside. As the facilities
+      are better than the old houses they used to live in, some monsters even eliminate
+      cat warriors as fast as they can so that they can rest at home. Users can increase
+      the number of monsters that can be captured by building a monster house.
     constructItems:
     - id: 3002008
       amount: 2
@@ -50,14 +42,11 @@ MonoBehaviour:
     range: 4
     statusPath: Status_502000
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/MonsterHouse.prefab
-    iconPath: Assets/Resources/UI/Icons/Building/MonsterHouse.png
+    iconPath: 
   - id: 5003000
-    name: "\uBC99\uCEE4"
-    description: "\uAC00\uAC8C\uC5D0 \uCC98\uB4E4\uC5B4 \uC624\uB294 \uC6A9\uC0AC\uB4E4\uC744
-      \uBCF4\uB2E4 \uD6A8\uACFC\uC801\uC73C\uB85C \uB9C9\uC544 \uB0B4\uAE30 \uC704\uD574
-      \uC81C\uC774\uB4DC\uAC00 \uACE0\uC548\uD574\uB0B8 \uBC29\uC5B4 \uC2DC\uC124\uC774\uB2E4.
-      \uBAAC\uC2A4\uD130\uAC00 \uC9C4\uC785\uD558\uC5EC \uAC15\uB825\uD55C \uC6D0\uAC70\uB9AC
-      \uACF5\uACA9\uC744 \uAC00\uD55C\uB2E4\uACE0 \uD55C\uB2E4."
+    name: Bunker
+    description: 'It is a defense facility devised by Jade to prevent warriors from
+      invading the store. Monsters enter the bunker and launch strong ranged attack. '
     constructItems:
     - id: 3002008
       amount: 4
@@ -70,13 +59,11 @@ MonoBehaviour:
     range: 4
     statusPath: Status_503000
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Bunker.prefab
-    iconPath: Assets/Resources/UI/Icons/Building/Bunker.png
+    iconPath: 
   - id: 5004000
-    name: "\uBAAC\uC2A4\uD130 \uC74C\uC2DD\uC810"
-    description: "\uBAAC\uC2A4\uD130\uC5D0\uAC8C \uB354 \uC88B\uC740 \uC74C\uC2DD\uC744
-      \uACF5\uAE09\uD558\uAE30 \uC704\uD574 \uB9CC\uB4E4\uC5B4\uC9C4 \uC2DC\uC124\uC774\uB2E4.
-      \uC6A9\uC0AC\uB4E4\uC5D0\uAC8C\uC11C \uBE7C\uC557\uC740 \uC74C\uC2DD \uC7AC\uB8CC\uB97C
-      \uC870\uD569\uD558\uC5EC \uC74C\uC2DD\uC744 \uB9CC\uB4E4 \uC218 \uC788\uB2E4."
+    name: Monster Restaurant
+    description: It is a facility built to provide better food for monsters. Users
+      can make food by combining the  ingredients taken from the warriors.
     constructItems:
     - id: 3005000
       amount: 3
@@ -87,14 +74,12 @@ MonoBehaviour:
     range: 4
     statusPath: Status_504000
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Restaurant.prefab
-    iconPath: Assets/Resources/UI/Icons/Building/Restaurant.png
+    iconPath: 
   - id: 5005000
-    name: "\uBAAC\uC2A4\uD130 \uACF5\uBC29"
-    description: "\uBAAC\uC2A4\uD130\uC5D0\uAC8C \uB354 \uC88B\uC740 \uC7A5\uBE44\uB97C
-      \uACF5\uAE09\uD558\uC5EC \uC6A9\uC0AC\uB4E4\uC744 \uBCF4\uB2E4 \uD6A8\uACFC\uC801\uC73C\uB85C
-      \uB9C9\uC544\uB0B4\uAE30 \uC704\uD574 \uB9CC\uB4E4\uC5B4\uC9C4 \uC2DC\uC124\uC774\uB2E4.
-      \uBAAC\uC2A4\uD130 \uC544\uC774\uD15C \uBFD0\uB9CC \uC544\uB2CC \uAC74\uC124\uC5D0
-      \uC0AC\uC6A9\uB420 \uC544\uC774\uD15C\uB3C4 \uC81C\uC791\uC774 \uAC00\uB2A5\uD558\uB2E4."
+    name: Monster Workshop
+    description: It is a facility built to provide better equipment to monsters which
+      can be used to prevent warriors. Users can produce items not only for monsters
+      but also for construction.
     constructItems:
     - id: 3004020
       amount: 3
@@ -105,4 +90,4 @@ MonoBehaviour:
     range: 4
     statusPath: Status_505000
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Smithy.prefab
-    iconPath: Assets/Resources/UI/Icons/Building/Smithy.png
+    iconPath: 

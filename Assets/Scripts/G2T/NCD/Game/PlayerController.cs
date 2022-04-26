@@ -115,7 +115,7 @@ namespace G2T.NCD.Game {
                 this.monsters.Add(monster);
                 break;
             case "Booty":
-                var booty = collision.GetComponent<Booty>();
+                var booty = collision.GetComponent<DropItem>();
                 GameController.Instance.AddItem(booty.id, booty.count);
                 Destroy(booty.gameObject);
                 break;

@@ -26,7 +26,7 @@ namespace G2T.NCD.Game {
         [LabelText("크리티컬 확률")]
         [SerializeField]
         [LabelWidth(150f)]
-        private float criProb;
+        private float criRate;
         [FoldoutGroup("스탯")]
         [LabelText("크리티컬 데미지")]
         [SerializeField]
@@ -43,11 +43,11 @@ namespace G2T.NCD.Game {
         [LabelWidth(150f)]
         private float attackSpeed;
 
-        public Status(float hp, float atk, float def, float criProb, float criDamage, float moveSpeed, float attackSpeed) {
+        public Status(float hp, float atk, float def, float criRate, float criDamage, float moveSpeed, float attackSpeed) {
             this.hp = hp;
             this.atk = atk;
             this.def = def;
-            this.criProb = criProb;
+            this.criRate = criRate;
             this.criDamage = criDamage;
             this.moveSpeed = moveSpeed;
             this.attackSpeed = attackSpeed;
@@ -56,7 +56,7 @@ namespace G2T.NCD.Game {
         public float Hp { get => hp; }
         public float Atk { get => atk; }
         public float Def { get => def; }
-        public float CriProb { get => criProb; }
+        public float CriRate { get => criRate; }
         public float CriDamage { get => criDamage; }
         public float MoveSpeed { get => moveSpeed; }
         public float AttackSpeed { get => attackSpeed; }
@@ -65,7 +65,7 @@ namespace G2T.NCD.Game {
            "hp",
            "atk",
            "def",
-           "criProb",
+           "criRate",
            "criDamage",
            "moveSpeed",
            "attackSpeed",
@@ -76,7 +76,7 @@ namespace G2T.NCD.Game {
             status.hp          = jObject.Value<float>("hp");
             status.atk         = jObject.Value<float>("atk");
             status.def         = jObject.Value<float>("def");
-            status.criProb     = jObject.Value<float>("criProb");
+            status.criRate     = jObject.Value<float>("criRate");
             status.criDamage   = jObject.Value<float>("criDamage");
             status.moveSpeed   = jObject.Value<float>("moveSpeed");
             status.attackSpeed = jObject.Value<float>("attackSpeed");

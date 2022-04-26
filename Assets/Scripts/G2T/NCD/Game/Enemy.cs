@@ -157,7 +157,7 @@ namespace G2T.NCD.Game {
             var entry = this.anim.AnimationState.SetAnimation(0, "Die", false);
             yield return new WaitForSpineAnimationComplete(entry);
 
-            var booty = Instantiate(bootyPrefab, this.transform.position, Quaternion.identity).GetComponent<Booty>();
+            var booty = Instantiate(bootyPrefab, this.transform.position, Quaternion.identity).GetComponent<DropItem>();
 
             var sum = info.DropItems.Sum(e => e.Prob);
             var rand = UnityEngine.Random.Range(0f, sum);

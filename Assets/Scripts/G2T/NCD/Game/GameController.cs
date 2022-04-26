@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 // UnityEngine
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,8 +14,8 @@ using Sirenix.OdinInspector;
 namespace G2T.NCD.Game {
     using Data;
     using UI;
-    using System.IO;
     using Table;
+    using Management;
 
     public class GameController : SingletonBehaviour<GameController> {
         // Serialized Members
@@ -169,19 +170,10 @@ namespace G2T.NCD.Game {
         #endregion
 
         #region Building
-        public void OnConstructBuilding(int id) {
+        public async void OnConstructBuilding(int id) {
             var data = TableLoader.Instance.BuildingTable.Datas.Find(e => e.Id == id);
-            if(data == null) {
-                Debug.LogError(string.Format("There is no building info id: {0}", id));
-            }
 
-            var path = data.PrefabPath;
-            path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
-            var prefab = Resources.Load<GameObject>(path);
-
-            if(prefab == null) {
-                Debug.LogError(string.Format("Fail to load building prefab path: {0}, id: {1}", path, id));
-            }
+            var prefab = await ResourcesManager.Instance.LoadAsync<GameObject>(data.PrefabPath);
 
             pendingBuilding = Instantiate(prefab, this.player.BuildingHoder);
             pendingBuilding.transform.localPosition = Vector3.zero;
@@ -269,6 +261,7 @@ namespace G2T.NCD.Game {
                 GenerateMonster(data);
                 GenerateEnemies(data.LeftEnemies, true);
                 GenerateEnemies(data.RightEnemies, false);
+                GenerateFarmingItems(data);
 
                 curEnemyCount += data.LeftEnemies.Count;
                 curEnemyCount += data.RightEnemies.Count;
@@ -291,8 +284,7 @@ namespace G2T.NCD.Game {
             times.Sort();
             
             foreach(var t in times) {
-                //await UniTask.Delay(TimeSpan.FromSeconds(t));
-                await UniTask.Delay(TimeSpan.FromSeconds(0.5));
+                await UniTask.Delay(TimeSpan.FromSeconds(t));
 
                 var sum = data.Monsters.Sum(e => e.Prob);
                 var rand = UnityEngine.Random.Range(0f, sum);
@@ -362,6 +354,55 @@ namespace G2T.NCD.Game {
                     curEnemyCount--;
                 };
             }
+        }
+
+        private async void GenerateFarmingItems(StageTimelineInfo data) {
+            float time = data.Time;
+            var times = new List<float>();
+            for(int i = 0; i < data.FarmingItemAmount; i++) {
+                times.Add(UnityEngine.Random.Range(0f, time));
+            }
+            times.Sort();
+
+            foreach(var t in times) {
+                await UniTask.Delay(TimeSpan.FromSeconds(t));
+
+                var sum = data.FarmingItems.Sum(e => e.Prob);
+                var rand = UnityEngine.Random.Range(0f, sum);
+
+                foreach(var info in data.Monsters) {
+                    if(rand <= info.Prob) {
+                        var posX = UnityEngine.Random.Range(0, 2) == 0 ? UnityEngine.Random.Range(RangeLeft, BuildingRangeLeft) : UnityEngine.Random.Range(BuildingRangeRight, RangeRight);
+
+                        GenerateFarmingItem(info.Id, posX);
+                        break;
+                    }
+                    rand -= info.Prob;
+                }
+            }
+        }
+
+        private void GenerateFarmingItem(int id, float posX) {
+            var farmingItemData = TableLoader.Instance.FarmingItemTable.Datas.Find(e => e.Id == id);
+
+            var path = farmingItemData.PrefabPath;
+            path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+
+            var itemPrefab = Resources.Load<GameObject>(path);
+
+            //var item = Instantiate(itemPrefab).GetComponent<Monster>();
+
+            //monster.transform.position = new Vector3(posX, 0f, 0f);
+            //monster.gameObject.SetActive(true);
+
+            //monster.Init(monsterData, monsterType);
+
+            //this.Monsters.Add(monster);
+
+            //monster.OnDead += (e) => {
+            //    this.Monsters.Remove(e);
+            //    this.SetMonsterAmountsUI();
+            //};
         }
 
         private void ChangeBackground(DayTimePart timePart) {

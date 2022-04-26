@@ -36,6 +36,28 @@ namespace G2T.NCD.Table {
             public int Id { get => id; }
             public float Prob { get => prob; }
         }
+
+        [Serializable]
+        public struct FarmingItemInfo {
+            [HorizontalGroup("group")]
+            [BoxGroup("group/아이디")]
+            [HideLabel]
+            [SerializeField]
+            private int id;
+            [HorizontalGroup("group")]
+            [BoxGroup("group/확률")]
+            [HideLabel]
+            [SerializeField]
+            private float prob;
+
+            public FarmingItemInfo(int id, float prob) {
+                this.id = id;
+                this.prob = prob;
+            }
+
+            public int Id { get => id; }
+            public float Prob { get => prob; }
+        }
         #endregion
 
         [FoldoutGroup("@GroupName")]
@@ -65,6 +87,14 @@ namespace G2T.NCD.Table {
         [SerializeField]
         [LabelText("몬스터 마리수")]
         private int monsterAmount;
+        [FoldoutGroup("@GroupName")]
+        [SerializeField]
+        [LabelText("파밍 아이템 정보")]
+        private List<FarmingItemInfo> farmingItems;
+        [FoldoutGroup("@GroupName")]
+        [SerializeField]
+        [LabelText("파밍 아이템 개수")]
+        private int farmingItemAmount;
 
         public DayTimePart TimePart { get => timePart; }
         public float Time { get => time; }
@@ -72,9 +102,11 @@ namespace G2T.NCD.Table {
         public List<int> RightEnemies { get => rightEnemies; }
         public List<MonsterSpawnInfo> Monsters { get => monsters; }
         public int MonsterAmount { get => monsterAmount; }
+        public List<FarmingItemInfo> FarmingItems { get => farmingItems; }
+        public int FarmingItemAmount { get => farmingItemAmount; }
 
 #if UNITY_EDITOR
-        private string GroupName { get => string.Format("{0}/{1}초/왼쪽 적 {2}명/오른쪽 적 {3}명/몬스터 {4}마리", this.timePart, this.time, this.leftEnemies.Count, this.rightEnemies.Count, this.monsterAmount); }
+        private string GroupName { get => string.Format("{0}/{1}초/왼쪽 적 {2}명/오른쪽 적 {3}명/몬스터 {4}마리/채집 아이템 {5}개", this.timePart, this.time, this.leftEnemies.Count, this.rightEnemies.Count, this.monsterAmount, this.farmingItemAmount); }
 #endif
 
         public override string[] GetProperties() {
@@ -85,7 +117,10 @@ namespace G2T.NCD.Table {
                 "waveRightIds",
                 "monsterIds",
                 "monsterProbs",
-                "monsterAmount"
+                "monsterAmount",
+                "farmingItemIds",
+                "farmingItemProbs",
+                "farmingItemAmount"
             };
             return properties;
         }
@@ -117,6 +152,19 @@ namespace G2T.NCD.Table {
             }
 
             this.monsterAmount = jObject.Value<int>("monsterAmount");
+
+            this.farmingItems = new List<FarmingItemInfo>();
+
+            if(jObject["farmingItemIds"] != null && jObject["farmingItemProbs"] != null) {
+                var farmingItemIds = jObject["farmingItemIds"].Values<int>().ToList();
+                var farmingItemProbs = jObject["farmingItemProbs"].Values<float>().ToList();
+
+                for(int i = 0; i < Mathf.Min(farmingItemIds.Count, farmingItemProbs.Count); i++) {
+                    farmingItems.Add(new FarmingItemInfo(farmingItemIds[i], farmingItemProbs[i]));
+                }
+            }
+
+            this.farmingItemAmount = jObject.Value<int>("farmingItemAmount");
         }
     }
 }
