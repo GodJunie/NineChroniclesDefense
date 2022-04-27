@@ -12,7 +12,7 @@ namespace G2T.NCD.UI {
         [SerializeField]
         private Transform container;
         [SerializeField]
-        private UIItemSlot slotPrefab;
+        private UISlot slotPrefab;
 
         private void OnEnable() {
             var items = GameController.Instance.Items;
@@ -30,12 +30,13 @@ namespace G2T.NCD.UI {
 
                 var icon = Resources.Load<Sprite>(path);
 
-                slot.IconImage.sprite = icon;
+                //slot.IconImage.sprite = icon;
 
                 var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
                 int count = ownedItem == null ? 0 : ownedItem.Count;
 
-                slot.CountText.text = item.Count.ToString();
+                //slot.CountText.text = item.Count.ToString();
+                slot.SetUI(icon, count.ToString());
             }
         }
     }

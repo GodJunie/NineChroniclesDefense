@@ -301,13 +301,10 @@ namespace G2T.NCD.Game {
             }
         }
 
-        public void GenerateMonster(int id, float posX, MonsterType monsterType) {
+        public async void GenerateMonster(int id, float posX, MonsterType monsterType) {
             var monsterData = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == id);
 
-            var path = monsterData.PrefabPath;
-            path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
-
-            var monsterPrefab = Resources.Load<GameObject>(path);
+            var monsterPrefab = await ResourcesManager.Instance.LoadAsync<GameObject>(monsterData.PrefabPath);
 
             var monster = Instantiate(monsterPrefab).GetComponent<Monster>();
 
@@ -333,11 +330,8 @@ namespace G2T.NCD.Game {
                 int enemyId = enemyPreset.EnemyId;
 
                 var enemyInfo = TableLoader.Instance.EnemyTable.Datas.Find(e => e.Id == enemyId);
-
-                var path = enemyInfo.PrefabPath;
-                path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
-
-                var enemyPrefab = Resources.Load<GameObject>(path);
+           
+                var enemyPrefab = await ResourcesManager.Instance.LoadAsync<GameObject>(enemyInfo.PrefabPath);
 
                 var enemy = Instantiate(enemyPrefab).GetComponent<Enemy>();
 
@@ -385,24 +379,7 @@ namespace G2T.NCD.Game {
         private void GenerateFarmingItem(int id, float posX) {
             var farmingItemData = TableLoader.Instance.FarmingItemTable.Datas.Find(e => e.Id == id);
 
-            var path = farmingItemData.PrefabPath;
-            path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
-
-            var itemPrefab = Resources.Load<GameObject>(path);
-
-            //var item = Instantiate(itemPrefab).GetComponent<Monster>();
-
-            //monster.transform.position = new Vector3(posX, 0f, 0f);
-            //monster.gameObject.SetActive(true);
-
-            //monster.Init(monsterData, monsterType);
-
-            //this.Monsters.Add(monster);
-
-            //monster.OnDead += (e) => {
-            //    this.Monsters.Remove(e);
-            //    this.SetMonsterAmountsUI();
-            //};
+            var itemPrefab = ResourcesManager.Instance.LoadAsync<GameObject>(farmingItemData.PrefabPath);
         }
 
         private void ChangeBackground(DayTimePart timePart) {

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 // UnityEngine
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ namespace G2T.NCD.Game {
     using Table;
     using Data;
     using UI;
-    using System.IO;
+    using Management;
 
     public enum MonsterType : int { None = 0, Wild, Friendly }
 
@@ -62,24 +63,24 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private Vector2 rootCanvasPosition;
 
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private Image imageIcon;
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject panel;
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject panelInfo;
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject panelCatch;
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject panelLevelUp;
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject panelEvolution;
+        //[TabGroup("group", "UI")]
+        //[SerializeField]
+        //private Image imageIcon;
+        //[TabGroup("group", "UI")]
+        //[SerializeField]
+        //private GameObject panel;
+        //[TabGroup("group", "UI")]
+        //[SerializeField]
+        //private GameObject panelInfo;
+        //[TabGroup("group", "UI")]
+        //[SerializeField]
+        //private GameObject panelCatch;
+        //[TabGroup("group", "UI")]
+        //[SerializeField]
+        //private GameObject panelLevelUp;
+        //[TabGroup("group", "UI")]
+        //[SerializeField]
+        //private GameObject panelEvolution;
 
         [TabGroup("group", "UI")]
         [SerializeField]
@@ -111,79 +112,51 @@ namespace G2T.NCD.Game {
 
         private MonsterStatusTable statusTable;
 
-        [Serializable]
-        public class StatusTextGroup {
-            [SerializeField]
-            private Text textHp;
-            [SerializeField]
-            private Text textAtk;
-            [SerializeField]
-            private Text textDef;
-            [SerializeField]
-            private Text textSpeed;
-            [SerializeField]
-            private Text textAttackSpeed;
-            [SerializeField]
-            private Text textCriRate;
-            [SerializeField]
-            private Text textCriDamage;
-           
-            public void InitUI(Status status) {
-                textHp.text = status.Hp.ToString();
-                textAtk.text = status.Atk.ToString();
-                textDef.text = status.Def.ToString();
-                textSpeed.text = status.MoveSpeed.ToString();
-                textAttackSpeed.text = status.AttackSpeed.ToString();
-                textCriRate.text = status.CriRate.ToString();
-                textCriDamage.text = status.CriDamage.ToString();
-            }
-        }
+        //[BoxGroup("group/UI/Info")]
+        //[SerializeField]
+        //private Text textName;
+        //[BoxGroup("group/UI/Info")]
+        //[SerializeField]
+        //private Text textLevel;
+        //[BoxGroup("group/UI/Info")]
+        //[SerializeField]
+        //private StatusTextGroup statusTextGroup;
 
-        [BoxGroup("group/UI/Info")]
-        [SerializeField]
-        private Text textName;
-        [BoxGroup("group/UI/Info")]
-        [SerializeField]
-        private Text textLevel;
-        [BoxGroup("group/UI/Info")]
-        [SerializeField]
-        private StatusTextGroup statusTextGroup;
+        //[BoxGroup("group/UI/Catch")]
+        //[SerializeField]
+        //private Transform catchSlotContainer;
+        //[BoxGroup("group/UI/Catch")]
+        //[SerializeField]
+        //private UIItemSlot itemSlotPerfab;
+        //[BoxGroup("group/UI/Catch")]
+        //[SerializeField]
+        //private Button catchButton;
 
-        [BoxGroup("group/UI/Catch")]
-        [SerializeField]
-        private Transform catchSlotContainer;
-        [BoxGroup("group/UI/Catch")]
-        [SerializeField]
-        private UIItemSlot itemSlotPerfab;
-        [BoxGroup("group/UI/Catch")]
-        [SerializeField]
-        private Button catchButton;
+        //[BoxGroup("group/UI/LevelUp")]
+        //[SerializeField]
+        //private Transform levelUpSlotContainer;
+        //[BoxGroup("group/UI/LevelUp")]
+        //[SerializeField]
+        //private Text textLevelBefore;
+        //[BoxGroup("group/UI/LevelUp")]
+        //[SerializeField]
+        //private Text textLevelAfter;
+        //[BoxGroup("group/UI/LevelUp")]
+        //[SerializeField]
+        //private Button buttonLevelUp;
+        //[BoxGroup("group/UI/LevelUp")]
+        //[SerializeField]
+        //private Text buttonTextLevelUp;
 
-        [BoxGroup("group/UI/LevelUp")]
-        [SerializeField]
-        private Transform levelUpSlotContainer;
-        [BoxGroup("group/UI/LevelUp")]
-        [SerializeField]
-        private Text textLevelBefore;
-        [BoxGroup("group/UI/LevelUp")]
-        [SerializeField]
-        private Text textLevelAfter;
-        [BoxGroup("group/UI/LevelUp")]
-        [SerializeField]
-        private Button buttonLevelUp;
-        [BoxGroup("group/UI/LevelUp")]
-        [SerializeField]
-        private Text buttonTextLevelUp;
-
-        [BoxGroup("group/UI/Evolution")]
-        [SerializeField]
-        private Transform evolutionSlotContainer;
-        [BoxGroup("group/UI/Evolution")]
-        [SerializeField]
-        private Button buttonEvolution;
-        [BoxGroup("group/UI/Evolution")]
-        [SerializeField]
-        private UIItemSlot evolutionResultSlot;
+        //[BoxGroup("group/UI/Evolution")]
+        //[SerializeField]
+        //private Transform evolutionSlotContainer;
+        //[BoxGroup("group/UI/Evolution")]
+        //[SerializeField]
+        //private Button buttonEvolution;
+        //[BoxGroup("group/UI/Evolution")]
+        //[SerializeField]
+        //private UISlot evolutionResultSlot;
 
         private Direction curDirection;
        
@@ -297,51 +270,50 @@ namespace G2T.NCD.Game {
 
             this.curState = State.Idle;
                
-            this.OpenPanel();
+            //this.OpenPanel();
         }
 
-        private void OpenPanel() {
-            this.panel.SetActive(true);
-            if(this.monsterType == MonsterType.Wild) {
-                this.OpenCatchPanel();
-            } else {
-                this.OpenInfoPanel();
-                this.OpenMovePanel();
-            }
+        //private void OpenPanel() {
+        //    this.panel.SetActive(true);
+        //    if(this.monsterType == MonsterType.Wild) {
+        //        this.OpenCatchPanel();
+        //    } else {
+        //        this.OpenInfoPanel();
+        //        this.OpenMovePanel();
+        //    }
                
-            var diff = this.player.transform.position - this.transform.position;
-            if(diff.x > 0)
-                SetDirection(Direction.Right);
-            else if(diff.x < 0)
-                SetDirection(Direction.Left);
+        //    var diff = this.player.transform.position - this.transform.position;
+        //    if(diff.x > 0)
+        //        SetDirection(Direction.Right);
+        //    else if(diff.x < 0)
+        //        SetDirection(Direction.Left);
 
-            this.Interacting = true;
-        }
+        //    this.Interacting = true;
+        //}
 
-        private void OpenCatchPanel() {
-            this.panelCatch.SetActive(true);
+        //private async void OpenCatchPanel() {
+        //    this.panelCatch.SetActive(true);
 
-            for(int i = 0; i < catchSlotContainer.childCount; i++) {
-                Destroy(catchSlotContainer.GetChild(i).gameObject);
-            }
-            foreach(var item in Info.CatchMaterials) {
-                var slot = Instantiate(itemSlotPerfab, this.catchSlotContainer);
+        //    for(int i = 0; i < catchSlotContainer.childCount; i++) {
+        //        Destroy(catchSlotContainer.GetChild(i).gameObject);
+        //    }
+        //    foreach(var item in Info.CatchMaterials) {
+        //        var slot = Instantiate(itemSlotPerfab, this.catchSlotContainer);
 
-                var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == item.Id);
+        //        var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == item.Id);
 
-                var path = itemData.IconPath;
-                path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+        //        var icon = await ResourcesManager.Instance.LoadAsync<Sprite>(itemData.IconPath);
 
-                var icon = Resources.Load<Sprite>(path);
+        //        //slot.IconImage.sprite = icon;
 
-                slot.IconImage.sprite = icon;
+        //        var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
+        //        int count = ownedItem == null ? 0 : ownedItem.Count;
 
-                var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
-                int count = ownedItem == null ? 0 : ownedItem.Count;
+        //        //slot.CountText.text = string.Format("{0}/{1}", count, item.Amount);
 
-                slot.CountText.text = string.Format("{0}/{1}", count, item.Amount);
-            }
-        }
+        //        slot.SetUI(icon, count, item.Amount);
+        //    }
+        //}
 
         public void OnCatch() {
             foreach(var item in Info.CatchMaterials) {
@@ -367,54 +339,53 @@ namespace G2T.NCD.Game {
             this.ClosePanel();
         }
 
-        private void OpenInfoPanel() {
-            this.panelInfo.SetActive(true);
+        //private void OpenInfoPanel() {
+        //    this.panelInfo.SetActive(true);
 
-            this.statusTextGroup.InitUI(this.CurStatus);
-            this.textLevel.text = string.Format("Lv. {0}", this.level + 1);
-        }
+        //    this.statusTextGroup.InitUI(this.CurStatus);
+        //    this.textLevel.text = string.Format("Lv. {0}", this.level + 1);
+        //}
 
         public void OnTargetBuildingDestroyed() {
             this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
         }
 
-        public void OnOpenLevelUpPanel() {
-            if(this.level == statusTable.Datas.Count - 1) {
-                this.OpenEvolutionPanel();
-            } else {
-                this.OpenLevelUpPanel();
-            }
-        }
+        //public void OnOpenLevelUpPanel() {
+        //    if(this.level == statusTable.Datas.Count - 1) {
+        //        this.OpenEvolutionPanel();
+        //    } else {
+        //        this.OpenLevelUpPanel();
+        //    }
+        //}
 
-        private void OpenLevelUpPanel() {
-            this.panelLevelUp.SetActive(true);
-            this.panelInfo.SetActive(false);
+        //private async void OpenLevelUpPanel() {
+        //    this.panelLevelUp.SetActive(true);
+        //    this.panelInfo.SetActive(false);
 
-            this.textLevelBefore.text = string.Format("Lv. {0}", level + 1);
-            this.textLevelAfter.text = string.Format("Lv. {0}", level + 2);
+        //    this.textLevelBefore.text = string.Format("Lv. {0}", level + 1);
+        //    this.textLevelAfter.text = string.Format("Lv. {0}", level + 2);
 
-            for(int i = 0; i < levelUpSlotContainer.childCount; i++) {
-                Destroy(levelUpSlotContainer.GetChild(i).gameObject);
-            }
+        //    for(int i = 0; i < levelUpSlotContainer.childCount; i++) {
+        //        Destroy(levelUpSlotContainer.GetChild(i).gameObject);
+        //    }
 
-            foreach(var item in statusTable.Datas[this.level].LevelUpItems) {
-                var slot = Instantiate(itemSlotPerfab, this.levelUpSlotContainer);
+        //    foreach(var item in statusTable.Datas[this.level].LevelUpItems) {
+        //        var slot = Instantiate(itemSlotPerfab, this.levelUpSlotContainer);
 
-                var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == item.Id);
+        //        var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == item.Id);
 
-                var path = itemData.IconPath;
-                path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+        //        var icon = await ResourcesManager.Instance.LoadAsync<Sprite>(itemData.IconPath);
 
-                var icon = Resources.Load<Sprite>(path);
+        //        //slot.IconImage.sprite = icon;
 
-                slot.IconImage.sprite = icon;
+        //        var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
+        //        int count = ownedItem == null ? 0 : ownedItem.Count;
 
-                var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
-                int count = ownedItem == null ? 0 : ownedItem.Count;
+        //        //slot.CountText.text = string.Format("{0}/{1}", count, item.Amount);
 
-                slot.CountText.text = string.Format("{0}/{1}", count, item.Amount);
-            }
-        }
+        //        slot.SetUI(icon, count, item.Amount);
+        //    }
+        //}
 
         public void OnLevelUp() {
             var data = statusTable.Datas[this.level];
@@ -442,67 +413,67 @@ namespace G2T.NCD.Game {
 
         private List<Monster> evolMat = new List<Monster>();
 
-        private void OpenEvolutionPanel() {
-            this.panelInfo.SetActive(false);
-            this.panelEvolution.SetActive(true);
+        //private async void OpenEvolutionPanel() {
+        //    this.panelInfo.SetActive(false);
+        //    this.panelEvolution.SetActive(true);
 
-            evolMat.Clear();
+        //    evolMat.Clear();
 
-            for(int i = 0; i < evolutionSlotContainer.childCount; i++) {
-                Destroy(evolutionSlotContainer.GetChild(i).gameObject);
-            }
+        //    for(int i = 0; i < evolutionSlotContainer.childCount; i++) {
+        //        Destroy(evolutionSlotContainer.GetChild(i).gameObject);
+        //    }
 
-            var data = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == id);
+        //    var data = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == id);
 
-            var resultIconPath = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == data.EvoutionResult).IconPath;
-            resultIconPath = resultIconPath.Replace("Assets/Resources/", "").Replace(Path.GetExtension(resultIconPath), "");
+        //    var resultIconPath = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == data.EvoutionResult).IconPath;
+        //    resultIconPath = resultIconPath.Replace("Assets/Resources/", "").Replace(Path.GetExtension(resultIconPath), "");
 
-            var resultIcon = Resources.Load<Sprite>(resultIconPath);
+        //    var resultIcon = Resources.Load<Sprite>(resultIconPath);
 
-            this.evolutionResultSlot.IconImage.sprite = resultIcon;
-            this.evolutionResultSlot.CountText.text = "";
+        //    //this.evolutionResultSlot.IconImage.sprite = resultIcon;
+        //    //this.evolutionResultSlot.CountText.text = "";
 
-            foreach(var mat in Info.EvolutionMaterials) {
-                var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == mat.Id);
-                if(itemData != null) {
-                    var slot = Instantiate(itemSlotPerfab, this.evolutionSlotContainer);
+        //    this.evolutionResultSlot.SetUI(resultIcon);
 
-                    var path = itemData.IconPath;
-                    path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+        //    foreach(var mat in Info.EvolutionMaterials) {
+        //        var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == mat.Id);
+        //        if(itemData != null) {
+        //            var slot = Instantiate(itemSlotPerfab, this.evolutionSlotContainer);
 
-                    var icon = Resources.Load<Sprite>(path);
+        //            var icon = await ResourcesManager.Instance.LoadAsync
+        //                <Sprite>(itemData.IconPath);
 
-                    slot.IconImage.sprite = icon;
+        //            //slot.IconImage.sprite = icon;
 
-                    var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
-                    int count = ownedItem == null ? 0 : ownedItem.Count;
+        //            var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
+        //            int count = ownedItem == null ? 0 : ownedItem.Count;
 
-                    slot.CountText.text = string.Format("{0}/{1}", count, mat.Amount);
-                    continue;
-                }
+        //            //slot.CountText.text = string.Format("{0}/{1}", count, mat.Amount);
 
-                var monsterData = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == mat.Id);
-                if(monsterData != null) {
-                    var slot = Instantiate(itemSlotPerfab, this.evolutionSlotContainer);
+        //            slot.SetUI(icon, count, mat.Amount);
 
-                    var path = monsterData.IconPath;
-                    path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+        //            continue;
+        //        }
 
-                    var icon = Resources.Load<Sprite>(path);
+        //        var monsterData = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == mat.Id);
+        //        if(monsterData != null) {
+        //            var slot = Instantiate(itemSlotPerfab, this.evolutionSlotContainer);
 
-                    slot.IconImage.sprite = icon;
+        //            var icon = await ResourcesManager.Instance.LoadAsync<Sprite>(monsterData.IconPath);
 
-                    slot.CountText.text = string.Format("{0}/{1}", 0, mat.Amount);
+        //            //slot.IconImage.sprite = icon;
 
-                    slot.GetComponent<Button>().onClick.AddListener(() => {
-                        GameController.Instance.OpenMonsterPanel(GameController.Instance.Monsters.Where(e => e.monsterType == MonsterType.Friendly && e.Id == mat.Id && !evolMat.Contains(e)).ToList(), monster => {
-                            this.evolMat.Add(monster);
-                            slot.CountText.text = string.Format("{0}/{1}", evolMat.Count(e => e.Id == mat.Id), mat.Amount);
-                        });
-                    });
-                }
-            }
-        }
+        //            //slot.CountText.text = string.Format("{0}/{1}", 0, mat.Amount);
+
+        //            slot.SetUI(icon, 0, mat.Amount, () => {
+        //                GameController.Instance.OpenMonsterPanel(GameController.Instance.Monsters.Where(e => e.monsterType == MonsterType.Friendly && e.Id == mat.Id && !evolMat.Contains(e)).ToList(), monster => {
+        //                    this.evolMat.Add(monster);
+        //                    //slot.CountText.text = string.Format("{0}/{1}", evolMat.Count(e => e.Id == mat.Id), mat.Amount);
+        //                });
+        //            });
+        //        }
+        //    }
+        //}
 
         public void OnEvolution() {
             var data = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == id);

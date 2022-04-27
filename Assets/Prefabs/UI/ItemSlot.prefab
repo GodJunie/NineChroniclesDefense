@@ -135,8 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d2383267d471d54d8829fba560fadf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IconImage: {fileID: 4523031345583957777}
-  CountText: {fileID: 4523031344355390289}
+  text: {fileID: 4523031344355390289}
+  image: {fileID: 4523031344162909575}
+  button: {fileID: 4523031344162909574}
+  colorWhite: {r: 1, g: 1, b: 1, a: 1}
+  colorGreen: {r: 0.08915506, g: 0.754717, b: 0.0035599943, a: 1}
+  colorRed: {r: 0.990566, g: 0.042052314, b: 0.042052314, a: 1}
 --- !u!1 &4523031344355390285
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +155,7 @@ GameObject:
   - component: {fileID: 4523031344355390288}
   - component: {fileID: 4523031344355390287}
   m_Layer: 0
-  m_Name: ItemCount
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +264,7 @@ GameObject:
   - component: {fileID: 4523031345583957778}
   - component: {fileID: 4523031345583957777}
   m_Layer: 0
-  m_Name: ItemIcon
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

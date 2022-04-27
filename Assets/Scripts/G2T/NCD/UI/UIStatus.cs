@@ -9,9 +9,9 @@ namespace G2T.NCD.UI {
 
     public class UIStatus : MonoBehaviour {
         [SerializeField]
-        private Text textAtk;
-        [SerializeField]
         private Text textHp;
+        [SerializeField]
+        private Text textAtk;
         [SerializeField]
         private Text textDef;
         [SerializeField]
@@ -24,13 +24,20 @@ namespace G2T.NCD.UI {
         private Text textCriDmg;
 
         public void SetUI(Status status) {
-            this.textAtk.text = status.Atk.ToString("0");
-            this.textHp.text = status.Hp.ToString("0");
-            this.textDef.text = status.Def.ToString("0");
-            this.textAtkSpeed.text = status.AttackSpeed.ToString("0.0");
-            this.textMoveSpeed.text = status.MoveSpeed.ToString("0.0");
-            this.textCriRate.text = status.CriRate.ToString("0.0%");
-            this.textCriDmg.text = status.CriDamage.ToString("0.0%");
+            if(this.textAtk)
+                this.textAtk.text = status.Atk.ToString("0");
+            if(this.textHp)
+                this.textHp.text = status.Hp.ToString("0");
+            if(this.textDef)
+                this.textDef.text = status.Def.ToString("0");
+            if(this.textAtkSpeed)
+                this.textAtkSpeed.text = status.AttackSpeed.ToString("0.0");
+            if(this.textMoveSpeed)
+                this.textMoveSpeed.text = status.MoveSpeed.ToString("0.0");
+            if(this.textCriRate)
+                this.textCriRate.text = status.CriRate.ToString("0.0%");
+            if(this.textCriDmg)
+                this.textCriDmg.text = status.CriDamage.ToString("0.0%");
         }
     }
 }

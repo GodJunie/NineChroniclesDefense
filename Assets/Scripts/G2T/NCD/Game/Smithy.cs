@@ -79,12 +79,13 @@ namespace G2T.NCD.Game {
 
                 var icon = Resources.Load<Sprite>(path);
 
-                slot.IconImage.sprite = icon;
+                //slot.IconImage.sprite = icon;
 
                 var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
                 int count = ownedItem == null ? 0 : ownedItem.Count;
 
-                slot.CountText.text = string.Format("{0}/{1}", count, item.Amount);
+                //slot.CountText.text = string.Format("{0}/{1}", count, item.Amount);
+                slot.SetUI(icon, count, item.Amount);
             }
         }
     }
