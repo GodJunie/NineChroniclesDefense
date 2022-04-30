@@ -484,5 +484,14 @@ namespace G2T.NCD.Game {
         public void HideSpacebar() {
             this.pressSpacebar.SetActive(false);
         }
+
+        [Button]
+        private void SetObject() {
+            this.anim = GetComponentInChildren<SkeletonAnimation>();
+            this.anim.GetComponent<MeshRenderer>().sortingLayerName = "Character";
+            this.skeletonTransform = anim.transform;
+            this.skeletonTransform.localScale = new Vector3(0.4f, 0.4f, 1f);
+            this.skeletonTransform.localPosition = new Vector3(0f, -1.05f, 0f);
+        }
     }
 }

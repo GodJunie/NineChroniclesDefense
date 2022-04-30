@@ -235,5 +235,14 @@ namespace G2T.NCD.Game {
             this.curDirection = direction;
             this.skeletonTransform.rotation = Quaternion.Euler(0f, this.defaultDirection == direction ? 0f : 180f, 0f);
         }
+        
+        [Button]
+        private void SetObject() {
+            this.anim = GetComponentInChildren<SkeletonAnimation>();
+            this.anim.GetComponent<MeshRenderer>().sortingLayerName = "Character";
+            this.skeletonTransform = this.anim.transform;
+            this.skeletonTransform.localScale = new Vector3(0.4f, 0.4f, 1f);
+            this.skeletonTransform.localPosition = new Vector3(0f, -1.05f, 0f);
+        }
     }
 }
