@@ -26,11 +26,63 @@ MonoBehaviour:
       prob: 1.3
     - id: 1001003
       prob: 0.4
-    monsterAmount: 5
-    farmingItems: []
-    farmingItemAmount: 0
+    monsterAmount: 10
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 10
   - timePart: 0
-    time: 20
+    time: 100
     leftEnemies: 
     rightEnemies: 
     monsters: []
@@ -38,7 +90,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
-    time: 10
+    time: 15
     leftEnemies: 
     rightEnemies: 
     monsters: []
@@ -46,8 +98,8 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
-    time: 60
-    leftEnemies: 214e0000214e0000214e0000214e0000214e0000
+    time: 105
+    leftEnemies: 214e0000214e0000214e0000214e0000214e0000214e0000214e0000214e0000214e0000214e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
@@ -62,7 +114,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
-    time: 60
+    time: 20
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -75,6 +127,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 1
     monsterAmount: 15
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 15
+  - timePart: 0
+    time: 100
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
@@ -86,7 +198,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
-    time: 60
+    time: 105
     leftEnemies: 
     rightEnemies: 224e0000224e0000224e0000224e0000224e0000224e0000224e0000224e0000224e00002c4e00002c4e00002c4e0000
     monsters: []
@@ -102,7 +214,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
-    time: 120
+    time: 20
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -115,6 +227,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 1
     monsterAmount: 15
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 15
+  - timePart: 0
+    time: 100
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
@@ -150,7 +322,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
-    time: 100
+    time: 25
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -163,6 +335,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 2
     monsterAmount: 20
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 20
+  - timePart: 0
+    time: 95
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
@@ -190,7 +422,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
-    time: 150
+    time: 30
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -203,6 +435,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 3
     monsterAmount: 20
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 20
+  - timePart: 0
+    time: 120
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
@@ -230,7 +522,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 2
-    time: 100
+    time: 30
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -243,6 +535,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 3
     monsterAmount: 20
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 20
+  - timePart: 2
+    time: 70
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 2
@@ -254,7 +606,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
-    time: 120
+    time: 30
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -267,6 +619,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 4
     monsterAmount: 20
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 20
+  - timePart: 0
+    time: 90
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
@@ -302,7 +714,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
-    time: 100
+    time: 35
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -315,6 +727,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 5
     monsterAmount: 25
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 25
+  - timePart: 0
+    time: 65
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
@@ -342,7 +814,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
-    time: 80
+    time: 35
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -355,6 +827,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 10
     monsterAmount: 25
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 25
+  - timePart: 0
+    time: 45
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 0
@@ -382,7 +914,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 2
-    time: 80
+    time: 35
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -395,6 +927,66 @@ MonoBehaviour:
     - id: 1001003
       prob: 11
     monsterAmount: 25
+    farmingItems:
+    - id: 30001
+      prob: 5
+    - id: 30002
+      prob: 5
+    - id: 30003
+      prob: 5
+    - id: 30004
+      prob: 5
+    - id: 30005
+      prob: 0.44
+    - id: 30006
+      prob: 0.44
+    - id: 30007
+      prob: 3.2
+    - id: 30008
+      prob: 5
+    - id: 30009
+      prob: 3.2
+    - id: 30010
+      prob: 5
+    - id: 30011
+      prob: 3.2
+    - id: 30012
+      prob: 0.44
+    - id: 30013
+      prob: 5
+    - id: 30014
+      prob: 5
+    - id: 30015
+      prob: 5
+    - id: 30016
+      prob: 5
+    - id: 30017
+      prob: 5
+    - id: 30018
+      prob: 5
+    - id: 30019
+      prob: 5
+    - id: 30020
+      prob: 0.44
+    - id: 30021
+      prob: 5
+    - id: 30022
+      prob: 5
+    - id: 30023
+      prob: 0.44
+    - id: 30024
+      prob: 3.2
+    - id: 30025
+      prob: 5
+    - id: 30026
+      prob: 5
+    farmingItemAmount: 25
+  - timePart: 2
+    time: 45
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 2

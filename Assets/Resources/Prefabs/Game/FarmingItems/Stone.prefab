@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1555844850278700588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -474,9 +474,10 @@ GameObject:
   m_Component:
   - component: {fileID: 546017363196619259}
   - component: {fileID: 6065389043812814850}
+  - component: {fileID: 2132419801}
   m_Layer: 0
   m_Name: Stone
-  m_TagString: Untagged
+  m_TagString: FarmingItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,3 +513,19 @@ MonoBehaviour:
   dropItemPrefab: {fileID: 2303634620407045217, guid: d52a03f88a2ebcc4abdc143271b2e5a8, type: 3}
   panelSpacebar: {fileID: 2110082598162126324}
   second: 1
+--- !u!58 &2132419801
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5873674970956759686}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.05}
+  serializedVersion: 2
+  m_Radius: 0.5

@@ -35,6 +35,7 @@ namespace G2T.NCD.Game {
 
         private List<Monster> monsters = new List<Monster>();
         private List<BuildingBase> buildings = new List<BuildingBase>();
+        private List<FarmingItem> farmingItems = new List<FarmingItem>();
 
         public Transform BuildingHoder { get => buildingHolder; }
 
@@ -56,7 +57,7 @@ namespace G2T.NCD.Game {
             if(this.interactableTarget != null && interactableTarget.Interacting) {
 
             } else {
-                var interactables = monsters.Select(e => e as IInteractable).Concat(buildings.Select(e => e as IInteractable)).OrderBy(e => Mathf.Abs(this.transform.position.x - e.PosX)).ToList();
+                var interactables = monsters.Select(e => e as IInteractable).Concat(buildings.Select(e => e as IInteractable)).Concat(farmingItems.Select(e => e as IInteractable)).OrderBy(e => Mathf.Abs(this.transform.position.x - e.PosX)).ToList();
 
                 if(interactables.Count > 0) {
                     interactableTarget = interactables[0];
@@ -125,6 +126,12 @@ namespace G2T.NCD.Game {
                     return;
                 this.buildings.Add(building);
                 break;
+            case "FarmingItem":
+                var farmingItem = collision.GetComponent<FarmingItem>();
+                if(this.farmingItems.Contains(farmingItem))
+                    return;
+                this.farmingItems.Add(farmingItem);
+                break;
             }
         }
 
@@ -143,6 +150,13 @@ namespace G2T.NCD.Game {
                     this.buildings.Remove(building);
                 }
                 building.HideSpacebar();
+                break;
+            case "FarmingItem":
+                var farmingItem = collision.GetComponent<FarmingItem>();
+                if(this.farmingItems.Contains(farmingItem)) {
+                    this.farmingItems.Remove(farmingItem);
+                }
+                farmingItem.HideSpacebar();
                 break;
             }
         }

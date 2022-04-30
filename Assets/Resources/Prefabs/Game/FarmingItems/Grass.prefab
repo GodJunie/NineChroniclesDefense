@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3766752137158690156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -216,9 +216,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3766752137856181667}
   - component: {fileID: 3766752137856181668}
+  - component: {fileID: 1622602229}
   m_Layer: 0
   m_Name: Grass
-  m_TagString: Untagged
+  m_TagString: FarmingItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,6 +255,22 @@ MonoBehaviour:
   dropItemPrefab: {fileID: 2303634620407045217, guid: d52a03f88a2ebcc4abdc143271b2e5a8, type: 3}
   panelSpacebar: {fileID: 3766752137158690064}
   second: 1
+--- !u!58 &1622602229
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766752137856181669}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.05}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &3766752138053852569
 GameObject:
   m_ObjectHideFlags: 0

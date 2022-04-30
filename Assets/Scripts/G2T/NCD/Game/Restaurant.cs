@@ -16,22 +16,18 @@ namespace G2T.NCD.Game {
             }
         }
 
-        private List<int> synthesisIds;
+
 
         public override async Task Init(BuildingInfo info) {
             await base.Init(info);
-
-            this.synthesisIds = (StatusTable as RestaurantStatusTable).Datas[this.Level].RecipeIds;
         }
 
         protected override void ClosePanel() {
-
+            UIManager.Instance.CloseUI("restaurant-info");
         }
 
         protected override void OpenPanel() {
-
+            UIManager.Instance.OpenUI("restaurant-info", this.uiRoot).GetComponent<UIRestaurantInfo>().Open(this);
         }
-
-        
     }
 }

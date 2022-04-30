@@ -370,7 +370,7 @@ namespace G2T.NCD.Game {
                 var sum = data.FarmingItems.Sum(e => e.Prob);
                 var rand = UnityEngine.Random.Range(0f, sum);
 
-                foreach(var info in data.Monsters) {
+                foreach(var info in data.FarmingItems) {
                     if(rand <= info.Prob) {
                         var posX = UnityEngine.Random.Range(0, 2) == 0 ? UnityEngine.Random.Range(RangeLeft, BuildingRangeLeft) : UnityEngine.Random.Range(BuildingRangeRight, RangeRight);
 
@@ -383,6 +383,8 @@ namespace G2T.NCD.Game {
         }
 
         private async void GenerateFarmingItem(int id, float posX) {
+            Debug.Log(id);
+
             var farmingItemData = TableLoader.Instance.FarmingItemTable.Datas.Find(e => e.Id == id);
 
             var itemPrefab = await ResourcesManager.Instance.LoadAsync<GameObject>(farmingItemData.PrefabPath);

@@ -12,6 +12,7 @@ TagManager:
   - Wall
   - Booty
   - Building
+  - FarmingItem
   layers:
   - Default
   - TransparentFX
