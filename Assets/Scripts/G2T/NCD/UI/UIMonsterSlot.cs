@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -8,30 +9,19 @@ using Sirenix.OdinInspector;
 namespace G2T.NCD.UI {
     using Table;
     using Game;
+    using Management;
 
-    public class UIMonsterSlot : MonoBehaviour {
-        public Image IconImage;
-        public Text LevelText;
-        public Button Button;
+    public class UIMonsterSlot : UISlot {
+        public Monster Target { get; private set; }
 
-        public void SetUI(Monster monster) {
-            var info = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == monster.Id);
+        public void SetUI(Monster monster, Action onClick = null) {
+            this.Target = monster;
 
-            var path = info.IconPath;
-            path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+            var monsterInfo = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == monster.Id);
 
-            var icon = Resources.Load<Sprite>(path);
+            var icon = ResourcesManager.Instance.Load<Sprite>(monsterInfo.IconPath);
 
-            this.IconImage.sprite = icon;
-
-            LevelText.text = string.Format("Lv. {0}", monster.Level + 1);
-        }
-
-        [Button]
-        public void Init() {
-            this.IconImage = this.transform.GetChild(0).GetComponent<Image>();
-            this.LevelText = this.transform.GetChild(1).GetComponent<Text>();
-            this.Button = this.GetComponent<Button>();
+            base.SetUI(icon, string.Format("Lv. {0}", monster.Level + 1), onClick);
         }
     }
 }

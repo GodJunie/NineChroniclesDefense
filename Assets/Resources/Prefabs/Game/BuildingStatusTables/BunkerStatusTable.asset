@@ -12,3 +12,150 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b671d2aec8e0f4f90997dff6c72c62, type: 3}
   m_Name: BunkerStatusTable
   m_EditorClassIdentifier: 
+  Datas:
+  - status:
+      hp: 300
+      atk: 30
+      def: 15
+      criRate: 0.1
+      criDamage: 0.1
+      moveSpeed: 0
+      attackSpeed: 1
+    levelUpItems:
+    - id: 3004015
+      amount: 3
+    - id: 3004020
+      amount: 3
+    entryCount: 2
+  - status:
+      hp: 350
+      atk: 40
+      def: 20
+      criRate: 0.12
+      criDamage: 0.12
+      moveSpeed: 0
+      attackSpeed: 1
+    levelUpItems:
+    - id: 3006002
+      amount: 2
+    - id: 3005011
+      amount: 3
+    - id: 3004014
+      amount: 2
+    entryCount: 2
+  - status:
+      hp: 400
+      atk: 50
+      def: 25
+      criRate: 0.12
+      criDamage: 0.12
+      moveSpeed: 0
+      attackSpeed: 1
+    levelUpItems:
+    - id: 3005013
+      amount: 3
+    - id: 3005012
+      amount: 3
+    entryCount: 2
+  - status:
+      hp: 450
+      atk: 60
+      def: 30
+      criRate: 0.13
+      criDamage: 0.13
+      moveSpeed: 0
+      attackSpeed: 1
+    levelUpItems:
+    - id: 3006024
+      amount: 5
+    - id: 3004010
+      amount: 1
+    entryCount: 2
+  - status:
+      hp: 500
+      atk: 70
+      def: 35
+      criRate: 0.13
+      criDamage: 0.14
+      moveSpeed: 0
+      attackSpeed: 2
+    levelUpItems:
+    - id: 3004019
+      amount: 2
+    - id: 3005013
+      amount: 4
+    - id: 3006003
+      amount: 3
+    entryCount: 3
+  - status:
+      hp: 550
+      atk: 80
+      def: 40
+      criRate: 0.14
+      criDamage: 0.15
+      moveSpeed: 0
+      attackSpeed: 2
+    levelUpItems:
+    - id: 3006024
+      amount: 4
+    - id: 3004006
+      amount: 2
+    - id: 3002008
+      amount: 6
+    entryCount: 3
+  - status:
+      hp: 600
+      atk: 90
+      def: 45
+      criRate: 0.14
+      criDamage: 0.15
+      moveSpeed: 0
+      attackSpeed: 2
+    levelUpItems:
+    - id: 3004014
+      amount: 6
+    - id: 3004007
+      amount: 2
+    - id: 3005011
+      amount: 4
+    entryCount: 3
+  - status:
+      hp: 650
+      atk: 100
+      def: 50
+      criRate: 0.15
+      criDamage: 0.16
+      moveSpeed: 0
+      attackSpeed: 2
+    levelUpItems:
+    - id: 3004008
+      amount: 3
+    - id: 3004009
+      amount: 3
+    - id: 3005012
+      amount: 5
+    entryCount: 3
+  - status:
+      hp: 700
+      atk: 110
+      def: 55
+      criRate: 0.15
+      criDamage: 0.18
+      moveSpeed: 0
+      attackSpeed: 2
+    levelUpItems:
+    - id: 3006000
+      amount: 4
+    - id: 3006026
+      amount: 5
+    entryCount: 3
+  - status:
+      hp: 750
+      atk: 120
+      def: 60
+      criRate: 0.15
+      criDamage: 0.2
+      moveSpeed: 0
+      attackSpeed: 2
+    levelUpItems: []
+    entryCount: 4

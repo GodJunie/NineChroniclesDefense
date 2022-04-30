@@ -13,57 +13,18 @@ MonoBehaviour:
   m_Name: BunkerStatusTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/Resources/Prefabs/Game/BuildingStatusTables
-  filePath: C:/Users/godju/Downloads/Building_Status.xlsx
+  filePath: C:/Users/godju/Downloads/Building_Status (1).xlsx
   sheetName: Status_5003000
   Columns:
   - ColumnName: ItemIds
     PropertyName: levelUpItemIds
     Type: 0
     IsArray: 1
-    index: 10
-    cols:
-    - Level
-    - Hp
-    - Atk
-    - Def
-    - CriDamege
-    - Criprob
-    - AtkRange
-    - AtkTarget
-    - AttackSpeed
-    - ItemIds
-    - ItemAmounts
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    properties:
-    - levelUpItemIds
-    - levelUpItemAmounts
-    - hp
-    - atk
-    - def
-    - criRate
-    - criDamage
-    - moveSpeed
-    - attackSpeed
-  - ColumnName: ItemAmounts
-    PropertyName: levelUpItemAmounts
-    Type: 0
-    IsArray: 1
     index: 11
     cols:
     - Level
     - Hp
+    - EntryAmounts
     - Atk
     - Def
     - CriDamege
@@ -96,6 +57,49 @@ MonoBehaviour:
     - criDamage
     - moveSpeed
     - attackSpeed
+    - entryCount
+  - ColumnName: ItemAmounts
+    PropertyName: levelUpItemAmounts
+    Type: 0
+    IsArray: 1
+    index: 12
+    cols:
+    - Level
+    - Hp
+    - EntryAmounts
+    - Atk
+    - Def
+    - CriDamege
+    - Criprob
+    - AtkRange
+    - AtkTarget
+    - AttackSpeed
+    - ItemIds
+    - ItemAmounts
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criRate
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - entryCount
   - ColumnName: Hp
     PropertyName: hp
     Type: 1
@@ -104,6 +108,7 @@ MonoBehaviour:
     cols:
     - Level
     - Hp
+    - EntryAmounts
     - Atk
     - Def
     - CriDamege
@@ -136,54 +141,16 @@ MonoBehaviour:
     - criDamage
     - moveSpeed
     - attackSpeed
+    - entryCount
   - ColumnName: Atk
     PropertyName: atk
-    Type: 1
-    IsArray: 0
-    index: 3
-    cols:
-    - Level
-    - Hp
-    - Atk
-    - Def
-    - CriDamege
-    - Criprob
-    - AtkRange
-    - AtkTarget
-    - AttackSpeed
-    - ItemIds
-    - ItemAmounts
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    properties:
-    - levelUpItemIds
-    - levelUpItemAmounts
-    - hp
-    - atk
-    - def
-    - criRate
-    - criDamage
-    - moveSpeed
-    - attackSpeed
-  - ColumnName: Def
-    PropertyName: def
     Type: 1
     IsArray: 0
     index: 4
     cols:
     - Level
     - Hp
+    - EntryAmounts
     - Atk
     - Def
     - CriDamege
@@ -216,54 +183,16 @@ MonoBehaviour:
     - criDamage
     - moveSpeed
     - attackSpeed
-  - ColumnName: Criprob
-    PropertyName: criRate
-    Type: 1
-    IsArray: 0
-    index: 6
-    cols:
-    - Level
-    - Hp
-    - Atk
-    - Def
-    - CriDamege
-    - Criprob
-    - AtkRange
-    - AtkTarget
-    - AttackSpeed
-    - ItemIds
-    - ItemAmounts
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    properties:
-    - levelUpItemIds
-    - levelUpItemAmounts
-    - hp
-    - atk
-    - def
-    - criRate
-    - criDamage
-    - moveSpeed
-    - attackSpeed
-  - ColumnName: CriDamege
-    PropertyName: criDamage
+    - entryCount
+  - ColumnName: Def
+    PropertyName: def
     Type: 1
     IsArray: 0
     index: 5
     cols:
     - Level
     - Hp
+    - EntryAmounts
     - Atk
     - Def
     - CriDamege
@@ -296,14 +225,100 @@ MonoBehaviour:
     - criDamage
     - moveSpeed
     - attackSpeed
+    - entryCount
+  - ColumnName: Criprob
+    PropertyName: criRate
+    Type: 1
+    IsArray: 0
+    index: 7
+    cols:
+    - Level
+    - Hp
+    - EntryAmounts
+    - Atk
+    - Def
+    - CriDamege
+    - Criprob
+    - AtkRange
+    - AtkTarget
+    - AttackSpeed
+    - ItemIds
+    - ItemAmounts
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criRate
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - entryCount
+  - ColumnName: CriDamege
+    PropertyName: criDamage
+    Type: 1
+    IsArray: 0
+    index: 6
+    cols:
+    - Level
+    - Hp
+    - EntryAmounts
+    - Atk
+    - Def
+    - CriDamege
+    - Criprob
+    - AtkRange
+    - AtkTarget
+    - AttackSpeed
+    - ItemIds
+    - ItemAmounts
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criRate
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - entryCount
   - ColumnName: AttackSpeed
     PropertyName: attackSpeed
     Type: 1
     IsArray: 0
-    index: 9
+    index: 10
     cols:
     - Level
     - Hp
+    - EntryAmounts
     - Atk
     - Def
     - CriDamege
@@ -336,3 +351,46 @@ MonoBehaviour:
     - criDamage
     - moveSpeed
     - attackSpeed
+    - entryCount
+  - ColumnName: EntryAmounts
+    PropertyName: entryCount
+    Type: 0
+    IsArray: 0
+    index: 3
+    cols:
+    - Level
+    - Hp
+    - EntryAmounts
+    - Atk
+    - Def
+    - CriDamege
+    - Criprob
+    - AtkRange
+    - AtkTarget
+    - AttackSpeed
+    - ItemIds
+    - ItemAmounts
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criRate
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - entryCount

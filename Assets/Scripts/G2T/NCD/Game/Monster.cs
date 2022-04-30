@@ -93,7 +93,7 @@ namespace G2T.NCD.Game {
        
         // Game
         public MonsterType MonsterType { get; private set; }
-        private State curState;
+        public State CurState { get; private set; }
         private int level;
         public float CurHp { get; private set; }
 
@@ -126,7 +126,7 @@ namespace G2T.NCD.Game {
 
             this.SetDirection(Direction.Right);
 
-            this.curState = State.Move;
+            this.CurState = State.Move;
 
             this.StatusTable = await ResourcesManager.Instance.LoadAsync<ScriptableObject>(info.StatusPath) as MonsterStatusTable;
 
@@ -172,12 +172,12 @@ namespace G2T.NCD.Game {
                 if(TargetBuilding != null)
                     TargetBuilding.HideRange();
 
-                this.curState = State.Move;
+                this.CurState = State.Move;
 
                 this.panelMove.SetActive(false);
                 this.TargetBuilding?.HideRange();
             } else {
-                if(this.curState == State.Attack || this.curState == State.Dead)
+                if(this.CurState == State.Attack || this.CurState == State.Dead)
                     return;
 
                 UIManager.Instance.OpenUI("monster-info", this.uiRoot).GetComponent<UIMonsterInfo>().Open(this);
@@ -190,9 +190,10 @@ namespace G2T.NCD.Game {
 
                 this.Interacting = true;
 
-                this.curState = State.Idle;
+                this.CurState = State.Idle;
 
-                OpenMovePanel();
+                if(this.MonsterType == MonsterType.Friendly)
+                    OpenMovePanel();
             }
         }
 
@@ -277,7 +278,7 @@ namespace G2T.NCD.Game {
 
         private IEnumerator FSM() {
             while(true) {
-                switch(this.curState) {
+                switch(this.CurState) {
                 case State.Attack:
                     yield return Attack();
                     break;
@@ -300,7 +301,7 @@ namespace G2T.NCD.Game {
         private IEnumerator Idle() {
             this.rigid.velocity = Vector2.zero;
             this.anim.AnimationState.SetAnimation(0, "Idle", true);
-            while(this.curState == State.Idle) {
+            while(this.CurState == State.Idle) {
                 yield return null;
             }
             Debug.Log("End Idle");
@@ -322,10 +323,10 @@ namespace G2T.NCD.Game {
             while(timer > 0) {
                 timer -= Time.fixedDeltaTime;
                 yield return new WaitForFixedUpdate();
-                if(this.curState != State.Attack)
+                if(this.CurState != State.Attack)
                     break;
             }
-            if(this.curState == State.Attack) {
+            if(this.CurState == State.Attack) {
                 try {
                     if(this.enemies.Count > 0) {
                         var enemy = this.enemies.OrderBy(e => Mathf.Abs(e.transform.position.x - PosX)).First();
@@ -370,7 +371,7 @@ namespace G2T.NCD.Game {
             var rangeLeft = this.MonsterType == MonsterType.Wild ? startPos.x - 1f : TargetBuilding.RangeLeft;
 
             while(true) {
-                if(this.curState != State.Move) {
+                if(this.CurState != State.Move) {
                     break;
                 }
 
@@ -397,7 +398,7 @@ namespace G2T.NCD.Game {
             this.CurHp -= damage;
             this.hpBar.SetHp(this.CurHp);
             if(this.CurHp <= 0f) {
-                this.curState = State.Dead;
+                this.CurState = State.Dead;
                 this.OnDead?.Invoke(this);
                 Debug.Log("Dead");
             }
@@ -414,7 +415,7 @@ namespace G2T.NCD.Game {
                 }
                 break;
             case "Enemy":
-                this.curState = State.Attack;
+                this.CurState = State.Attack;
                 var enemy = collision.GetComponent<Enemy>();
                 if(this.enemies.Contains(enemy)) return;
                 this.enemies.Add(enemy);
@@ -423,9 +424,9 @@ namespace G2T.NCD.Game {
                         this.enemies.Remove(enemy);
                         if(this.enemies.Count == 0) {
                             if(this.MonsterType == MonsterType.Wild) {
-                                this.curState = State.Idle;
+                                this.CurState = State.Idle;
                             } else if(this.MonsterType == MonsterType.Friendly) {
-                                this.curState = State.Move;   
+                                this.CurState = State.Move;   
                             }
                         }
                     }
@@ -451,7 +452,7 @@ namespace G2T.NCD.Game {
                     //    UIManager.Instance.CloseUI("monsterInfo");
                     //}
 
-                    this.curState = State.Move;
+                    this.CurState = State.Move;
                 }
                 break;
             case "Enemy":
@@ -460,9 +461,9 @@ namespace G2T.NCD.Game {
                     this.enemies.Remove(enemy);
                     if(this.enemies.Count == 0) {
                         if(this.MonsterType == MonsterType.Wild) {
-                            this.curState = State.Idle;
+                            this.CurState = State.Idle;
                         } else if(this.MonsterType == MonsterType.Friendly) {
-                            this.curState = State.Move;
+                            this.CurState = State.Move;
                         }
                     }
                 }
@@ -483,6 +484,20 @@ namespace G2T.NCD.Game {
 
         public void HideSpacebar() {
             this.pressSpacebar.SetActive(false);
+        }
+
+        public void GoToBunker(Bunker bunker) {
+            this.StopAllCoroutines();
+            this.TargetBuilding = bunker;
+            this.transform.position = new Vector3(bunker.PosX, 0f, 0f);
+            this.gameObject.SetActive(false);
+        }
+
+        public void GoOutBunker() {
+            this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
+            this.gameObject.SetActive(true);
+            this.CurState = State.Move;
+            StartFSM();
         }
 
         [Button]

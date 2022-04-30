@@ -20,14 +20,30 @@ namespace G2T.NCD.Game {
             }
         }
 
-        public List<Monster> Monsters { get; private set; }
+        public List<Monster> Entries { get; private set; }
+
+        protected override void Start() {
+            base.Start();
+
+            this.Entries = new List<Monster>();
+        }
 
         protected override void OpenPanel() {
-            UIManager.Instance.OpenUI("bunker-info").GetComponent<UIBunkerInfo>().Open(this);
+            UIManager.Instance.OpenUI("bunker-info", this.uiRoot).GetComponent<UIBunkerInfo>().Open(this);
         }
 
         protected override void ClosePanel() {
             UIManager.Instance.CloseUI("bunker-info");
+        }
+
+        public void AddMonster(Monster monster) {
+            this.Entries.Add(monster);
+            monster.GoToBunker(this);
+        }
+
+        public void RemoveMonster(Monster monster) {
+            this.Entries.Remove(monster);
+            monster.GoOutBunker();
         }
     }
 }

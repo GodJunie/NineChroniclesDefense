@@ -9,6 +9,7 @@ using UnityEngine.UI;
 namespace G2T.NCD.UI {
     using Table;
     using Game;
+    using Management;
 
     public class UIMonsterPanel : MonoBehaviour {
         [Serializable]
@@ -79,8 +80,7 @@ namespace G2T.NCD.UI {
             foreach(var monster in monsters) {
                 var slot = Instantiate(slotPrefab, this.container);
 
-                slot.SetUI(monster);
-                slot.Button.onClick.AddListener(() => {
+                slot.SetUI(monster, () => {
                     this.monster = monster;
                     this.ShowMonsterInfo();
                 });
@@ -94,10 +94,7 @@ namespace G2T.NCD.UI {
 
             var info = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == monster.Id);
 
-            var path = info.IconPath;
-            path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
-
-            var icon = Resources.Load<Sprite>(path);
+            var icon = ResourcesManager.Instance.Load<Sprite>(info.IconPath);
 
             this.imageIcon.sprite = icon;
 
