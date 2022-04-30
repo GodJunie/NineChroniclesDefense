@@ -155,23 +155,23 @@ namespace G2T.NCD.Table.Editor {
 
             var properties = new Data().GetProperties();
 
-            if(Columns == null || Columns.Count < properties.Length) {
+            if(Columns == null)
                 Columns = new List<Column>();
+
+            if(Columns.Count == 0) {
                 foreach(var property in properties) {
                     string adjustCol = cols.Find(e => e.ToLower() == property.ToLower());
                     if(adjustCol == null) adjustCol = "";
                     Columns.Add(new Column() {
-                        cols = cols.ToArray(),
                         ColumnName = adjustCol,
                         properties = properties,
                         PropertyName = property,
                         index = 0
                     });
                 }
-            } else {
-                foreach(var col in Columns) {
-                    col.cols = cols.ToArray();
-                }
+            }
+            foreach(var col in Columns) {
+                col.cols = cols.ToArray();
             }
         }
 
