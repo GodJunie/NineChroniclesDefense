@@ -93,7 +93,7 @@ namespace G2T.NCD.UI {
                     marker = GetNewMarker();
                 }
 
-                marker.SetColor(monster.CurrentMonsterType == MonsterType.Friendly ? myMonsterColor : wildMonsterColor);
+                marker.SetColor(monster.MonsterType == MonsterType.Friendly ? myMonsterColor : wildMonsterColor);
                 marker.SetTarget(monster.transform);
 
                 var x = monster.transform.position.x - playerTransform.position.x;

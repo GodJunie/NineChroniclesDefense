@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ca588ae97528147addc9387de99a36, type: 3}
   m_Name: RestaurantStatusTableLoader
   m_EditorClassIdentifier: 
-  FolderPath: Assets/ScriptableObjects/BuildingStatus
+  FolderPath: Assets/Resources/Prefabs/Game/BuildingStatusTables
   filePath: C:/Users/godju/Downloads/Building_Status.xlsx
   sheetName: Status_5005000
   Columns:
@@ -52,11 +52,11 @@ MonoBehaviour:
     - hp
     - atk
     - def
-    - criProb
+    - criRate
     - criDamage
     - moveSpeed
     - attackSpeed
-    - synthesisIds
+    - recipeIds
   - ColumnName: ItemAmounts
     PropertyName: levelUpItemAmounts
     Type: 0
@@ -93,11 +93,11 @@ MonoBehaviour:
     - hp
     - atk
     - def
-    - criProb
+    - criRate
     - criDamage
     - moveSpeed
     - attackSpeed
-    - synthesisIds
+    - recipeIds
   - ColumnName: Hp
     PropertyName: hp
     Type: 1
@@ -134,13 +134,13 @@ MonoBehaviour:
     - hp
     - atk
     - def
-    - criProb
+    - criRate
     - criDamage
     - moveSpeed
     - attackSpeed
-    - synthesisIds
+    - recipeIds
   - ColumnName: SynthesisIds
-    PropertyName: synthesisIds
+    PropertyName: recipeIds
     Type: 0
     IsArray: 1
     index: 5
@@ -175,8 +175,8 @@ MonoBehaviour:
     - hp
     - atk
     - def
-    - criProb
+    - criRate
     - criDamage
     - moveSpeed
     - attackSpeed
-    - synthesisIds
+    - recipeIds

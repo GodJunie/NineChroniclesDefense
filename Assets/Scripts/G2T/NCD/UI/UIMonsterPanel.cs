@@ -71,7 +71,7 @@ namespace G2T.NCD.UI {
             this.onSelect = onSelect;
             this.gameObject.SetActive(true);
 
-            if(monsters == null) monsters = GameController.Instance.Monsters.Where(e => e.CurrentMonsterType == MonsterType.Friendly).ToList();
+            if(monsters == null) monsters = GameController.Instance.Monsters.Where(e => e.MonsterType == MonsterType.Friendly).ToList();
 
             for(int i = 0; i < container.childCount; i++) {
                 Destroy(container.GetChild(i).gameObject);

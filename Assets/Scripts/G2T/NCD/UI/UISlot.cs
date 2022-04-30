@@ -8,11 +8,11 @@ using Sirenix.OdinInspector;
 namespace G2T.NCD.UI {
     public class UISlot : MonoBehaviour {
         [SerializeField]
-        private Text text;
+        protected Text text;
         [SerializeField]
-        private Image image;
+        protected Image image;
         [SerializeField]
-        private Button button;
+        protected Button button;
 
         [Button]
         private void Init() {

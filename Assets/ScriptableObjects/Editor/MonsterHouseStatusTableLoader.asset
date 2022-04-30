@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8db1a81b6e7a543984b0a17ee3b31a, type: 3}
   m_Name: MonsterHouseStatusTableLoader
   m_EditorClassIdentifier: 
-  FolderPath: Assets/ScriptableObjects/BuildingStatus
+  FolderPath: Assets/Resources/Prefabs/Game/BuildingStatusTables
   filePath: C:/Users/godju/Downloads/Building_Status.xlsx
   sheetName: Status_5002000
   Columns:

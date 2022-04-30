@@ -70,6 +70,11 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private float minRangeRight;
 
+        [TabGroup("group", "게임 설정")]
+        [SerializeField]
+        [LabelText("제이드 하우스 아이디")]
+        private int houseId;
+
 
         [TabGroup("group", "임시")]
         [SerializeField]
@@ -105,13 +110,14 @@ namespace G2T.NCD.Game {
             }
         }
 
-        protected override void Awake() {
+        protected override async void Awake() {
             this.Items = new List<ItemData>();
             this.Enemies = new List<Enemy>();
             this.Monsters = new List<Monster>();
             this.Buildings = new List<BuildingBase>();
-            this.Buildings.Add(this.house);
-            this.house.Init();
+
+            await this.house.Init(TableLoader.Instance.BuildingTable.Datas.Find(e => e.Id == houseId));
+            this.house.ConfirmBuild();
         }
 
         private void Start() {
@@ -179,7 +185,7 @@ namespace G2T.NCD.Game {
             pendingBuilding.transform.localPosition = Vector3.zero;
             pendingBuilding.SetActive(true);
 
-            pendingBuilding.GetComponent<BuildingBase>().TryBuild();
+            pendingBuilding.GetComponent<BuildingBase>().Init(data);
 
             foreach(var building in this.Buildings) {
                 building.ShowRange();
@@ -226,7 +232,7 @@ namespace G2T.NCD.Game {
         }
 
         public void SetMonsterAmountsUI() {
-            this.textMonstersCount.text = string.Format("{0}/{1}", this.Monsters.Count(e => e.CurrentMonsterType == MonsterType.Friendly), MaxMonsterAmount);
+            this.textMonstersCount.text = string.Format("{0}/{1}", this.Monsters.Count(e => e.MonsterType == MonsterType.Friendly), MaxMonsterAmount);
         }
 
         public void SetEnemyCountUI() {
@@ -376,10 +382,14 @@ namespace G2T.NCD.Game {
             }
         }
 
-        private void GenerateFarmingItem(int id, float posX) {
+        private async void GenerateFarmingItem(int id, float posX) {
             var farmingItemData = TableLoader.Instance.FarmingItemTable.Datas.Find(e => e.Id == id);
 
-            var itemPrefab = ResourcesManager.Instance.LoadAsync<GameObject>(farmingItemData.PrefabPath);
+            var itemPrefab = await ResourcesManager.Instance.LoadAsync<GameObject>(farmingItemData.PrefabPath);
+
+            var farmingItem = Instantiate(itemPrefab, new Vector3(posX, 0f, 0f), Quaternion.identity).GetComponent<FarmingItem>();
+
+            farmingItem.Init(farmingItemData);
         }
 
         private void ChangeBackground(DayTimePart timePart) {

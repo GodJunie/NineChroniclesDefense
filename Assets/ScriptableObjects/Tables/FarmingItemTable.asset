@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7130a172d06a040419c8724104b8cf28, type: 3}
+  m_Name: FarmingItemTable
+  m_EditorClassIdentifier: 
+  Datas:
+  - id: 30001
+    dropItems:
+    - id: 3001015
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Grass.prefab
+  - id: 30002
+    dropItems:
+    - id: 3002001
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Grass.prefab
+  - id: 30003
+    dropItems:
+    - id: 3004012
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30004
+    dropItems:
+    - id: 3004015
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Grass.prefab
+  - id: 30005
+    dropItems:
+    - id: 3004016
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Grass.prefab
+  - id: 30006
+    dropItems:
+    - id: 3004017
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Grass.prefab
+  - id: 30007
+    dropItems:
+    - id: 3001012
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30008
+    dropItems:
+    - id: 3001017
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30009
+    dropItems:
+    - id: 3004019
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30010
+    dropItems:
+    - id: 3004020
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30011
+    dropItems:
+    - id: 3005003
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30012
+    dropItems:
+    - id: 3005004
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30013
+    dropItems:
+    - id: 3005013
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30014
+    dropItems:
+    - id: 3006014
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30015
+    dropItems:
+    - id: 3006015
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30016
+    dropItems:
+    - id: 3006016
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30017
+    dropItems:
+    - id: 3006017
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30018
+    dropItems:
+    - id: 3006018
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Stone.prefab
+  - id: 30019
+    dropItems:
+    - id: 3002008
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30020
+    dropItems:
+    - id: 3002010
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30021
+    dropItems:
+    - id: 3004013
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30022
+    dropItems:
+    - id: 3004014
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30023
+    dropItems:
+    - id: 3004018
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30024
+    dropItems:
+    - id: 3005002
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30025
+    dropItems:
+    - id: 3005011
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab
+  - id: 30026
+    dropItems:
+    - id: 3005012
+      amount: 1
+    prefabPath: Assets/Resources/Prefabs/Game/FarmingItems/Tree.prefab

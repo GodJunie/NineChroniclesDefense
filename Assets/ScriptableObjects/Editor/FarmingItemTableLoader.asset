@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 8be02d28ab6e77e498a7aacfd7bdc849, type: 3}
+  m_Name: FarmingItemTableLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/ScriptableObjects/Tables
+  filePath: C:/Users/godju/Downloads/Farming_Item.xlsx
+  sheetName: Farming
+  Columns:
+  - ColumnName: Id
+    PropertyName: id
+    Type: 0
+    IsArray: 0
+    index: 1
+    cols:
+    - Id
+    - DropItemIds
+    - DropItemAmounts
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - dropItemIds
+    - dropItemAmounts
+    - prefabPath
+  - ColumnName: DropItemIds
+    PropertyName: dropItemIds
+    Type: 0
+    IsArray: 1
+    index: 2
+    cols:
+    - Id
+    - DropItemIds
+    - DropItemAmounts
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - dropItemIds
+    - dropItemAmounts
+    - prefabPath
+  - ColumnName: DropItemAmounts
+    PropertyName: dropItemAmounts
+    Type: 0
+    IsArray: 1
+    index: 3
+    cols:
+    - Id
+    - DropItemIds
+    - DropItemAmounts
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - dropItemIds
+    - dropItemAmounts
+    - prefabPath
+  - ColumnName: PrefabPath
+    PropertyName: prefabPath
+    Type: 2
+    IsArray: 0
+    index: 4
+    cols:
+    - Id
+    - DropItemIds
+    - DropItemAmounts
+    - PrefabPath
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - dropItemIds
+    - dropItemAmounts
+    - prefabPath

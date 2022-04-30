@@ -66,6 +66,7 @@ namespace G2T.NCD.Table {
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("스탯")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string statusPath;
         [BoxGroup("group/연결")]

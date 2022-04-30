@@ -68,7 +68,7 @@ namespace G2T.NCD.Game {
                     }
 
                     if(Input.GetKeyDown(KeyCode.Space)) {
-                        interactableTarget.OnSpacebar();
+                        interactableTarget.OnInteract();
                     }
                 } else {
                     interactableTarget = null;

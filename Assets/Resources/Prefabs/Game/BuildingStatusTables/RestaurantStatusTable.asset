@@ -9,159 +9,157 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e6f3d53d1f1dfb40b9f92d3eb2db4a1, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: bb7c6b9f11d82704fad0be5412f1ab20, type: 3}
+  m_Name: RestaurantStatusTable
   m_EditorClassIdentifier: 
   Datas:
   - status:
-      hp: 500
+      hp: 200
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
+    - id: 3005011
+      amount: 3
+    - id: 3004012
+      amount: 3
+    recipeIds: e1930400e2930400e3930400e4930400
+  - status:
+      hp: 220
+      atk: 0
+      def: 0
+      criRate: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
+    - id: 3005011
+      amount: 2
+    - id: 3004013
+      amount: 3
     - id: 3004014
       amount: 3
-    - id: 3005011
-      amount: 4
-    - id: 3005012
-      amount: 3
+    recipeIds: e5930400e6930400e7930400
   - status:
-      hp: 600
+      hp: 240
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3004011
-      amount: 2
-    - id: 3004012
+    - id: 3002008
       amount: 5
-    - id: 3006024
-      amount: 4
+    - id: 3004020
+      amount: 3
+    recipeIds: e8930400
   - status:
-      hp: 700
+      hp: 260
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3005013
+    - id: 3004022
       amount: 4
+    - id: 3006024
+      amount: 1
+    - id: 3004010
+      amount: 1
+    recipeIds: e9930400
+  - status:
+      hp: 280
+      atk: 0
+      def: 0
+      criRate: 0
+      criDamage: 0
+      moveSpeed: 0
+      attackSpeed: 0
+    levelUpItems:
     - id: 3004015
-      amount: 4
+      amount: 3
     - id: 3006003
       amount: 2
+    - id: 3005003
+      amount: 3
+    recipeIds: ea930400
   - status:
-      hp: 800
+      hp: 300
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
     - id: 3006014
-      amount: 4
-    - id: 3005012
-      amount: 5
+      amount: 3
+    - id: 3002008
+      amount: 7
+    recipeIds: eb930400
   - status:
-      hp: 900
+      hp: 320
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3006024
+    - id: 3005012
       amount: 5
     - id: 3004006
       amount: 2
-  - status:
-      hp: 1000
-      atk: 0
-      def: 0
-      criProb: 0
-      criDamage: 0
-      moveSpeed: 0
-      attackSpeed: 0
-    levelUpItems:
-    - id: 3004014
-      amount: 4
-    - id: 3004022
-      amount: 4
-    - id: 3006005
-      amount: 3
     - id: 3004007
       amount: 2
+    recipeIds: ef930400
   - status:
-      hp: 1100
+      hp: 340
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3004011
-      amount: 5
-    - id: 3004012
-      amount: 5
-    - id: 3004013
-      amount: 5
+    - id: 3004022
+      amount: 6
     - id: 3004008
-      amount: 2
-    - id: 3004009
-      amount: 2
-  - status:
-      hp: 1200
-      atk: 0
-      def: 0
-      criProb: 0
-      criDamage: 0
-      moveSpeed: 0
-      attackSpeed: 0
-    levelUpItems:
-    - id: 3004019
       amount: 3
-    - id: 3005012
-      amount: 4
-    - id: 3006024
-      amount: 5
     - id: 3004010
       amount: 3
+    recipeIds: ec930400
   - status:
-      hp: 1300
+      hp: 360
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3005004
-      amount: 1
-    - id: 3005012
-      amount: 5
-    - id: 3006002
-      amount: 5
-    - id: 3006003
-      amount: 5
+    - id: 3006026
+      amount: 2
+    - id: 3006000
+      amount: 4
+    - id: 30006003
+      amount: 6
+    recipeIds: ed930400
   - status:
-      hp: 1400
+      hp: 380
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
     - id: 0
       amount: 0
+    recipeIds: ee930400

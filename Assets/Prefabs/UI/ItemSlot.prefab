@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 4523031344355390289}
-  image: {fileID: 4523031344162909575}
+  image: {fileID: 4523031345583957777}
   button: {fileID: 4523031344162909574}
   colorWhite: {r: 1, g: 1, b: 1, a: 1}
   colorGreen: {r: 0.08915506, g: 0.754717, b: 0.0035599943, a: 1}

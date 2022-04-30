@@ -19,9 +19,9 @@ MonoBehaviour:
       Teratoma. There are outdated places in places.
     constructItems: []
     range: 4
-    statusPath: Status_501000
-    prefabPath: 
-    iconPath: 
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/JadeHouseStatusTable.asset
+    prefabPath: Assets/Resources/Prefabs/Game/Buildings/MonsterHouse.prefab
+    iconPath: Assets/Resources/UI/Icons/Building/Bunker.png
   - id: 5002000
     name: Monster House
     description: It is a space where monsters captured by Jade reside. As the facilities
@@ -40,9 +40,9 @@ MonoBehaviour:
     - id: 3006024
       amount: 1
     range: 4
-    statusPath: Status_502000
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/MonsterHouseStatusTable.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/MonsterHouse.prefab
-    iconPath: 
+    iconPath: Assets/Resources/UI/Icons/Building/MonsterHouse.png
   - id: 5003000
     name: Bunker
     description: 'It is a defense facility devised by Jade to prevent warriors from
@@ -57,9 +57,9 @@ MonoBehaviour:
     - id: 3006024
       amount: 2
     range: 4
-    statusPath: Status_503000
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/BunkerStatusTable.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Bunker.prefab
-    iconPath: 
+    iconPath: Assets/Resources/UI/Icons/Building/Bunker.png
   - id: 5004000
     name: Monster Restaurant
     description: It is a facility built to provide better food for monsters. Users
@@ -72,9 +72,9 @@ MonoBehaviour:
     - id: 3006014
       amount: 2
     range: 4
-    statusPath: Status_504000
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/RestaurantStatusTable.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Restaurant.prefab
-    iconPath: 
+    iconPath: Assets/Resources/UI/Icons/Building/Restaurant.png
   - id: 5005000
     name: Monster Workshop
     description: It is a facility built to provide better equipment to monsters which
@@ -88,6 +88,6 @@ MonoBehaviour:
     - id: 3005011
       amount: 4
     range: 4
-    statusPath: Status_505000
-    prefabPath: Assets/Resources/Prefabs/Game/Buildings/Smithy.prefab
-    iconPath: 
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/WorkShopStatusTable.asset
+    prefabPath: Assets/Resources/Prefabs/Game/Buildings/WorkShop.prefab
+    iconPath: Assets/Resources/UI/Icons/Building/WorkShop.png

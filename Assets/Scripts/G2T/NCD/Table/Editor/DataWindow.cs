@@ -37,9 +37,11 @@ namespace G2T.NCD.Table.Editor {
                 { "스테이지 정보 테이블", StageTableLoader.Instance },
 
                 { "건물 테이블", BuildingTableLoader.Instance },
-                { "건물 스탯 테이블", BuildingStatusTableLoader.Instance },
+
                 { "건물 스탯 테이블/몬스터 하우스 스탯 테이블", MonsterHouseStatusTableLoader.Instance },
                 { "건물 스탯 테이블/합성대 스탯 테이블", RestaurantStatusTableLoader.Instance },
+                { "건물 스탯 테이블/벙커 스탯 테이블", BunkerStatusTableLoader.Instance },
+
                 { "아이템 레시피 테이블", RecipeTableLoader.Instance },
 
                 { "몬스터 스탯 테이블", MonsterStatusTableLoader.Instance },
@@ -59,7 +61,10 @@ namespace G2T.NCD.Table.Editor {
             tree.AddAllAssetsAtPath("스테이지 정보 테이블", StageTableLoader.Instance.FolderPath, typeof(StageTable));
 
             tree.AddAllAssetsAtPath("건물 테이블", BuildingTableLoader.Instance.FolderPath, typeof(BuildingTable));
-            tree.AddAllAssetsAtPath("건물 스탯 테이블", BuildingStatusTableLoader.Instance.FolderPath, typeof(BuildingStatusTable));
+
+            tree.AddAllAssetsAtPath("건물 스탯 테이블/몬스터 하우스 스탯 테이블", MonsterHouseStatusTableLoader.Instance.FolderPath, typeof(MonsterHouseStatusTable));
+            tree.AddAllAssetsAtPath("건물 스탯 테이블/합성대 스탯 테이블", RestaurantStatusTableLoader.Instance.FolderPath, typeof(RestaurantStatusTable));
+            tree.AddAllAssetsAtPath("건물 스탯 테이블/벙커 스탯 테이블", BunkerStatusTableLoader.Instance.FolderPath, typeof(BunkerStatusTable));
 
             tree.AddAllAssetsAtPath("아이템 레시피 테이블", RecipeTableLoader.Instance.FolderPath, typeof(RecipeTable));
 

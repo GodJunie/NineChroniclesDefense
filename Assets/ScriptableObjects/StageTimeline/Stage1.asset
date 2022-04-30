@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Datas:
   - timePart: 0
-    time: 60
+    time: 20
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -27,24 +27,40 @@ MonoBehaviour:
     - id: 1001003
       prob: 0.4
     monsterAmount: 5
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 20
+    leftEnemies: 
+    rightEnemies: 
+    monsters: []
+    monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 10
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 60
     leftEnemies: 214e0000214e0000214e0000214e0000214e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 60
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 60
     leftEnemies: 
@@ -59,24 +75,32 @@ MonoBehaviour:
     - id: 1001003
       prob: 1
     monsterAmount: 15
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 15
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 60
     leftEnemies: 
     rightEnemies: 224e0000224e0000224e0000224e0000224e0000224e0000224e0000224e0000224e00002c4e00002c4e00002c4e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 60
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 120
     leftEnemies: 
@@ -91,30 +115,40 @@ MonoBehaviour:
     - id: 1001003
       prob: 1
     monsterAmount: 15
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 15
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 15
     leftEnemies: 234e0000234e0000234e0000234e0000234e0000234e00002d4e00002d4e00002d4e0000374e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 90
     leftEnemies: 
     rightEnemies: 234e0000234e0000234e0000414e0000414e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 60
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 100
     leftEnemies: 
@@ -129,24 +163,32 @@ MonoBehaviour:
     - id: 1001003
       prob: 2
     monsterAmount: 20
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 10
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 100
     leftEnemies: 2e4e00002e4e00002e4e00002e4e00002e4e0000384e0000384e00004c4e00004c4e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 70
     leftEnemies: 
     rightEnemies: 564e0000424e0000424e0000564e0000424e000066750000564e0000424e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 150
     leftEnemies: 
@@ -161,24 +203,32 @@ MonoBehaviour:
     - id: 1001003
       prob: 3
     monsterAmount: 20
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 10
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 15
     leftEnemies: 254e0000254e0000254e0000254e0000254e0000254e0000254e0000254e0000254e0000254e00002f4e0000394e0000434e00004d4e0000574e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 125
     leftEnemies: 
     rightEnemies: 254e0000254e0000254e0000254e0000254e00002f4e0000394e0000434e00004d4e0000574e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 100
     leftEnemies: 
@@ -193,12 +243,16 @@ MonoBehaviour:
     - id: 1001003
       prob: 3
     monsterAmount: 20
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 300
     leftEnemies: 264e0000264e0000264e0000264e0000264e0000264e0000304e0000304e0000304e0000
     rightEnemies: 304e0000304e00003a4e0000444e00004e4e0000584e00003a4e0000444e00004e4e000024500000624e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 120
     leftEnemies: 
@@ -213,30 +267,40 @@ MonoBehaviour:
     - id: 1001003
       prob: 4
     monsterAmount: 20
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 15
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 25
     leftEnemies: 274e0000274e0000274e0000274e00003b4e0000454e00004f4e0000314e0000314e0000314e0000634e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 85
     leftEnemies: 
     rightEnemies: 314e0000314e0000314e0000314e0000314e0000634e0000634e0000634e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 60
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 100
     leftEnemies: 
@@ -251,24 +315,32 @@ MonoBehaviour:
     - id: 1001003
       prob: 5
     monsterAmount: 25
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 20
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 130
     leftEnemies: 644e0000644e00006e4e00006e4e0000824e0000784e0000784e0000824e00008c4e0000644e00008c4e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 70
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 80
     leftEnemies: 
@@ -283,24 +355,32 @@ MonoBehaviour:
     - id: 1001003
       prob: 10
     monsterAmount: 25
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 0
     time: 20
     leftEnemies: 294e0000294e0000294e0000294e0000294e0000
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 10
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 1
     time: 190
     leftEnemies: 
     rightEnemies: 334e0000334e0000334e0000334e0000334e0000654e0000654e0000654e00006f4e0000794e0000834e00008d4e0000334e0000334e0000654e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 80
     leftEnemies: 
@@ -315,15 +395,21 @@ MonoBehaviour:
     - id: 1001003
       prob: 11
     monsterAmount: 25
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 50
     leftEnemies: 
     rightEnemies: 
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0
   - timePart: 2
     time: 170
     leftEnemies: 2a4e00002a4e00002a4e00002a4e00002a4e0000344e0000344e0000344e0000344e0000664e0000664e0000664e0000
     rightEnemies: 3e4e0000484e00005c4e0000524e00005c4e00003e4e0000484e0000524e0000704e0000844e00008e4e00007a4e0000954e0000
     monsters: []
     monsterAmount: 0
+    farmingItems: []
+    farmingItemAmount: 0

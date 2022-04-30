@@ -51,7 +51,7 @@ namespace G2T.NCD.Table {
         private string prefabPath;
 
         public int Id { get => id; }
-        public List<DropItem> DropItems;
+        public List<DropItem> DropItems { get => dropItems; }
         public string PrefabPath { get => prefabPath; }
 
         public override string[] GetProperties() {

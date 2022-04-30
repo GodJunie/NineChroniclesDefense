@@ -11,5 +11,6 @@ namespace G2T.NCD.Table {
         public StageTable StageTable;
         public BuildingTable BuildingTable;
         public FarmingItemTable FarmingItemTable;
+        public RecipeTable RecipeTable;
     }
 }

@@ -4,6 +4,6 @@ using UnityEngine;
 
 namespace G2T.NCD.Table {
     public class BunkerStatusTable : ExcelTable<BunkerStatusTable, BunkerStatusInfo> {
-        
+
     }
 }

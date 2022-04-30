@@ -14,6 +14,10 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private GameObject panelSpacebar;
 
+        // 나중에 테이블로 빼기
+        [SerializeField]
+        private float second;
+
         public bool Interacting { get; private set; }
         public float PosX => this.transform.position.x;
 
@@ -21,7 +25,7 @@ namespace G2T.NCD.Game {
 
         private FarmingItemInfo info;
 
-        public void OnSpacebar() {
+        public void OnInteract() {
             if(Interacting) {
                 CancelFarming();
             } else {
@@ -42,11 +46,19 @@ namespace G2T.NCD.Game {
         }
 
         private async void TryFarming() {
-            
+            await UniTask.Delay(TimeSpan.FromSeconds(this.second));
+            foreach(var data in this.info.DropItems) {
+                var item = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == data.Id);
+                var dropItem = Instantiate(this.dropItemPrefab, transform.position, Quaternion.identity, null).GetComponent<DropItem>();
+                dropItem.Init(data.Id, data.Amount);
+            }
+            Interacting = false;
+            Destroy(this.gameObject);
         }
 
         private void CancelFarming() {
-
+            Interacting = false;
+            // 파밍 연출 취소
         }
 
         private void OnFarmingComplete() {

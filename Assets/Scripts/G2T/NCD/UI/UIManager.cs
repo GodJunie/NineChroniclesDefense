@@ -31,13 +31,13 @@ namespace G2T.NCD.UI {
                 ui.Panel.transform.SetParent(parent);
             } else {
                 switch(ui.Type) {
-                case "World":
+                case UIPanelType.World:
                     ui.Panel.transform.SetParent(worldRootCanvas);
                     break;
-                case "Overlay":
+                case UIPanelType.Overlay:
                     ui.Panel.transform.SetParent(overlayRootCanvas);
                     break;
-                case "Screen":
+                case UIPanelType.Screen:
                     ui.Panel.transform.SetParent(screenRootCanvas);
                     break;
                 }
@@ -58,13 +58,13 @@ namespace G2T.NCD.UI {
             if(ui == null) return;
 
             switch(ui.Type) {
-            case "World":
+            case UIPanelType.World:
                 ui.Panel.transform.SetParent(worldRootCanvas);
                 break;
-            case "Overlay":
+            case UIPanelType.Overlay:
                 ui.Panel.transform.SetParent(overlayRootCanvas);
                 break;
-            case "Screen":
+            case UIPanelType.Screen:
                 ui.Panel.transform.SetParent(screenRootCanvas);
                 break;
             }
@@ -76,7 +76,9 @@ namespace G2T.NCD.UI {
         public class UIInfo {
             public string Id;
             public GameObject Panel;
-            public string Type;
+            public UIPanelType Type;
         }
+
+        public enum UIPanelType : int { World, Overlay, Screen }
     }
 }

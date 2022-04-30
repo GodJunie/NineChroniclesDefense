@@ -2,36 +2,43 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 // UnityEngine
 using UnityEngine;
+using UnityEngine.UI;
+// Editor
+using Sirenix.OdinInspector;
 
 namespace G2T.NCD.Game {
     using Data;
     using Table;
-    using UnityEngine.UI;
+    using Management;
 
     public abstract class BuildingBase : MonoBehaviour, IInteractable {
         // 정보
+        [TabGroup("group", "Settings")]
         [SerializeField]
         private int id;
+        [TabGroup("group", "Settings")]
+        [SerializeField]
+        private float range;
 
+        [TabGroup("group", "UI")]
         [SerializeField]
         protected HpBar hpBar;
+        [TabGroup("group", "UI")]
         [SerializeField]
         private GameObject panelSpacebar;
 
+        [TabGroup("group", "UI")]
         [SerializeField]
-        private float range;
+        protected RectTransform uiRoot;
+        [TabGroup("group", "UI")]
         [SerializeField]
-        private int count;
+        private Vector2 rootCanvasPosition;
 
         [SerializeField]
         private new SpriteRenderer renderer;
-
-        [SerializeField]
-        private RectTransform uiRoot;
-        [SerializeField]
-        private Vector2 rootCanvasPosition;
 
         [SerializeField]
         private GameObject panelConfirmBuild;
@@ -39,28 +46,8 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private Transform rangeTransform;
 
-        [SerializeField]
-        private GameObject panel;
-        [SerializeField]
-        protected GameObject infoPanel;
-        [SerializeField]
-        protected GameObject levelUpPanel;
-
-        [SerializeField]
-        protected Text textLevelBefore;
-        [SerializeField]
-        protected Text textLevelAfter;
-        [SerializeField]
-        protected Text textCurrentLevel;
-        [SerializeField]
-        protected Button buttonLevelUp;
-        [SerializeField]
-        protected Transform levelUpItemSlotContainer;
-
-
         protected Status curStatus;
         protected float curHp;
-        protected int level;
         protected List<Monster> monsters;
 
         // Event
@@ -68,11 +55,13 @@ namespace G2T.NCD.Game {
 
         private bool constructing;
 
+        public BuildingInfo Info { get; private set; }
+        public ScriptableObject StatusTable { get; private set; }
+
         #region Getter
         public int Id { get => id; }
-        public int Level { get => level; }
+        public int Level { get; private set; }
         public float Range { get => range; }
-        public int Count { get => count; }
         public int CurrentCount { get => monsters.Count; }
         public float PosX { 
             get {
@@ -94,13 +83,27 @@ namespace G2T.NCD.Game {
         }
         #endregion
 
+        public abstract List<BuildingStatusInfo> Statuses { get; }
+
+        public virtual async Task Init(BuildingInfo info) {
+            this.constructing = true;
+            this.panelConfirmBuild.SetActive(true);
+
+            this.Info = info;
+            this.StatusTable = await ResourcesManager.Instance.LoadAsync<ScriptableObject>(info.StatusPath);
+
+            this.Level = 0;
+
+            this.curStatus = Statuses[Level].Status;
+            this.curHp = curStatus.Hp;
+            this.hpBar.Init(curHp);
+        }
+
         // Start is called before the first frame update
         void Start() {
-            this.level = 0;
+            this.Level = 0;
             this.curHp = curStatus.Hp;
             this.hpBar.Init(curStatus.Hp);
-
-            //this.curStatus = statusTable.Datas[this.level].Status;
 
             rangeTransform.localScale = new Vector3(this.range * 2, 1, 1);
             this.Interacting = false;
@@ -121,7 +124,7 @@ namespace G2T.NCD.Game {
                 }
             }
 
-            if(panel.activeInHierarchy) {
+            if(Interacting) {
                 if((this.transform.position - GameController.Instance.Player.transform.position).x < 0) {
                     this.uiRoot.anchoredPosition = new Vector2(this.rootCanvasPosition.x, this.rootCanvasPosition.y);
                 } else {
@@ -129,8 +132,6 @@ namespace G2T.NCD.Game {
                 }
             }
         }
-
-        public abstract void Init();
 
         public void ShowSpacebar() {
             this.panelSpacebar.SetActive(true);
@@ -149,14 +150,16 @@ namespace G2T.NCD.Game {
             }
         }
 
-        public void TryBuild() {
-            this.constructing = true;
-            this.panelConfirmBuild.SetActive(true);
+        public virtual void OnLevelUp() {
+            this.Level++;
+            this.curStatus = Statuses[this.Level].Status;
+            this.curHp = curStatus.Hp;
+            this.hpBar.Init(curHp);
+
+            this.OnInteract();
         }
 
         public void ConfirmBuild() {
-            Init();
-
             this.constructing = false;
             this.transform.SetParent(null);
             GameController.Instance.AddBuilding(this);
@@ -177,38 +180,17 @@ namespace G2T.NCD.Game {
             this.rangeTransform.gameObject.SetActive(false);
         }
 
-        public void OnSpacebar() {
+        public void OnInteract() {
             if(this.Interacting) {
+                this.Interacting = false;
                 ClosePanel();
             } else {
+                this.Interacting = true;
                 OpenPanel();
             }
         }
 
-        public virtual void OpenPanel() {
-            this.panel.SetActive(true);
-            this.infoPanel.SetActive(true);
-            this.levelUpPanel.SetActive(false);
-            this.textCurrentLevel.text = string.Format("Lv. {0}", this.level + 1);
-            this.Interacting = true;
-        }
-
-        public void ClosePanel() {
-            this.panel.SetActive(false);
-            this.Interacting = false;
-        }
-
-        public virtual void OpenLevelUpUI() {
-            this.infoPanel.SetActive(false);
-            this.levelUpPanel.SetActive(true);
-            InitLevelUpUI();
-        }
-
-        protected virtual void InitLevelUpUI() {
-            textLevelBefore.text = string.Format("Lv. {0}", this.level + 1);
-            textLevelAfter.text = string.Format("Lv. {0}", this.level + 2);
-        }
-
-        public abstract void OnLevelUp();
+        protected abstract void OpenPanel();
+        protected abstract void ClosePanel();
     }
 }

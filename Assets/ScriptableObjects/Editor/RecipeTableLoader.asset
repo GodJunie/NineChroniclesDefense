@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 077779068b24850438d1707ab6583bc6, type: 3}
+  m_Name: RecipeTableLoader
+  m_EditorClassIdentifier: 
+  FolderPath: Assets/ScriptableObjects/Tables
+  filePath: C:/Users/godju/Downloads/Synthesis_Info.xlsx
+  sheetName: Reciepe
+  Columns:
+  - ColumnName: Id
+    PropertyName: id
+    Type: 0
+    IsArray: 0
+    index: 1
+    cols:
+    - Id
+    - MaterialIds
+    - MaterialAmounts
+    - Result
+    - ResultAmounts
+    - CoolTime
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - materialIds
+    - materialAmounts
+    - resultId
+    - resultAmount
+    - coolTime
+  - ColumnName: MaterialIds
+    PropertyName: materialIds
+    Type: 0
+    IsArray: 1
+    index: 2
+    cols:
+    - Id
+    - MaterialIds
+    - MaterialAmounts
+    - Result
+    - ResultAmounts
+    - CoolTime
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - materialIds
+    - materialAmounts
+    - resultId
+    - resultAmount
+    - coolTime
+  - ColumnName: MaterialAmounts
+    PropertyName: materialAmounts
+    Type: 0
+    IsArray: 1
+    index: 3
+    cols:
+    - Id
+    - MaterialIds
+    - MaterialAmounts
+    - Result
+    - ResultAmounts
+    - CoolTime
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - materialIds
+    - materialAmounts
+    - resultId
+    - resultAmount
+    - coolTime
+  - ColumnName: Result
+    PropertyName: resultId
+    Type: 0
+    IsArray: 0
+    index: 4
+    cols:
+    - Id
+    - MaterialIds
+    - MaterialAmounts
+    - Result
+    - ResultAmounts
+    - CoolTime
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - materialIds
+    - materialAmounts
+    - resultId
+    - resultAmount
+    - coolTime
+  - ColumnName: ResultAmounts
+    PropertyName: resultAmount
+    Type: 0
+    IsArray: 0
+    index: 5
+    cols:
+    - Id
+    - MaterialIds
+    - MaterialAmounts
+    - Result
+    - ResultAmounts
+    - CoolTime
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - materialIds
+    - materialAmounts
+    - resultId
+    - resultAmount
+    - coolTime
+  - ColumnName: CoolTime
+    PropertyName: coolTime
+    Type: 1
+    IsArray: 0
+    index: 6
+    cols:
+    - Id
+    - MaterialIds
+    - MaterialAmounts
+    - Result
+    - ResultAmounts
+    - CoolTime
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - materialIds
+    - materialAmounts
+    - resultId
+    - resultAmount
+    - coolTime

@@ -1,0 +1,891 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c63bc48664c2a94fbc384752ff5947c, type: 3}
+  m_Name: RecipeTable
+  m_EditorClassIdentifier: 
+  Datas:
+  - id: 300001
+    materials:
+    - id: 3001014
+      amount: 2
+    resultId: 3001001
+    resultAmount: 1
+    coolTime: 1
+  - id: 300002
+    materials:
+    - id: 3001016
+      amount: 2
+    resultId: 3001002
+    resultAmount: 1
+    coolTime: 3
+  - id: 300003
+    materials:
+    - id: 3002004
+      amount: 1
+    - id: 3001017
+      amount: 3
+    resultId: 3001000
+    resultAmount: 1
+    coolTime: 5
+  - id: 300004
+    materials:
+    - id: 3001013
+      amount: 3
+    - id: 3001016
+      amount: 3
+    - id: 3002007
+      amount: 1
+    resultId: 3001003
+    resultAmount: 1
+    coolTime: 5
+  - id: 300005
+    materials:
+    - id: 3002004
+      amount: 1
+    - id: 3001013
+      amount: 3
+    resultId: 3001004
+    resultAmount: 1
+    coolTime: 7
+  - id: 300006
+    materials:
+    - id: 3002009
+      amount: 3
+    - id: 3001015
+      amount: 1
+    resultId: 3001008
+    resultAmount: 1
+    coolTime: 1
+  - id: 300007
+    materials:
+    - id: 3002001
+      amount: 2
+    resultId: 3001011
+    resultAmount: 1
+    coolTime: 1
+  - id: 300008
+    materials:
+    - id: 3002004
+      amount: 2
+    - id: 3002000
+      amount: 3
+    - id: 3002011
+      amount: 3
+    resultId: 3001005
+    resultAmount: 1
+    coolTime: 10
+  - id: 300009
+    materials:
+    - id: 3002005
+      amount: 3
+    - id: 3001013
+      amount: 3
+    - id: 3002007
+      amount: 3
+    resultId: 3001006
+    resultAmount: 1
+    coolTime: 10
+  - id: 300010
+    materials:
+    - id: 3002005
+      amount: 4
+    - id: 3002000
+      amount: 1
+    - id: 3002001
+      amount: 3
+    resultId: 3001007
+    resultAmount: 1
+    coolTime: 8
+  - id: 300011
+    materials:
+    - id: 3002006
+      amount: 3
+    - id: 3001013
+      amount: 3
+    - id: 3002007
+      amount: 3
+    resultId: 3001009
+    resultAmount: 1
+    coolTime: 10
+  - id: 300012
+    materials:
+    - id: 3002006
+      amount: 5
+    - id: 3002000
+      amount: 2
+    resultId: 3001010
+    resultAmount: 1
+    coolTime: 18
+  - id: 300013
+    materials:
+    - id: 3002004
+      amount: 2
+    resultId: 3002002
+    resultAmount: 1
+    coolTime: 20
+  - id: 300014
+    materials:
+    - id: 3002004
+      amount: 3
+    - id: 3002010
+      amount: 1
+    resultId: 3002003
+    resultAmount: 1
+    coolTime: 30
+  - id: 300015
+    materials:
+    - id: 3004017
+      amount: 1
+    resultId: 3002010
+    resultAmount: 1
+    coolTime: 30
+  - id: 300016
+    materials:
+    - id: 3002013
+      amount: 1
+    resultId: 3002012
+    resultAmount: 3
+    coolTime: 0
+  - id: 300017
+    materials:
+    - id: 3003004
+      amount: 1
+    resultId: 3003003
+    resultAmount: 3
+    coolTime: 0
+  - id: 300018
+    materials:
+    - id: 3003009
+      amount: 1
+    resultId: 3003008
+    resultAmount: 3
+    coolTime: 0
+  - id: 300019
+    materials:
+    - id: 3003014
+      amount: 1
+    resultId: 3003013
+    resultAmount: 3
+    coolTime: 0
+  - id: 300020
+    materials:
+    - id: 3003019
+      amount: 1
+    resultId: 3003018
+    resultAmount: 3
+    coolTime: 0
+  - id: 300021
+    materials:
+    - id: 3004014
+      amount: 2
+    resultId: 3004011
+    resultAmount: 1
+    coolTime: 0
+  - id: 300022
+    materials:
+    - id: 3004013
+      amount: 1
+    resultId: 3004012
+    resultAmount: 2
+    coolTime: 0
+  - id: 300023
+    materials:
+    - id: 3004015
+      amount: 1
+    resultId: 3004014
+    resultAmount: 1
+    coolTime: 0
+  - id: 300024
+    materials:
+    - id: 3006033
+      amount: 1
+    resultId: 3004021
+    resultAmount: 8
+    coolTime: 0
+  - id: 300025
+    materials:
+    - id: 3004012
+      amount: 3
+    resultId: 3004022
+    resultAmount: 2
+    coolTime: 0
+  - id: 300026
+    materials:
+    - id: 3005013
+      amount: 3
+    resultId: 3005000
+    resultAmount: 1
+    coolTime: 0
+  - id: 300027
+    materials:
+    - id: 3005012
+      amount: 2
+    resultId: 3005001
+    resultAmount: 1
+    coolTime: 0
+  - id: 300028
+    materials:
+    - id: 3002008
+      amount: 2
+    resultId: 3005011
+    resultAmount: 4
+    coolTime: 0
+  - id: 300029
+    materials:
+    - id: 3002008
+      amount: 5
+    resultId: 3005012
+    resultAmount: 1
+    coolTime: 0
+  - id: 300030
+    materials:
+    - id: 3004020
+      amount: 2
+    resultId: 3005013
+    resultAmount: 1
+    coolTime: 0
+  - id: 300031
+    materials:
+    - id: 3001015
+      amount: 3
+    resultId: 3006002
+    resultAmount: 1
+    coolTime: 0
+  - id: 300032
+    materials:
+    - id: 3004020
+      amount: 3
+    resultId: 3006003
+    resultAmount: 1
+    coolTime: 0
+  - id: 300033
+    materials:
+    - id: 3006002
+      amount: 3
+    resultId: 3006005
+    resultAmount: 1
+    coolTime: 0
+  - id: 300034
+    materials:
+    - id: 3006009
+      amount: 1
+    resultId: 3006014
+    resultAmount: 3
+    coolTime: 0
+  - id: 300035
+    materials:
+    - id: 3006010
+      amount: 1
+    resultId: 3006015
+    resultAmount: 3
+    coolTime: 0
+  - id: 300036
+    materials:
+    - id: 3006011
+      amount: 1
+    resultId: 3006016
+    resultAmount: 3
+    coolTime: 0
+  - id: 300037
+    materials:
+    - id: 3006012
+      amount: 1
+    resultId: 3006017
+    resultAmount: 3
+    coolTime: 0
+  - id: 300038
+    materials:
+    - id: 3006013
+      amount: 1
+    resultId: 3006018
+    resultAmount: 3
+    coolTime: 0
+  - id: 300039
+    materials:
+    - id: 3004012
+      amount: 2
+    - id: 3004013
+      amount: 2
+    resultId: 3006024
+    resultAmount: 1
+    coolTime: 0
+  - id: 300040
+    materials:
+    - id: 3006032
+      amount: 5
+    resultId: 3006030
+    resultAmount: 1
+    coolTime: 0
+  - id: 300041
+    materials:
+    - id: 3005000
+      amount: 2
+    - id: 3006034
+      amount: 4
+    resultId: 3006031
+    resultAmount: 1
+    coolTime: 0
+  - id: 300042
+    materials:
+    - id: 3006014
+      amount: 3
+    - id: 3006015
+      amount: 3
+    resultId: 3001012
+    resultAmount: 1
+    coolTime: 0
+  - id: 300043
+    materials:
+    - id: 3002012
+      amount: 3
+    - id: 3005001
+      amount: 3
+    resultId: 3002013
+    resultAmount: 1
+    coolTime: 0
+  - id: 300044
+    materials:
+    - id: 3003003
+      amount: 3
+    - id: 3006024
+      amount: 3
+    resultId: 3003004
+    resultAmount: 1
+    coolTime: 0
+  - id: 300045
+    materials:
+    - id: 3003008
+      amount: 3
+    - id: 3006024
+      amount: 3
+    resultId: 3003009
+    resultAmount: 1
+    coolTime: 0
+  - id: 300046
+    materials:
+    - id: 3003013
+      amount: 4
+    resultId: 3003014
+    resultAmount: 1
+    coolTime: 0
+  - id: 300047
+    materials:
+    - id: 3003018
+      amount: 4
+    resultId: 3003019
+    resultAmount: 1
+    coolTime: 0
+  - id: 300048
+    materials:
+    - id: 3006015
+      amount: 4
+    resultId: 3004002
+    resultAmount: 1
+    coolTime: 0
+  - id: 300049
+    materials:
+    - id: 3006017
+      amount: 4
+    resultId: 3004003
+    resultAmount: 1
+    coolTime: 0
+  - id: 300050
+    materials:
+    - id: 3006018
+      amount: 4
+    resultId: 3004004
+    resultAmount: 1
+    coolTime: 0
+  - id: 300051
+    materials:
+    - id: 3006016
+      amount: 4
+    resultId: 3004005
+    resultAmount: 1
+    coolTime: 0
+  - id: 300052
+    materials:
+    - id: 3006018
+      amount: 1
+    - id: 3004014
+      amount: 3
+    resultId: 3004006
+    resultAmount: 1
+    coolTime: 0
+  - id: 300053
+    materials:
+    - id: 3006015
+      amount: 1
+    - id: 3004014
+      amount: 3
+    resultId: 3004007
+    resultAmount: 1
+    coolTime: 0
+  - id: 300054
+    materials:
+    - id: 3006016
+      amount: 1
+    - id: 3004014
+      amount: 3
+    resultId: 3004008
+    resultAmount: 1
+    coolTime: 0
+  - id: 300055
+    materials:
+    - id: 3006017
+      amount: 1
+    - id: 3004014
+      amount: 3
+    resultId: 3004009
+    resultAmount: 1
+    coolTime: 0
+  - id: 300056
+    materials:
+    - id: 3006014
+      amount: 1
+    - id: 3004014
+      amount: 3
+    resultId: 3004010
+    resultAmount: 1
+    coolTime: 0
+  - id: 300057
+    materials:
+    - id: 3006014
+      amount: 5
+    resultId: 3004019
+    resultAmount: 1
+    coolTime: 0
+  - id: 300058
+    materials:
+    - id: 3006017
+      amount: 4
+    - id: 3002008
+      amount: 2
+    resultId: 3005003
+    resultAmount: 1
+    coolTime: 0
+  - id: 300059
+    materials:
+    - id: 3006024
+      amount: 1
+    - id: 3004006
+      amount: 1
+    - id: 3004007
+      amount: 1
+    - id: 3003008
+      amount: 1
+    - id: 3004009
+      amount: 1
+    resultId: 3006000
+    resultAmount: 1
+    coolTime: 0
+  - id: 300060
+    materials:
+    - id: 3006003
+      amount: 3
+    resultId: 3006001
+    resultAmount: 1
+    coolTime: 0
+  - id: 300061
+    materials:
+    - id: 3006014
+      amount: 5
+    resultId: 3006009
+    resultAmount: 1
+    coolTime: 0
+  - id: 300062
+    materials:
+    - id: 3006015
+      amount: 5
+    resultId: 3006010
+    resultAmount: 1
+    coolTime: 0
+  - id: 300063
+    materials:
+    - id: 3006016
+      amount: 5
+    resultId: 3006011
+    resultAmount: 1
+    coolTime: 0
+  - id: 300064
+    materials:
+    - id: 3006017
+      amount: 5
+    resultId: 3006012
+    resultAmount: 1
+    coolTime: 0
+  - id: 300065
+    materials:
+    - id: 3006018
+      amount: 5
+    resultId: 3006013
+    resultAmount: 1
+    coolTime: 0
+  - id: 300066
+    materials:
+    - id: 3004019
+      amount: 1
+    - id: 3004013
+      amount: 4
+    resultId: 3006029
+    resultAmount: 1
+    coolTime: 0
+  - id: 300067
+    materials:
+    - id: 3002013
+      amount: 2
+    - id: 3005001
+      amount: 5
+    resultId: 3003000
+    resultAmount: 1
+    coolTime: 0
+  - id: 300068
+    materials:
+    - id: 3003004
+      amount: 2
+    - id: 3006024
+      amount: 5
+    resultId: 3003005
+    resultAmount: 1
+    coolTime: 0
+  - id: 300069
+    materials:
+    - id: 3003009
+      amount: 2
+    - id: 3006024
+      amount: 5
+    resultId: 3003010
+    resultAmount: 1
+    coolTime: 0
+  - id: 300070
+    materials:
+    - id: 3003014
+      amount: 2
+    - id: 3005000
+      amount: 4
+    resultId: 3003015
+    resultAmount: 1
+    coolTime: 0
+  - id: 300071
+    materials:
+    - id: 3003019
+      amount: 2
+    - id: 3005000
+      amount: 4
+    resultId: 3003020
+    resultAmount: 1
+    coolTime: 0
+  - id: 300072
+    materials:
+    - id: 3006010
+      amount: 1
+    - id: 3006010
+      amount: 1
+    - id: 3006012
+      amount: 1
+    - id: 3006013
+      amount: 1
+    resultId: 3006004
+    resultAmount: 1
+    coolTime: 0
+  - id: 300073
+    materials:
+    - id: 3006009
+      amount: 3
+    resultId: 3006019
+    resultAmount: 1
+    coolTime: 0
+  - id: 300074
+    materials:
+    - id: 3006010
+      amount: 3
+    resultId: 3006020
+    resultAmount: 1
+    coolTime: 0
+  - id: 300075
+    materials:
+    - id: 3006011
+      amount: 3
+    resultId: 3006021
+    resultAmount: 1
+    coolTime: 0
+  - id: 300076
+    materials:
+    - id: 3006012
+      amount: 3
+    resultId: 3006022
+    resultAmount: 1
+    coolTime: 0
+  - id: 300077
+    materials:
+    - id: 3006013
+      amount: 3
+    resultId: 3006023
+    resultAmount: 1
+    coolTime: 0
+  - id: 300078
+    materials:
+    - id: 3004016
+      amount: 1
+    - id: 3005003
+      amount: 2
+    - id: 3006005
+      amount: 5
+    resultId: 3006025
+    resultAmount: 1
+    coolTime: 0
+  - id: 300079
+    materials:
+    - id: 3004019
+      amount: 3
+    - id: 3006009
+      amount: 3
+    resultId: 3006026
+    resultAmount: 1
+    coolTime: 0
+  - id: 300080
+    materials:
+    - id: 3004019
+      amount: 3
+    - id: 3006028
+      amount: 1
+    resultId: 3006028
+    resultAmount: 1
+    coolTime: 0
+  - id: 300081
+    materials:
+    - id: 3005000
+      amount: 5
+    - id: 3005013
+      amount: 3
+    resultId: 3006035
+    resultAmount: 1
+    coolTime: 0
+  - id: 300082
+    materials:
+    - id: 3005000
+      amount: 3
+    - id: 3005013
+      amount: 5
+    resultId: 3006036
+    resultAmount: 1
+    coolTime: 0
+  - id: 300083
+    materials:
+    - id: 3004019
+      amount: 8
+    resultId: 3005004
+    resultAmount: 1
+    coolTime: 0
+  - id: 300084
+    materials:
+    - id: 3003000
+      amount: 3
+    - id: 3006001
+      amount: 5
+    resultId: 3003001
+    resultAmount: 1
+    coolTime: 0
+  - id: 300085
+    materials:
+    - id: 3003005
+      amount: 3
+    - id: 3005003
+      amount: 3
+    - id: 3006035
+      amount: 1
+    resultId: 3003006
+    resultAmount: 1
+    coolTime: 0
+  - id: 300086
+    materials:
+    - id: 3003010
+      amount: 3
+    - id: 3001012
+      amount: 6
+    resultId: 3003011
+    resultAmount: 1
+    coolTime: 0
+  - id: 300087
+    materials:
+    - id: 3003015
+      amount: 3
+    - id: 3006009
+      amount: 6
+    resultId: 3003016
+    resultAmount: 1
+    coolTime: 0
+  - id: 300088
+    materials:
+    - id: 3003020
+      amount: 3
+    - id: 3006009
+      amount: 6
+    resultId: 3004000
+    resultAmount: 1
+    coolTime: 0
+  - id: 300089
+    materials:
+    - id: 3004021
+      amount: 10
+    - id: 3006002
+      amount: 5
+    - id: 3006003
+      amount: 5
+    resultId: 3006033
+    resultAmount: 1
+    coolTime: 0
+  - id: 300090
+    materials:
+    - id: 3003001
+      amount: 4
+    - id: 3006001
+      amount: 6
+    - id: 3005001
+      amount: 10
+    resultId: 3003002
+    resultAmount: 1
+    coolTime: 0
+  - id: 300091
+    materials:
+    - id: 3003006
+      amount: 4
+    - id: 3004002
+      amount: 3
+    - id: 3004003
+      amount: 3
+    - id: 3004004
+      amount: 3
+    - id: 3004005
+      amount: 3
+    resultId: 3003007
+    resultAmount: 1
+    coolTime: 0
+  - id: 300092
+    materials:
+    - id: 3003011
+      amount: 4
+    - id: 3006010
+      amount: 3
+    - id: 3006011
+      amount: 3
+    - id: 3006012
+      amount: 3
+    - id: 3006013
+      amount: 3
+    resultId: 3003012
+    resultAmount: 1
+    coolTime: 0
+  - id: 300093
+    materials:
+    - id: 3003016
+      amount: 4
+    - id: 3005004
+      amount: 3
+    - id: 3006019
+      amount: 5
+    resultId: 3003017
+    resultAmount: 1
+    coolTime: 0
+  - id: 300094
+    materials:
+    - id: 3004000
+      amount: 4
+    - id: 3005004
+      amount: 5
+    - id: 3006028
+      amount: 3
+    resultId: 3004001
+    resultAmount: 1
+    coolTime: 0
+  - id: 300095
+    materials:
+    - id: 3006037
+      amount: 3
+    - id: 3005004
+      amount: 8
+    resultId: 3005005
+    resultAmount: 1
+    coolTime: 0
+  - id: 300096
+    materials:
+    - id: 3006020
+      amount: 6
+    resultId: 3005006
+    resultAmount: 1
+    coolTime: 0
+  - id: 300097
+    materials:
+    - id: 3006001
+      amount: 5
+    - id: 3006034
+      amount: 7
+    - id: 3002008
+      amount: 7
+    - id: 3004012
+      amount: 7
+    - id: 3004013
+      amount: 7
+    resultId: 3005009
+    resultAmount: 1
+    coolTime: 0
+  - id: 300098
+    materials:
+    - id: 3005011
+      amount: 15
+    - id: 3006029
+      amount: 3
+    - id: 3004019
+      amount: 6
+    resultId: 3005010
+    resultAmount: 1
+    coolTime: 0
+  - id: 300099
+    materials:
+    - id: 3006004
+      amount: 5
+    - id: 3006033
+      amount: 4
+    resultId: 3006006
+    resultAmount: 1
+    coolTime: 0
+  - id: 300100
+    materials:
+    - id: 3006025
+      amount: 3
+    resultId: 3006007
+    resultAmount: 1
+    coolTime: 0
+  - id: 300101
+    materials:
+    - id: 3006037
+      amount: 3
+    - id: 3006004
+      amount: 5
+    - id: 3006019
+      amount: 5
+    - id: 3005004
+      amount: 5
+    resultId: 3006008
+    resultAmount: 1
+    coolTime: 0
+  - id: 300102
+    materials:
+    - id: 3006037
+      amount: 3
+    - id: 3004019
+      amount: 10
+    - id: 3005008
+      amount: 20
+    resultId: 3006027
+    resultAmount: 1
+    coolTime: 0

@@ -12,20 +12,20 @@ namespace G2T.NCD.Table {
     public class RestaurantStatusInfo : BuildingStatusInfo {
         [LabelText("합성 아이디")]
         [SerializeField]
-        private List<int> synthesisIds;
+        private List<int> recipeIds;
 
         public override string[] GetProperties() {
             return base.GetProperties().Concat(new string[] {
-                "synthesisIds"
+                "recipeIds"
             }).ToArray();
         }
 
         public override void InitFromJObject(JObject jObject) {
             base.InitFromJObject(jObject);
 
-            synthesisIds = jObject["synthesisIds"].Values<int>().ToList();
+            recipeIds = jObject["recipeIds"].Values<int>().ToList();
         }
 
-        public List<int> SynthesisIds { get => synthesisIds; }
+        public List<int> RecipeIds { get => recipeIds; }
     }
 }

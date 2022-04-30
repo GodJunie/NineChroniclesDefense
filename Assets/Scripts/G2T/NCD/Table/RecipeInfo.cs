@@ -41,16 +41,24 @@ namespace G2T.NCD.Table {
         [SerializeField]
         [LabelText("아이디")]
         private int id;
-
+        [SerializeField]
+        [LabelText("재료 아이템")]
         private List<Material> materials;
+        [SerializeField]
+        [LabelText("결과 아이디")]
         private int resultId;
+        [SerializeField]
+        [LabelText("결과 개수")]
         private int resultAmount;
+        [SerializeField]
+        [LabelText("쿨타임")]
+        private float coolTime;
 
         public int Id { get => id; }
-        public List<Material> Materials;
-
+        public List<Material> Materials { get => materials; }
         public int ResultId { get => resultId; }
         public int ResultAmount { get => resultAmount; }
+        public float CoolTime { get => coolTime; }
 
         public override string[] GetProperties() {
             var properties = new string[] {
@@ -59,6 +67,7 @@ namespace G2T.NCD.Table {
                 "materialAmounts",
                 "resultId",
                 "resultAmount",
+                "coolTime",
             };
             return properties;
         }
@@ -67,6 +76,7 @@ namespace G2T.NCD.Table {
             this.id = jObject.Value<int>("id");
             this.resultId = jObject.Value<int>("resultId");
             this.resultAmount = jObject.Value<int>("resultAmount");
+            this.coolTime = jObject.Value<float>("coolTime");
 
             var materialIds = jObject["materialIds"].Values<int>().ToList();
             var materialAmounts = jObject["materialAmounts"].Values<int>().ToList();
