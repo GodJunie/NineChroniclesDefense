@@ -1,4 +1,4 @@
-// System
+ï»¿// System
 using System;
 using System.Linq;
 using System.IO;
@@ -6,13 +6,13 @@ using System.Collections;
 using System.Collections.Generic;
 // UnityEngine
 using UnityEngine;
-//°øÅë NPOI
+//ê³µí†µ NPOI
 using NPOI;
 using NPOI.SS.UserModel;
-//Ç¥ÁØ xls ¹öÁ¯ excel½ÃÆ®
+//í‘œì¤€ xls ë²„ì ¼ excelì‹œíŠ¸
 using NPOI.HSSF;
 using NPOI.HSSF.UserModel;
-//È®Àå xlsx ¹öÁ¯ excel ½ÃÆ®
+//í™•ì¥ xlsx ë²„ì ¼ excel ì‹œíŠ¸
 using NPOI.XSSF;
 using NPOI.XSSF.UserModel;
 // Editor
@@ -32,21 +32,21 @@ namespace G2T.NCD.Table.Editor {
         [Serializable]
         public class Column {
             [HorizontalGroup("group", .25f)]
-            [BoxGroup("group/¿¢¼¿ ¿­ ÀÌ¸§")]
+            [BoxGroup("group/ì—‘ì…€ ì—´ ì´ë¦„")]
             [HideLabel]
             [ValueDropdown("cols")]
             public string ColumnName;
             [HorizontalGroup("group", .25f)]
-            [BoxGroup("group/º¯°æÇÒ º¯¼ö ÀÌ¸§")]
+            [BoxGroup("group/ë³€ê²½í•  ë³€ìˆ˜ ì´ë¦„")]
             [HideLabel]
             [ValueDropdown("properties")]
             public string PropertyName;
             [HorizontalGroup("group", .25f)]
-            [BoxGroup("group/Å¸ÀÔ")]
+            [BoxGroup("group/íƒ€ì…")]
             [HideLabel]
             public ValueType Type;
             [HorizontalGroup("group", .25f)]
-            [BoxGroup("group/¹è¿­")]
+            [BoxGroup("group/ë°°ì—´")]
             [HideLabel]
             public bool IsArray;
 
@@ -85,29 +85,29 @@ namespace G2T.NCD.Table.Editor {
             }
         }
 
-        [TitleGroup("Å×ÀÌºí °æ·Î")]
-        [LabelText("Å×ÀÌºí °æ·Î")]
+        [TitleGroup("í…Œì´ë¸” ê²½ë¡œ")]
+        [LabelText("í…Œì´ë¸” ê²½ë¡œ")]
         [FolderPath(AbsolutePath = false)]
         [SerializeField]
         public string FolderPath;
 
-        [TitleGroup("¿¢¼¿ ÆÄÀÏ ·Îµå")]
-        [LabelText("ÆÄÀÏ °æ·Î")]
+        [TitleGroup("ì—‘ì…€ íŒŒì¼ ë¡œë“œ")]
+        [LabelText("íŒŒì¼ ê²½ë¡œ")]
         [FilePath(AbsolutePath = true)]
         [SerializeField]
         private string filePath;
 
-        [TitleGroup("½ÃÆ® ¼³Á¤")]
-        [LabelText("½ÃÆ®")]
+        [TitleGroup("ì‹œíŠ¸ ì„¤ì •")]
+        [LabelText("ì‹œíŠ¸")]
         [ShowIf("@sheet!=null")]
         [ValueDropdown("sheetNames")]
         [OnValueChanged("LoadSheet")]
         [SerializeField]
         private string sheetName;
 
-        [TitleGroup("¿­ ¼³Á¤")]
+        [TitleGroup("ì—´ ì„¤ì •")]
         [ShowIf("@sheet!=null")]
-        [LabelText("¿­ Á¤º¸")]
+        [LabelText("ì—´ ì •ë³´")]
         [ListDrawerSettings(Expanded = true)]
         [SerializeField]
         private List<Column> Columns = new List<Column>();
@@ -117,8 +117,8 @@ namespace G2T.NCD.Table.Editor {
         private IWorkbook workbook;
         private ISheet sheet;
 
-        [TitleGroup("¿¢¼¿ ÆÄÀÏ ·Îµå")]
-        [Button("ÆÄÀÏ ºÒ·¯¿À±â", Style = ButtonStyle.Box, ButtonHeight = 50)]
+        [TitleGroup("ì—‘ì…€ íŒŒì¼ ë¡œë“œ")]
+        [Button("íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°", Style = ButtonStyle.Box, ButtonHeight = 50)]
         private void LoadExcelFile() {
             var version = Path.GetExtension(filePath);
             Debug.Log(version);
@@ -136,7 +136,7 @@ namespace G2T.NCD.Table.Editor {
                     sheetName = sheetNames[0];
                     LoadSheet();
                 } else {
-                    sheetName = "½ÃÆ®°¡ ¾ø½À´Ï´Ù";
+                    sheetName = "ì‹œíŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤";
                 }
             }
         }
@@ -175,11 +175,11 @@ namespace G2T.NCD.Table.Editor {
             }
         }
 
-        [TitleGroup("¿­ ¼³Á¤")]
+        [TitleGroup("ì—´ ì„¤ì •")]
         [ShowIf("@sheet!=null")]
-        [Button("µ¥ÀÌÅÍ ÀúÀåÇÏ±â", Style = ButtonStyle.Box, ButtonHeight = 50)]
+        [Button("ë°ì´í„° ì €ì¥í•˜ê¸°", Style = ButtonStyle.Box, ButtonHeight = 50)]
         private void LoadData() {
-            // ·Îµå ÇÒ ¶§ 
+            // ë¡œë“œ í•  ë•Œ 
             var table = new Table();
             table.Datas = new List<Data>();
 
@@ -269,7 +269,7 @@ namespace G2T.NCD.Table.Editor {
                 Debug.Log(data.ToString());
             }
 
-            string path = UnityEditor.EditorUtility.SaveFilePanel("»ı¼ºÇÏ±â", FolderPath, typeof(Table).Name, "asset");
+            string path = UnityEditor.EditorUtility.SaveFilePanel("ìƒì„±í•˜ê¸°", FolderPath, typeof(Table).Name, "asset");
             if(!path.StartsWith(Application.dataPath))
                 return;
             path = path.Replace(Application.dataPath, "Assets");
@@ -289,11 +289,11 @@ namespace G2T.NCD.Table.Editor {
         #region Excel
         public IWorkbook GetWorkbook(string filename, string version) {
             using(var stream = new FileStream(filename, FileMode.Open, FileAccess.Read)) {
-                //Ç¥ÁØ xls ¹öÁ¯
+                //í‘œì¤€ xls ë²„ì ¼
                 if(".xls".Equals(version)) {
                     return new HSSFWorkbook(stream);
                 }
-                //È®Àå xlsx ¹öÁ¯
+                //í™•ì¥ xlsx ë²„ì ¼
                 else if(".xlsx".Equals(version)) {
                     return new XSSFWorkbook(stream);
                 }
@@ -301,7 +301,7 @@ namespace G2T.NCD.Table.Editor {
             }
         }
 
-        // Sheet·Î ºÎÅÍ Row¸¦ Ãëµæ, »ı¼ºÇÏ±â
+        // Sheetë¡œ ë¶€í„° Rowë¥¼ ì·¨ë“, ìƒì„±í•˜ê¸°
         public IRow GetRow(ISheet sheet, int rownum) {
             var row = sheet.GetRow(rownum);
             if(row == null) {
@@ -310,7 +310,7 @@ namespace G2T.NCD.Table.Editor {
             return row;
         }
 
-        // Row·Î ºÎÅÍ Cell¸¦ Ãëµæ, »ı¼ºÇÏ±â
+        // Rowë¡œ ë¶€í„° Cellë¥¼ ì·¨ë“, ìƒì„±í•˜ê¸°
         public ICell GetCell(IRow row, int cellnum) {
             var cell = row.GetCell(cellnum);
             if(cell == null) {
@@ -354,11 +354,11 @@ namespace G2T.NCD.Table.Editor {
             }
         }
 
-        [InfoBox("ÃÖÃÊ ÇÑ ¹ø¸¸ »ı¼ºÇÕ´Ï´Ù. ÀúÀå ÀÌÈÄ¿£ ÀÚµ¿À¸·Î »ı¼ºµÈ Å×ÀÌºíÀ» ºÒ·¯¿É´Ï´Ù.")]
-        [TitleGroup("·Î´õ ÀúÀå")]
-        [Button("»ı¼ºÇÏ±â", ButtonHeight = 50), HideIf("isLoadedFromAsset")]
+        [InfoBox("ìµœì´ˆ í•œ ë²ˆë§Œ ìƒì„±í•©ë‹ˆë‹¤. ì €ì¥ ì´í›„ì—” ìë™ìœ¼ë¡œ ìƒì„±ëœ í…Œì´ë¸”ì„ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.")]
+        [TitleGroup("ë¡œë” ì €ì¥")]
+        [Button("ìƒì„±í•˜ê¸°", ButtonHeight = 50), HideIf("isLoadedFromAsset")]
         private void CreateTable() {
-            string path = UnityEditor.EditorUtility.SaveFilePanel("»ı¼ºÇÏ±â", "Assets", typeof(Loader).Name, "asset");
+            string path = UnityEditor.EditorUtility.SaveFilePanel("ìƒì„±í•˜ê¸°", "Assets", typeof(Loader).Name, "asset");
             if(!path.StartsWith(Application.dataPath))
                 return;
             path = path.Replace(Application.dataPath, "Assets");

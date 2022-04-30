@@ -1,4 +1,4 @@
-using Newtonsoft.Json.Linq;
+ï»¿using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections;
@@ -9,7 +9,7 @@ using UnityEngine;
 namespace G2T.NCD.Table {
     [Serializable]
     public class MonsterHouseStatusInfo : BuildingStatusInfo {
-        [LabelText("¸ó½ºÅÍ ¼ö")]
+        [LabelText("ëª¬ìŠ¤í„° ìˆ˜")]
         [SerializeField]
         private int monsterAmount;
 

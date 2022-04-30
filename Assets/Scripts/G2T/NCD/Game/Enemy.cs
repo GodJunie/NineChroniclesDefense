@@ -1,4 +1,4 @@
-// System
+ï»¿// System
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -62,7 +62,7 @@ namespace G2T.NCD.Game {
             var house = GameController.Instance.House;
             var diff = house.transform.position - this.transform.position;
             if(diff.x < 0) {
-                // ¸ñÇ¥¹° ¿ÞÂÊ
+                // ëª©í‘œë¬¼ ì™¼ìª½
                 this.SetDirection(Direction.Left);
             } else {
                 this.SetDirection(Direction.Right);
@@ -200,7 +200,7 @@ namespace G2T.NCD.Game {
                 };
                 break;
             case "Building":
-                var building = collision.GetComponent<MonsterHouse>();
+                var building = collision.GetComponent<BuildingBase>();
                 if(this.buildings.Contains(building)) return;
                 this.buildings.Add(building);
                 this.curState = State.Attack;

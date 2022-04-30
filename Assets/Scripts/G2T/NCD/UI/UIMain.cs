@@ -1,4 +1,4 @@
-// System
+ï»¿// System
 using System.Collections;
 using System.Collections.Generic;
 // UnityEngine 
@@ -61,7 +61,7 @@ namespace G2T.NCD.UI {
                 var backgroundImage = this.stageBackgroundImages[i];
                 var button = this.stageButtons[i];
 
-                // ¹öÆ°ÀÇ ¹è°æ ÀÌ¹ÌÁö ·Îµå
+                // ë²„íŠ¼ì˜ ë°°ê²½ ì´ë¯¸ì§€ ë¡œë“œ
                 var path = data.BackgroundPath.Replace("Assets/Resources/", "");
                 path = path.Replace(".png", "");
                 

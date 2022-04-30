@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,13 +16,13 @@ namespace G2T.NCD.Table {
         public struct LevelUpItem {
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/¾ÆÀÌµğ")]
+            [BoxGroup("group/ì•„ì´ë””")]
             [HideLabel]
             private int id;
 
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/°³¼ö")]
+            [BoxGroup("group/ê°œìˆ˜")]
             [HideLabel]
             private int amount;
 
@@ -36,11 +36,11 @@ namespace G2T.NCD.Table {
         }
         #endregion
 
-        // Á¤º¸
-        [LabelText("½ºÅÈ")]
+        // ì •ë³´
+        [LabelText("ìŠ¤íƒ¯")]
         [SerializeField]
         private Status status;
-        [LabelText("·¹º§¾÷ ¾ÆÀÌÅÛ")]
+        [LabelText("ë ˆë²¨ì—… ì•„ì´í…œ")]
         [SerializeField]
         private List<LevelUpItem> levelUpItems;
 

@@ -1,4 +1,4 @@
-// System
+ï»¿// System
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,13 +18,13 @@ namespace G2T.NCD.Table {
         public struct Material {
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/¾ÆÀÌµğ")]
+            [BoxGroup("group/ì•„ì´ë””")]
             [HideLabel]
             private int id;
 
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/°³¼ö")]
+            [BoxGroup("group/ê°œìˆ˜")]
             [HideLabel]
             private int amount;
 
@@ -39,19 +39,19 @@ namespace G2T.NCD.Table {
         #endregion
 
         [SerializeField]
-        [LabelText("¾ÆÀÌµğ")]
+        [LabelText("ì•„ì´ë””")]
         private int id;
         [SerializeField]
-        [LabelText("Àç·á ¾ÆÀÌÅÛ")]
+        [LabelText("ì¬ë£Œ ì•„ì´í…œ")]
         private List<Material> materials;
         [SerializeField]
-        [LabelText("°á°ú ¾ÆÀÌµğ")]
+        [LabelText("ê²°ê³¼ ì•„ì´ë””")]
         private int resultId;
         [SerializeField]
-        [LabelText("°á°ú °³¼ö")]
+        [LabelText("ê²°ê³¼ ê°œìˆ˜")]
         private int resultAmount;
         [SerializeField]
-        [LabelText("ÄğÅ¸ÀÓ")]
+        [LabelText("ì¿¨íƒ€ì„")]
         private float coolTime;
 
         public int Id { get => id; }

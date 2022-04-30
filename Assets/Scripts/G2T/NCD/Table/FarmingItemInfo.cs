@@ -1,4 +1,4 @@
-// System
+ï»¿// System
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,13 +17,13 @@ namespace G2T.NCD.Table {
         public struct DropItem {
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/¾ÆÀÌµğ")]
+            [BoxGroup("group/ì•„ì´ë””")]
             [HideLabel]
             private int id;
 
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/°³¼ö")]
+            [BoxGroup("group/ê°œìˆ˜")]
             [HideLabel]
             private int amount;
 
@@ -38,15 +38,15 @@ namespace G2T.NCD.Table {
         #endregion
 
         [SerializeField]
-        [LabelText("¾ÆÀÌµğ")]
+        [LabelText("ì•„ì´ë””")]
         private int id;
 
         [SerializeField]
-        [LabelText("µå¶ø ¾ÆÀÌÅÛ")]
+        [LabelText("ë“œë ì•„ì´í…œ")]
         private List<DropItem> dropItems;
 
         [SerializeField]
-        [LabelText("ÇÁ¸®ÆÕ °æ·Î")]
+        [LabelText("í”„ë¦¬íŒ¹ ê²½ë¡œ")]
         [FilePath(AbsolutePath = false)]
         private string prefabPath;
 

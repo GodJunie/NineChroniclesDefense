@@ -1,4 +1,4 @@
-using Newtonsoft.Json.Linq;
+ï»¿using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections;
@@ -14,13 +14,13 @@ namespace G2T.NCD.Table {
         public struct ConstructItem {
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/¾ÆÀÌµğ")]
+            [BoxGroup("group/ì•„ì´ë””")]
             [HideLabel]
             private int id;
 
             [SerializeField]
             [HorizontalGroup("group")]
-            [BoxGroup("group/°³¼ö")]
+            [BoxGroup("group/ê°œìˆ˜")]
             [HideLabel]
             private int amount;
 
@@ -35,49 +35,49 @@ namespace G2T.NCD.Table {
         #endregion
 
         [HorizontalGroup("group")]
-        // Á¤º¸
-        [BoxGroup("group/Á¤º¸")]
-        [LabelText("¾ÆÀÌµğ")]
+        // ì •ë³´
+        [BoxGroup("group/ì •ë³´")]
+        [LabelText("ì•„ì´ë””")]
         [LabelWidth(80f)]
         [SerializeField]
         private int id;
-        [BoxGroup("group/Á¤º¸")]
-        [LabelText("ÀÌ¸§")]
+        [BoxGroup("group/ì •ë³´")]
+        [LabelText("ì´ë¦„")]
         [LabelWidth(80f)]
         [SerializeField]
         private string name;
-        [BoxGroup("group/Á¤º¸")]
-        [LabelText("¼³¸í")]
+        [BoxGroup("group/ì •ë³´")]
+        [LabelText("ì„¤ëª…")]
         [LabelWidth(80f)]
         [SerializeField]
         private string description;
 
-        [BoxGroup("group/°ÔÀÓ")]
-        [LabelText("°Ç¼³ ¾ÆÀÌÅÛ")]
+        [BoxGroup("group/ê²Œì„")]
+        [LabelText("ê±´ì„¤ ì•„ì´í…œ")]
         [LabelWidth(80f)]
         [SerializeField]
         private List<ConstructItem> constructItems;
-        [BoxGroup("group/°ÔÀÓ")]
-        [LabelText("°Ç¹° ¹üÀ§")]
+        [BoxGroup("group/ê²Œì„")]
+        [LabelText("ê±´ë¬¼ ë²”ìœ„")]
         [LabelWidth(80f)]
         [SerializeField]
         private float range;
 
-        [BoxGroup("group/¿¬°á")]
+        [BoxGroup("group/ì—°ê²°")]
         [LabelWidth(80f)]
-        [LabelText("½ºÅÈ")]
+        [LabelText("ìŠ¤íƒ¯")]
         [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string statusPath;
-        [BoxGroup("group/¿¬°á")]
+        [BoxGroup("group/ì—°ê²°")]
         [LabelWidth(80f)]
-        [LabelText("ÇÁ¸®ÆÕ")]
+        [LabelText("í”„ë¦¬íŒ¹")]
         [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string prefabPath;
-        [BoxGroup("group/¿¬°á")]
+        [BoxGroup("group/ì—°ê²°")]
         [LabelWidth(80f)]
-        [LabelText("¾ÆÀÌÄÜ ÀÌ¹ÌÁö")]
+        [LabelText("ì•„ì´ì½˜ ì´ë¯¸ì§€")]
         [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string iconPath;

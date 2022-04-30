@@ -1,4 +1,4 @@
-// System
+ï»¿// System
 using System.Collections;
 using System.Collections.Generic;
 // UnityEngine
@@ -13,7 +13,7 @@ namespace G2T.NCD {
 
     public class GameManager : SingletonBehaviour<GameManager> {
         #region Serialized Members
-        // ³ªÁß¿¡ ÀÌ¸§ ¸»°í Path ·Î ¹Ù²ã¼­ Addressable ¿¡¼­ ·Îµå
+        // ë‚˜ì¤‘ì— ì´ë¦„ ë§ê³  Path ë¡œ ë°”ê¿”ì„œ Addressable ì—ì„œ ë¡œë“œ
         [TitleGroup("Scene")]
         [SerializeField]
         private string mainSceneName;

@@ -1,4 +1,4 @@
-using Newtonsoft.Json.Linq;
+ï»¿using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections;
@@ -10,7 +10,7 @@ using UnityEngine;
 namespace G2T.NCD.Table {
     [Serializable]
     public class RestaurantStatusInfo : BuildingStatusInfo {
-        [LabelText("ÇÕ¼º ¾ÆÀÌµğ")]
+        [LabelText("í•©ì„± ì•„ì´ë””")]
         [SerializeField]
         private List<int> recipeIds;
 

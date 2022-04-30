@@ -1,4 +1,4 @@
-// System
+ï»¿// System
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,10 +16,10 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private Text hpText;
 
-        //[FoldoutGroup("Ã¼·Â ¹Ù UI")]
+        //[FoldoutGroup("ì²´ë ¥ ë°” UI")]
         //[SerializeField]
         //private Sprite hpBarYellowSprite;
-        //[FoldoutGroup("Ã¼·Â ¹Ù UI")]
+        //[FoldoutGroup("ì²´ë ¥ ë°” UI")]
         //[SerializeField]
         //private Sprite hpBarBlueSprite;
 

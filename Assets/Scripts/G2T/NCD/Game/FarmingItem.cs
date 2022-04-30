@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +14,7 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private GameObject panelSpacebar;
 
-        // ³ªÁß¿¡ Å×ÀÌºí·Î »©±â
+        // ë‚˜ì¤‘ì— í…Œì´ë¸”ë¡œ ë¹¼ê¸°
         [SerializeField]
         private float second;
 
@@ -58,7 +58,7 @@ namespace G2T.NCD.Game {
 
         private void CancelFarming() {
             Interacting = false;
-            // ÆÄ¹Ö ¿¬Ãâ Ãë¼Ò
+            // íŒŒë° ì—°ì¶œ ì·¨ì†Œ
         }
 
         private void OnFarmingComplete() {

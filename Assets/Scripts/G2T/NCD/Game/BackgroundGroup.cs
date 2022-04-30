@@ -1,4 +1,4 @@
-// System
+Ôªø// System
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,10 +14,10 @@ namespace G2T.NCD.Game {
     public class BackgroundGroup : MonoBehaviour {
         [Serializable]
         public class BackgroundInfo {
-            [LabelText("Ω√∞£¥Î")]
+            [LabelText("ÏãúÍ∞ÑÎåÄ")]
             [SerializeField]
             private DayTimePart timePart;
-            [LabelText("ø¿∫Í¡ß∆Æ")]
+            [LabelText("Ïò§Î∏åÏ†ùÌä∏")]
             [SerializeField]
             private GameObject target;
 
@@ -54,12 +54,12 @@ namespace G2T.NCD.Game {
             }
         }
 
-        [LabelText("πË∞Ê ∏ÆΩ∫∆Æ")]
+        [LabelText("Î∞∞Í≤Ω Î¶¨Ïä§Ìä∏")]
         [ListDrawerSettings]
         [SerializeField]
         private List<BackgroundInfo> backgrounds;
 
-        [LabelText("¿¸»Ø Ω√∞£")]
+        [LabelText("Ï†ÑÌôò ÏãúÍ∞Ñ")]
         [SerializeField]
         private float duration;
 

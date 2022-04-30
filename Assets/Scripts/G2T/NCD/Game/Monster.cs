@@ -173,6 +173,9 @@ namespace G2T.NCD.Game {
                     TargetBuilding.HideRange();
 
                 this.curState = State.Move;
+
+                this.panelMove.SetActive(false);
+                this.TargetBuilding?.HideRange();
             } else {
                 if(this.curState == State.Attack || this.curState == State.Dead)
                     return;
@@ -188,6 +191,8 @@ namespace G2T.NCD.Game {
                 this.Interacting = true;
 
                 this.curState = State.Idle;
+
+                OpenMovePanel();
             }
         }
 
@@ -232,7 +237,7 @@ namespace G2T.NCD.Game {
 
         private void OpenMovePanel() {
             this.panelMove.SetActive(true);
-            this.TargetBuilding.ShowRange();
+            this.TargetBuilding?.ShowRange();
 
             var orderedBuildings = GameController.Instance.Buildings.OrderBy(e => e.PosX).ToList();
             int index = orderedBuildings.IndexOf(this.TargetBuilding);
@@ -248,6 +253,11 @@ namespace G2T.NCD.Game {
             } else {
                 buttonRight.SetActive(true);
             }
+        }
+
+        public void OnMove(string direction) {
+            if(direction == "Left") this.OnMove(Direction.Left);
+            else this.OnMove(Direction.Right);
         }
 
         public void OnMove(Direction direction) {
