@@ -100,7 +100,7 @@ namespace G2T.NCD.Game {
         }
 
         // Start is called before the first frame update
-        void Start() {
+        protected virtual void Start() {
             this.Level = 0;
             this.curHp = curStatus.Hp;
             this.hpBar.Init(curStatus.Hp);
@@ -110,7 +110,7 @@ namespace G2T.NCD.Game {
         }
 
         // Update is called once per frame
-        void Update() {
+        protected virtual void Update() {
             if(constructing) {
                 var house = GameController.Instance.House;
                 var x = (this.transform.position - house.transform.position).x;

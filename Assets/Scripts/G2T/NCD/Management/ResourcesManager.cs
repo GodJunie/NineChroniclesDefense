@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 
 namespace G2T.NCD.Management {
     public class ResourcesManager : SingletonBehaviour<ResourcesManager> {
-        public async Task<T> LoadAsync<T>(string path, Transform parent = null) where T : Object {
+        public async Task<T> LoadAsync<T>(string path) where T : Object {
             if(!path.StartsWith("Assets/Resources/")) {
                 throw new System.Exception(string.Format("Invalid path: {0}", path));
             }
@@ -21,6 +21,16 @@ namespace G2T.NCD.Management {
             }
 
             return request.asset as T;
+        }
+
+        public T Load<T>(string path) where T : Object {
+            if(!path.StartsWith("Assets/Resources/")) {
+                throw new System.Exception(string.Format("Invalid path: {0}", path));
+            }
+
+            path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+
+            return Resources.Load<T>(path);
         }
     }
 }

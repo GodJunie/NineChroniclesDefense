@@ -43,7 +43,7 @@ namespace G2T.NCD.UI {
             base.Open(workshop);
         }
 
-        protected override async void OpenInfo() {
+        protected override void OpenInfo() {
             base.OpenInfo();
 
             for(int i = 0; i < recipeSlotContainer.childCount; i++) {
@@ -60,14 +60,14 @@ namespace G2T.NCD.UI {
 
                     var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == recipeData.ResultId);
 
-                    var icon = await ResourcesManager.Instance.LoadAsync<Sprite>(itemData.IconPath);
+                    var icon =  ResourcesManager.Instance.Load<Sprite>(itemData.IconPath);
 
                     slot.SetUI(icon, recipeData.ResultAmount, isLock, () => OpenCraft(recipeData));
                 }
             }
         }
 
-        private async void OpenCraft(RecipeInfo info) {
+        private void OpenCraft(RecipeInfo info) {
             this.panelInfo.SetActive(false);
             this.panelCraft.SetActive(true);
 
@@ -81,7 +81,7 @@ namespace G2T.NCD.UI {
 
                 var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == material.Id);
 
-                var icon = await ResourcesManager.Instance.LoadAsync<Sprite>(itemData.IconPath);
+                var icon = ResourcesManager.Instance.Load<Sprite>(itemData.IconPath);
 
                 var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
                 int count = ownedItem == null ? 0 : ownedItem.Count;
@@ -90,7 +90,7 @@ namespace G2T.NCD.UI {
             }
 
             var resultItemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == info.ResultId);
-            var resultIcon = await ResourcesManager.Instance.LoadAsync<Sprite>(resultItemData.IconPath);
+            var resultIcon = ResourcesManager.Instance.Load<Sprite>(resultItemData.IconPath);
 
             this.craftResultSlot.SetUI(resultIcon, info.ResultAmount.ToString());
         }
