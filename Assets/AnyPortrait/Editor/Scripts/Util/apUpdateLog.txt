@@ -1,0 +1,441 @@
+﻿(업데이트 이미지 개수)
+2
+-----------------------------------------
+(영어)
+<size=16>AnyPortrait Update Log v1.3.5</size>
+(Build January 12, 2022)
+
+<size=13>Improvements</size>
+
+- <color=blue>Support URP of Unity 2021/2022</color>
+    Added material presets compatible with URP (Universal Render Pipeline) in Unity 2021 and 2022.
+    An issue is fixed that clipping meshes were not rendered properly in URP using this package.
+
+- <color=blue>Merging Materials</color>
+    Material Presets and Script Functions are added to allow draw calls to be merged for meshes with different images (up to 10) while sharing the same Shader.
+    These material presets support the built-in render pipeline and URP (in Unity 2021 and newer).
+
+- When executing Bake, if the value of "Render Pipeline" among the settings of Bake does not match the settings of the project, a message asking whether to change them automatically appears.
+- A script function has been added that allows you to flexibly control the character's update time by receiving it as a callback function.
+- When editing animation, the color of the controller on the left UI is changed to red so that it can be distinguished whether the value of the keyframe of the control parameter is being edited. Otherwise, it will not be applied to the keyframe.
+- When creating a material set from the material library, the created material set is selected immediately.
+- It is improved that it is easier to adjust the brush size of Soft Selection, Blur, and Rigging Brush.
+- When using Bake, Optimized Bake, Quick Bake, and Refresh Meshes functions, only the first root unit is displayed.
+- It is improved that the draw call does not increase when using a script function that changes the material properties of meshes in batches, such as "SetMeshColorAll".
+
+
+
+<size=13>Fixed issues</size>
+
+- An issue is fixed that changing a Shader asset in the material library could not be changed again after changing it.
+- An issue is fixed that the properties are shown like that it is not changed has been fixed when undoing in the material library.
+- An issue is fixed that a script error occurs when a class with the name "Action" exists in the project.
+- An issue is fixed that the color could not be changed after changing the image of the mesh using the script function of apPortrait.
+- An issue is fixed that the initial value is set to 0 when adding keyframes for animations linked to control parameters has been fixed.
+- An issue is fixed that the layout of the dialog to select a texture asset was abnormal.
+- An issue is fixed that the function that automatically restores to default values if the animation played next does not have a timeline layer that existed in the previous animation when switching animations.
+- An issue is fixed that the blending of control parameters was awkward when switching animations.
+- An issue is fixed that the first frame or the last frame was not expressed properly when non-Loop animations were played by Mecanim and Timeline.
+
+
+
+
+-----------------------------------------
+(한국어)
+<size=16>AnyPortrait 업데이트 로그 v1.3.5</size>
+(2022년 1월 12일 빌드)
+
+<size=13>개선된 사항</size>
+
+- <color=blue>유니티 2021, 2022의 URP 지원</color>
+    유니티 2021, 2022에서의 URP (Universal Render Pipeline)을 지원하는 재질 프리셋 추가됨
+    해당 패키지를 통해서 URP에서 클리핑 메시가 제대로 렌더링 되지 않는 문제가 수정됨
+
+- <color=blue>재질 병합</color>
+    동일한 Shader를 공유하면서 서로 다른 이미지(최대 10개)를 가진 메시들을 대상으로 드로우콜을 줄일 수 있는 "재질 병합" 기능 추가
+    "재질 병합" 기능은 기본 렌더 파이프라인과 유니티 2021 이상의 URP를 지원함
+
+- Bake를 실행할 때, Bake의 설정 중 "Render Pipeline"의 설정이 프로젝트의 설정과 맞지 않다면 자동으로 변경할지를 묻는 메시지가 표시됨
+- 캐릭터의 업데이트 시간을 콜백 함수로 받아서 유연하게 제어할 수 있는 스크립트 함수가 추가됨
+- 애니메이션 편집시, 컨트롤 파라미터의 키프레임의 값을 편집 중인 경우엔 왼쪽 UI의 컨트롤러의 색상이 붉은 색으로 표시되도록 변경됨
+- 재질 라이브러리에서 재질 세트를 생성 직후엔 해당 재질 세트가 바로 선택됨
+- Soft Selection, Blur, Rigging Brush의 브러시의 크기를 조절하기 편하도록 개선됨
+- Bake, Optimized Bake, Quick Bake, Refresh Meshes 기능을 사용할 때, 첫번째 루트 유닛만 보여지도록 변경됨
+- "SetMeshColorAll"과 같이 메시들의 재질의 속성을 일괄적으로 변경하는 스크립트 함수를 사용할 때 드로우콜이 증가하지 않도록 개선됨
+
+
+
+<size=13>수정된 문제점</size>
+
+- 재질 라이브러리에서 Shader 에셋을 변경한 이후에 다시 변경하지 못하는 문제가 수정됨
+- 재질 라이브러리에서 실행 취소를 했을 때, 화면이 갱신되지 않는 문제가 수정됨
+- 프로젝트 내에 "Action"이라는 이름을 가진 클래스가 존재하는 경우 스크립트 에러가 발생하는 문제가 수정됨
+- apPortrait의 함수를 이용하여 메시의 이미지를 변경한 이후 색상을 변경할 수 없었던 문제가 수정됨
+- 컨트롤 파라미터와 연결되는 애니메이션의 키프레임을 추가할 때, 초기값이 무조건 0으로 지정되는 문제가 수정됨
+- 텍스쳐 에셋을 선택하는 다이얼로그의 레이아웃이 비정상적이었던 문제가 수정됨
+- 애니메이션을 전환할 때, 다음에 재생되는 애니메이션에 이전의 애니메이션에 존재했던 타임라인 레이어가 없다면 기본값으로 자동으로 복구되는 기능이 비정상적으로 동작하는 문제가 수정됨
+- 애니메이션을 전환할 때 컨트롤 파라미터의 블렌딩이 어색했던 문제가 수정됨
+- 메카님, 타임라인에 의해서 Loop가 아닌 애니메이션이 재생될 때, 첫번째 프레임이나 마지막 프레임이 정상적으로 표현되지 못하는 문제가 수정됨
+
+
+
+
+-----------------------------------------
+(프랑스어)
+<size=16>Fichier de mise à jour AnyPortrait v1.3.5</size>
+(Construit le 12 janvier 2022)
+
+<size=13>Améliorations</size>
+
+- <color=blue>Support URP de Unity 2021/2022</color>
+     Ajout de préréglages de matériaux compatibles avec URP (Universal Render Pipeline) dans Unity 2021 et 2022.
+     Un problème est résolu, à savoir que les maillages de découpage n'étaient pas rendus correctement dans URP à l'aide de ce package.
+
+- <color=blue>Fusionner les matériaux</color>
+     Des préréglages de matériaux et des fonctions de script sont ajoutés pour permettre aux appels de dessin d'être fusionnés pour des maillages avec différentes images (jusqu'à 10) tout en partageant le même Shader.
+     Ces préréglages de matériaux prennent en charge le pipeline de rendu intégré et l'URP (dans Unity 2021 et versions ultérieures).
+
+- Lors de l'exécution de Bake, si la valeur de "Render Pipeline" parmi les paramètres de Bake ne correspond pas aux paramètres du projet, un message demandant s'il faut les modifier automatiquement apparaît.
+- Une fonction de script a été ajoutée qui vous permet de contrôler de manière flexible le temps de mise à jour du personnage en le recevant comme une fonction de rappel.
+- Lors de l'édition d'une animation, la couleur du contrôleur sur l'interface utilisateur gauche est changée en rouge afin de pouvoir distinguer si la valeur de l'image clé du paramètre de contrôle est en cours d'édition. Sinon, il ne sera pas appliqué à l'image clé.
+- Lors de la création d'un jeu de matériaux à partir de la bibliothèque de matériaux, le jeu de matériaux créé est immédiatement sélectionné.
+- Il est amélioré qu'il soit plus facile d'ajuster la taille du pinceau de la sélection douce, du flou et du pinceau de gréement.
+- Lors de l'utilisation des fonctions Bake, Optimized Bake, Quick Bake et Refresh Meshes, seule la première unité racine est affichée.
+- Il est amélioré que l'appel de dessin n'augmente pas lors de l'utilisation d'une fonction de script qui modifie les propriétés matérielles des maillages par lots, comme "SetMeshColorAll".
+
+
+
+<size=13>Problème résolu</size>
+
+- Un problème est résolu, à savoir que la modification d'un élément Shader dans la bibliothèque de matériaux ne pouvait plus être modifiée après l'avoir modifié.
+- Un problème est résolu que les propriétés sont affichées comme si elles n'étaient pas modifiées a été corrigé lors de l'annulation dans la bibliothèque de matériaux.
+- Un problème est résolu qu'une erreur de script se produit lorsqu'une classe avec le nom "Action" existe dans le projet.
+- Un problème est résolu : la couleur ne pouvait pas être modifiée après avoir changé l'image du maillage à l'aide de la fonction de script d'apPortrait.
+- Un problème est résolu : la valeur initiale est définie sur 0 lors de l'ajout d'images clés pour les animations liées aux paramètres de contrôle a été corrigé.
+- Un problème est résolu : la disposition de la boîte de dialogue pour sélectionner un élément de texture était anormale.
+- Un problème est résolu : la fonction qui restaure automatiquement les valeurs par défaut si l'animation jouée ensuite n'a pas de calque de chronologie qui existait dans l'animation précédente lors du changement d'animation.
+- Un problème est résolu, à savoir que le mélange des paramètres de contrôle était gênant lors du changement d'animation.
+- Un problème est résolu : la première image ou la dernière image n'était pas exprimée correctement lorsque des animations sans boucle étaient lues par Mecanim et Timeline.
+
+
+
+
+-----------------------------------------
+(독일어)
+<size=16>AnyPortrait-Aktualisierungsprotokoll v1.3.5</size>
+(Build 12. Januar 2022)
+
+<size=13>Verbesserungen</size>
+
+- <color=blue>Unterstütze URP von Unity 2021/2022</color>
+    Materialvoreinstellungen hinzugefügt, die mit URP (Universal Render Pipeline) in Unity 2021 und 2022 kompatibel sind.
+    Es wurde ein Problem behoben, bei dem Clipping-Meshes in URP mit diesem Paket nicht richtig gerendert wurden.
+
+- <color=blue>Zusammenführen von Materialien</color>
+    Materialvoreinstellungen und Skriptfunktionen werden hinzugefügt, um das Zusammenführen von Zeichenaufrufen für Meshes mit unterschiedlichen Bildern (bis zu 10) zu ermöglichen, während derselbe Shader geteilt wird.
+    Diese Materialvoreinstellungen unterstützen die integrierte Renderpipeline und URP (in Unity 2021 und neuer).
+
+- Wenn beim Ausführen von Bake der Wert von "Render Pipeline" unter den Einstellungen von Bake nicht mit den Einstellungen des Projekts übereinstimmt, wird eine Meldung angezeigt, in der Sie gefragt werden, ob sie automatisch geändert werden sollen.
+- Es wurde eine Skriptfunktion hinzugefügt, mit der Sie die Aktualisierungszeit des Charakters flexibel steuern können, indem Sie sie als Callback-Funktion erhalten.
+- Beim Bearbeiten von Animationen wird die Farbe des Controllers auf der linken UI auf Rot geändert, damit unterschieden werden kann, ob der Wert des Keyframes des Steuerparameters bearbeitet wird. Andernfalls wird es nicht auf den Keyframe angewendet.
+- Beim Erstellen eines Materialsatzes aus der Materialbibliothek wird der erstellte Materialsatz sofort ausgewählt.
+- Es wurde verbessert, dass es einfacher ist, die Pinselgröße von Soft Selection, Blur und Rigging Brush anzupassen.
+- Bei Verwendung der Funktionen Bake, Optimized Bake, Quick Bake und Refresh Meshes wird nur die erste Root-Einheit angezeigt.
+- Es wurde verbessert, dass der Zeichenaufruf nicht erhöht wird, wenn eine Skriptfunktion verwendet wird, die die Materialeigenschaften von Meshes stapelweise ändert, wie z. B. "SetMeshColorAll".
+
+
+
+<size=13>Problem behoben</size>
+
+- Es wurde ein Problem behoben, bei dem das Ändern eines Shader-Assets in der Materialbibliothek nach dem Ändern nicht erneut geändert werden konnte.
+- Es wurde ein Problem behoben, dass die Eigenschaften beim Rückgängigmachen in der Materialbibliothek so angezeigt werden, dass sie nicht geändert werden.
+- Es wurde ein Problem behoben, bei dem ein Skriptfehler auftritt, wenn eine Klasse mit dem Namen "Aktion" im Projekt vorhanden ist.
+- Ein Problem wurde behoben, bei dem die Farbe nicht geändert werden konnte, nachdem das Bild des Netzes mit der Skriptfunktion von apPortrait geändert wurde.
+- Ein Problem wurde behoben, bei dem der Anfangswert auf 0 gesetzt wurde, wenn Keyframes für Animationen hinzugefügt wurden, die mit Steuerparametern verknüpft waren.
+- Ein Problem wurde behoben, bei dem das Layout des Dialogfelds zum Auswählen eines Textur-Assets anormal war.
+- Es wurde ein Problem behoben, bei dem die Funktion, die automatisch auf die Standardwerte zurücksetzt, wenn die als nächstes abgespielte Animation keine Zeitachsenebene hat, die in der vorherigen Animation beim Wechseln von Animationen vorhanden war.
+- Ein Problem wurde behoben, bei dem das Mischen von Steuerungsparametern beim Wechseln von Animationen umständlich war.
+- Es wurde ein Problem behoben, bei dem das erste Bild oder das letzte Bild nicht richtig ausgedrückt wurde, wenn Nicht-Loop-Animationen von Mecanim und Timeline abgespielt wurden.
+
+
+
+
+-----------------------------------------
+(스페인어)
+<size=16>AnyPortrait Update Log v1.3.5</size>
+(Construido el 12 de enero de 2022)
+
+<size=13>Mejoras</size>
+
+- <color=blue>Soporte URP de Unity 2021/2022</color>
+    Se agregaron ajustes preestablecidos de material compatibles con URP (Universal Render Pipeline) en Unity 2021 y 2022.
+    Se solucionó el problema de que las mallas de recorte no se procesaban correctamente en URP usando este paquete.
+
+- <color=blue>Materiales combinados</color>
+    Se agregan preajustes de materiales y funciones de secuencia de comandos para permitir que las llamadas de dibujo se fusionen para mallas con diferentes imágenes (hasta 10) mientras comparten el mismo Shader.
+    Estos ajustes preestablecidos de material son compatibles con la canalización de procesamiento integrada y URP (en Unity 2021 y versiones posteriores).
+
+- Al ejecutar Bake, si el valor de "Render Pipeline" entre las configuraciones de Bake no coincide con las configuraciones del proyecto, aparece un mensaje preguntando si desea cambiarlas automáticamente.
+- Se ha agregado una función de secuencia de comandos que le permite controlar de manera flexible el tiempo de actualización del personaje al recibirlo como una función de devolución de llamada.
+- Al editar la animación, el color del controlador en la IU izquierda cambia a rojo para que se pueda distinguir si se está editando el valor del fotograma clave del parámetro de control. De lo contrario, no se aplicará al fotograma clave.
+- Al crear un conjunto de materiales desde la biblioteca de materiales, el conjunto de materiales creado se selecciona inmediatamente.
+- Se mejoró que es más fácil ajustar el tamaño del pincel de Selección suave, Desenfoque y Pincel de aparejo.
+- Al usar las funciones Bake, Optimized Bake, Quick Bake y Refresh Meshes, solo se muestra la primera unidad raíz.
+- Se mejora que la llamada de dibujo no aumente cuando se usa una función de script que cambia las propiedades del material de las mallas en lotes, como "SetMeshColorAll".
+
+
+
+<size=13>Problema solucionado</size>
+
+- Se solucionó el problema de que no se podía volver a cambiar un activo de Shader en la biblioteca de materiales después de cambiarlo.
+- Se solucionó el problema de que las propiedades se muestran como si no se cambiara al deshacer en la biblioteca de materiales.
+- Se solucionó el problema de que se produce un error de secuencia de comandos cuando existe una clase con el nombre "Acción" en el proyecto.
+- Se solucionó el problema de que el color no se podía cambiar después de cambiar la imagen de la malla usando la función de script de apPortrait.
+- Se solucionó el problema de que el valor inicial se establece en 0 cuando se agregan fotogramas clave para animaciones vinculadas a parámetros de control.
+- Se solucionó el problema de que el diseño del cuadro de diálogo para seleccionar un activo de textura era anormal.
+- Se solucionó el problema de que la función que restaura automáticamente los valores predeterminados si la animación que se reproduce a continuación no tiene una capa de línea de tiempo que existía en la animación anterior al cambiar de animación.
+- Se solucionó el problema de que la combinación de parámetros de control era incómoda al cambiar de animación.
+- Se solucionó el problema de que el primer cuadro o el último cuadro no se expresaba correctamente cuando Mecanim y Timeline reproducían animaciones que no eran de bucle.
+
+
+
+
+
+-----------------------------------------
+(이탈리아어)
+<size=16>Registro aggiornamenti AnyPortrait v1.3.5</size>
+(Build 12 gennaio 2022)
+
+<size=13>Miglioramenti</size>
+
+- <color=blue>Supporto URP of Unity 2021/2022</color>
+    Aggiunti preset di materiale compatibili con URP (Universal Render Pipeline) in Unity 2021 e 2022.
+    È stato risolto un problema per cui le mesh di ritaglio non venivano renderizzate correttamente in URP utilizzando questo pacchetto.
+
+- <color=blue>Unire materiali</color>
+    I preset dei materiali e le funzioni di script vengono aggiunti per consentire di unire le chiamate di disegno per le mesh con immagini diverse (fino a 10) condividendo lo stesso Shader.
+    Questi preset di materiale supportano la pipeline di rendering integrata e URP (in Unity 2021 e versioni successive).
+
+- Durante l'esecuzione di Bake, se il valore di "Render Pipeline" tra le impostazioni di Bake non corrisponde alle impostazioni del progetto, viene visualizzato un messaggio che chiede se modificarle automaticamente.
+- È stata aggiunta una funzione di script che ti consente di controllare in modo flessibile il tempo di aggiornamento del personaggio ricevendolo come funzione di callback.
+- Durante la modifica dell'animazione, il colore del controller sull'interfaccia utente sinistra viene modificato in rosso in modo da poter distinguere se il valore del fotogramma chiave del parametro di controllo è in corso di modifica. In caso contrario, non verrà applicato al fotogramma chiave.
+- Quando si crea un set di materiali dalla libreria dei materiali, il set di materiali creato viene selezionato immediatamente.
+- È stato migliorato il fatto che sia più facile regolare la dimensione del pennello di Selezione morbida, Sfocatura e Pennello di rigging.
+- Quando si utilizzano le funzioni Bake, Optimized Bake, Quick Bake e Refresh Meshes, viene visualizzata solo la prima unità radice.
+- È stato migliorato che la chiamata di disegno non aumenti quando si utilizza una funzione di script che modifica le proprietà del materiale delle mesh in batch, come "SetMeshColorAll".
+
+
+
+<size=13>Risolto il problema</size>
+
+- È stato risolto un problema per cui la modifica di una risorsa Shader nella libreria dei materiali non poteva essere modificata di nuovo dopo averla modificata.
+- È stato risolto un problema per cui le proprietà venivano mostrate come se non venissero modificate è stato risolto durante l'annullamento nella libreria dei materiali.
+- È stato risolto un problema per cui si verifica un errore di script quando nel progetto esiste una classe con il nome "Azione".
+- È stato risolto un problema per cui il colore non poteva essere modificato dopo aver modificato l'immagine della mesh utilizzando la funzione di script di apPortrait.
+- È stato risolto un problema per cui il valore iniziale era impostato su 0 quando l'aggiunta di fotogrammi chiave per le animazioni collegate ai parametri di controllo è stata corretta.
+- È stato risolto un problema per cui il layout della finestra di dialogo per selezionare una risorsa di texture era anormale.
+- È stato risolto un problema per cui la funzione che ripristina automaticamente i valori predefiniti se l'animazione riprodotta successiva non ha un livello della timeline che esisteva nell'animazione precedente quando si cambia animazione.
+- È stato risolto un problema per cui la fusione dei parametri di controllo era scomoda quando si cambiava animazione.
+- È stato risolto un problema per cui il primo o l'ultimo fotogramma non veniva espresso correttamente quando Mecanim e Timeline riproducevano animazioni non Loop.
+
+
+
+
+-----------------------------------------
+(덴마크어)
+<size=16>AnyPortrait Update Log v1.3.5</size>
+(Byg den 12. januar 2022)
+
+<size=13>Forbedringer</size>
+
+- <color=blue>Support URP of Unity 2021/2022</color>
+    Tilføjede materialeforudindstillinger, der er kompatible med URP (Universal Render Pipeline) i Unity 2021 og 2022.
+    Et problem er rettet, at klippemasker ikke blev gengivet korrekt i URP ved hjælp af denne pakke.
+
+- <color=blue>Flette materialer</color>
+    Materiale-forudindstillinger og script-funktioner tilføjes for at tillade, at draw-opkald kan flettes til masker med forskellige billeder (op til 10), mens de deler den samme Shader.
+    Disse materialeforudindstillinger understøtter den indbyggede renderpipeline og URP (i Unity 2021 og nyere).
+
+- Når du udfører Bake, hvis værdien af ​​"Render Pipeline" blandt indstillingerne for Bake ikke stemmer overens med indstillingerne for projektet, vises en meddelelse, der spørger, om de skal ændres automatisk.
+- Der er tilføjet en script-funktion, der giver dig mulighed for fleksibelt at styre karakterens opdateringstid ved at modtage den som en tilbagekaldsfunktion.
+- Ved redigering af animation ændres farven på controlleren i venstre UI til rød, så det kan skelnes om værdien af ​​keyframen af ​​kontrolparameteren redigeres. Ellers vil det ikke blive anvendt på keyframen.
+- Ved oprettelse af et materialesæt fra materialebiblioteket vælges det oprettede materialesæt med det samme.
+- Det er forbedret, at det er nemmere at justere børstestørrelsen for Soft Selection, Blur og Rigging Brush.
+- Når du bruger funktionerne Bag, Optimeret bagning, Hurtig bagning og Opdater masker, vises kun den første rodenhed.
+- Det er forbedret, at draw-kaldet ikke øges ved brug af en script-funktion, der ændrer materialeegenskaberne for masker i batches, såsom "SetMeshColorAll".
+
+
+
+<size=13>Faste problem</size>
+
+- Et problem er rettet, at ændring af et Shader-aktiv i materialebiblioteket ikke kunne ændres igen efter ændring af det.
+- Et problem er rettet, at egenskaberne vises sådan, at det ikke er ændret, er blevet rettet ved fortrydelse i materialebiblioteket.
+- Et problem er rettet, at der opstår en scriptfejl, når der findes en klasse med navnet "Action" i projektet.
+- Et problem er rettet, at farven ikke kunne ændres efter ændring af billedet af mesh ved hjælp af script-funktionen i apPortrait.
+- Et problem er rettet, at startværdien er sat til 0, når der er blevet rettet til at tilføje keyframes til animationer, der er knyttet til kontrolparametre.
+- Et problem er rettet, at layoutet af dialogen til at vælge et teksturaktiv var unormalt.
+- Et problem er rettet, at funktionen, der automatisk gendannes til standardværdier, hvis animationen, der afspilles næste gang, ikke har et tidslinjelag, der fandtes i den forrige animation, når der skiftedes animation.
+- Et problem er rettet, at blandingen af ​​kontrolparametre var akavet, når du skiftede animationer.
+- Et problem er rettet, at det første billede eller det sidste billede ikke blev udtrykt korrekt, når ikke-loop-animationer blev afspillet af Mecanim og Timeline.
+
+
+
+
+-----------------------------------------
+(일본어)
+<size=16> AnyPortrait更新ログv1.3.5</size>
+（2022年1月12日ビルド）
+
+<size=13>改善点</size>
+
+- <color=blue>Unity 2021、2022のURPをサポート</color>
+    「Unity 2021, 2022」の「URP（Universal Render Pipeline）」をサポートするマテリアルプリセットが追加されました。
+    「URP」で「クリッピングメッシュ」が正しくレンダリングされない問題が修正されました。
+
+- <color=blue>マテリアルマージ</color>
+    同じ「Shader」を共有しながら、異なるイメージ（最大10個）を持つメッシュを対象にドローコールを減らすことができるサポートする 「マテリアルプリセット」とスクリプト関数が追加されました。
+    対応するマテリアルプリセットは、「組み込みレンダリングパイプライン」と「Unity 2021以降」のURPをサポートします。
+
+- 「Bake」を実行すると、「Render Pipeline」の設定がプロジェクトの設定と一致しない場合は、自動的に変更するかどうかを尋ねられます。 この機能は「Unity 2020」から適用されます。
+- キャラクターの更新時間を「コールバック関数」にして柔軟に制御できるスクリプト関数が追加されました。
+- アニメーション編集時に、コントロールパラメータのキーフレームの値が編集中かどうかを区別できるように、 該当する場合は左UIのコントローラの色が赤色に変わります。 
+- マテリアルライブラリからマテリアルセットを作成すると、生成されたマテリアルセットがすぐに選択されます。
+- 「Soft Selection、Blur、Rigging Brush」のブラシのサイズを調節しやすくなるように改善されました。
+- 「Bake、Optimized Bake、Quick Bake、Refresh Meshes」機能を使用すると、最初のルートユニットのみが表示されるように変更されました。
+- 「SetMeshColorAll」など、メッシュのマテリアルのプロパティを一括変更するスクリプト関数を使用する場合、 ドローコールが増加しないように改善されました。
+
+
+
+<size=13>修正された問題</size>
+
+- マテリアル ライブラリで「Shader」アセットを変更した後に再度変更できない問題を修正しました。
+- マテリアルライブラリで「元に戻す」を行ったとき、画面が更新されない問題を修正しました。
+- プロジェクト内に「Action」という名前のクラスが存在する場合、スクリプトエラーが発生する問題を修正しました。
+- apPortraitの関数を使用してメッシュの画像を変更した後に色を変更できなかった問題を修正しました。
+- 「制御パラメータ」に関連付けられるアニメーションのキーフレームを追加するとき、初期値が無条件0に指定される問題を修正しました。
+- テクスチャアセットを選択するダイアログのレイアウトが異常だった問題を修正しました。
+- アニメーションを切り替えるとき、次に再生されるアニメーションにマッチするタイムラインレイヤーがないと、 デフォルト値に自動的に回復される機能が異常に動作する問題を修正しました。
+- アニメーションを切り替えたときに制御パラメータのブレンドがぎこちない問題を修正しました。
+- メッカ様、タイムラインによって「ループ以外のアニメーション」が再生されるとき、 最初のフレームや最後のフレームが正常に表現されない問題を修正しました。
+
+
+
+-----------------------------------------
+(중국어-번체)
+<size=16>AnyPortrait更新日誌v1.3.5</size>
+（2022年1月12日）
+
+<size=13>改進</size>
+
+- <color=blue>支持Unity 2021/2022的URP</color>
+    在 Unity 2021 和 2022 中添加了與 URP（通用渲染管線）兼容的材質預設。
+    修復了使用此包在 URP 中未正確渲染剪裁網格的問題。
+
+- <color=blue>合併材質</color>
+    添加了材質預設和腳本函數以允許為具有不同圖像（最多 10 個）的網格合併繪製調用，同時共享相同的著色器。
+    這些材質預設支持內置渲染管線和 URP（在 Unity 2021 及更高版本中）。
+
+- 執行 Bake 時，如果 Bake 的設置中“Render Pipeline”的值與項目的設置不匹配，則會出現詢問是否自動更改它們的消息。
+- 增加了腳本功能，可以通過接收作為回調函數來靈活控制角色的更新時間。
+- 編輯動畫時，左側UI的控制器顏色變為紅色，以便區分控件參數的關鍵幀值是否正在編輯。否則，它將不會應用於關鍵幀。
+- 從材料庫創建材料組時，立即選擇創建的材料組。
+- 改進了更容易調整軟選擇、模糊和索具畫筆的畫筆大小。
+- 使用 Bake、Optimized Bake、Quick Bake 和 Refresh Meshes 功能時，僅顯示第一個根單元。
+- 改進了使用“SetMeshColorAll”等批量改變網格材質屬性的腳本函數時，draw call不增加的問題。
+
+
+
+<size=13>修復了問題</size>
+
+- 修復了更改材質庫中的著色器資源後無法再次更改的問題。
+- 修復了在材料庫中撤消時屬性顯示為未更改的問題。
+- 修復了項目中存在名稱為“Action”的類時發生腳本錯誤的問題。
+- 修復了使用 apPortrait 的腳本功能更改網格圖像後無法更改顏色的問題。
+- 修復了為鏈接到控制參數的動畫添加關鍵幀時初始值設置為 0 的問題。
+- 修復了選擇紋理資源的對話框佈局異常的問題。
+- 修復了切換動畫時，如果下一個動畫沒有上一個動畫中存在的時間線層，則自動恢復為默認值的功能。
+- 修復了切換動畫時控制參數的混合很尷尬的問題。
+- 修復了 Mecanim 和 Timeline 播放非循環動畫時，第一幀或最後一幀沒有正確表達的問題。
+
+
+
+-----------------------------------------
+(중국어-간체)
+<size=16>AnyPortrait更新日志v1.3.5</size>
+（2022年1月12日）
+
+<size=13>改进</size>
+
+- <color=blue>支持Unity 2021/2022的URP</color>
+    在 Unity 2021 和 2022 中添加了与 URP（通用渲染管线）兼容的材质预设。
+    修复了使用此包在 URP 中未正确渲染剪裁网格的问题。
+
+- <color=blue>合并材质</color>
+    添加了材质预设和脚本函数以允许为具有不同图像（最多 10 个）的网格合并绘制调用，同时共享相同的着色器。
+    这些材质预设支持内置渲染管线和 URP（在 Unity 2021 及更高版本中）。
+
+- 执行 Bake 时，如果 Bake 的设置中“Render Pipeline”的值与项目的设置不匹配，则会出现询问是否自动更改它们的消息。
+- 增加了脚本功能，可以通过接收作为回调函数来灵活控制角色的更新时间。
+- 编辑动画时，左侧UI的控制器颜色变为红色，以便区分控件参数的关键帧值是否正在编辑。否则，它将不会应用于关键帧。
+- 从材料库创建材料组时，立即选择创建的材料组。
+- 改进了更容易调整软选择、模糊和索具画笔的画笔大小。
+- 使用 Bake、Optimized Bake、Quick Bake 和 Refresh Meshes 功能时，仅显示第一个根单元。
+- 改进了使用“SetMeshColorAll”等批量改变网格材质属性的脚本函数时，draw call不增加的问题。
+
+
+
+<size=13>修复了问题</size>
+
+- 修复了更改材质库中的着色器资源后无法再次更改的问题。
+- 修复了在材料库中撤消时属性显示为未更改的问题。
+- 修复了项目中存在名称为“Action”的类时发生脚本错误的问题。
+- 修复了使用 apPortrait 的脚本功能更改网格图像后无法更改颜色的问题。
+- 修复了为链接到控制参数的动画添加关键帧时初始值设置为 0 的问题。
+- 修复了选择纹理资源的对话框布局异常的问题。
+- 修复了切换动画时，如果下一个动画没有上一个动画中存在的时间线层，则自动恢复为默认值的功能。
+- 修复了切换动画时控制参数的混合很尴尬的问题。
+- 修复了 Mecanim 和 Timeline 播放非循环动画时，第一帧或最后一帧没有正确表达的问题。
+
+
+
+-----------------------------------------
+(폴란드어)
+<size=16>Dziennik aktualizacji AnyPortret v1.3.5</size>
+(Zbuduj 12 stycznia 2022 r.)
+
+
+<size=13>Ulepszenia</size>
+
+- <color=blue>Obsługa URP Unity 2021/2022</color>
+    Dodano ustawienia wstępne materiałów zgodne z URP (Universal Render Pipeline) w Unity 2021 i 2022.
+    Rozwiązano problem polegający na tym, że siatki przycinające nie były poprawnie renderowane w URP przy użyciu tego pakietu.
+
+- <color=blue>Scalanie materiałów</color>
+    Dodano ustawienia wstępne materiałów i funkcje skryptów, aby umożliwić łączenie wywołań rysowania dla siatek z różnymi obrazami (do 10) przy jednoczesnym współdzieleniu tego samego shadera.
+    Te ustawienia wstępne materiałów obsługują wbudowany potok renderowania i URP (w Unity 2021 i nowszych).
+
+- Podczas wykonywania Bake, jeśli wartość „Render Pipeline” wśród ustawień Bake nie jest zgodna z ustawieniami projektu, automatycznie pojawi się komunikat z pytaniem, czy je zmienić.
+- Dodano funkcję skryptu, która pozwala elastycznie kontrolować czas aktualizacji postaci poprzez odbieranie go jako funkcji zwrotnej.
+- Podczas edycji animacji kolor kontrolera w lewym interfejsie użytkownika zmienia się na czerwony, aby można było odróżnić, czy edytowana jest wartość klatki kluczowej parametru sterującego. W przeciwnym razie nie zostanie zastosowany do klatki kluczowej.
+- Podczas tworzenia zestawu materiałów z biblioteki materiałów, utworzony zestaw materiałów jest wybierany natychmiast.
+- Ulepszono, że łatwiej jest dostosować rozmiar pędzla Soft Selection, Blur i Rigging Brush.
+- Podczas korzystania z funkcji Bake, Optimized Bake, Quick Bake i Refresh Meshes wyświetlana jest tylko pierwsza jednostka główna.
+- Poprawiono to, że wywołanie rysowania nie zwiększa się podczas korzystania z funkcji skryptu, która zmienia właściwości materiału siatek w partiach, np. „SetMeshColorAll”.
+
+
+
+<size=13>Naprawiono problem</size>
+
+- Naprawiono problem polegający na tym, że zmiana zasobu modułu cieniującego w bibliotece materiałów nie mogła zostać zmieniona ponownie po jego zmianie.
+- Naprawiono problem polegający na tym, że właściwości są wyświetlane w taki sposób, że nie uległy zmianie, naprawiono podczas cofania w bibliotece materiałów.
+— Rozwiązano problem polegający na tym, że błąd skryptu występuje, gdy w projekcie istnieje klasa o nazwie „Akcja”.
+- Naprawiono problem polegający na tym, że nie można było zmienić koloru po zmianie obrazu siatki za pomocą funkcji skryptu apPortrait.
+- Naprawiono problem polegający na tym, że początkowa wartość jest ustawiona na 0 podczas dodawania klatek kluczowych do animacji powiązanych z parametrami sterowania.
+- Naprawiono błąd, w wyniku którego układ okna dialogowego wyboru zasobu tekstury był nieprawidłowy.
+- Naprawiono błąd polegający na tym, że funkcja, która automatycznie przywraca wartości domyślne, jeśli później odtwarzana animacja nie ma warstwy osi czasu, która istniała w poprzedniej animacji podczas przełączania animacji.
+- Naprawiono problem polegający na tym, że mieszanie parametrów sterowania było niewygodne podczas przełączania animacji.
+- Naprawiono błąd, który powodował, że pierwsza lub ostatnia klatka nie była poprawnie wyrażona, gdy animacje inne niż w pętli były odtwarzane przez Mecanim i oś czasu.
+
+
+
+-----------------------------------------
