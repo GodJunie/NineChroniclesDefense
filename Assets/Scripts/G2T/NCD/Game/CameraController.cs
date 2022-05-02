@@ -52,7 +52,7 @@ namespace G2T.NCD.Game {
 
         private void MosueScroll() {
             var pos = Input.mousePosition;
-            var width = UnityEngine.Screen.width;
+            var width = Screen.width;
 
             var rangeLeft = GameController.Instance.RangeLeft;
             var rangeRight = GameController.Instance.RangeRight;
