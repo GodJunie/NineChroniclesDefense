@@ -108,9 +108,11 @@ namespace G2T.NCD.Table.Editor {
         [TitleGroup("열 설정")]
         [ShowIf("@sheet!=null")]
         [LabelText("열 정보")]
-        [ListDrawerSettings(Expanded = true)]
+        [ListDrawerSettings(Expanded = true, CustomAddFunction = "AddColumn")]
         [SerializeField]
         private List<Column> Columns = new List<Column>();
+        private string[] cols;
+        private string[] properties;
 
         private List<string> sheetNames = new List<string>();
 
@@ -152,8 +154,9 @@ namespace G2T.NCD.Table.Editor {
                     cols.Add(col);
                 }
             }
+            this.cols = cols.ToArray();
 
-            var properties = new Data().GetProperties();
+            properties = new Data().GetProperties();
 
             if(Columns == null)
                 Columns = new List<Column>();
@@ -171,7 +174,7 @@ namespace G2T.NCD.Table.Editor {
                 }
             }
             foreach(var col in Columns) {
-                col.cols = cols.ToArray();
+                col.cols = this.cols;
             }
         }
 
@@ -284,6 +287,14 @@ namespace G2T.NCD.Table.Editor {
                 Debug.LogError(e.Message);
                 return;
             }
+        }
+
+        private void AddColumn() {
+            Columns.Add(new Column() {
+                properties = properties,
+                cols = cols,
+                index = 0
+            });
         }
 
         #region Excel
