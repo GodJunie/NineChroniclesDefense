@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88b671d2aec8e0f4f90997dff6c72c62, type: 3}
-  m_Name: BunkerStatusTable
+  m_Name: Bunker
   m_EditorClassIdentifier: 
   Datas:
   - status:
       hp: 300
-      atk: 30
+      atk: 25
       def: 15
       criRate: 0.1
       criDamage: 0.1
@@ -29,7 +29,7 @@ MonoBehaviour:
     entryCount: 2
   - status:
       hp: 350
-      atk: 40
+      atk: 30
       def: 20
       criRate: 0.12
       criDamage: 0.12
@@ -45,7 +45,7 @@ MonoBehaviour:
     entryCount: 2
   - status:
       hp: 400
-      atk: 50
+      atk: 35
       def: 25
       criRate: 0.12
       criDamage: 0.12
@@ -59,7 +59,7 @@ MonoBehaviour:
     entryCount: 2
   - status:
       hp: 450
-      atk: 60
+      atk: 40
       def: 30
       criRate: 0.13
       criDamage: 0.13
@@ -73,7 +73,7 @@ MonoBehaviour:
     entryCount: 2
   - status:
       hp: 500
-      atk: 70
+      atk: 45
       def: 35
       criRate: 0.13
       criDamage: 0.14
@@ -89,7 +89,7 @@ MonoBehaviour:
     entryCount: 3
   - status:
       hp: 550
-      atk: 80
+      atk: 50
       def: 40
       criRate: 0.14
       criDamage: 0.15
@@ -105,7 +105,7 @@ MonoBehaviour:
     entryCount: 3
   - status:
       hp: 600
-      atk: 90
+      atk: 58
       def: 45
       criRate: 0.14
       criDamage: 0.15
@@ -121,7 +121,7 @@ MonoBehaviour:
     entryCount: 3
   - status:
       hp: 650
-      atk: 100
+      atk: 64
       def: 50
       criRate: 0.15
       criDamage: 0.16
@@ -137,7 +137,7 @@ MonoBehaviour:
     entryCount: 3
   - status:
       hp: 700
-      atk: 110
+      atk: 70
       def: 55
       criRate: 0.15
       criDamage: 0.18
@@ -151,7 +151,7 @@ MonoBehaviour:
     entryCount: 3
   - status:
       hp: 750
-      atk: 120
+      atk: 80
       def: 60
       criRate: 0.15
       criDamage: 0.2

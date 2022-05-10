@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a320fa6d94db5e3498cfe23e69755970, type: 3}
-  m_Name: MonsterTable
+  m_Name: Monster_Info
   m_EditorClassIdentifier: 
   Datas:
   - id: 1001000
@@ -24,9 +24,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3001016
       amount: 1
-    prefabPath: 201000
-    statusPath: Status_1001000
-    iconPath: 201000
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201000.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001000.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201000.png
   - id: 1001001
     name: Teratomato
     description: It has gained a little confidence by sprouting. Sometimes, it is
@@ -38,9 +38,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3001014
       amount: 1
-    prefabPath: 201001
-    statusPath: Status_1001001
-    iconPath: 201001
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201001.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001001.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201001.png
   - id: 1001002
     name: Teratoreef
     description: As soon as the leaves grew, it became more violent than other teratoma.
@@ -54,9 +54,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3002012
       amount: 3
-    prefabPath: 201002
-    statusPath: Status_1001002
-    iconPath: 201002
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201002.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001002.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201002.png
   - id: 1001003
     name: teratoruit
     description: Mana-filled fruits are growing on its head. Fruit is popular as
@@ -68,9 +68,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3005002
       amount: 1
-    prefabPath: 201004
-    statusPath: Status_1001003
-    iconPath: 201004
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201004.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001003.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201004.png
   - id: 1001004
     name: Teratolower
     description: The fruit of its head has grown into beautiful flowers. The best
@@ -82,9 +82,9 @@ MonoBehaviour:
       amount: 3
     evolutionResult: 1001005
     catchMaterials: []
-    prefabPath: 201003
-    statusPath: Status_1001004
-    iconPath: 201003
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201003.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001004.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201003.png
   - id: 1001005
     name: TeratoMushoom
     description: A mature teratoma which has a gentle personality. However, mushrooms
@@ -93,9 +93,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 201007
-    statusPath: Status_1001005
-    iconPath: 201007
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201007.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001005.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201007.png
   - id: 1001006
     name: Teratowiz
     description: The most violent terratoma. It moves in groups with terratoleaves.
@@ -112,9 +112,9 @@ MonoBehaviour:
       amount: 3
     evolutionResult: 1001007
     catchMaterials: []
-    prefabPath: 201008
-    statusPath: Status_1001006
-    iconPath: 201008
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201008.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001006.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201008.png
   - id: 1001007
     name: Teratovine
     description: Suffering from constant poaching, Terratoweed wraps the vine all
@@ -129,9 +129,9 @@ MonoBehaviour:
       amount: 7
     evolutionResult: 1001008
     catchMaterials: []
-    prefabPath: 201006
-    statusPath: Status_1001007
-    iconPath: 201006
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201006.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001007.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201006.png
   - id: 1001008
     name: Teratogarden
     description: A leagendary feature of teratoma has blossomed in several fruits.
@@ -140,9 +140,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 201005
-    statusPath: Status_1001008
-    iconPath: 201005
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/201005.prefab
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1001008.asset
+    iconPath: Assets/Resources/UI/Icons/Character/201005.png
   - id: 1002000
     name: Desert Fox Juvenile
     description: A young soldier of the desert fox tribe who loves nature. It is
@@ -158,9 +158,9 @@ MonoBehaviour:
       amount: 1
     - id: 3005001
       amount: 1
-    prefabPath: 202000
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202000.prefab
     statusPath: Status_1002000
-    iconPath: 202000
+    iconPath: Assets/Resources/UI/Icons/Character/202000.png
   - id: 1002001
     name: Desert Fox Trainer
     description: Training to be reborn as a warrior. Still weak, but it is said to
@@ -176,9 +176,9 @@ MonoBehaviour:
       amount: 1
     - id: 3006034
       amount: 2
-    prefabPath: 202001
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202001.prefab
     statusPath: Status_1002001
-    iconPath: 202001
+    iconPath: Assets/Resources/UI/Icons/Character/202001.png
   - id: 1002002
     name: Thief Desert Fox
     description: It was only a petty thief who robbed empty houses, but now it collects
@@ -190,9 +190,9 @@ MonoBehaviour:
       amount: 3
     evolutionResult: 1002003
     catchMaterials: []
-    prefabPath: 202002
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202002.prefab
     statusPath: Status_1002002
-    iconPath: 202002
+    iconPath: Assets/Resources/UI/Icons/Character/202002.png
   - id: 1002003
     name: Desert Fox Warrior
     description: It has steadily trained to gain strong physical strength and mind.
@@ -208,9 +208,9 @@ MonoBehaviour:
       amount: 3
     evolutionResult: 1002007
     catchMaterials: []
-    prefabPath: 202003
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202003.prefab
     statusPath: Status_1002003
-    iconPath: 202003
+    iconPath: Assets/Resources/UI/Icons/Character/202003.png
   - id: 1002004
     name: Desert Fox Apprenticeship Wizard
     description: Only some trainees with magical powers can be qualified as wizards.
@@ -228,9 +228,9 @@ MonoBehaviour:
       amount: 3
     - id: 3002001
       amount: 5
-    prefabPath: 202005
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202005.prefab
     statusPath: Status_1002004
-    iconPath: 202005
+    iconPath: Assets/Resources/UI/Icons/Character/202005.png
   - id: 1002005
     name: Desert Fox Wizard
     description: Use powerful magic as ones who realize the power of mana. Some even
@@ -244,9 +244,9 @@ MonoBehaviour:
       amount: 2
     evolutionResult: 1002006
     catchMaterials: []
-    prefabPath: 202006
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202006.prefab
     statusPath: Status_1002005
-    iconPath: 202006
+    iconPath: Assets/Resources/UI/Icons/Character/202006.png
   - id: 1002006
     name: Desert Fox Shaman
     description: It helps to predict the fate of the desert fox tribe and continue
@@ -254,9 +254,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 202004
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202004.prefab
     statusPath: Status_1002006
-    iconPath: 202004
+    iconPath: Assets/Resources/UI/Icons/Character/202004.png
   - id: 1002007
     name: Foa
     description: A chief of the Desert Fox tribe who is respected by all the Desert
@@ -264,9 +264,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 202007
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/202007.prefab
     statusPath: Status_1002007
-    iconPath: 202007
+    iconPath: Assets/Resources/UI/Icons/Character/202007.png
   - id: 1003000
     name: Boy Bottle of Fire Pig
     description: A child soldier of the Fire Pig tribe stands at the forefront of
@@ -281,9 +281,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3001014
       amount: 3
-    prefabPath: 203000
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203000.prefab
     statusPath: Status_1003000
-    iconPath: 203000
+    iconPath: Assets/Resources/UI/Icons/Character/203000.png
   - id: 1003001
     name: Fire Pig Trainer
     description: A trainee t of the Fire Pig tribe who dreams of becoming a strong
@@ -301,9 +301,9 @@ MonoBehaviour:
       amount: 5
     - id: 3006031
       amount: 5
-    prefabPath: 203001
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203001.prefab
     statusPath: Status_1003001
-    iconPath: 203001
+    iconPath: Assets/Resources/UI/Icons/Character/203001.png
   - id: 1003002
     name: Fire Pig Deserper
     description: The Fire Pig tribe values the pride of the battlefield the most.
@@ -322,9 +322,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3002003
       amount: 5
-    prefabPath: 203005
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203005.prefab
     statusPath: Status_1003002
-    iconPath: 203005
+    iconPath: Assets/Resources/UI/Icons/Character/203005.png
   - id: 1003003
     name: Fire Pig Warrior
     description: It has trained to the limit. It strikes the enemy with a powerful
@@ -340,9 +340,9 @@ MonoBehaviour:
       amount: 1
     evolutionResult: 1003004
     catchMaterials: []
-    prefabPath: 203003
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203003.prefab
     statusPath: Status_1003003
-    iconPath: 203003
+    iconPath: Assets/Resources/UI/Icons/Character/203003.png
   - id: 1003004
     name: Fire Pig Palladin
     description: An elite soldier of Gemnir. It protects the tribe by swinging a
@@ -350,9 +350,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 203004
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203004.prefab
     statusPath: Status_1003004
-    iconPath: 203004
+    iconPath: Assets/Resources/UI/Icons/Character/203004.png
   - id: 1003005
     name: Fire Pig Wizard
     description: Only few are born with mana. However, it has difficulty using powerful
@@ -370,9 +370,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006014
       amount: 8
-    prefabPath: 203002
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203002.prefab
     statusPath: Status_1003005
-    iconPath: 203002
+    iconPath: Assets/Resources/UI/Icons/Character/203002.png
   - id: 1003006
     name: Fire Pig Assassin
     description: An assassination unit of Jerimnir, whom not many people in the tribe
@@ -388,9 +388,9 @@ MonoBehaviour:
       amount: 1
     evolutionResult: 1003007
     catchMaterials: []
-    prefabPath: 203006
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203006.prefab
     statusPath: Status_1003006
-    iconPath: 203006
+    iconPath: Assets/Resources/UI/Icons/Character/203006.png
   - id: 1003007
     name: Serimnir
     description: A chief leading the Fire Pig tribe. No one including the Thor can
@@ -398,9 +398,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 203007
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/203007.prefab
     statusPath: Status_1003007
-    iconPath: 203007
+    iconPath: Assets/Resources/UI/Icons/Character/203007.png
   - id: 1004000
     name: Soul of the Battlefield
     description: The spirit of those who died on the battlefield.
@@ -409,9 +409,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006009
       amount: 3
-    prefabPath: 205001
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205001.prefab
     statusPath: Status_1004000
-    iconPath: 205001
+    iconPath: Assets/Resources/UI/Icons/Character/205001.png
   - id: 1004001
     name: Soul of a Young Knights
     description: The spirit of the young knights which was chosen to protect Asgard.
@@ -419,9 +419,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 1004002
     catchMaterials: []
-    prefabPath: 205000
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205000.prefab
     statusPath: Status_1004001
-    iconPath: 205000
+    iconPath: Assets/Resources/UI/Icons/Character/205000.png
   - id: 1004002
     name: The Soul of Anger Knight
     description: A warrior born with the spirits of the dead on the battlefield.
@@ -429,9 +429,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 1004003
     catchMaterials: []
-    prefabPath: 205003
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205003.prefab
     statusPath: Status_1004002
-    iconPath: 205003
+    iconPath: Assets/Resources/UI/Icons/Character/205003.png
   - id: 1004003
     name: Knight of the Soul Blade
     description: A knight who became one spirit with its weapon. The place where
@@ -439,9 +439,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 1004006
     catchMaterials: []
-    prefabPath: 205004
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205004.prefab
     statusPath: Status_1004003
-    iconPath: 205004
+    iconPath: Assets/Resources/UI/Icons/Character/205004.png
   - id: 1004004
     name: Horsepower Aggregation
     description: Although it has mana, it is too weak that it has dificulty using
@@ -451,9 +451,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006009
       amount: 5
-    prefabPath: 205002
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205002.prefab
     statusPath: Status_1004004
-    iconPath: 205002
+    iconPath: Assets/Resources/UI/Icons/Character/205002.png
   - id: 1004005
     name: Ancient Soul Wizard
     description: A combination of many spirits with mana resulted in becoming an
@@ -466,9 +466,9 @@ MonoBehaviour:
       amount: 6
     evolutionResult: 1004007
     catchMaterials: []
-    prefabPath: 205006
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205006.prefab
     statusPath: Status_1004005
-    iconPath: 205006
+    iconPath: Assets/Resources/UI/Icons/Character/205006.png
   - id: 1004006
     name: Hestr
     description: A training instructor who trains spirits. As a member of Odin's
@@ -476,9 +476,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 205005
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205005.prefab
     statusPath: Status_1004006
-    iconPath: 205005
+    iconPath: Assets/Resources/UI/Icons/Character/205005.png
   - id: 1004007
     name: fenrir
     description: Son of Loki, the god of mischief. He manages spirits in Hellheim
@@ -486,9 +486,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 205007
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/205007.prefab
     statusPath: Status_1004007
-    iconPath: 205007
+    iconPath: Assets/Resources/UI/Icons/Character/205007.png
   - id: 1005000
     name: The Shell of Yggdrassil
     description: Born from a decayed shell of Yggdrasil seed. Although it is an intellectual
@@ -500,9 +500,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006014
       amount: 5
-    prefabPath: 204010
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204010.prefab
     statusPath: Status_1005000
-    iconPath: 204010
+    iconPath: Assets/Resources/UI/Icons/Character/204010.png
   - id: 1005001
     name: Yggdrassilflank
     description: A living thing made by stacking the shells of Yggdrasil. Intelligence
@@ -513,9 +513,9 @@ MonoBehaviour:
       amount: 2
     evolutionResult: 1005002
     catchMaterials: []
-    prefabPath: 204000
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204000.prefab
     statusPath: Status_1005001
-    iconPath: 204000
+    iconPath: Assets/Resources/UI/Icons/Character/204000.png
   - id: 1005002
     name: Yggdrassil Golem
     description: A mixture of Yggdrasil's shell and mana and lives at the root of
@@ -523,9 +523,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 204020
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204020.prefab
     statusPath: Status_1005002
-    iconPath: 204020
+    iconPath: Assets/Resources/UI/Icons/Character/204020.png
   - id: 1005003
     name: Bark of Burning Yggdrassil
     description: A creature born from the shell of Yggdrasil that fell in Muspelheim.
@@ -538,9 +538,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006015
       amount: 5
-    prefabPath: 204012
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204012.prefab
     statusPath: Status_1005003
-    iconPath: 204012
+    iconPath: Assets/Resources/UI/Icons/Character/204012.png
   - id: 1005004
     name: Flame Board
     description: A mixture of flaming Yggdrasil shells. It helps creating the Muspelheim
@@ -550,9 +550,9 @@ MonoBehaviour:
       amount: 2
     evolutionResult: 1005005
     catchMaterials: []
-    prefabPath: 204002
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204002.prefab
     statusPath: Status_1005004
-    iconPath: 204002
+    iconPath: Assets/Resources/UI/Icons/Character/204002.png
   - id: 1005005
     name: Flame Golem
     description: A spirit that protects Muspelheim. It is surrounded by strong flames,
@@ -560,9 +560,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 204022
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204022.prefab
     statusPath: Status_1005005
-    iconPath: 204022
+    iconPath: Assets/Resources/UI/Icons/Character/204022.png
   - id: 1005006
     name: Damp Yggdrassil's Shell
     description: A creature created of melted  Nippleheim's frost. It's icy cold
@@ -574,9 +574,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006018
       amount: 5
-    prefabPath: 204014
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204014.prefab
     statusPath: Status_1005006
-    iconPath: 204014
+    iconPath: Assets/Resources/UI/Icons/Character/204014.png
   - id: 1005007
     name: Liquid Board
     description: A creature formed by the drop of Nippleheim. It lives in Lake Neith,
@@ -586,9 +586,9 @@ MonoBehaviour:
       amount: 2
     evolutionResult: 1005008
     catchMaterials: []
-    prefabPath: 204004
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204004.prefab
     statusPath: Status_1005007
-    iconPath: 204004
+    iconPath: Assets/Resources/UI/Icons/Character/204004.png
   - id: 1005008
     name: Liquid Golem
     description: A spirit that protects Lake Neith. It also melts the frost of Nippleheim
@@ -596,9 +596,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 204024
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204024.prefab
     statusPath: Status_1005008
-    iconPath: 204024
+    iconPath: Assets/Resources/UI/Icons/Character/204024.png
   - id: 1005009
     name: Floating Yggdrassil's shell
     description: A creature created by the  wind combined with the soul of the Yggdrasil
@@ -610,9 +610,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006016
       amount: 5
-    prefabPath: 204013
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204013.prefab
     statusPath: Status_1005009
-    iconPath: 204013
+    iconPath: Assets/Resources/UI/Icons/Character/204013.png
   - id: 1005010
     name: Breeze Plank
     description: The shell and mana of Yggdrasil, which had accumulated throughout
@@ -622,9 +622,9 @@ MonoBehaviour:
       amount: 2
     evolutionResult: 1005011
     catchMaterials: []
-    prefabPath: 204003
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204003.prefab
     statusPath: Status_1005010
-    iconPath: 204003
+    iconPath: Assets/Resources/UI/Icons/Character/204003.png
   - id: 1005011
     name: Gust Golem
     description: It is considered to be a disaster in Asgard. When the golem passes
@@ -632,9 +632,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 204023
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204023.prefab
     statusPath: Status_1005011
-    iconPath: 204023
+    iconPath: Assets/Resources/UI/Icons/Character/204023.png
   - id: 1005012
     name: shell of solid Yggdrassil
     description: A creature born from the spirit of Jotunheim. It always dig to make
@@ -646,9 +646,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006017
       amount: 5
-    prefabPath: 204011
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204011.prefab
     statusPath: Status_1005012
-    iconPath: 204011
+    iconPath: Assets/Resources/UI/Icons/Character/204011.png
   - id: 1005013
     name: Land Plank
     description: They sacrifice themselves to maintain the land of Jotunheim soft
@@ -658,9 +658,9 @@ MonoBehaviour:
       amount: 2
     evolutionResult: 1005014
     catchMaterials: []
-    prefabPath: 204001
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204001.prefab
     statusPath: Status_1005013
-    iconPath: 204001
+    iconPath: Assets/Resources/UI/Icons/Character/204001.png
   - id: 1005014
     name: Ground golem
     description: A spirit guarding the gate of Jotunheim. It is quite large, but
@@ -668,9 +668,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 204021
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/204021.prefab
     statusPath: Status_1005014
-    iconPath: 204021
+    iconPath: Assets/Resources/UI/Icons/Character/204021.png
   - id: 1006000
     name: Lizard Trainer
     description: A young trainee of the lizard tribe. It uses their own teeth instead
@@ -684,9 +684,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3001014
       amount: 5
-    prefabPath: 206000
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206000.prefab
     statusPath: Status_1006000
-    iconPath: 206000
+    iconPath: Assets/Resources/UI/Icons/Character/206000.png
   - id: 1006001
     name: Lizard Spear
     description: A lizard tribe combatant who uses long spears to utilize his long,
@@ -704,9 +704,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3002006
       amount: 7
-    prefabPath: 206001
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206001.prefab
     statusPath: Status_1006001
-    iconPath: 206001
+    iconPath: Assets/Resources/UI/Icons/Character/206001.png
   - id: 1006002
     name: Thief Lizard
     description: Unlike its appearance, it is quite sleek and uses a fairly sharp
@@ -724,9 +724,9 @@ MonoBehaviour:
     catchMaterials:
     - id: 3006001
       amount: 3
-    prefabPath: 206002
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206002.prefab
     statusPath: Status_1006002
-    iconPath: 206002
+    iconPath: Assets/Resources/UI/Icons/Character/206002.png
   - id: 1006003
     name: Lizard Warrior
     description: As a combatant of the lizard tribe, it presses the enemy with a
@@ -741,9 +741,9 @@ MonoBehaviour:
       amount: 5
     evolutionResult: 1006005
     catchMaterials: []
-    prefabPath: 206003
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206003.prefab
     statusPath: Status_1006003
-    iconPath: 206003
+    iconPath: Assets/Resources/UI/Icons/Character/206003.png
   - id: 1006004
     name: Edwards
     description: A businessman who runs a grocery store. Unlike his stupid appearance,
@@ -751,9 +751,9 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 206004
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206004.prefab
     statusPath: Status_1006004
-    iconPath: 206004
+    iconPath: Assets/Resources/UI/Icons/Character/206004.png
   - id: 1006005
     name: Lizard Berserker
     description: The highest power of the lizard tribe that presses the enemy with
@@ -768,9 +768,9 @@ MonoBehaviour:
       amount: 1
     evolutionResult: 1006006
     catchMaterials: []
-    prefabPath: 206005
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206005.prefab
     statusPath: Status_1006005
-    iconPath: 206005
+    iconPath: Assets/Resources/UI/Icons/Character/206005.png
   - id: 1006006
     name: Lava Lizard Warrior
     description: They are said to have been born in the lava of Muspelheim, and is
@@ -785,9 +785,9 @@ MonoBehaviour:
       amount: 15
     evolutionResult: 1006007
     catchMaterials: []
-    prefabPath: 206006
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206006.prefab
     statusPath: Status_1006006
-    iconPath: 206006
+    iconPath: Assets/Resources/UI/Icons/Character/206006.png
   - id: 1006007
     name: Surtr
     description: It was used to be a fire giant guarding the entrance of Muspelheim,
@@ -795,6 +795,6 @@ MonoBehaviour:
     evolutionMaterials: []
     evolutionResult: 0
     catchMaterials: []
-    prefabPath: 206007
+    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206007.prefab
     statusPath: Status_1006007
     iconPath: 206007

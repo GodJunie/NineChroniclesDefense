@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RestaurantStatusTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/Resources/Prefabs/Game/BuildingStatusTables
-  filePath: C:/Users/godju/Downloads/Building_Status.xlsx
+  filePath: /Users/lavit/Desktop/Table/Building/Building_Status.xlsx
   sheetName: Status_5005000
   Columns:
   - ColumnName: ItemIds

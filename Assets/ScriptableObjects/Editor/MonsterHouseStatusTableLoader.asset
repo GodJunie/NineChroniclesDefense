@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MonsterHouseStatusTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/Resources/Prefabs/Game/BuildingStatusTables
-  filePath: C:/Users/godju/Downloads/Building_Status.xlsx
-  sheetName: Status_5002000
+  filePath: /Users/lavit/Desktop/Table/Building/Building_Status.xlsx
+  sheetName: Status_5001000
   Columns:
   - ColumnName: ItemIds
     PropertyName: levelUpItemIds

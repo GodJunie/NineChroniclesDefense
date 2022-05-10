@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MonsterTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/ScriptableObjects/Tables
-  filePath: C:/Users/godju/Downloads/Monster_Info.xlsx
+  filePath: /Users/lavit/Desktop/Table/Character/Monster_Info.xlsx
   sheetName: MonsterInfo
   Columns:
   - ColumnName: Id
@@ -28,17 +28,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -62,7 +59,7 @@ MonoBehaviour:
     PropertyName: name
     Type: 2
     IsArray: 0
-    index: 15
+    index: 2
     cols:
     - Id
     - Name
@@ -70,17 +67,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -104,7 +98,7 @@ MonoBehaviour:
     PropertyName: description
     Type: 2
     IsArray: 0
-    index: 16
+    index: 3
     cols:
     - Id
     - Name
@@ -112,17 +106,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -146,7 +137,7 @@ MonoBehaviour:
     PropertyName: evolutionMaterialIds
     Type: 0
     IsArray: 1
-    index: 7
+    index: 9
     cols:
     - Id
     - Name
@@ -154,17 +145,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -188,7 +176,7 @@ MonoBehaviour:
     PropertyName: evolutionMaterialAmounts
     Type: 0
     IsArray: 1
-    index: 8
+    index: 10
     cols:
     - Id
     - Name
@@ -196,17 +184,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -230,7 +215,7 @@ MonoBehaviour:
     PropertyName: evolutionResult
     Type: 0
     IsArray: 0
-    index: 9
+    index: 11
     cols:
     - Id
     - Name
@@ -238,17 +223,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -280,17 +262,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -322,17 +301,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -356,7 +332,7 @@ MonoBehaviour:
     PropertyName: prefabPath
     Type: 2
     IsArray: 0
-    index: 10
+    index: 12
     cols:
     - Id
     - Name
@@ -364,17 +340,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -406,17 +379,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 
@@ -440,7 +410,7 @@ MonoBehaviour:
     PropertyName: iconPath
     Type: 2
     IsArray: 0
-    index: 11
+    index: 13
     cols:
     - Id
     - Name
@@ -448,17 +418,14 @@ MonoBehaviour:
     - StatusPath
     - CatchItemIds
     - CatchItemAmounts
+    - 'EvolutionMonsterIds '
+    - EvolutionMonsterAmounts
     - EvolutionItemIds
     - EvolutionItemAmounts
     - EvolutionResult
     - PrefabPath
     - IconPath
     - TargetType
-    - 
-    - Name
-    - Description
-    - 
-    - 
     - 
     - 
     - 

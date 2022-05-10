@@ -13,6 +13,272 @@ MonoBehaviour:
   m_Name: StageTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/ScriptableObjects/Tables
-  filePath: 
-  sheetName: 
-  Columns: []
+  filePath: /Users/lavit/Desktop/Table/Stage/Stage_Info.xlsx
+  sheetName: StageInfo
+  Columns:
+  - ColumnName: StageId
+    PropertyName: id
+    Type: 0
+    IsArray: 0
+    index: 1
+    cols:
+    - StageId
+    - StageName
+    - Description
+    - ClearCondition
+    - TimelinePath
+    - BgPath
+    - RewardsItemId
+    - RewardsItemAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - timelinePath
+    - backgroundPath
+    - rewardIds
+    - rewardAmounts
+  - ColumnName: StageName
+    PropertyName: name
+    Type: 2
+    IsArray: 0
+    index: 2
+    cols:
+    - StageId
+    - StageName
+    - Description
+    - ClearCondition
+    - TimelinePath
+    - BgPath
+    - RewardsItemId
+    - RewardsItemAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - timelinePath
+    - backgroundPath
+    - rewardIds
+    - rewardAmounts
+  - ColumnName: Description
+    PropertyName: description
+    Type: 2
+    IsArray: 0
+    index: 3
+    cols:
+    - StageId
+    - StageName
+    - Description
+    - ClearCondition
+    - TimelinePath
+    - BgPath
+    - RewardsItemId
+    - RewardsItemAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - timelinePath
+    - backgroundPath
+    - rewardIds
+    - rewardAmounts
+  - ColumnName: TimelinePath
+    PropertyName: timelinePath
+    Type: 0
+    IsArray: 0
+    index: 5
+    cols:
+    - StageId
+    - StageName
+    - Description
+    - ClearCondition
+    - TimelinePath
+    - BgPath
+    - RewardsItemId
+    - RewardsItemAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - timelinePath
+    - backgroundPath
+    - rewardIds
+    - rewardAmounts
+  - ColumnName: BgPath
+    PropertyName: backgroundPath
+    Type: 0
+    IsArray: 0
+    index: 6
+    cols:
+    - StageId
+    - StageName
+    - Description
+    - ClearCondition
+    - TimelinePath
+    - BgPath
+    - RewardsItemId
+    - RewardsItemAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - timelinePath
+    - backgroundPath
+    - rewardIds
+    - rewardAmounts
+  - ColumnName: RewardsItemId
+    PropertyName: rewardIds
+    Type: 0
+    IsArray: 0
+    index: 7
+    cols:
+    - StageId
+    - StageName
+    - Description
+    - ClearCondition
+    - TimelinePath
+    - BgPath
+    - RewardsItemId
+    - RewardsItemAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - timelinePath
+    - backgroundPath
+    - rewardIds
+    - rewardAmounts
+  - ColumnName: RewardsItemAmount
+    PropertyName: rewardAmounts
+    Type: 0
+    IsArray: 0
+    index: 8
+    cols:
+    - StageId
+    - StageName
+    - Description
+    - ClearCondition
+    - TimelinePath
+    - BgPath
+    - RewardsItemId
+    - RewardsItemAmount
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - name
+    - description
+    - timelinePath
+    - backgroundPath
+    - rewardIds
+    - rewardAmounts

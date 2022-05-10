@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MonsterStatusTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/Resources/Prefabs/Game/MonsterStatusTables
-  filePath: C:/Users/godju/Downloads/Monster_Status.xlsx
-  sheetName: Status_1001003
+  filePath: /Users/lavit/Desktop/Table/Character/Monster_Status.xlsx
+  sheetName: Status_1001008
   Columns:
   - ColumnName: ItemIds
     PropertyName: levelUpItemIds

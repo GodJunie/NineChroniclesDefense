@@ -17,7 +17,7 @@ MonoBehaviour:
       hp: 50
       atk: 13
       def: 4
-      criProb: 0.2
+      criRate: 0
       criDamage: 1.25
       moveSpeed: 1
       attackSpeed: 2
@@ -28,7 +28,7 @@ MonoBehaviour:
       hp: 55
       atk: 16
       def: 7
-      criProb: 0.2
+      criRate: 0
       criDamage: 1.25
       moveSpeed: 1
       attackSpeed: 2
@@ -41,7 +41,7 @@ MonoBehaviour:
       hp: 62
       atk: 20
       def: 11
-      criProb: 0.2
+      criRate: 0
       criDamage: 1.25
       moveSpeed: 1
       attackSpeed: 2
@@ -54,7 +54,7 @@ MonoBehaviour:
       hp: 70
       atk: 23
       def: 14
-      criProb: 0.21
+      criRate: 0
       criDamage: 1.28
       moveSpeed: 1.5
       attackSpeed: 2
@@ -67,7 +67,7 @@ MonoBehaviour:
       hp: 83
       atk: 27
       def: 19
-      criProb: 0.22
+      criRate: 0
       criDamage: 1.3
       moveSpeed: 1.8
       attackSpeed: 2
@@ -82,7 +82,7 @@ MonoBehaviour:
       hp: 94
       atk: 33
       def: 22
-      criProb: 0.22
+      criRate: 0
       criDamage: 1.3
       moveSpeed: 2
       attackSpeed: 2
@@ -97,7 +97,7 @@ MonoBehaviour:
       hp: 102
       atk: 38
       def: 27
-      criProb: 0.25
+      criRate: 0
       criDamage: 1.3
       moveSpeed: 2
       attackSpeed: 2
@@ -112,7 +112,7 @@ MonoBehaviour:
       hp: 114
       atk: 45
       def: 34
-      criProb: 0.25
+      criRate: 0
       criDamage: 1.3
       moveSpeed: 2
       attackSpeed: 2
@@ -123,7 +123,7 @@ MonoBehaviour:
       hp: 128
       atk: 52
       def: 40
-      criProb: 0.25
+      criRate: 0
       criDamage: 1.35
       moveSpeed: 2
       attackSpeed: 2
@@ -134,7 +134,7 @@ MonoBehaviour:
       hp: 143
       atk: 60
       def: 48
-      criProb: 0.25
+      criRate: 0
       criDamage: 1.35
       moveSpeed: 2
       attackSpeed: 2

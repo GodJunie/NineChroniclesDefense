@@ -1,0 +1,341 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b70b1171487614c928e9344cb42d49, type: 3}
+  m_Name: Enemy_Info
+  m_EditorClassIdentifier: 
+  Datas:
+  - id: 2001000
+    name: Cat Trainee
+    description: Kittens from a cat tribe who have just begun training. Since trainees
+      have no combat experience, they have difficulty dealing with Teratoma.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10200000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10200000.png
+  - id: 2001001
+    name: Cat Knight Apprentice
+    description: Cats who are facing only one final gateway to becoming a cat knight.
+      They are working hard on their daily training, always hoping to be the best
+      knight.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10210000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10210000.png
+  - id: 2001002
+    name: Elemental Knight Apprentice (fire)
+    description: Among cats who can handle mana, fire cats are the one who can communicate
+      with the spirit of the fire. Apprentices can only use simple magic because
+      it has just begun to communicate with the spirit.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10211000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10211000.png
+  - id: 2001003
+    name: Elemental Knight Apprentice (water)
+    description: Cats who commune with the spirit of the water. Although water cats
+      hate fighting, they were sent to the battlefield under Odin's command. They
+      use the "water shield" to protect themselves and avoid fighting as much as
+      possible.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10212000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10212000.png
+  - id: 2001004
+    name: Elemental Knight Apprentice (earth)
+    description: Cats who commune with the spirit of the earth and worked on agriculture.
+      They were obliged to join the military since Teratomas ruined their crops.
+      As a result, they are extremely detestable to Teratomas.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10213000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10213000.png
+  - id: 2001005
+    name: Elemental Knight Apprentice (wind)
+    description: Being fascinated by the spirit of the wind freely traveling Asgard,
+      wind cats built a friendship with the spirit of the wind. As wind cats were
+      originally minstrels, they are famous for having a flute in their arms everytime.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10214000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10214000.png
+  - id: 2002000
+    name: Cat Knight
+    description: Cats who became qualified as a knight after passing all the chivalry
+      tests. They are strong enough to cut down Teratoma.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10220000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10220000.png
+  - id: 2002001
+    name: Elemental Knight (fire)
+    description: Cats who have firm relationship with the spirit of the fire. According
+      to the rumor, they even use the power of fire when cooking.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10221000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10221000.png
+  - id: 2002002
+    name: Elemental Knight (water)
+    description: Cats who use the power of water to protect their colleagues. Unlike
+      usual cats who hate rain, they love rainy weather.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10222000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10222000.png
+  - id: 2002003
+    name: Elemental Knight (earth)
+    description: Cats who protect the entrance of Asgard by building solid sand walls.
+      As they are engaged in farming as a concurrent business, Teratomas are their
+      greatest enemy.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10223000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10223000.png
+  - id: 2002004
+    name: Elemental Knight (wind)
+    description: Cats who are in charge of guarding the outskirts of Asgard. They
+      use to sing together with the spirit of the wind during patrol. They are known
+      as a Loreley of cat empire.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10224000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10224000.png
+  - id: 2002005
+    name: Valnar
+    description: Cats who were originally called as 'the Reaper of the battlefield'.
+      However, after facing the cruelty of the battlefield, they left the battlefield
+      and started to fight evil alone, wandering around the abyss of the Kinunga.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10230000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10230000.png
+  - id: 2003000
+    name: Cat Bandits
+    description: "Cats who belong to Herm\xE8s, one of the most famous bandits in
+      Asgard. Peculiarly enough, this group is consisted of a large number of noble
+      cats. However, most of them are a child of a concubine."
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10230001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10230001.png
+  - id: 2003001
+    name: Cat Bandits (fire)
+    description: Cats who use the power of the fire among members of the Hermes.
+      As a noble birth, they can freely handle magical powers.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10231000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10231000.png
+  - id: 2003002
+    name: Cat Bandits (water)
+    description: Cats who use the power of the water among members of the Hermes.
+      However, due to lack of magic education, they have a bad  relationship with
+      the spirits and use magical power only for the purpose of securing water.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10231001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10231001.png
+  - id: 2003003
+    name: Cat Bandits (earth)
+    description: Cats who use the power of the earth among the members of Hermes.
+      They protect their collegues by creating sand barrier.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10232000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10232000.png
+  - id: 2003004
+    name: Cat Bandits (wind)
+    description: Cats who use the power of the wind among members of the Hermes.
+      They are suitable for dealing with large numbers of enemies as they create
+      sandstorms with a cat bandit(earth).
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10232001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10232001.png
+  - id: 2004000
+    name: Cat Assassin (fire)
+    description: Cats who use the power of the fire among assassins. Usually, they
+      use the sword covered with the spirit of fire. Anything that touches their
+      sword burns out black.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10233000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10233000.png
+  - id: 2004001
+    name: Cat Assassin (water)
+    description: Cats who use the power of the water among assassins. They usually
+      target enemies around lakes and rivers. They are specially vigorous on rainy
+      weather.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10233001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10233001.png
+  - id: 2004002
+    name: Cat Assassin (earth)
+    description: Cats who use the power of the earth. They usually move underground
+      and ambush enemies. They always take a bath after completing the mission.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10234000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10234000.png
+  - id: 2004003
+    name: Cat Assassin (wind)
+    description: Cats known as to be the fastest and swiftest among the assassination
+      force. By using the spirit of the wind, they hide in the flow of air and kill
+      the enemy.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10234001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10234001.png
+  - id: 2004004
+    name: Kinda
+    description: Captain of the Assassination Force. They are also called 'the light'
+      due to the speed of their skill of subduing enemies. They are also famous for
+      killing 10 people at one stroke.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10235000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10235000.png
+  - id: 2005000
+    name: Cat Knight Banneret
+    description: Commander of the cat knight calvary. The descendants of the knight
+      family inherit the position from generation to generation. As such, they are
+      highly proud of themselves and considers it to be their greatest honor and
+      pleasure to be with Odin.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10240000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10240000.png
+  - id: 2005001
+    name: Cat Knight Banneret (Heavy Armed)
+    description: A feature of a cat banneret when they get into a large-scale of
+      battle. It is less mobile but is extremely defensive.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10240001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10240001.png
+  - id: 2005002
+    name: Elemental Knight Banneret (fire)
+    description: Only those who have massive mana among the nobles can reach this
+      level. They are considerably outstanding not only in fencing but also in magic.
+      Their signature skill is using flame by heating up their sword with the power
+      of fire.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10241000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10241000.png
+  - id: 2005003
+    name: Elemental Knight Banneret (Heavy Armed / fire)
+    description: They are wearing gloves made of steel from Muspelheim. It is said
+      that just as they approach, the area around them seems to be on fire.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10241001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10241001.png
+  - id: 2005004
+    name: Elemental Knight Banneret (water)
+    description: They are mainly specialized in treatment using the spirit of the
+      water rather than combat. They lead medical units and use water sheild in battle
+      for their allies' safety.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10242000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10242000.png
+  - id: 2005005
+    name: Elemental Knight Banneret (Heavy Armed / water)
+    description: They are wearing an armor discarded from Nippleheim. This is a feature
+      when they are in a battle, and their skill is to draw off  enemy's moisture.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10242001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10242001.png
+  - id: 2005006
+    name: Elemental Knight Banneret (earth)
+    description: They are able to freely handle the spirit of the earth that are
+      powerful enough to fight against the giants of Jotunheim. They can also destroy
+      areas by creating earthquakes.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10243000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10243000.png
+  - id: 2005007
+    name: Elemental Knight Banneret (Heavy Armed / earth)
+    description: They are wearing an armor made by the spirit of the earth. The ground
+      splits every time they take a step.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10243001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10243001.png
+  - id: 2005008
+    name: Elemental Knight Banneret (wind)
+    description: Their blade is like a wind. They prefer traveling to guiding the
+      wind cat knight.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10244000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10244000.png
+  - id: 2005009
+    name: Elemental Knight Banneret (Heavy Armed / wind)
+    description: No one can stop their wind which blows everything off the battlefield.
+      Even colleagues are swept away sometimes due to its power.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10244001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10244001.png
+  - id: 2006000
+    name: Dark Cat Knight
+    description: Cats who were sent to Hell Heim to monitor Hela. In order to protect
+      them from being encroached by Hell Heim's energy, their armor is decorated
+      of Wheatstone that blocks the darkness.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10250000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10250000.png
+  - id: 2006001
+    name: Cat Commander
+    description: General manager of the entire unit. They are trusted by everyone
+      with his outstanding resourcefulness and combat capabilities. The power of
+      mana varies depending on the armor they wear.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10250001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10250001.png
+  - id: 2006002
+    name: Flame Cat Knight
+    description: Watchmen who monitor Surte from awakening in Muspelheim. To withstand
+      the heat of Muspelheim, they use 'God's Ore' called 'Miss-Reel' and 'Flame
+      Stone'.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10251000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10251000.png
+  - id: 2006003
+    name: Cat Commander (fire)
+    description: A feature of a cat commander wearing an armor containing the spirit
+      of the fire, "Salamander." Salamander's heat can burn anything away.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10251001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10251001.png
+  - id: 2006004
+    name: Torrent Cat Knight
+    description: They are responsible for monitoring the Nippleheim's Surriger, "Hurimturs."
+      In order to withstand the cold of Nippleheim, they wear an armor that is made
+      of mana stone of Lake Niith which never melts.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10252000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10252000.png
+  - id: 2006005
+    name: Cat Commander (water)
+    description: A feature of a cat commander wearing an armor of the Undine, the
+      water spirit. They are skillful at defense and healing, and attack enemies
+      by creating tsunamis.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10252001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10252001.png
+  - id: 2006006
+    name: Quake Cat Knight
+    description: They are responsible for monitoring the giants of Yotunheim. They
+      have a very special relationship with the Great spirit of Yotunheim.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10253000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10253000.png
+  - id: 2006007
+    name: Cat Commander (earth)
+    description: A feautre of a cat commander wearing an armor of "Nom", the soil
+      spirit. They are good at disturbing enemy troops by earthquakes.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10253001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10253000.png
+  - id: 2006008
+    name: Storm Cat Knight
+    description: They are responsible for monitoring the Black Elves in Svart elfheim.
+      Although they usually just monitor the black elves, they are said to punish
+      them in an instant if any action to harm Asgard is sensed.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10254000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10254000.png
+  - id: 2006009
+    name: Cat Commander (wind)
+    description: A feature of cat commander wearing an armor of 'Sylph', the spirit
+      of the wind. They seem to have a frequent quarrels since they have a quite
+      aggressive temper unlike gentle Sylphs.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/10254001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/10254001.png
+  - id: 2007000
+    name: Valkyrie
+    description: A group consisted only of female cats. It is called 'the goddess
+      of victory' on the battlefield.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/40100000.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/40100000.png
+  - id: 2007001
+    name: Lionheart
+    description: One of Asgard's generals who is also called 'the Lion King'. Cares
+      about their soldiers more than anyone else.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/40100001.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/40100001.png
+  - id: 2007002
+    name: Brynhildr
+    description: The queen of the Valkyrie who leads the Valkyrie unit. She played
+      the main role of leading many battles to victory under Odin's order. However,
+      she is said to hate Odin extremely.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/40100002.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/40100002.png
+  - id: 2007003
+    name: Elite Valkyrie Troop Member
+    description: They are selected as elites among Valkyrie members. They are usually
+      responsible for guarding the Brynhildr.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/40100003.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/40100003.png
+  - id: 2007004
+    name: Warrior of Light Izos
+    description: A warrior of light who overcame all the darkness. Whenever he gets
+      into battle, he carries a sword called "Kindasvero" which shines in any darkness.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/40100004.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/40100004.png
+  - id: 2007005
+    name: Senior Valkyrie
+    description: Cats who win more than 10 times in the battlefield tey lead can
+      become a senior Valkyrie. Although there are some Valkyries who get into battle
+      in secret to become a senior Valkyrie, it is actually not allowed to intervene
+      in the battlefield of Midgard.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/40100005.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/40100005.png
+  - id: 2007006
+    name: Welkirge
+    description: A senior Valkyrie who educates and trains Valkyrie units. He has
+      quiet and conservative disposition.
+    prefabPath: Assets/Resources/Prefabs/Game/Enemies/40100006.prefab
+    iconPath: Assets/Resources/UI/Icons/Item/40100006.png

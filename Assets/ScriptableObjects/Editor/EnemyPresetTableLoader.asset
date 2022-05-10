@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyPresetTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/ScriptableObjects/Tables
-  filePath: C:/Users/godju/Downloads/Enemy_Preset.xlsx
+  filePath: /Users/lavit/Desktop/Table/Character/Enemy_Preset.xlsx
   sheetName: EnemyPreset
   Columns:
   - ColumnName: Id

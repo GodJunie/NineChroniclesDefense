@@ -19,7 +19,7 @@ MonoBehaviour:
       Teratoma. There are outdated places in places.
     constructItems: []
     range: 4
-    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/JadeHouseStatusTable.asset
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/Jade_Store.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/MonsterHouse.prefab
     iconPath: Assets/Resources/UI/Icons/Building/Bunker.png
   - id: 5002000
@@ -40,7 +40,7 @@ MonoBehaviour:
     - id: 3006024
       amount: 1
     range: 4
-    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/MonsterHouseStatusTable.asset
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/Monster_House.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/MonsterHouse.prefab
     iconPath: Assets/Resources/UI/Icons/Building/MonsterHouse.png
   - id: 5003000
@@ -57,7 +57,7 @@ MonoBehaviour:
     - id: 3006024
       amount: 2
     range: 4
-    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/BunkerStatusTable.asset
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/Bunker.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Bunker.prefab
     iconPath: Assets/Resources/UI/Icons/Building/Bunker.png
   - id: 5004000
@@ -72,7 +72,7 @@ MonoBehaviour:
     - id: 3006014
       amount: 2
     range: 4
-    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/RestaurantStatusTable.asset
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/Restaurant.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Restaurant.prefab
     iconPath: Assets/Resources/UI/Icons/Building/Restaurant.png
   - id: 5005000
@@ -88,6 +88,6 @@ MonoBehaviour:
     - id: 3005011
       amount: 4
     range: 4
-    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/WorkShopStatusTable.asset
+    statusPath: Assets/Resources/Prefabs/Game/BuildingStatusTables/WorkShop.asset
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/WorkShop.prefab
     iconPath: Assets/Resources/UI/Icons/Building/WorkShop.png

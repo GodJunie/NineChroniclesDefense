@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BuildingTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/ScriptableObjects/Tables
-  filePath: "C:/Users/godju/Documents/Building_Info (2\uCC28 \uC644\uB8CC).xlsx"
+  filePath: /Users/lavit/Desktop/Table/Building/Building_Info.xlsx
   sheetName: BuildingInfo
   Columns:
   - ColumnName: Id
@@ -29,7 +29,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -70,7 +69,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -111,7 +109,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -152,7 +149,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -182,7 +178,7 @@ MonoBehaviour:
     - iconPath
   - ColumnName: ItemAmounts
     PropertyName: constructItemAmounts
-    Type: 0
+    Type: 2
     IsArray: 1
     index: 5
     cols:
@@ -193,7 +189,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -222,10 +217,10 @@ MonoBehaviour:
     - prefabPath
     - iconPath
   - ColumnName: Range
-    PropertyName: range
-    Type: 1
+    PropertyName: 
+    Type: 0
     IsArray: 0
-    index: 6
+    index: 0
     cols:
     - Id
     - Name
@@ -234,7 +229,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -252,16 +246,7 @@ MonoBehaviour:
     - 
     - 
     - 
-    properties:
-    - id
-    - name
-    - description
-    - constructItemIds
-    - constructItemAmounts
-    - range
-    - statusPath
-    - prefabPath
-    - iconPath
+    properties: []
   - ColumnName: StatusPath
     PropertyName: statusPath
     Type: 2
@@ -275,7 +260,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -307,7 +291,7 @@ MonoBehaviour:
     PropertyName: prefabPath
     Type: 2
     IsArray: 0
-    index: 9
+    index: 8
     cols:
     - Id
     - Name
@@ -316,7 +300,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 
@@ -357,7 +340,6 @@ MonoBehaviour:
     - ItemAmounts
     - Range
     - StatusPath
-    - IconPath
     - PrefabPath
     - 
     - 

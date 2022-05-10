@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb7c6b9f11d82704fad0be5412f1ab20, type: 3}
-  m_Name: WorkShopStatusTable
+  m_Name: Restaurant
   m_EditorClassIdentifier: 
   Datas:
   - status:
@@ -22,11 +22,11 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3002008
+    - id: 3005011
       amount: 3
-    - id: 3004011
+    - id: 3004012
       amount: 3
-    recipeIds: f0930400f1930400f2930400f3930400f4930400f5930400f6930400f7930400f8930400f9930400fa930400fb930400fc930400fd930400fe930400ff93040000940400019404000294040003940400049404000594040006940400079404001494040015940400169404001794040018940400
+    recipeIds: e1930400e2930400e3930400e4930400
   - status:
       hp: 220
       atk: 0
@@ -36,13 +36,13 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3004020
+    - id: 3005011
+      amount: 2
+    - id: 3004013
       amount: 3
     - id: 3004014
-      amount: 2
-    - id: 3004011
-      amount: 2
-    recipeIds: 08940400099404000a9404000b9404000c9404000d9404000e9404000f94040010940400119404001294040013940400199404001a9404001b9404001c940400
+      amount: 3
+    recipeIds: e5930400e6930400e7930400
   - status:
       hp: 240
       atk: 0
@@ -52,13 +52,11 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3004011
+    - id: 3002008
+      amount: 5
+    - id: 3004020
       amount: 3
-    - id: 3006002
-      amount: 2
-    - id: 3006005
-      amount: 2
-    recipeIds: 1d9404001e9404001f940400209404002194040022940400
+    recipeIds: e8930400
   - status:
       hp: 260
       atk: 0
@@ -68,11 +66,13 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3005007
+    - id: 3004022
       amount: 4
-    - id: 3006003
-      amount: 4
-    recipeIds: 239404002494040025940400269404002794040028940400
+    - id: 3006024
+      amount: 1
+    - id: 3004010
+      amount: 1
+    recipeIds: e9930400
   - status:
       hp: 280
       atk: 0
@@ -82,13 +82,13 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3006003
+    - id: 3004015
       amount: 3
-    - id: 3006005
-      amount: 4
-    - id: 3006014
+    - id: 3006003
       amount: 2
-    recipeIds: 299404002a9404002b9404002c9404002d940400
+    - id: 3005003
+      amount: 3
+    recipeIds: ea930400
   - status:
       hp: 300
       atk: 0
@@ -98,11 +98,11 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3005012
-      amount: 5
-    - id: 3006000
-      amount: 2
-    recipeIds: 2e9404002f94040030940400319404003294040033940400
+    - id: 3006014
+      amount: 3
+    - id: 3002008
+      amount: 7
+    recipeIds: eb930400
   - status:
       hp: 320
       atk: 0
@@ -112,11 +112,13 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3005003
-      amount: 3
-    - id: 3004019
-      amount: 3
-    recipeIds: 3494040035940400369404003794040038940400
+    - id: 3005012
+      amount: 5
+    - id: 3004006
+      amount: 2
+    - id: 3004007
+      amount: 2
+    recipeIds: ef930400
   - status:
       hp: 340
       atk: 0
@@ -126,13 +128,13 @@ MonoBehaviour:
       moveSpeed: 0
       attackSpeed: 0
     levelUpItems:
-    - id: 3006026
-      amount: 2
-    - id: 3005012
-      amount: 4
-    - id: 3004020
-      amount: 4
-    recipeIds: 399404003a9404003b9404003c9404003d9404003e9404004194040042940400
+    - id: 3004022
+      amount: 6
+    - id: 3004008
+      amount: 3
+    - id: 3004010
+      amount: 3
+    recipeIds: ec930400
   - status:
       hp: 360
       atk: 0
@@ -144,13 +146,11 @@ MonoBehaviour:
     levelUpItems:
     - id: 3006026
       amount: 2
-    - id: 3004011
-      amount: 5
-    - id: 3004014
-      amount: 5
-    - id: 3004019
+    - id: 3006000
       amount: 4
-    recipeIds: 409404004394040044940400
+    - id: 30006003
+      amount: 6
+    recipeIds: ed930400
   - status:
       hp: 380
       atk: 0
@@ -159,7 +159,5 @@ MonoBehaviour:
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
-    levelUpItems:
-    - id: 0
-      amount: 0
-    recipeIds: 3f9404004594040046940400
+    levelUpItems: []
+    recipeIds: ee930400

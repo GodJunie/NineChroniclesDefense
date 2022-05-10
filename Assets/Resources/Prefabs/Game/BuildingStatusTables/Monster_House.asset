@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab49f5473c865d4fad41a404fd0c283, type: 3}
-  m_Name: MonsterHouseStatusTable
+  m_Name: Monster_House
   m_EditorClassIdentifier: 
   Datas:
   - status:
       hp: 100
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
       hp: 120
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
       hp: 140
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
       hp: 160
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
       hp: 180
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
       hp: 200
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
       hp: 220
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
       hp: 240
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
       hp: 260
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
@@ -153,11 +153,9 @@ MonoBehaviour:
       hp: 280
       atk: 0
       def: 0
-      criProb: 0
+      criRate: 0
       criDamage: 0
       moveSpeed: 0
       attackSpeed: 0
-    levelUpItems:
-    - id: 0
-      amount: 0
+    levelUpItems: []
     monsterAmount: 12

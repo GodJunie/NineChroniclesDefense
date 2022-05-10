@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StageTimelineTableLoader
   m_EditorClassIdentifier: 
   FolderPath: Assets/ScriptableObjects/StageTimeline
-  filePath: C:/Users/godju/Downloads/Timeline_Table (2).xlsx
+  filePath: /Users/lavit/Desktop/Table/Stage/Timeline_Table.xlsx
   sheetName: Stage1
   Columns:
   - ColumnName: Timepart
