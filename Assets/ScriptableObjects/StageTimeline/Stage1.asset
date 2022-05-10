@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Datas:
   - timePart: 0
-    time: 20
+    time: 10
     leftEnemies: 
     rightEnemies: 
     monsters:
@@ -80,9 +80,9 @@ MonoBehaviour:
       prob: 5
     - id: 30026
       prob: 5
-    farmingItemAmount: 10
+    farmingItemAmount: 5
   - timePart: 0
-    time: 100
+    time: 10
     leftEnemies: 
     rightEnemies: 
     monsters: []
@@ -90,7 +90,7 @@ MonoBehaviour:
     farmingItems: []
     farmingItemAmount: 0
   - timePart: 1
-    time: 15
+    time: 1
     leftEnemies: 
     rightEnemies: 
     monsters: []

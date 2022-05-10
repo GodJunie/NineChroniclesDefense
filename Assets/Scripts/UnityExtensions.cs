@@ -20,3 +20,7 @@ public static class UnityExtensions {
         return result;
     }
 }
+
+namespace DG.Tweening {
+
+}

@@ -55,6 +55,10 @@ namespace G2T.NCD.Game {
         [SerializeField]
         private UIMonsterPanel uiMonsterPanel;
 
+        [TabGroup("group", "UI")]
+        [LabelText("아이템 카운트")]
+        [SerializeField]
+        private UIItemCount uiItemCount;
         #endregion
 
         [TabGroup("group", "게임 설정")]
@@ -164,6 +168,8 @@ namespace G2T.NCD.Game {
             } else {
                 item.Count += count;
             }
+
+            uiItemCount.EnqueueItem(id, count);
         }
 
         public void UseItem(int id, int count) {
@@ -172,6 +178,8 @@ namespace G2T.NCD.Game {
             if(item.Count == 0) {
                 Items.Remove(item);
             }
+
+            uiItemCount.EnqueueItem(id, -count);
         }
         #endregion
 

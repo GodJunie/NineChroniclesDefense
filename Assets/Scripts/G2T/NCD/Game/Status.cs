@@ -42,8 +42,13 @@ namespace G2T.NCD.Game {
         [SerializeField]
         [LabelWidth(150f)]
         private float attackSpeed;
+        [FoldoutGroup("스탯")]
+        [LabelText("공격 범위")]
+        [SerializeField]
+        [LabelWidth(150f)]
+        private float attackRange;
 
-        public Status(float hp, float atk, float def, float criRate, float criDamage, float moveSpeed, float attackSpeed) {
+        public Status(float hp, float atk, float def, float criRate, float criDamage, float moveSpeed, float attackSpeed, float attackRange) {
             this.hp = hp;
             this.atk = atk;
             this.def = def;
@@ -51,6 +56,7 @@ namespace G2T.NCD.Game {
             this.criDamage = criDamage;
             this.moveSpeed = moveSpeed;
             this.attackSpeed = attackSpeed;
+            this.attackRange = attackRange;
         }
 
         public float Hp { get => hp; }
@@ -60,6 +66,7 @@ namespace G2T.NCD.Game {
         public float CriDamage { get => criDamage; }
         public float MoveSpeed { get => moveSpeed; }
         public float AttackSpeed { get => attackSpeed; }
+        public float AttackRange { get => attackRange; }
 
         public static string[] Properties = new string[] {
            "hp",
@@ -69,6 +76,7 @@ namespace G2T.NCD.Game {
            "criDamage",
            "moveSpeed",
            "attackSpeed",
+           "attackRange",
         };
 
         public static Status FromJObject(JObject jObject) {
@@ -80,6 +88,7 @@ namespace G2T.NCD.Game {
             status.criDamage   = jObject.Value<float>("criDamage");
             status.moveSpeed   = jObject.Value<float>("moveSpeed");
             status.attackSpeed = jObject.Value<float>("attackSpeed");
+            status.attackRange = jObject.Value<float>("attackRange");
             return status;
         }
     }

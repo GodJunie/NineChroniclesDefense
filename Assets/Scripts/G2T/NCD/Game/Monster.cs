@@ -48,6 +48,9 @@ namespace G2T.NCD.Game {
         [TabGroup("group", "오브젝트")]
         [SerializeField]
         private Transform skeletonTransform;
+        [TabGroup("group", "오브젝트")]
+        [SerializeField]
+        private Transform effectRoot;
 
         // UI
         [TabGroup("group", "UI")]
@@ -206,6 +209,8 @@ namespace G2T.NCD.Game {
             GameController.Instance.SetMonsterAmountsUI();
 
             this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
+           
+            EffectPool.Instance.ShowEffect("MonsterCatch", this.effectRoot);
 
             OnInteract();
         }
@@ -219,20 +224,24 @@ namespace G2T.NCD.Game {
             this.CurHp = CurStatus.Hp;
             this.hpBar.Init(CurHp);
 
+            EffectPool.Instance.ShowEffect("MonsterLevelUp", this.effectRoot);
+
             OnInteract();
         }
 
-        public void OnEvolution() {
-            GameController.Instance.GenerateMonster(Info.EvoutionResult, this.PosX, Game.MonsterType.Friendly);
-
+        public async void OnEvolution() {
             if(TargetBuilding != null) TargetBuilding.HideRange();
 
             GameController.Instance.Player.ResetInteractableTarget();
 
-            this.OnDead?.Invoke(this);
-
             OnInteract();
 
+            EffectPool.Instance.ShowEffect("MonsterEvolution", this.effectRoot);
+
+            await UniTask.Delay(TimeSpan.FromSeconds(3f));
+          
+            GameController.Instance.GenerateMonster(Info.EvoutionResult, this.PosX, MonsterType.Friendly);
+            this.OnDead?.Invoke(this);
             Destroy(this.gameObject);
         }
 
@@ -433,7 +442,6 @@ namespace G2T.NCD.Game {
                 };
                 break;
             }
-
         }
 
         private void OnTriggerExit2D(Collider2D collision) {

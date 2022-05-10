@@ -5,6 +5,8 @@ using System.Linq;
 // UnityEngine
 using UnityEngine;
 using Sirenix.OdinInspector;
+using DG.Tweening;
+using Cysharp.Threading.Tasks;
 
 
 namespace G2T.NCD.Game {
@@ -107,7 +109,7 @@ namespace G2T.NCD.Game {
             this.buildingHolder.localPosition = new Vector2(this.buildingHolderPos.x * (direction == Direction.Right ? 1 : -1), this.buildingHolderPos.y);
         }
 
-        private void OnTriggerEnter2D(Collider2D collision) {
+        private async void OnTriggerEnter2D(Collider2D collision) {
             switch(collision.tag) {
             case "Monster":
                 var monster = collision.GetComponent<Monster>();
@@ -118,6 +120,11 @@ namespace G2T.NCD.Game {
             case "Booty":
                 var booty = collision.GetComponent<DropItem>();
                 GameController.Instance.AddItem(booty.id, booty.count);
+                booty.transform.SetParent(this.transform);
+                await UniTask.WhenAll(
+                    booty.transform.DOLocalMove(new Vector3(0f, -.3f, 0f), .7f).ToUniTask(), 
+                    booty.transform.DOScale(.2f, .7f).ToUniTask()
+                );
                 Destroy(booty.gameObject);
                 break;
             case "Building":

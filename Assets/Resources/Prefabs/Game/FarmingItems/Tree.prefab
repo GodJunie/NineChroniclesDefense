@@ -437,7 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropItemPrefab: {fileID: 2303634620407045217, guid: d52a03f88a2ebcc4abdc143271b2e5a8, type: 3}
   panelSpacebar: {fileID: 437181478215742939}
-  second: 1
+  second: 0
 --- !u!58 &1799544046
 CircleCollider2D:
   m_ObjectHideFlags: 0
