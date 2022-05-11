@@ -22,16 +22,6 @@ MonoBehaviour:
       moveSpeed: 2
       attackSpeed: 2
       attackRange: 0.2
-    levelUpItems: []
-  - status:
-      hp: 180
-      atk: 58
-      def: 32
-      criRate: 0
-      criDamage: 1.45
-      moveSpeed: 2
-      attackSpeed: 2
-      attackRange: 0.2
     levelUpItems:
     - id: 3002002
       amount: 3
