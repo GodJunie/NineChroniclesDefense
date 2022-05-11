@@ -159,7 +159,7 @@ MonoBehaviour:
     - id: 3005001
       amount: 1
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202000.prefab
-    statusPath: Status_1002000
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002000.asset
     iconPath: Assets/Resources/UI/Icons/Character/202000.png
   - id: 1002001
     name: Desert Fox Trainer
@@ -177,7 +177,7 @@ MonoBehaviour:
     - id: 3006034
       amount: 2
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202001.prefab
-    statusPath: Status_1002001
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002001.asset
     iconPath: Assets/Resources/UI/Icons/Character/202001.png
   - id: 1002002
     name: Thief Desert Fox
@@ -191,7 +191,7 @@ MonoBehaviour:
     evolutionResult: 1002003
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202002.prefab
-    statusPath: Status_1002002
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002002.asset
     iconPath: Assets/Resources/UI/Icons/Character/202002.png
   - id: 1002003
     name: Desert Fox Warrior
@@ -209,7 +209,7 @@ MonoBehaviour:
     evolutionResult: 1002007
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202003.prefab
-    statusPath: Status_1002003
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002003.asset
     iconPath: Assets/Resources/UI/Icons/Character/202003.png
   - id: 1002004
     name: Desert Fox Apprenticeship Wizard
@@ -229,7 +229,7 @@ MonoBehaviour:
     - id: 3002001
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202005.prefab
-    statusPath: Status_1002004
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002004.asset
     iconPath: Assets/Resources/UI/Icons/Character/202005.png
   - id: 1002005
     name: Desert Fox Wizard
@@ -245,7 +245,7 @@ MonoBehaviour:
     evolutionResult: 1002006
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202006.prefab
-    statusPath: Status_1002005
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002005.asset
     iconPath: Assets/Resources/UI/Icons/Character/202006.png
   - id: 1002006
     name: Desert Fox Shaman
@@ -255,7 +255,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202004.prefab
-    statusPath: Status_1002006
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002006.asset
     iconPath: Assets/Resources/UI/Icons/Character/202004.png
   - id: 1002007
     name: Foa
@@ -265,7 +265,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/202007.prefab
-    statusPath: Status_1002007
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1002007.asset
     iconPath: Assets/Resources/UI/Icons/Character/202007.png
   - id: 1003000
     name: Boy Bottle of Fire Pig
@@ -282,7 +282,7 @@ MonoBehaviour:
     - id: 3001014
       amount: 3
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203000.prefab
-    statusPath: Status_1003000
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003000.asset
     iconPath: Assets/Resources/UI/Icons/Character/203000.png
   - id: 1003001
     name: Fire Pig Trainer
@@ -302,7 +302,7 @@ MonoBehaviour:
     - id: 3006031
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203001.prefab
-    statusPath: Status_1003001
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003001.asset
     iconPath: Assets/Resources/UI/Icons/Character/203001.png
   - id: 1003002
     name: Fire Pig Deserper
@@ -323,7 +323,7 @@ MonoBehaviour:
     - id: 3002003
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203005.prefab
-    statusPath: Status_1003002
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003002.asset
     iconPath: Assets/Resources/UI/Icons/Character/203005.png
   - id: 1003003
     name: Fire Pig Warrior
@@ -341,7 +341,7 @@ MonoBehaviour:
     evolutionResult: 1003004
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203003.prefab
-    statusPath: Status_1003003
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003003.asset
     iconPath: Assets/Resources/UI/Icons/Character/203003.png
   - id: 1003004
     name: Fire Pig Palladin
@@ -351,7 +351,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203004.prefab
-    statusPath: Status_1003004
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003004.asset
     iconPath: Assets/Resources/UI/Icons/Character/203004.png
   - id: 1003005
     name: Fire Pig Wizard
@@ -371,7 +371,7 @@ MonoBehaviour:
     - id: 3006014
       amount: 8
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203002.prefab
-    statusPath: Status_1003005
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003005.asset
     iconPath: Assets/Resources/UI/Icons/Character/203002.png
   - id: 1003006
     name: Fire Pig Assassin
@@ -389,7 +389,7 @@ MonoBehaviour:
     evolutionResult: 1003007
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203006.prefab
-    statusPath: Status_1003006
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003006.asset
     iconPath: Assets/Resources/UI/Icons/Character/203006.png
   - id: 1003007
     name: Serimnir
@@ -399,7 +399,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/203007.prefab
-    statusPath: Status_1003007
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1003007.asset
     iconPath: Assets/Resources/UI/Icons/Character/203007.png
   - id: 1004000
     name: Soul of the Battlefield
@@ -410,7 +410,7 @@ MonoBehaviour:
     - id: 3006009
       amount: 3
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205001.prefab
-    statusPath: Status_1004000
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004000.asset
     iconPath: Assets/Resources/UI/Icons/Character/205001.png
   - id: 1004001
     name: Soul of a Young Knights
@@ -420,7 +420,7 @@ MonoBehaviour:
     evolutionResult: 1004002
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205000.prefab
-    statusPath: Status_1004001
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004001.asset
     iconPath: Assets/Resources/UI/Icons/Character/205000.png
   - id: 1004002
     name: The Soul of Anger Knight
@@ -430,7 +430,7 @@ MonoBehaviour:
     evolutionResult: 1004003
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205003.prefab
-    statusPath: Status_1004002
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004002.asset
     iconPath: Assets/Resources/UI/Icons/Character/205003.png
   - id: 1004003
     name: Knight of the Soul Blade
@@ -440,7 +440,7 @@ MonoBehaviour:
     evolutionResult: 1004006
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205004.prefab
-    statusPath: Status_1004003
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004003.asset
     iconPath: Assets/Resources/UI/Icons/Character/205004.png
   - id: 1004004
     name: Horsepower Aggregation
@@ -452,7 +452,7 @@ MonoBehaviour:
     - id: 3006009
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205002.prefab
-    statusPath: Status_1004004
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004004.asset
     iconPath: Assets/Resources/UI/Icons/Character/205002.png
   - id: 1004005
     name: Ancient Soul Wizard
@@ -467,7 +467,7 @@ MonoBehaviour:
     evolutionResult: 1004007
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205006.prefab
-    statusPath: Status_1004005
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004005.asset
     iconPath: Assets/Resources/UI/Icons/Character/205006.png
   - id: 1004006
     name: Hestr
@@ -477,7 +477,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205005.prefab
-    statusPath: Status_1004006
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004006.asset
     iconPath: Assets/Resources/UI/Icons/Character/205005.png
   - id: 1004007
     name: fenrir
@@ -487,7 +487,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/205007.prefab
-    statusPath: Status_1004007
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1004007.asset
     iconPath: Assets/Resources/UI/Icons/Character/205007.png
   - id: 1005000
     name: The Shell of Yggdrassil
@@ -501,7 +501,7 @@ MonoBehaviour:
     - id: 3006014
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204010.prefab
-    statusPath: Status_1005000
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005000.asset
     iconPath: Assets/Resources/UI/Icons/Character/204010.png
   - id: 1005001
     name: Yggdrassilflank
@@ -514,7 +514,7 @@ MonoBehaviour:
     evolutionResult: 1005002
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204000.prefab
-    statusPath: Status_1005001
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005001.asset
     iconPath: Assets/Resources/UI/Icons/Character/204000.png
   - id: 1005002
     name: Yggdrassil Golem
@@ -524,7 +524,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204020.prefab
-    statusPath: Status_1005002
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005002.asset
     iconPath: Assets/Resources/UI/Icons/Character/204020.png
   - id: 1005003
     name: Bark of Burning Yggdrassil
@@ -539,7 +539,7 @@ MonoBehaviour:
     - id: 3006015
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204012.prefab
-    statusPath: Status_1005003
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005003.asset
     iconPath: Assets/Resources/UI/Icons/Character/204012.png
   - id: 1005004
     name: Flame Board
@@ -551,7 +551,7 @@ MonoBehaviour:
     evolutionResult: 1005005
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204002.prefab
-    statusPath: Status_1005004
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005004.asset
     iconPath: Assets/Resources/UI/Icons/Character/204002.png
   - id: 1005005
     name: Flame Golem
@@ -561,7 +561,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204022.prefab
-    statusPath: Status_1005005
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005005.asset
     iconPath: Assets/Resources/UI/Icons/Character/204022.png
   - id: 1005006
     name: Damp Yggdrassil's Shell
@@ -575,7 +575,7 @@ MonoBehaviour:
     - id: 3006018
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204014.prefab
-    statusPath: Status_1005006
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005006.asset
     iconPath: Assets/Resources/UI/Icons/Character/204014.png
   - id: 1005007
     name: Liquid Board
@@ -587,7 +587,7 @@ MonoBehaviour:
     evolutionResult: 1005008
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204004.prefab
-    statusPath: Status_1005007
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005007.asset
     iconPath: Assets/Resources/UI/Icons/Character/204004.png
   - id: 1005008
     name: Liquid Golem
@@ -597,7 +597,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204024.prefab
-    statusPath: Status_1005008
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005008.asset
     iconPath: Assets/Resources/UI/Icons/Character/204024.png
   - id: 1005009
     name: Floating Yggdrassil's shell
@@ -611,7 +611,7 @@ MonoBehaviour:
     - id: 3006016
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204013.prefab
-    statusPath: Status_1005009
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005009.asset
     iconPath: Assets/Resources/UI/Icons/Character/204013.png
   - id: 1005010
     name: Breeze Plank
@@ -623,7 +623,7 @@ MonoBehaviour:
     evolutionResult: 1005011
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204003.prefab
-    statusPath: Status_1005010
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005010.asset
     iconPath: Assets/Resources/UI/Icons/Character/204003.png
   - id: 1005011
     name: Gust Golem
@@ -633,7 +633,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204023.prefab
-    statusPath: Status_1005011
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005011.asset
     iconPath: Assets/Resources/UI/Icons/Character/204023.png
   - id: 1005012
     name: shell of solid Yggdrassil
@@ -647,7 +647,7 @@ MonoBehaviour:
     - id: 3006017
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204011.prefab
-    statusPath: Status_1005012
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005012.asset
     iconPath: Assets/Resources/UI/Icons/Character/204011.png
   - id: 1005013
     name: Land Plank
@@ -659,7 +659,7 @@ MonoBehaviour:
     evolutionResult: 1005014
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204001.prefab
-    statusPath: Status_1005013
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005013.asset
     iconPath: Assets/Resources/UI/Icons/Character/204001.png
   - id: 1005014
     name: Ground golem
@@ -669,7 +669,7 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/204021.prefab
-    statusPath: Status_1005014
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1005014.asset
     iconPath: Assets/Resources/UI/Icons/Character/204021.png
   - id: 1006000
     name: Lizard Trainer
@@ -685,7 +685,7 @@ MonoBehaviour:
     - id: 3001014
       amount: 5
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206000.prefab
-    statusPath: Status_1006000
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006000.asset
     iconPath: Assets/Resources/UI/Icons/Character/206000.png
   - id: 1006001
     name: Lizard Spear
@@ -705,7 +705,7 @@ MonoBehaviour:
     - id: 3002006
       amount: 7
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206001.prefab
-    statusPath: Status_1006001
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006001.asset
     iconPath: Assets/Resources/UI/Icons/Character/206001.png
   - id: 1006002
     name: Thief Lizard
@@ -725,7 +725,7 @@ MonoBehaviour:
     - id: 3006001
       amount: 3
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206002.prefab
-    statusPath: Status_1006002
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006002.asset
     iconPath: Assets/Resources/UI/Icons/Character/206002.png
   - id: 1006003
     name: Lizard Warrior
@@ -742,18 +742,8 @@ MonoBehaviour:
     evolutionResult: 1006005
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206003.prefab
-    statusPath: Status_1006003
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006003.asset
     iconPath: Assets/Resources/UI/Icons/Character/206003.png
-  - id: 1006004
-    name: Edwards
-    description: A businessman who runs a grocery store. Unlike his stupid appearance,
-      he is said to be quite good at negotiating.
-    evolutionMaterials: []
-    evolutionResult: 0
-    catchMaterials: []
-    prefabPath: Assets/Resources/Prefabs/Game/Monsters/206004.prefab
-    statusPath: Status_1006004
-    iconPath: Assets/Resources/UI/Icons/Character/206004.png
   - id: 1006005
     name: Lizard Berserker
     description: The highest power of the lizard tribe that presses the enemy with
@@ -769,7 +759,7 @@ MonoBehaviour:
     evolutionResult: 1006006
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206005.prefab
-    statusPath: Status_1006005
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006005.asset
     iconPath: Assets/Resources/UI/Icons/Character/206005.png
   - id: 1006006
     name: Lava Lizard Warrior
@@ -786,7 +776,7 @@ MonoBehaviour:
     evolutionResult: 1006007
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206006.prefab
-    statusPath: Status_1006006
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006006.asset
     iconPath: Assets/Resources/UI/Icons/Character/206006.png
   - id: 1006007
     name: Surtr
@@ -796,5 +786,5 @@ MonoBehaviour:
     evolutionResult: 0
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206007.prefab
-    statusPath: Status_1006007
+    statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006007.asset
     iconPath: 206007

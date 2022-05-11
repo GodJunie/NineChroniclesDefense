@@ -532,3 +532,47 @@ MonoBehaviour:
     - criDamage
     - moveSpeed
     - attackSpeed
+  - ColumnName: AtkRange
+    PropertyName: attackRange
+    Type: 1
+    IsArray: 0
+    index: 8
+    cols:
+    - Id
+    - EnemyId
+    - Hp
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - DropItemIds
+    - DropItemAmounts
+    - DropItemProbs
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    properties:
+    - id
+    - enemyId
+    - dropItemIds
+    - dropItemAmounts
+    - dropItemProbs
+    - hp
+    - atk
+    - def
+    - criRate
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - attackRange

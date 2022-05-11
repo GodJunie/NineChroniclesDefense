@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FolderPath: Assets/Resources/Prefabs/Game/MonsterStatusTables
   filePath: /Users/lavit/Desktop/Table/Character/Monster_Status.xlsx
-  sheetName: Status_1001008
+  sheetName: Status_1006007
   Columns:
   - ColumnName: ItemIds
     PropertyName: levelUpItemIds
@@ -268,3 +268,32 @@ MonoBehaviour:
     - criDamage
     - moveSpeed
     - attackSpeed
+  - ColumnName: AtkRange
+    PropertyName: attackRange
+    Type: 1
+    IsArray: 0
+    index: 7
+    cols:
+    - Level
+    - HP
+    - Atk
+    - Def
+    - CriDamage
+    - CriProb
+    - AtkRange
+    - AtkTarget
+    - AtkSpeed
+    - MoveSpeed
+    - ItemIds
+    - ItemAmounts
+    properties:
+    - levelUpItemIds
+    - levelUpItemAmounts
+    - hp
+    - atk
+    - def
+    - criRate
+    - criDamage
+    - moveSpeed
+    - attackSpeed
+    - attackRange

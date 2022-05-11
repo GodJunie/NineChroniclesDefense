@@ -21,6 +21,7 @@ MonoBehaviour:
       criDamage: 1.3
       moveSpeed: 2
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems: []
   - status:
       hp: 72
@@ -30,6 +31,7 @@ MonoBehaviour:
       criDamage: 1.3
       moveSpeed: 2
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 2
@@ -41,6 +43,7 @@ MonoBehaviour:
       criDamage: 1.3
       moveSpeed: 2
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 2
@@ -54,6 +57,7 @@ MonoBehaviour:
       criDamage: 1.3
       moveSpeed: 2
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 3
@@ -67,6 +71,7 @@ MonoBehaviour:
       criDamage: 1.34
       moveSpeed: 2
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 4
@@ -80,6 +85,7 @@ MonoBehaviour:
       criDamage: 1.36
       moveSpeed: 2
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 4
@@ -93,6 +99,7 @@ MonoBehaviour:
       criDamage: 1.36
       moveSpeed: 2
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 5
@@ -106,6 +113,7 @@ MonoBehaviour:
       criDamage: 1.36
       moveSpeed: 3
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 5
@@ -119,6 +127,7 @@ MonoBehaviour:
       criDamage: 1.36
       moveSpeed: 3
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 5
@@ -132,6 +141,7 @@ MonoBehaviour:
       criDamage: 1.42
       moveSpeed: 3
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems:
     - id: 3002013
       amount: 5
@@ -145,4 +155,5 @@ MonoBehaviour:
       criDamage: 1.42
       moveSpeed: 4
       attackSpeed: 4
+      attackRange: 0.2
     levelUpItems: []
