@@ -43,11 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9589028649b46c1ac7f336e9e66f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemTable: {fileID: 11400000, guid: a9aee3b9c2e3a47dcbb2b0cedb48a18c, type: 2}
-  MonsterTable: {fileID: 11400000, guid: 894d45c839f438e4286cb6462eebfc15, type: 2}
-  EnemyTable: {fileID: 11400000, guid: 341b940ad90f48345b777b7f6e0ec18e, type: 2}
-  EnemyPresetTable: {fileID: 11400000, guid: ba56984d279c12543a493ffc25630e76, type: 2}
+  ItemTable: {fileID: 11400000, guid: 0dffe1e272bfb48819e4c6966d3b0519, type: 2}
+  MonsterTable: {fileID: 11400000, guid: 4f4abca24ad8e45ca843b1501112fab2, type: 2}
+  EnemyTable: {fileID: 11400000, guid: aa7404703c29443cbb41a954a5c44439, type: 2}
+  EnemyPresetTable: {fileID: 11400000, guid: fef67b37bd4a14ee389228fbdde49429, type: 2}
   StageTable: {fileID: 11400000, guid: c25b90a04173de24f8be2f9e0d8eeb37, type: 2}
   BuildingTable: {fileID: 11400000, guid: aafe8f8e9f5b26446a17dc6f50c82776, type: 2}
   FarmingItemTable: {fileID: 11400000, guid: 6dd621098e31de44d9ffd8d44007b3f8, type: 2}
-  RecipeTable: {fileID: 11400000, guid: f89dc563883e67a41807a0620a6bdb0a, type: 2}
+  RecipeTable: {fileID: 11400000, guid: eedd62cf2ac404111be38c006b18a9bd, type: 2}

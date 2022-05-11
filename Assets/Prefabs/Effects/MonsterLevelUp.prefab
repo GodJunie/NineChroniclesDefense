@@ -53,6 +53,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6077848188039115523}
     m_Modifications:
+    - target: {fileID: 931352995316504579, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 931352995316504579, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 317033869
+      objectReference: {fileID: 0}
+    - target: {fileID: 931352995316525917, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 931352995316525917, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 317033869
+      objectReference: {fileID: 0}
     - target: {fileID: 931352995334049593, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -112,6 +128,14 @@ PrefabInstance:
     - target: {fileID: 931352995334258111, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
       propertyPath: m_Name
       value: LevelupCylinderBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156476934009208164, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156476934009208164, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 317033869
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7894e9ff3a821ea42a692a6a0cda4e5c, type: 3}

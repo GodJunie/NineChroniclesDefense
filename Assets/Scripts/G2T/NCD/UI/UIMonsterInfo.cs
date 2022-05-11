@@ -236,6 +236,8 @@ namespace G2T.NCD.UI {
             }
 
             monster.OnCatch();
+
+            this.Open(monster);
         }
 
         public void OnLevelUp() {
@@ -252,6 +254,8 @@ namespace G2T.NCD.UI {
             }
 
             monster.OnLevelUp();
+
+            this.Open(monster);
         }
 
         public void OnEvolution() {

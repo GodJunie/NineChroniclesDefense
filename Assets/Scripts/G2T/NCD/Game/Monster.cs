@@ -211,8 +211,6 @@ namespace G2T.NCD.Game {
             this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
            
             EffectPool.Instance.ShowEffect("MonsterCatch", this.effectRoot);
-
-            OnInteract();
         }
 
         public void OnTargetBuildingDestroyed() {
@@ -225,8 +223,6 @@ namespace G2T.NCD.Game {
             this.hpBar.Init(CurHp);
 
             EffectPool.Instance.ShowEffect("MonsterLevelUp", this.effectRoot);
-
-            OnInteract();
         }
 
         public async void OnEvolution() {

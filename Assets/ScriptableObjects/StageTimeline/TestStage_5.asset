@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b76e17966e2c2f4e9574c653c2c4567, type: 3}
+  m_Name: TestStage_5
+  m_EditorClassIdentifier: 
+  Datas:
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005001
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005002
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005003
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005004
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005005
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005006
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005007
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005008
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005009
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005010
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005011
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005012
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005013
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
+  - timePart: 0
+    time: 1
+    leftEnemies: 
+    rightEnemies: 
+    monsters:
+    - id: 1005014
+      prob: 100
+    monsterAmount: 1
+    farmingItems: []
+    farmingItemAmount: 0
