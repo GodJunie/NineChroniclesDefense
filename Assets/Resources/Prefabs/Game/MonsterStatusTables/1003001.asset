@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784b5bba63f3ac94cb551713baaf3cd0, type: 3}
+  m_Name: 1003001
+  m_EditorClassIdentifier: 
+  Datas:
+  - status:
+      hp: 76
+      atk: 31
+      def: 20
+      criRate: 0
+      criDamage: 1.3
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems: []
+  - status:
+      hp: 76
+      atk: 31
+      def: 20
+      criRate: 0
+      criDamage: 1.3
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3001002
+      amount: 3
+    - id: 3006030
+      amount: 3
+  - status:
+      hp: 82
+      atk: 36
+      def: 24
+      criRate: 0
+      criDamage: 1.3
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3001002
+      amount: 4
+    - id: 3006031
+      amount: 3
+  - status:
+      hp: 89
+      atk: 42
+      def: 30
+      criRate: 0
+      criDamage: 1.34
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3001014
+      amount: 5
+    - id: 3003004
+      amount: 1
+  - status:
+      hp: 97
+      atk: 51
+      def: 38
+      criRate: 0
+      criDamage: 1.39
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3002000
+      amount: 2
+    - id: 3002001
+      amount: 2
+    - id: 3002005
+      amount: 2
+    - id: 3003009
+      amount: 1
+  - status:
+      hp: 106
+      atk: 57
+      def: 45
+      criRate: 0
+      criDamage: 1.43
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3005003
+      amount: 4
+    - id: 3006030
+      amount: 4
+  - status:
+      hp: 116
+      atk: 64
+      def: 54
+      criRate: 0
+      criDamage: 1.45
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3005003
+      amount: 4
+    - id: 3006031
+      amount: 4
+  - status:
+      hp: 128
+      atk: 72
+      def: 65
+      criRate: 0
+      criDamage: 1.49
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3002004
+      amount: 2
+    - id: 3004021
+      amount: 4
+  - status:
+      hp: 140
+      atk: 81
+      def: 76
+      criRate: 0
+      criDamage: 1.52
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3001000
+      amount: 3
+    - id: 3004021
+      amount: 5
+  - status:
+      hp: 154
+      atk: 93
+      def: 89
+      criRate: 0
+      criDamage: 1.57
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems:
+    - id: 3001004
+      amount: 3
+    - id: 3005007
+      amount: 5
+    - id: 3005008
+      amount: 5
+  - status:
+      hp: 170
+      atk: 106
+      def: 102
+      criRate: 0
+      criDamage: 1.65
+      moveSpeed: 2
+      attackSpeed: 3
+      attackRange: 0.2
+    levelUpItems: []
