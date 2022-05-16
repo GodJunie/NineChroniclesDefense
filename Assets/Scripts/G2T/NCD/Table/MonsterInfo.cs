@@ -44,13 +44,13 @@ namespace G2T.NCD.Table {
             [HorizontalGroup("group")]
             [BoxGroup("group/아이디")]
             [HideLabel]
-            public int id;
+            private int id;
 
             [SerializeField]
             [HorizontalGroup("group")]
             [BoxGroup("group/개수")]
             [HideLabel]
-            public int amount;
+            private int amount;
 
             public CatchMaterial(int id, int amount) {
                 this.id = id;
@@ -173,7 +173,7 @@ namespace G2T.NCD.Table {
         public string Name { get => name; }
         public string Description { get => description; }
         public List<EvolutionMaterial> EvolutionMaterials { get => evolutionMaterials; }
-        public int EvoutionResult { get => evolutionResult; }
+        public int EvolutionResult { get => evolutionResult; }
         public List<CatchMaterial> CatchMaterials { get => catchMaterials; }
         public string PrefabPath { get => prefabPath; }
         public string IconPath { get => iconPath; }

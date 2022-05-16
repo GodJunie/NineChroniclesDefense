@@ -135,7 +135,7 @@ MonoBehaviour:
     levelUpItems:
     - id: 3001005
       amount: 1
-    - id: 300211
+    - id: 3002011
       amount: 5
   - status:
       hp: 144

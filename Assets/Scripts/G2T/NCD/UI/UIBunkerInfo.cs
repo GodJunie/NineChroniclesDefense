@@ -56,7 +56,7 @@ namespace G2T.NCD.UI {
         }
 
         public void OnSelectMonster() {
-            GameController.Instance.OpenMonsterPanel(GameController.Instance.Monsters.Where(e => e.gameObject.activeInHierarchy && e.CurState != State.Dead && e.MonsterType == MonsterType.Friendly).ToList(), (monster) => {
+            GameController.Instance.OpenMonsterPanel(GameController.Instance.Monsters.Where(e => e.gameObject.activeInHierarchy && e.State != State.Dead && e.MonsterType == MonsterType.Friendly).ToList(), (monster) => {
                 bunker.AddMonster(monster);
                 this.OpenInfo();
             });

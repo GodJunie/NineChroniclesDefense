@@ -86,5 +86,9 @@ namespace G2T.NCD.UI {
         public void GameStart() {
             GameManager.Instance.GameStart(this.currentStage);
         }
+
+        public void Quit() {
+            GameManager.Instance.GoToTitle();
+        }
     }
 }

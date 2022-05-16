@@ -787,4 +787,4 @@ MonoBehaviour:
     catchMaterials: []
     prefabPath: Assets/Resources/Prefabs/Game/Monsters/206007.prefab
     statusPath: Assets/Resources/Prefabs/Game/MonsterStatusTables/1006007.asset
-    iconPath: 206007
+    iconPath: Assets/Resources/UI/Icons/Character/206007.png

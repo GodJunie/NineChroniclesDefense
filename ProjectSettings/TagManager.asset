@@ -77,3 +77,6 @@ TagManager:
   - name: SystemUI
     uniqueID: 2949179215
     locked: 0
+  - name: SystemUIVFX
+    uniqueID: 1209845021
+    locked: 0

@@ -51,6 +51,15 @@ namespace G2T.NCD.UI {
         [TabGroup("group", "Info")]
         [SerializeField]
         private Text textButtonGrowth;
+        [TabGroup("group", "Info")]
+        [SerializeField]
+        private Image imageInfoIcon;
+        [TabGroup("group", "Info")]
+        [SerializeField]
+        private GameObject buttonLeft;
+        [TabGroup("group", "Info")]
+        [SerializeField]
+        private GameObject buttonRight;
         #endregion
 
         #region Level Up
@@ -132,11 +141,12 @@ namespace G2T.NCD.UI {
             this.uiStatusInfo.SetUI(monster.CurStatus);
             this.textInfoName.text = monster.Info.Name;
             this.textInfoLevel.text = string.Format("Lv. {0}", monster.Level + 1);
+            this.imageInfoIcon.sprite = ResourcesManager.Instance.Load<Sprite>(monster.Info.IconPath);
 
             if(monster.Level < monster.StatusTable.Datas.Count - 1) {
-                this.textButtonGrowth.text = "Level Up";
+                this.textButtonGrowth.text = "LEVEL UP";
             } else {
-                this.textButtonGrowth.text = "Evolution";
+                this.textButtonGrowth.text = "EVOLUTION";
             }
         }
 
@@ -177,7 +187,7 @@ namespace G2T.NCD.UI {
             this.panelInfo.SetActive(false);
             this.panelEvolution.SetActive(true);
 
-            var evolutionResult = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == monster.Info.EvoutionResult);
+            var evolutionResult = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == monster.Info.EvolutionResult);
 
             var resultIcon = await ResourcesManager.Instance.LoadAsync<Sprite>(evolutionResult.IconPath);
 
@@ -235,7 +245,7 @@ namespace G2T.NCD.UI {
                 GameController.Instance.UseItem(item.Id, item.Amount);
             }
 
-            monster.OnCatch();
+            monster.Catch();
 
             this.Open(monster);
         }
@@ -253,7 +263,7 @@ namespace G2T.NCD.UI {
                 GameController.Instance.UseItem(item.Id, item.Amount);
             }
 
-            monster.OnLevelUp();
+            monster.LevelUp();
 
             this.Open(monster);
         }
@@ -284,14 +294,14 @@ namespace G2T.NCD.UI {
                 Destroy(monster.gameObject);
             }
 
-            monster.OnEvolution();
+            monster.Evolution();
         }
 
         public void OnMove(string direction) {
             if(direction.Equals("Left")) {
-                monster.OnMove(Direction.Left);
+                monster.MoveTargetBuilding(Direction.Left);
             } else if(direction.Equals("Right")) {
-                monster.OnMove(Direction.Right);
+                monster.MoveTargetBuilding(Direction.Right);
             } else {
                 Debug.LogError(string.Format("Undefined direction, {0}", direction));
             }

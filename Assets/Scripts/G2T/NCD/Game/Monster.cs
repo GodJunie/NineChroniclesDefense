@@ -3,485 +3,455 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.IO;
 // UnityEngine
 using UnityEngine;
-using UnityEngine.UI;
-// Spine
-using Spine.Unity;
-// Other
+// Editor
 using Sirenix.OdinInspector;
-using Cysharp.Threading.Tasks;
-using DG.Tweening;
 
 namespace G2T.NCD.Game {
     using Table;
-    using Data;
-    using UI;
     using Management;
+    using UI;
 
-    public enum MonsterType : int { None = 0, Wild, Friendly }
-
-    [RequireComponent(typeof(Rigidbody2D))]
     public class Monster : MonoBehaviour, IInteractable {
-        [Serializable]
-        public class MonsterLevelInfo {
-            [FoldoutGroup("Î†àÎ≤® Ï†ïÎ≥¥")]
-            [FoldoutGroup("Î†àÎ≤® Ï†ïÎ≥¥/Îä•Î†•Ïπò")]
-            [HideLabel]
-            [SerializeField]
-            private Status status;
-            [FoldoutGroup("Î†àÎ≤® Ï†ïÎ≥¥")]
-            [LabelText("ÌïÑÏöî ÏïÑÏù¥ÌÖú")]
-            [SerializeField]
-            private List<ItemData> needs;
+        #region Members
 
-            public Status Status { get => status; }
-            public List<ItemData> Needs { get => needs; }
-        }
+        #region Objects
+        [SerializeField]
+        private Transform monsterHolder;
 
-        // Serialized Members
-        // Components
-        [TabGroup("group", "Ïò§Î∏åÏ†ùÌä∏")]
         [SerializeField]
-        private SkeletonAnimation anim;
-        [TabGroup("group", "Ïò§Î∏åÏ†ùÌä∏")]
+        private Detector attackDetector;
         [SerializeField]
-        private Transform skeletonTransform;
-        [TabGroup("group", "Ïò§Î∏åÏ†ùÌä∏")]
-        [SerializeField]
-        private Transform effectRoot;
+        private Detector aggroDetector;
+        #endregion
 
-        // UI
-        [TabGroup("group", "UI")]
+        #region UI
+        // Game UI
         [SerializeField]
         private MonsterHpBar hpBar;
-        [TabGroup("group", "UI")]
         [SerializeField]
         private PressSpacebar pressSpacebar;
-        [TabGroup("group", "UI")]
+        // UI Root
         [SerializeField]
         private RectTransform uiRoot;
-        [TabGroup("group", "UI")]
         [SerializeField]
         private Vector2 rootCanvasPosition;
-
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject panelMove;
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject buttonLeft;
-        [TabGroup("group", "UI")]
-        [SerializeField]
-        private GameObject buttonRight;
-
-        [TabGroup("group", "ÏÑ§Ï†ï")]
-        [LabelText("Í∏∞Î≥∏ Î∞©Ìñ• (Ïä§ÌååÏù∏)")]
-        [SerializeField]
-        private Direction defaultDirection;
-        [TabGroup("group", "ÏÑ§Ï†ï")]
-        [LabelText("ÏïÑÏù¥Îîî")]
-        [SerializeField]
-        private int id;
-        public int Id { get => id; }
+        #endregion
 
 
-        private Direction curDirection;
-       
-        // Private Members
-        // Components
-        private Rigidbody2D rigid;
-        private new Transform transform;
-       
-        // Game
+        // ∞‘¿” µø¿€ø° « ø‰«— ∏‚πˆµÈ
+        #region Game
+        // «ˆ¿Á ªÛ≈¬, ∏ÛΩ∫≈Õ ≈∏¿‘
+        public State State { get; private set; }
         public MonsterType MonsterType { get; private set; }
-        public State CurState { get; private set; }
-        private int level;
+        public BuildingBase TargetBuilding { get; private set; }
+        // Ω∫≈» ºˆƒ° (∑π∫ß, √º∑¬, «ˆ¿Á Ω∫≈»)
+        public int Level { get; private set; }
         public float CurHp { get; private set; }
-
-        // objects
-        private List<Enemy> enemies = new List<Enemy>();
-        private PlayerController player = null;
-
-        // Events
-        public Action<Monster> OnDead;
-        
-        public string Name { get => this.name; }
-        public int Level { get => this.level; }
-        public Status CurStatus { get => StatusTable.Datas[level].Status; }
-
-        public float PosX => this.transform.position.x;
-
+        public Status CurStatus { get; private set; }
+        // ªÛ»£¿€øÎ µÓ
         public bool Interacting { get; private set; }
+        public float PosX { get => transform.position.x; }
 
+        private List<Enemy> attackTargets = new List<Enemy>();
+        private List<Enemy> aggroTargets = new List<Enemy>();
+        private MonsterAnimation monsterAnimation;
+        #endregion
+
+        #region Events
+        public Action<Monster> OnDead;
+        public Action<Monster> OnLevelUp;
+        public Action<Monster> OnEvolution;
+        #endregion
+
+        #endregion
+
+        // ∏ÛΩ∫≈Õ Ω∫≈» ≈◊¿Ã∫Ì µÓ¿« µ•¿Ã≈Õ
+        #region Data
+        public int Id { get; private set; }
         public MonsterInfo Info { get; private set; }
         public MonsterStatusTable StatusTable { get; private set; }
+        #endregion
 
-        private Vector3 startPos;
-        public BuildingBase TargetBuilding { get; private set; }
+        #region Mono
+        private void Start() {
+            this.aggroDetector.OnEnter = (collider) => this.OnAggroTriggerEnter(collider);
+            this.aggroDetector.OnExit = (collider) => this.OnAggroTriggerExit(collider);
 
-        public async void Init(MonsterInfo info, MonsterType monsterType) {
+            this.attackDetector.OnEnter = (collider) => this.OnAttackTriggerEnter(collider);
+            this.attackDetector.OnExit = (collider) => this.OnAttackTriggerExit(collider);
+
+        }
+
+        private void Update() {
+            switch(this.State) {
+            case State.Idle:
+                Idle();
+                break;
+            case State.Attack:
+                Attack();
+                break;
+            case State.Dead:
+                Dead();
+                break;
+            case State.Interact:
+                Interact();
+                break;
+            case State.Aggro:
+                Aggro();
+                break;
+            default:
+                break;
+            }
+        }
+        #endregion
+
+        #region Management
+        // √ ±‚»≠ (µ•¿Ã≈Õ, ∏ÛΩ∫≈Õ ≈∏¿‘, Ω∫≈» µÓ)
+        #region Init
+        public void Init(int id, MonsterType monsterType = MonsterType.Wild) {
+            var info = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == id);
+            this.Init(id, info, monsterType);
+        }
+
+        public void Init(int id, MonsterInfo info, MonsterType monsterType = MonsterType.Wild) {
+            this.Id = id;
             this.Info = info;
-            this.level = 0;
+
+            // Init level
+            this.Level = 0;
+
+            // Get Table
+            this.StatusTable = ResourcesManager.Instance.Load<ScriptableObject>(info.StatusPath) as MonsterStatusTable;
+
+            // Instantiate monste prefab
+            var monsterPrefab = ResourcesManager.Instance.Load<GameObject>(info.PrefabPath);
+            this.monsterAnimation = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity, monsterHolder).GetComponent<MonsterAnimation>();
+            this.monsterAnimation.transform.localPosition = Vector3.zero;
+            this.monsterAnimation.transform.localScale = Vector3.one;
+
+            // Set MonsterType
+            this.InitMonsterType(monsterType);
+
+            // Set Status
+            InitStatus();
+
+            ChangeState(State.Idle);
+        }
+
+        private void InitMonsterType(MonsterType monsterType) {
             this.MonsterType = monsterType;
-            this.startPos = this.transform.position;
+            this.hpBar.SetType(monsterType);
+            this.pressSpacebar.SetType(monsterType);
+        }
 
-            this.SetDirection(Direction.Right);
+        private void InitStatus() {
+            this.CurStatus = StatusTable.Datas[this.Level].Status;
 
-            this.CurState = State.Move;
-
-            this.StatusTable = await ResourcesManager.Instance.LoadAsync<ScriptableObject>(info.StatusPath) as MonsterStatusTable;
-
-            this.CurHp = this.CurStatus.Hp;
-            this.hpBar.SetType(this.MonsterType);
+            this.CurHp = CurStatus.Hp;
             this.hpBar.Init(CurStatus.Hp);
-            this.pressSpacebar.SetType(this.MonsterType);
-            this.pressSpacebar.SetActive(false);
+            this.attackDetector.SetRange(CurStatus.AttackRange);
+            this.aggroDetector.SetRange(2f);
+        }
+        #endregion
+
+        // ∏ÛΩ∫≈Õ ∑π∫ßæ˜ ¡¯»≠ µÓ
+        #region Interact
+        public async void Catch() {
+            this.InitMonsterType(MonsterType.Friendly);
+            this.InitStatus();
+
+            this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Math.Abs(e.PosX - this.PosX)).First();
+            this.TargetBuilding.ShowRange();
+
+            await this.monsterAnimation.OnCatch();
 
             GameController.Instance.SetMonsterAmountsUI();
-
-            if(monsterType == MonsterType.Friendly) {
-                this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
-            }
-
-            this.StartFSM();
         }
 
-        private void Awake() {
-            this.rigid = GetComponent<Rigidbody2D>();
-            this.transform = GetComponent<Transform>();
+        public async void LevelUp() {
+            this.Level++;
+            await this.monsterAnimation.OnLevelUp();
+            this.InitStatus();
         }
 
-        // Start is called before the first frame update
-        void Start() {
-
+        public async void Evolution() {
+            await this.monsterAnimation.OnEvolutionStart();
+            Destroy(this.monsterAnimation.gameObject);
+            this.Init(this.Info.EvolutionResult, MonsterType.Friendly);
+            await this.monsterAnimation.OnEvolutionEnd();
         }
 
-        // Update is called once per frame
-        void Update() {
+        public void MoveTargetBuilding(Direction direction) {
+            // ≈∏∞Ÿ ∫Ùµ˘ ¿Ãµø
             
         }
+        #endregion
 
-        private void StartFSM() {
-            StartCoroutine(FSM());
-        }
-
-        public void OnInteract() {
-            if(this.Interacting) {
-                UIManager.Instance.CloseUI("monster-info");
-                this.Interacting = false;
-
-                if(TargetBuilding != null)
-                    TargetBuilding.HideRange();
-
-                this.CurState = State.Move;
-
-                this.panelMove.SetActive(false);
-                this.TargetBuilding?.HideRange();
-            } else {
-                if(this.CurState == State.Attack || this.CurState == State.Dead)
-                    return;
-
-                UIManager.Instance.OpenUI("monster-info", this.uiRoot).GetComponent<UIMonsterInfo>().Open(this);
-
-                var diff = this.player.transform.position - this.transform.position;
-                if(diff.x > 0)
-                    SetDirection(Direction.Right);
-                else if(diff.x < 0)
-                    SetDirection(Direction.Left);
-
-                this.Interacting = true;
-
-                this.CurState = State.Idle;
-
-                if(this.MonsterType == MonsterType.Friendly)
-                    OpenMovePanel();
-            }
-        }
-
-        public void OnCatch() {
-            this.MonsterType = MonsterType.Friendly;
-
-            this.hpBar.SetType(this.MonsterType);
-            this.pressSpacebar.SetType(this.MonsterType);
-
-            GameController.Instance.SetMonsterAmountsUI();
-
-            this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
-           
-            EffectPool.Instance.ShowEffect("MonsterCatch", this.effectRoot);
-        }
-
-        public void OnTargetBuildingDestroyed() {
-            this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
-        }
-
-        public void OnLevelUp() {
-            this.level++;
-            this.CurHp = CurStatus.Hp;
-            this.hpBar.Init(CurHp);
-
-            EffectPool.Instance.ShowEffect("MonsterLevelUp", this.effectRoot);
-        }
-
-        public async void OnEvolution() {
-            if(TargetBuilding != null) TargetBuilding.HideRange();
-
-            GameController.Instance.Player.ResetInteractableTarget();
-
-            OnInteract();
-
-            EffectPool.Instance.ShowEffect("MonsterEvolution", this.effectRoot);
-
-            await UniTask.Delay(TimeSpan.FromSeconds(3f));
-          
-            GameController.Instance.GenerateMonster(Info.EvoutionResult, this.PosX, MonsterType.Friendly);
-            this.OnDead?.Invoke(this);
-            Destroy(this.gameObject);
-        }
-
-        private void OpenMovePanel() {
-            this.panelMove.SetActive(true);
-            this.TargetBuilding?.ShowRange();
-
-            var orderedBuildings = GameController.Instance.Buildings.OrderBy(e => e.PosX).ToList();
-            int index = orderedBuildings.IndexOf(this.TargetBuilding);
-
-            if(index == 0) {
-                buttonLeft.SetActive(false);
-            } else {
-                buttonLeft.SetActive(true);
-            }
-
-            if(index == orderedBuildings.Count - 1) {
-                buttonRight.SetActive(false);
-            } else {
-                buttonRight.SetActive(true);
-            }
-        }
-
-        public void OnMove(string direction) {
-            if(direction == "Left") this.OnMove(Direction.Left);
-            else this.OnMove(Direction.Right);
-        }
-
-        public void OnMove(Direction direction) {
-            var orderedBuildings = GameController.Instance.Buildings.OrderBy(e => e.PosX).ToList();
-            int index = orderedBuildings.IndexOf(this.TargetBuilding);
-
-            TargetBuilding.HideRange();
-
-            if(direction == Direction.Left) {
-                TargetBuilding = orderedBuildings[index - 1];
-            } else {
-                TargetBuilding = orderedBuildings[index + 1];
-            }
-
-            OnInteract();
-        }
-
-        private IEnumerator FSM() {
-            while(true) {
-                switch(this.CurState) {
-                case State.Attack:
-                    yield return Attack();
-                    break;
-                case State.Move:
-                    yield return Move();
-                    break;
-                case State.Idle:
-                    yield return Idle();
-                    break;
-                case State.Dead:
-                    yield return Dead();
-                    break;
-                default:
-                    yield return null;
-                    break;
-                }
-            }
-        }
-
-        private IEnumerator Idle() {
-            this.rigid.velocity = Vector2.zero;
-            this.anim.AnimationState.SetAnimation(0, "Idle", true);
-            while(this.CurState == State.Idle) {
-                yield return null;
-            }
-            Debug.Log("End Idle");
-        }
-
-        private IEnumerator Attack() {
-            this.rigid.velocity = Vector2.zero;
-
-            var first = this.enemies.OrderBy(e => Mathf.Abs((this.transform.position.x) - e.transform.position.x)).First();
-            if(first.transform.position.x - this.transform.position.x < 0) {
-                this.SetDirection(Direction.Left);
-            } else {
-                this.SetDirection(Direction.Right);
-            }
-            this.anim.AnimationState.ClearTracks();
-            this.anim.AnimationState.SetAnimation(0, "Attack", false);
-
-            float timer = this.CurStatus.AttackSpeed;
-            while(timer > 0) {
-                timer -= Time.fixedDeltaTime;
-                yield return new WaitForFixedUpdate();
-                if(this.CurState != State.Attack)
-                    break;
-            }
-            if(this.CurState == State.Attack) {
-                try {
-                    if(this.enemies.Count > 0) {
-                        var enemy = this.enemies.OrderBy(e => Mathf.Abs(e.transform.position.x - PosX)).First();
-                        enemy.OnDamaged(this.CurStatus.Atk);
-                    }
-                }
-                catch(Exception e) {
-                    Debug.LogError(e.Message);
-                }
-            }
-        }
-
-        private IEnumerator Move() {
-            Direction direction;
-            float timer = 0f;
-
-            if(MonsterType == MonsterType.Friendly && this.TargetBuilding != null) {
-                var enemy = GameController.Instance.Enemies.Where(e => e.transform.position.x > TargetBuilding.RangeLeft && e.transform.position.x < TargetBuilding.RangeRight).OrderBy(e => Mathf.Abs(e.transform.position.x - this.transform.position.x)).FirstOrDefault();
-
-                if(enemy == default(Enemy)) {
-                    direction = (Direction)UnityEngine.Random.Range(0, 2);
-                    timer = UnityEngine.Random.Range(1f, 3f);
-                } else {
-                    var diff = enemy.transform.position.x - this.transform.position.x;
-                    if(diff < 0)
-                        direction = Direction.Left;
-                    else
-                        direction = Direction.Right;
-                    timer = 10f;
-                }
-            } else {
-                direction = (Direction)UnityEngine.Random.Range(0, 2);
-                timer = UnityEngine.Random.Range(1f, 3f);
-            }
-
-            SetDirection(direction);
-
-            this.rigid.velocity = (this.curDirection == Direction.Left ? Vector2.left : Vector2.right) * this.CurStatus.MoveSpeed;
-            this.anim.AnimationState.SetAnimation(0, "Run", true);
-
-            var rangeRight = this.MonsterType == MonsterType.Wild ? startPos.x + 1f : TargetBuilding.RangeRight;
-            var rangeLeft = this.MonsterType == MonsterType.Wild ? startPos.x - 1f : TargetBuilding.RangeLeft;
-
-            while(true) {
-                if(this.CurState != State.Move) {
-                    break;
-                }
-
-                if(this.transform.position.x > rangeRight && direction == Direction.Right)
-                    break;
-                if(this.transform.position.x < rangeLeft && direction == Direction.Left)
-                    break;
-                timer -= Time.fixedDeltaTime;
-
-                if(timer < 0)
-                    break;
-                yield return new WaitForFixedUpdate();
-            }
-        }
-
-        private IEnumerator Dead() {
-            var entry = this.anim.AnimationState.SetAnimation(0, "Die", false);
-            yield return new WaitForSpineAnimationComplete(entry);
-            Destroy(this.gameObject);
-            yield break;
-        }
-
+        #region Combat
         public void OnDamaged(float damage) {
             this.CurHp -= damage;
-            this.hpBar.SetHp(this.CurHp);
+            this.hpBar.SetHp(CurHp);
             if(this.CurHp <= 0f) {
-                this.CurState = State.Dead;
-                this.OnDead?.Invoke(this);
-                Debug.Log("Dead");
+                this.ChangeState(State.Dead);
+            }
+        }
+        #endregion
+        #endregion
+
+        #region FSM
+        private void ChangeState(State state) {
+            switch(this.State) {
+            case State.Idle:
+                IdleExit();
+                break;
+            case State.Aggro:
+                AggroExit();
+                break;
+            case State.Attack:
+                AttackExit();
+                break;
+            case State.Interact:
+                InteractExit();
+                break;
+            case State.Dead:
+                DeadExit();
+                break;
+            }
+
+            this.State = state;
+
+            switch(this.State) {
+            case State.Idle:
+                IdleEnter();
+                break;
+            case State.Aggro:
+                AggroEnter();
+                break;
+            case State.Attack:
+                AttackEnter();
+                break;
+            case State.Interact:
+                InteractEnter();
+                break;
+            case State.Dead:
+                DeadEnter();
+                break;
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision) {
-            switch(collision.tag) {
-            case "Player":
-                var player = collision.GetComponent<PlayerController>();
-                if(player != null) {
-                    this.player = player;
-                    this.pressSpacebar.SetActive(true);
-                    this.uiRoot.gameObject.SetActive(true);
+        private void CheckState() {
+            if(this.MonsterType == MonsterType.Friendly) {
+                if(this.attackTargets.Count > 0) {
+                    ChangeState(State.Attack);
+                } else if(this.aggroTargets.Concat(TargetBuilding.Enemies).ToList().Count > 0) {
+                    if(this.State == State.Aggro) return;
+                    ChangeState(State.Aggro);
+                } else {
+                    ChangeState(State.Idle);
                 }
-                break;
-            case "Enemy":
-                this.CurState = State.Attack;
-                var enemy = collision.GetComponent<Enemy>();
-                if(this.enemies.Contains(enemy)) return;
-                this.enemies.Add(enemy);
-                enemy.OnDead += (enemy) => {
-                    if(this.enemies.Contains(enemy)) {
-                        this.enemies.Remove(enemy);
-                        if(this.enemies.Count == 0) {
-                            if(this.MonsterType == MonsterType.Wild) {
-                                this.CurState = State.Idle;
-                            } else if(this.MonsterType == MonsterType.Friendly) {
-                                this.CurState = State.Move;   
-                            }
-                        }
+            } else {
+                if(this.attackTargets.Count > 0) {
+                    ChangeState(State.Attack);
+                } else {
+                    ChangeState(State.Idle);
+                }
+            }
+        }
+
+        #region Idle
+        private float idleRangeLeft;
+        private float idleRangeRight;
+        private Direction idleDirection;
+        private bool idleMove;
+        private float idleTimer = 0f;
+
+        private void IdleEnter() {
+            if(this.MonsterType == MonsterType.Wild) {
+                idleRangeLeft = this.PosX - 1f;
+                idleRangeRight = this.PosX + 1f;
+            } else {
+                idleRangeLeft = TargetBuilding.RangeLeft;
+                idleRangeRight = TargetBuilding.RangeRight;
+            }
+
+            idleTimer = 0f;
+        }
+
+        private void Idle() {
+            idleTimer -= Time.deltaTime;
+
+            if(idleTimer < 0) {
+                // ¥Ÿ¿Ω «‡µø ∞·¡§ (øÚ¡˜¿Ã±‚, ∏ÿ√ﬂ±‚)
+                if(this.PosX < idleRangeLeft) {
+                    idleDirection = Direction.Right;
+                    idleMove = true;
+                } else if(this.PosX > idleRangeRight) {
+                    idleDirection = Direction.Left;
+                    idleMove = true;
+                } else {
+                    idleMove = UnityEngine.Random.Range(0f, 2f) > 1f;
+
+                    idleDirection = UnityEngine.Random.Range(0f, 2f) > 1f ? Direction.Left : Direction.Right;
+                }
+
+                idleTimer = UnityEngine.Random.Range(1f, 2f);
+
+                if(idleMove) {
+                    SetDirection(idleDirection);
+                    this.monsterAnimation.Move();
+                } else {
+                    this.monsterAnimation.Idle();
+                }
+            }
+
+            if(idleMove) {
+                this.transform.position += new Vector3(this.CurStatus.MoveSpeed * Time.deltaTime * (idleDirection == Direction.Right ? 1f : -1f), 0f, 0f);
+
+                if(this.PosX < idleRangeLeft && idleDirection == Direction.Left) idleTimer = 0f;
+                if(this.PosX > idleRangeRight && idleDirection == Direction.Right) idleTimer = 0f;
+            }
+        }
+
+        private void IdleExit() {
+
+        }
+        #endregion
+
+        #region Aggro
+        private float aggroIdleTimer;
+
+        public void AggroTrigger() {
+            if(this.State == State.Idle) {
+                ChangeState(State.Aggro);
+            }
+        }
+
+        private void AggroEnter() {
+            this.monsterAnimation.Idle();
+            this.monsterAnimation.OnAggro();
+            aggroIdleTimer = .5f;
+
+            var target = aggroTargets.Concat(TargetBuilding == null ? new List<Enemy>() : TargetBuilding.Enemies).OrderBy(e => Mathf.Abs(e.transform.position.x - this.PosX)).First();
+
+            var direction = this.PosX > target.transform.position.x ? Direction.Right : Direction.Left;
+
+            SetDirection(direction);
+        }
+
+        private void Aggro() {
+            aggroIdleTimer -= Time.deltaTime;
+
+            if(aggroIdleTimer < 0) {
+                this.monsterAnimation.Move();
+                var target = aggroTargets.Concat(TargetBuilding == null ? new List<Enemy>() : TargetBuilding.Enemies).OrderBy(e => Mathf.Abs(e.transform.position.x - this.PosX)).First();
+
+                var direction = this.PosX > target.transform.position.x ? Direction.Left : Direction.Right;
+
+                SetDirection(direction);
+
+                this.transform.position += new Vector3(this.CurStatus.MoveSpeed * Time.deltaTime * (direction == Direction.Right ? 1f : -1f), 0f, 0f);
+            }
+        }
+
+        private void AggroExit() {
+
+        }
+        #endregion
+
+        #region Attack
+        private void AttackEnter() {
+            if(attackTargets.Count > 0) {
+                var target = attackTargets.OrderBy(e => Mathf.Abs(this.PosX - e.transform.position.x)).First();
+
+                SetDirection(target.transform.position.x < this.PosX ? Direction.Left : Direction.Right);
+
+                this.monsterAnimation.Attack(() => {
+                    if(target != null) {
+                        target.OnDamaged(this.CurStatus.Atk);
                     }
-                };
-                break;
+                }, () => {
+                    Debug.Log("attack end!");
+                    CheckState();
+                });
+            } else {
+                // ∞¯∞› æÓƒ…«œ¡ˆ ¿Ã∞«?
+                // ∞¯∞›¿ª «ÿæﬂ«œ¥¬µ• ≈∏∞Ÿ¿Ã æ¯¿Ω
+                // æ÷√ ø° ∞¯∞› ªÛ≈¬∑Œ æÓƒ… ø‘¥¬¡ˆ..
             }
         }
 
-        private void OnTriggerExit2D(Collider2D collision) {
-            switch(collision.tag) {
-            case "Player":
-                var player = collision.GetComponent<PlayerController>();
-                if(this.player == player) {
-                    this.player = null;
-                    this.uiRoot.gameObject.SetActive(false);
+        private void Attack() {
+            // ∞¯∞› ∏º« ¥Î±‚¡ﬂ¿” (æÓ¬˜«« ∞¯∞› Ω√¡°ø° ƒ›πÈ¿∏∑Œ √≥∏Æ«“∞≈∂Û..)
+        }
 
-                    //if(this.catchPanel != null && this.catchPanel.transform.parent == this.uiRoot) {
-                    //    UIManager.Instance.CloseUI("catch");
-                    //}
+        private void AttackExit() {
 
-                    //if(this.monsterInfoPanel != null && this.monsterInfoPanel.transform.parent == this.uiRoot) {
-                    //    UIManager.Instance.CloseUI("monsterInfo");
-                    //}
+        }
+        #endregion
 
-                    this.CurState = State.Move;
-                }
-                break;
-            case "Enemy":
-                var enemy = collision.GetComponent<Enemy>();
-                if(this.enemies.Contains(enemy)) {
-                    this.enemies.Remove(enemy);
-                    if(this.enemies.Count == 0) {
-                        if(this.MonsterType == MonsterType.Wild) {
-                            this.CurState = State.Idle;
-                        } else if(this.MonsterType == MonsterType.Friendly) {
-                            this.CurState = State.Move;
-                        }
-                    }
-                }
-                break;
+        #region Interact
+        private void InteractEnter() {
+            this.monsterAnimation.Idle();
+
+            UIManager.Instance.OpenUI("monster-info", this.uiRoot).GetComponent<UIMonsterInfo>().Open(this);
+
+            var diff = GameController.Instance.Player.transform.position - this.transform.position;
+
+            if(diff.x > 0) {
+                SetDirection(Direction.Right);
+                uiRoot.anchoredPosition = this.rootCanvasPosition;
+            } else {
+                SetDirection(Direction.Left);
+                uiRoot.anchoredPosition = this.rootCanvasPosition * -1f;
             }
+
+            this.Interacting = true;
+
+            this.aggroDetector.gameObject.SetActive(false);
+            this.attackDetector.gameObject.SetActive(false);
+
+            this.TargetBuilding?.ShowRange();
         }
 
-        private void SetDirection(Direction direction) {
-            this.curDirection = direction;
-            this.skeletonTransform.rotation = Quaternion.Euler(0f, this.defaultDirection == direction ? 0f : 180f, 0f);
-
-            this.uiRoot.anchoredPosition = new Vector2(this.rootCanvasPosition.x * (direction == Direction.Right ? 1 : -1), this.rootCanvasPosition.y);
+        private void Interact() {
+            // «ˆ¿Á ªÛ»£¿€øÎ ¡ﬂ¿”
         }
 
+        private void InteractExit() {
+            this.TargetBuilding?.HideRange();
+
+            UIManager.Instance.CloseUI("monster-info");
+
+            this.aggroDetector.gameObject.SetActive(true);
+            this.attackDetector.gameObject.SetActive(true);
+
+            this.Interacting = false;
+        }
+        #endregion
+
+        #region Dead
+        private void DeadEnter() {
+            this.OnDead?.Invoke(this);
+            this.monsterAnimation.Dead(() => {
+                Destroy(gameObject);
+            });
+        }
+
+        private void Dead() {
+
+        }
+
+        private void DeadExit() {
+
+        }
+        #endregion
+
+
+        #endregion
+
+        #region Interact
         public void ShowSpacebar() {
             this.pressSpacebar.SetActive(true);
         }
@@ -490,27 +460,80 @@ namespace G2T.NCD.Game {
             this.pressSpacebar.SetActive(false);
         }
 
-        public void GoToBunker(Bunker bunker) {
-            this.StopAllCoroutines();
-            this.TargetBuilding = bunker;
-            this.transform.position = new Vector3(bunker.PosX, 0f, 0f);
-            this.gameObject.SetActive(false);
+        public void OnInteract() {
+            if(this.State == State.Idle) {
+                ChangeState(State.Interact);
+            } else if(this.State == State.Interact) {
+                CheckState();
+            }
+        }
+        #endregion
+
+        #region Graphic
+        private void SetDirection(Direction direction) {
+            this.monsterHolder.rotation = Quaternion.Euler(0f, direction == Direction.Left ? -180f : 0f, 0f);
+        }
+        #endregion
+
+        #region Trigger
+        private void OnAttackTriggerEnter(Collider2D collider) {
+            switch(collider.tag) {
+            case "Enemy":
+                var enemy = collider.GetComponent<Enemy>();
+                if(!this.attackTargets.Contains(enemy)) {
+                    this.attackTargets.Add(enemy);
+                }
+                if(this.State == State.Aggro || this.State == State.Idle)
+                    ChangeState(State.Attack);
+                break;
+            }
         }
 
-        public void GoOutBunker() {
-            this.TargetBuilding = GameController.Instance.Buildings.OrderBy(e => Mathf.Abs(PosX - e.PosX)).First();
-            this.gameObject.SetActive(true);
-            this.CurState = State.Move;
-            StartFSM();
+        private void OnAttackTriggerExit(Collider2D collider) {
+            switch(collider.tag) {
+            case "Enemy":
+                var enemy = collider.GetComponent<Enemy>();
+                if(this.attackTargets.Contains(enemy)) {
+                    this.attackTargets.Remove(enemy);
+                }
+                if(this.attackTargets.Count == 0) {
+                    ChangeState(State.Idle);
+                }
+                break;
+            }
         }
 
-        [Button]
-        private void SetObject() {
-            this.anim = GetComponentInChildren<SkeletonAnimation>();
-            this.anim.GetComponent<MeshRenderer>().sortingLayerName = "Character";
-            this.skeletonTransform = anim.transform;
-            this.skeletonTransform.localScale = new Vector3(0.4f, 0.4f, 1f);
-            this.skeletonTransform.localPosition = new Vector3(0f, -1.05f, 0f);
+        private void OnAggroTriggerEnter(Collider2D collider) {
+            switch(collider.tag) {
+            case "Enemy":
+                var enemy = collider.GetComponent<Enemy>();
+                if(!this.aggroTargets.Contains(enemy)) {
+                    this.aggroTargets.Add(enemy);
+                }
+
+                if(this.State == State.Idle && this.MonsterType == MonsterType.Friendly) {
+                    ChangeState(State.Aggro);
+                }
+                break;
+            }
         }
+
+        private void OnAggroTriggerExit(Collider2D collider) {
+            switch(collider.tag) {
+            case "Enemy":
+                var enemy = collider.GetComponent<Enemy>();
+                if(this.aggroTargets.Contains(enemy)) {
+                    this.aggroTargets.Remove(enemy);
+                }
+                if(this.aggroTargets.Count == 0) {
+                    if(this.State == State.Attack || this.State == State.Aggro) {
+                        ChangeState(State.Idle);
+                    }
+                }
+                break;
+            }
+        }
+        #endregion
+
     }
 }

@@ -38,12 +38,12 @@ namespace G2T.NCD.Game {
 
         public void AddMonster(Monster monster) {
             this.Entries.Add(monster);
-            monster.GoToBunker(this);
+            //monster.GoToBunker(this);
         }
 
         public void RemoveMonster(Monster monster) {
             this.Entries.Remove(monster);
-            monster.GoOutBunker();
+            //monster.GoOutBunker();
         }
     }
 }

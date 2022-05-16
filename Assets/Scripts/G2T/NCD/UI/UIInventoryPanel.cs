@@ -7,15 +7,37 @@ using UnityEngine.UI;
 namespace G2T.NCD.UI {
     using Game;
     using Table;
+    using Management;
 
     public class UIInventoryPanel : MonoBehaviour {
         [SerializeField]
         private Transform container;
         [SerializeField]
-        private UISlot slotPrefab;
+        private UIInventorySlot slotPrefab;
+        [SerializeField]
+        private ScrollRect scrollRect;
+
+        [SerializeField]
+        private RectTransform tooltipPivot;
+        [SerializeField]
+        private RectTransform tooltipBackground;
+        [SerializeField]
+        private Text tooltipText;
+        [SerializeField]
+        private Vector2 tooltipPadding;
+    
+        private void Update() {
+            if(tooltipPivot.gameObject.activeInHierarchy) {
+                var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                worldPos.z = 0;
+
+                this.tooltipPivot.position = worldPos;
+            }
+        }
 
         private void OnEnable() {
             var items = GameController.Instance.Items;
+            tooltipPivot.gameObject.SetActive(false);
 
             for(int i = 0; i < container.childCount; i++) {
                 Destroy(container.GetChild(i).gameObject);
@@ -25,18 +47,27 @@ namespace G2T.NCD.UI {
 
                 var itemData = TableLoader.Instance.ItemTable.Datas.Find(e => e.Id == item.Id);
 
-                var path = itemData.IconPath;
-                path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
-
-                var icon = Resources.Load<Sprite>(path);
-
-                //slot.IconImage.sprite = icon;
+                var icon = ResourcesManager.Instance.Load<Sprite>(itemData.IconPath);
 
                 var ownedItem = GameController.Instance.Items.Find(e => e.Id == itemData.Id);
                 int count = ownedItem == null ? 0 : ownedItem.Count;
 
                 //slot.CountText.text = item.Count.ToString();
-                slot.SetUI(icon, count.ToString());
+                slot.SetUI(icon, count.ToString(), 
+                    () => {
+                        this.tooltipPivot.gameObject.SetActive(true);
+                        this.tooltipText.text = itemData.Name;
+
+                        var size = new Vector2(tooltipText.preferredWidth, tooltipText.preferredHeight);
+                        tooltipText.rectTransform.sizeDelta = size;
+
+                        this.tooltipBackground.sizeDelta = size + tooltipPadding;
+                    },
+                    () => {
+                        this.tooltipPivot.gameObject.SetActive(false);
+                    },
+                    scrollRect
+                );
             }
         }
     }

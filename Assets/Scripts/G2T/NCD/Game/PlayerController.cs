@@ -71,6 +71,7 @@ namespace G2T.NCD.Game {
                     }
 
                     if(Input.GetKeyDown(KeyCode.Space)) {
+                        Debug.Log("Space!");
                         interactableTarget.OnInteract();
                     }
                 } else {

@@ -29,6 +29,14 @@ namespace G2T.NCD {
         public StageInfo CurrentStage { get; private set; }
         #endregion
 
+        public void GoToTitle() {
+            SceneManager.LoadScene(titleSceneName);
+        }
+
+        public void GoToMain() {
+            SceneManager.LoadScene(mainSceneName);
+        }
+
         public void GameStart(StageInfo stage) {
             this.CurrentStage = stage;
             SceneManager.LoadScene(gameSceneName);

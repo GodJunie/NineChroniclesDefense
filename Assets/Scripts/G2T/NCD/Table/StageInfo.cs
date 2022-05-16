@@ -66,6 +66,7 @@ namespace G2T.NCD.Table {
         [BoxGroup("group/연결")]
         [LabelWidth(80f)]
         [LabelText("타임라인")]
+        [FilePath(AbsolutePath = false)]
         [SerializeField]
         private string timelinePath;
         [BoxGroup("group/연결")]

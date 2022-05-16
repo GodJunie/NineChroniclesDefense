@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 namespace G2T.NCD.UI {
     using Table;
     using Game;
+    using Management;
 
     public class UIConstructPanel : MonoBehaviour {
         private BuildingTable table;
@@ -44,10 +45,8 @@ namespace G2T.NCD.UI {
                         this.gameObject.SetActive(false);
                     });
 
-                    var path = data.IconPath;
-                    path = path.Replace("Assets/Resources/", "").Replace(Path.GetExtension(path), "");
+                    var icon = ResourcesManager.Instance.Load<Sprite>(data.IconPath);
 
-                    var icon = Resources.Load<Sprite>(path);
                     iconImage.sprite = icon;
 
                     var trigger = button.GetComponent<EventTrigger>();
@@ -87,6 +86,10 @@ namespace G2T.NCD.UI {
 
         private void OnPointerExit(PointerEventData pointer) {
             this.tooltipRect.gameObject.SetActive(false);
+        }
+
+        private void OnEnable() {
+            tooltipRect.gameObject.SetActive(false);
         }
     }
 }

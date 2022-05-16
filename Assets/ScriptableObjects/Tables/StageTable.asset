@@ -20,7 +20,7 @@ MonoBehaviour:
     rewards:
     - id: 119
       amount: 50000
-    timelinePath: Stage1
+    timelinePath: Assets/Resources/Prefabs/Game/StageTimeline/Stage_1.asset
     backgroundPath: Assets/Resources/UI/Textures/WorldMap/battle_UI_bg_01_01.png
     backgroundPrefabPath: 
   - id: 4002000
@@ -30,7 +30,7 @@ MonoBehaviour:
     rewards:
     - id: 119
       amount: 70000
-    timelinePath: Stage2
+    timelinePath: Assets/ScriptableObjects/StageTimeline/Stage_1.asset
     backgroundPath: Assets/Resources/UI/Textures/WorldMap/battle_UI_bg_02_03.png
     backgroundPrefabPath: 
   - id: 4003000

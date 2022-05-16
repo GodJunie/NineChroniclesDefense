@@ -29,6 +29,9 @@ namespace G2T.NCD.Game {
         [TabGroup("group", "오브젝트")]
         [SerializeField]
         private MonsterHouse house;
+        [TabGroup("group", "오브젝트")]
+        [SerializeField]
+        private Monster monsterPrefab;
 
         #region UI
         // 패널
@@ -59,6 +62,11 @@ namespace G2T.NCD.Game {
         [LabelText("아이템 카운트")]
         [SerializeField]
         private UIItemCount uiItemCount;
+
+        [TabGroup("group", "UI")]
+        [LabelText("아이템 카운트")]
+        [SerializeField]
+        private UIClock uiClock;
         #endregion
 
         [TabGroup("group", "게임 설정")]
@@ -83,6 +91,7 @@ namespace G2T.NCD.Game {
         [TabGroup("group", "임시")]
         [SerializeField]
         private bool isTestMode;
+        [TabGroup("group", "임시")]
         [SerializeField]
         private StageTimelineTable timelineTable;
         #endregion
@@ -93,20 +102,20 @@ namespace G2T.NCD.Game {
         public List<BuildingBase> Buildings { get; private set; }
         public float RangeLeft { get; private set; }
         public float RangeRight { get; private set; }
-
         public float BuildingRangeLeft { get; private set; }
         public float BuildingRangeRight { get; private set; }
 
         public PlayerController Player { get => player; }
         public MonsterHouse House { get => house; }
 
-        private StageInfo stage;
+        public StageInfo Stage { get; private set; }
 
-        private bool constructing;
         private GameObject pendingBuilding;
 
         private int curEnemyCount;
         private int enemyCount;
+        private int totalEnemyCount;
+        public int KillCount { get; private set; }
 
         public int MaxMonsterAmount {
             get {
@@ -128,16 +137,19 @@ namespace G2T.NCD.Game {
             this.textMonstersCount.text = string.Format("{0}/{1}", 0, this.house.MonsterAmount);
 
             if(isTestMode) {
-                this.stage = TableLoader.Instance.StageTable.Datas[0];
+                this.Stage = TableLoader.Instance.StageTable.Datas[0];
             } else {
-                this.stage = GameManager.Instance.CurrentStage;
+                this.Stage = GameManager.Instance.CurrentStage;
+                this.timelineTable = ResourcesManager.Instance.Load<ScriptableObject>(Stage.TimelinePath) as StageTimelineTable;
             }
 
             // Cheat
-            var itemTable = TableLoader.Instance.ItemTable;
-            foreach(var item in itemTable.Datas) {
-                this.Items.Add(new ItemData(item.Id, 999));
-            }
+            //var itemTable = TableLoader.Instance.ItemTable;
+            //foreach(var item in itemTable.Datas) {
+            //    this.Items.Add(new ItemData(item.Id, 999));
+            //}
+            this.Items.Add(new ItemData(3001016, 10));
+            this.Items.Add(new ItemData(3001014, 5));
 
             GameStart();
         }
@@ -153,7 +165,12 @@ namespace G2T.NCD.Game {
 
         private void GameOver() {
             Time.timeScale = .01f;
-            panelGameOver.SetActive(true);
+            panelGameOver.GetComponent<UIGameOver>().Open();
+        }
+
+        private void GameClear() {
+            Time.timeScale = .01f;
+            panelGameClear.GetComponent<UIGameClear>().Open();
         }
 
         #region Item
@@ -224,9 +241,9 @@ namespace G2T.NCD.Game {
                 Destroy(e.gameObject);
                 this.SetMonsterAmountsUI();
 
-                foreach(var monster in this.Monsters.Where(e => e.TargetBuilding == e)) {
-                    monster.OnTargetBuildingDestroyed();
-                }
+                //foreach(var monster in this.Monsters.Where(e => e.TargetBuilding == e)) {
+                //    monster.OnTargetBuildingDestroyed();
+                //}
             };
         }
 
@@ -267,6 +284,8 @@ namespace G2T.NCD.Game {
 
         #region Timeline
         private async void PlayTimeline() {
+            totalEnemyCount = timelineTable.Datas.Sum(e => e.LeftEnemies.Count + e.RightEnemies.Count);
+
             foreach(var data in timelineTable.Datas) {
                 foreach(var background in backgrounds) {
                     background.SwitchBakcground(data.TimePart);
@@ -284,6 +303,9 @@ namespace G2T.NCD.Game {
                 enemyCount += data.RightEnemies.Count;
 
                 SetEnemyCountUI();
+
+                uiClock.RotateHand(data.Time);
+                uiClock.SetTimepart(data.TimePart);
 
                 await UniTask.Delay(TimeSpan.FromSeconds(data.Time));
             }
@@ -307,32 +329,26 @@ namespace G2T.NCD.Game {
                     if(rand <= info.Prob) {
                         var posX = UnityEngine.Random.Range(0, 2) == 0 ? UnityEngine.Random.Range(RangeLeft, BuildingRangeLeft) : UnityEngine.Random.Range(BuildingRangeRight, RangeRight);
 
-                        GenerateMonster(info.Id, posX, MonsterType.Wild);
+                        var monsterData = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == info.Id);
+
+                        var monster = Instantiate(monsterPrefab).GetComponent<Monster>();
+
+                        monster.transform.position = new Vector3(posX, 0f, 0f);
+                        monster.gameObject.SetActive(true);
+
+                        monster.Init(info.Id);
+
+                        this.Monsters.Add(monster);
+
+                        monster.OnDead += (e) => {
+                            this.Monsters.Remove(e);
+                            this.SetMonsterAmountsUI();
+                        };
                         break;
                     }
                     rand -= info.Prob;
                 }
             }
-        }
-
-        public async void GenerateMonster(int id, float posX, MonsterType monsterType) {
-            var monsterData = TableLoader.Instance.MonsterTable.Datas.Find(e => e.Id == id);
-
-            var monsterPrefab = await ResourcesManager.Instance.LoadAsync<GameObject>(monsterData.PrefabPath);
-
-            var monster = Instantiate(monsterPrefab).GetComponent<Monster>();
-
-            monster.transform.position = new Vector3(posX, 0f, 0f);
-            monster.gameObject.SetActive(true);
-
-            monster.Init(monsterData, monsterType);
-
-            this.Monsters.Add(monster);
-
-            monster.OnDead += (e) => {
-                this.Monsters.Remove(e);
-                this.SetMonsterAmountsUI();
-            };
         }
 
         private async void GenerateEnemies(List<int> ids, bool isLeft) {
@@ -360,6 +376,12 @@ namespace G2T.NCD.Game {
                 enemy.OnDead += (e) => {
                     this.Enemies.Remove(e);
                     curEnemyCount--;
+                    totalEnemyCount--;
+                    KillCount++;
+
+                    if(totalEnemyCount <= 0) {
+                        GameClear();
+                    }
                 };
             }
         }

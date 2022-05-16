@@ -23,7 +23,7 @@ MonoBehaviour:
     description: A combat ration
     iconPath: Assets/Resources/UI/Icons/Item/201000.png
   - id: 3001002
-    name: Fried egg
+    name: Fried Egg
     description: A dish that many people eat for a simple breakfast.
     iconPath: Assets/Resources/UI/Icons/Item/201002.png
   - id: 3001003
@@ -306,16 +306,16 @@ MonoBehaviour:
       at this time is quite sweet and delicious.
     iconPath: Assets/Resources/UI/Icons/Item/306005.png
   - id: 3004017
-    name: Igdrasil Flower
+    name: Yggdrassil Flower
     description: It is the flower of the Teratolower. It is popular among lovers.
     iconPath: Assets/Resources/UI/Icons/Item/306006.png
   - id: 3004018
-    name: Igdra Fruit
+    name: Yggdrassil Fruit
     description: It is a fruit that grew from teratotuit It is popular for its refreshing
       taste.
     iconPath: Assets/Resources/UI/Icons/Item/306007.png
   - id: 3004019
-    name: magic stone
+    name: Magic Stone
     description: An ore made of Igdrasil's mana by-products lump.
     iconPath: Assets/Resources/UI/Icons/Item/306008.png
   - id: 3004020
@@ -509,7 +509,7 @@ MonoBehaviour:
     description: A tool used to arrest criminals who have magical power.
     iconPath: Assets/Resources/UI/Icons/Item/306051.png
   - id: 3006026
-    name: Mana Stone Plates
+    name: Mana Stone Plate
     description: A stone plate studded with mana stone. It is used as a talisman.
     iconPath: Assets/Resources/UI/Icons/Item/306052.png
   - id: 3006027
@@ -557,10 +557,10 @@ MonoBehaviour:
       it is made as a purpose of medal.
     iconPath: Assets/Resources/UI/Icons/Item/306065.png
   - id: 3006037
-    name: Golden Sand
+    name: Golden Sandglass
     description: Sand that contains the power of light of Alfheim.
     iconPath: Assets/Resources/UI/Icons/Item/400000.png
   - id: 119
     name: Gold
     description: Gold.
-    iconPath: 
+    iconPath: Assets/Resources/UI/Icons/Item/400000.png

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 // UnityEngine
 using UnityEngine;
 using UnityEngine.UI;
@@ -45,10 +46,12 @@ namespace G2T.NCD.Game {
 
         [SerializeField]
         private Transform rangeTransform;
+        [SerializeField]
+        private Detector aggroDetector;
 
         protected Status curStatus;
         protected float curHp;
-        protected List<Monster> monsters;
+        public List<Enemy> Enemies = new List<Enemy>();
 
         // Event
         public Action<BuildingBase> OnDead;
@@ -62,7 +65,6 @@ namespace G2T.NCD.Game {
         public int Id { get => id; }
         public int Level { get; private set; }
         public float Range { get => range; }
-        public int CurrentCount { get => monsters.Count; }
         public float PosX { 
             get {
                 return this.transform.position.x;
@@ -107,6 +109,17 @@ namespace G2T.NCD.Game {
 
             rangeTransform.localScale = new Vector3(this.range * 2, 1, 1);
             this.Interacting = false;
+
+            this.aggroDetector.SetRange(this.range);
+
+            this.aggroDetector.OnEnter = (coll) => {
+                if(coll.tag == "Enemy") {
+                    this.Enemies.Add(coll.GetComponent<Enemy>());
+                    foreach(var monster in GameController.Instance.Monsters.Where(e => e.TargetBuilding == this)) {
+                        monster.AggroTrigger();
+                    }
+                }
+            };
         }
 
         // Update is called once per frame

@@ -61,7 +61,7 @@ MonoBehaviour:
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Bunker.prefab
     iconPath: Assets/Resources/UI/Icons/Building/Bunker.png
   - id: 5004000
-    name: Monster Restaurant
+    name: Restaurant
     description: It is a facility built to provide better food for monsters. Users
       can make food by combining the  ingredients taken from the warriors.
     constructItems:
@@ -76,7 +76,7 @@ MonoBehaviour:
     prefabPath: Assets/Resources/Prefabs/Game/Buildings/Restaurant.prefab
     iconPath: Assets/Resources/UI/Icons/Building/Restaurant.png
   - id: 5005000
-    name: Monster Workshop
+    name: Workshop
     description: It is a facility built to provide better equipment to monsters which
       can be used to prevent warriors. Users can produce items not only for monsters
       but also for construction.

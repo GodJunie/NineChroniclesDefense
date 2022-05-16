@@ -30,10 +30,13 @@ namespace G2T.NCD.Game {
 
         public List<CookingInfo> Cookings { get; private set; }
 
+        private void Awake() {
+            this.Cookings = new List<CookingInfo>();
+        }
+
         protected override void Start() {
             base.Start();
 
-            this.Cookings = new List<CookingInfo>();
         }
 
         protected override void Update() {
